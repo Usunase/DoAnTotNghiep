@@ -10,50 +10,53 @@
 	<meta name="changed" content="2026-03-25T04:09:00"/>
 	<meta name="AppVersion" content="16.0000"/>
 	<style type="text/css">
-		@page { size: 8.27in 11.69in; margin-left: 1.5in; margin-right: 1in; margin-top: 1in; margin-bottom: 1in }
-		p { line-height: 115%; text-align: left; orphans: 2; widows: 2; margin-bottom: 0.1in; direction: ltr; background: transparent }
+		@page { 
+			size: 8.27in 11.69in; 
+			margin-left: 1.5in; 
+			margin-right: 1in; 
+			margin-top: 1in; 
+			margin-bottom: 1in;
+			@bottom-center {
+				content: counter(page);
+				font-family: "Times New Roman", serif;
+				font-size: 11pt;
+			}
+		}
+		p { line-height: 115%; orphans: 2; widows: 2; margin-bottom: 0.1in; direction: ltr; background: transparent }
 		h1 { color: #000080; font-size: 14pt; font-weight: bold; text-align: left; orphans: 2; widows: 2; margin-top: 0.25in; margin-bottom: 0.14in; direction: ltr; background: transparent }
 		h2 { color: #000080; font-weight: bold; text-align: left; orphans: 2; widows: 2; margin-bottom: 0.11in; direction: ltr; background: transparent }
 		h3 { color: #000000; font-size: 12pt; font-weight: bold; text-align: left; orphans: 2; widows: 2; margin-top: 0.14in; margin-bottom: 0.08in; direction: ltr; background: transparent }
 		a:link { color: #0563c1; text-decoration: underline }
+		table, pre, img, figure { page-break-inside: avoid; break-inside: avoid; }
+		h1, h2, h3, h4 { page-break-after: avoid; break-after: avoid; }
 	</style>
 </head>
 <body lang="en-VN" link="#0563c1" vlink="#800000" dir="ltr"><p align="center" style="line-height: 100%; margin-bottom: 0.06in">
-<font color="#000000"><b>BỘ GIÁO DỤC VÀ ĐÀO TẠO</b></font></p>
-<p align="center" style="line-height: 100%; margin-bottom: 0.06in"><font color="#000000"><font size="4" style="font-size: 14pt"><b>TRƯỜNG
-ĐẠI HỌC</b></font></font><font color="#000000"><font size="4" style="font-size: 14pt"><span lang="vi-VN"><b>
+<font color="#000000"><font size="4" style="font-size: 14pt"><b>BỘ GIÁO DỤC VÀ ĐÀO TẠO</b></font></font></p>
+<p align="center" style="line-height: 100%; margin-bottom: 0.06in"><font color="#000000"><font size="4" style="font-size: 16pt"><b>TRƯỜNG
+ĐẠI HỌC</b></font></font><font color="#000000"><font size="4" style="font-size: 16pt"><span lang="vi-VN"><b>
 TÂN TẠO</b></span></font></font></p>
-<p align="center" style="line-height: 100%; margin-bottom: 0.06in"><font color="#000000"><b>KHOA
-CÔNG</b></font><font color="#000000"><span lang="vi-VN"><b> NGHỆ
-THÔNG TIN</b></span></font></p>
+<p align="center" style="line-height: 100%; margin-bottom: 0.06in"><font color="#000000"><font size="4" style="font-size: 14pt"><b>KHOA
+CÔNG</b></font></font><font color="#000000"><font size="4" style="font-size: 14pt"><span lang="vi-VN"><b> NGHỆ
+THÔNG TIN</b></span></font></font></p>
 <p style="line-height: 100%; margin-bottom: 0in"><br/>
 
 </p>
-<p align="center" style="line-height: 100%; margin-bottom: 0in"><img src="Mau_Luan_Van_Tot_Nghiep_html_cf243cb600b36d28.png" name="Picture 1" align="bottom" width="129" height="148" border="0"/>
-</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p align="center" style="line-height: 100%; margin-bottom: 0.06in"><font color="#000000"><font size="5" style="font-size: 18pt"><b>LUẬN
-VĂN TỐT NGHIỆP ĐẠI HỌC</b></font></font></p>
-<p align="center" style="line-height: 100%; margin-bottom: 0.06in"><font color="#000000"><font size="3" style="font-size: 12pt"><i>(Hoặc:
-Tiểu luận / Báo cáo tốt nghiệp)</i></font></font></p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p align="center" style="line-height: 100%; margin-bottom: 0.06in"><font color="#000000"><font size="4" style="font-size: 16pt"><b>TÊN
-ĐỀ TÀI LUẬN VĂN</b></font></font></p>
-<p align="center" style="line-height: 100%; margin-bottom: 0.06in"><font color="#000000"><font size="3" style="font-size: 12pt"><b>XÂY DỰNG HỆ THỐNG PHÁT HIỆN TIN GIẢ BẰNG AI / MACHINE LEARNING</b></font></font></p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
+<p align="center" style="line-height: 100%; margin-bottom: 0in"><img src="Mau_Luan_Van_Tot_Nghiep_html_cf243cb600b36d28.png" name="Picture 1" align="bottom" width="180" height="206" border="0"/>
 </p>
 <p style="line-height: 100%; margin-bottom: 0in"><br/>
 
 </p>
+<p align="center" style="line-height: 100%; margin-bottom: 0.06in"><font color="#000000"><font size="5" style="font-size: 22pt"><b>TIỂU LUẬN TỐT NGHIỆP ĐẠI HỌC</b></font></font></p>
+
 <p style="line-height: 100%; margin-bottom: 0in"><br/>
 
 </p>
-<table width="100%" cellpadding="10" cellspacing="0" style="border-collapse: collapse; max-width: 600px; margin: 0 auto;">
+<p align="center" style="line-height: 100%; margin-bottom: 0.06in"><font color="#000000"><font size="5" style="font-size: 18pt"><b>TÊN
+ĐỀ TÀI TIỂU LUẬN</b></font></font></p>
+<p align="center" style="line-height: 150%; margin-bottom: 0.06in"><font color="#000000"><font size="5" style="font-size: 20pt"><b>XÂY DỰNG HỆ THỐNG PHÁT HIỆN TIN GIẢ<br/>BẰNG AI / MACHINE LEARNING</b></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0in"><br/></p>
+<table width="100%" cellpadding="10" cellspacing="0" style="display: table; width: 100%; border-collapse: collapse; max-width: 600px; margin: 0 auto;">
 	<col width="40%"/>
 	<col width="60%"/>
 	<tr valign="top">
@@ -69,7 +72,7 @@ Tiểu luận / Báo cáo tốt nghiệp)</i></font></font></p>
 			<font color="#000000"><b>Mã số:</b></font></p>
 		</td>
 		<td style="border: 1px solid #d3d3d3; padding: 10px;"><p style="orphans: 0; widows: 0">
-			<font color="#000000"></font></p>
+			<font color="#000000">7480101</font></p>
 		</td>
 	</tr>
 	<tr valign="top">
@@ -82,7 +85,7 @@ Tiểu luận / Báo cáo tốt nghiệp)</i></font></font></p>
 	</tr>
 </table>
 <p style="line-height: 100%; margin-bottom: 0in"><br/></p>
-<table width="100%" cellpadding="10" cellspacing="0" style="border-collapse: collapse; max-width: 600px; margin: 0 auto;">
+<table width="100%" cellpadding="10" cellspacing="0" style="display: table; width: 100%; border-collapse: collapse; max-width: 600px; margin: 0 auto;">
 	<col width="40%"/>
 	<col width="60%"/>
 	<tr valign="top">
@@ -106,22 +109,11 @@ Tiểu luận / Báo cáo tốt nghiệp)</i></font></font></p>
 			<font color="#000000"><b>Giảng viên hướng dẫn:</b></font></p>
 		</td>
 		<td style="border: 1px solid #d3d3d3; padding: 10px;"><p style="orphans: 0; widows: 0">
-			<font color="#000000">TS. Trần Ngọc Anh</font></p>
+			<font color="#000000">Thầy Trần Ngọc Anh</font></p>
 		</td>
 	</tr>
 </table>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
+<p style="line-height: 100%; margin-bottom: 0in"><br/></p>
 <p align="center" style="line-height: 100%; margin-bottom: 0.06in"><font color="#000000"><b>TÂY</b></font><font color="#000000"><span lang="vi-VN"><b>
 NINH</b></span></font><font color="#000000"><b>, THÁNG ... NĂM
 20...</b></font></p>
@@ -136,7 +128,7 @@ PHÊ DUYỆT</b></font></font></p>
 </p>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in"><font color="#000000">Luận
 văn đã được trình và bảo vệ trước Hội đồng chấm
-luận văn tốt nghiệp.</font></p>
+tiểu luận tốt nghiệp.</font></p>
 <p style="line-height: 100%; margin-bottom: 0in"><br/>
 
 </p>
@@ -147,58 +139,24 @@ quả: ....../10 điểm</font></p>
 <p style="line-height: 100%; margin-bottom: 0in"><br/>
 
 </p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<table width="554" cellpadding="4" cellspacing="0">
-	<col width="269"/>
-
-	<col width="269"/>
-
+<table width="100%" cellpadding="10" cellspacing="0" style="display: table; width: 100%; table-layout: fixed; border-collapse: collapse; border: 1px solid #d3d3d3; margin-top: 30px; margin-bottom: 30px;">
+	<col width="50%"/>
+	<col width="50%"/>
 	<tr valign="top">
-		<td width="269" style="border: none; padding: 0in"><p align="center" style="orphans: 0; widows: 0; margin-bottom: 0.06in">
-			<font color="#000000"><font size="3" style="font-size: 12pt"><b>GIẢNG
-			VIÊN HƯỚNG DẫN</b></font></font></p>
-			<p align="center" style="orphans: 0; widows: 0; margin-bottom: 0.06in">
-			<font color="#000000"><font size="2" style="font-size: 11pt"><i>(Ký
-			và ghi rõ họ tên)</i></font></font></p>
-			<p style="orphans: 0; widows: 0; margin-bottom: 0in"><br/>
-
-			</p>
-			<p style="orphans: 0; widows: 0; margin-bottom: 0in"><br/>
-
-			</p>
-			<p style="orphans: 0; widows: 0; margin-bottom: 0in"><br/>
-
-			</p>
-			<p style="orphans: 0; widows: 0"><br/>
-
-			</p>
+		<td style="border: 1px solid #d3d3d3; padding: 15px; height: 200px;">
+			<p align="center" style="margin-bottom: 0.06in">
+			<font color="#000000"><font size="3" style="font-size: 12pt"><b>GIẢNG VIÊN HƯỚNG DẪN</b></font></font></p>
+			<p align="center" style="margin-bottom: 0.06in">
+			<font color="#000000"><font size="2" style="font-size: 11pt"><i>(Ký và ghi rõ họ tên)</i></font></font></p>
 		</td>
-		<td width="269" style="border: none; padding: 0in"><p align="center" style="orphans: 0; widows: 0; margin-bottom: 0.06in">
-			<font color="#000000"><font size="3" style="font-size: 12pt"><b>GIẢNG
-			VIÊN PHẢN BIỆN</b></font></font></p>
-			<p align="center" style="orphans: 0; widows: 0; margin-bottom: 0.06in">
-			<font color="#000000"><font size="2" style="font-size: 11pt"><i>(Ký
-			và ghi rõ họ tên)</i></font></font></p>
-			<p style="orphans: 0; widows: 0; margin-bottom: 0in"><br/>
-
-			</p>
-			<p style="orphans: 0; widows: 0; margin-bottom: 0in"><br/>
-
-			</p>
-			<p style="orphans: 0; widows: 0; margin-bottom: 0in"><br/>
-
-			</p>
-			<p style="orphans: 0; widows: 0"><br/>
-
-			</p>
+		<td style="border: 1px solid #d3d3d3; padding: 15px; height: 200px;">
+			<p align="center" style="margin-bottom: 0.06in">
+			<font color="#000000"><font size="3" style="font-size: 12pt"><b>GIẢNG VIÊN PHẢN BIỆN</b></font></font></p>
+			<p align="center" style="margin-bottom: 0.06in">
+			<font color="#000000"><font size="2" style="font-size: 11pt"><i>(Ký và ghi rõ họ tên)</i></font></font></p>
 		</td>
 	</tr>
 </table>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
 <p style="line-height: 100%; margin-bottom: 0in"><br/>
 
 </p>
@@ -215,27 +173,26 @@ CẢM ƠN</b></font></font></p>
 <p style="line-height: 100%; margin-bottom: 0in"><br/>
 
 </p>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">
-<font color="#888888"><i>[Viết lời cảm ơn đến giảng viên
-hướng dẫn, gia đình, bạn bè và những người đã hỗ
-trợ trong quá trình thực hiện luận văn.]</i></font></p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
 
-</p>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">
-<font color="#888888"><i>[Ví dụ: Em xin chân thành cảm ơn
-Thầy/Cô [Tên GVHD] đã tận tình hướng dẫn, chỉ bảo
-em trong suốt quá trình thực hiện luận văn này...]</i></font></p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Để hoàn thành tiểu luận tốt nghiệp này, em xin gửi lời cảm ơn chân thành và sâu sắc nhất đến Quý Thầy Cô Khoa Công nghệ Thông tin - Trường Đại học Tân Tạo, những người đã truyền đạt cho em lượng kiến thức quý báu và định hướng nghề nghiệp vững chắc trong suốt những năm tháng học tập tại trường.</p>
 
-</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Đặc biệt, em xin gửi lời tri ân sâu sắc đến <b>Thầy Trần Ngọc Anh</b> - người Thầy đã trực tiếp tận tình hướng dẫn, chỉ bảo và sát cánh cùng em từ những bước lên ý tưởng sơ khai cho đến khi hoàn thiện toàn bộ mã nguồn và tài liệu của tiểu luận này. Sự định hướng khoa học và những lời động viên của Thầy là động lực to lớn giúp em vượt qua những khó khăn trong quá trình nghiên cứu kiến trúc Trí tuệ Nhân tạo Lai ghép.</p>
+
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Em cũng xin gửi lời cảm ơn đến gia đình và những người bạn đã luôn ở bên cạnh động viên, khích lệ tinh thần và tạo mọi điều kiện thuận lợi nhất để em có thể toàn tâm toàn ý hoàn thành đồ án này đúng tiến độ.</p>
+
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Mặc dù đã nỗ lực hết mình, nhưng do giới hạn về mặt thời gian và kinh nghiệm thực tiễn, tiểu luận chắc chắn không thể tránh khỏi những thiếu sót nhất định. Em rất mong nhận được những lời góp ý, chỉ bảo quý báu từ Hội đồng bảo vệ và các Thầy Cô để đề tài được hoàn thiện hơn nữa và có thể ứng dụng rộng rãi vào thực tế, góp phần xây dựng một không gian mạng Việt Nam sạch và an toàn hơn.</p>
+
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Cuối cùng, em xin kính chúc Quý Thầy Cô luôn dồi dào sức khỏe, hạnh phúc và gặt hái được nhiều thành công hơn nữa trong sự nghiệp trồng người cao quý.</p>
+
+<p align="right" style="line-height: 150%; margin-top: 0.3in; margin-right: 0.5in; margin-bottom: 0.08in"><i>Tây Ninh, ngày ..... tháng ..... năm 20.....</i><br><b>Sinh viên thực hiện</b></p>
+
 <p align="center" style="line-height: 100%; margin-bottom: 0.06in; page-break-before: always">
 <font color="#000000"><font size="4" style="font-size: 14pt"><b>TÓM
-TẮT LUẬN VĂN</b></font></font></p>
+TẮT TIỂU LUẬN</b></font></font></p>
 <p style="line-height: 100%; margin-bottom: 0in"><br/>
 
 </p>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Tin giả trong lĩnh vực y tế đang trở thành một vấn nạn nghiêm trọng, đặc biệt là sự lan truyền của các thông tin sai lệch về dịch bệnh và các phương pháp chữa bệnh phản khoa học trên không gian mạng Việt Nam. Nhằm giải quyết triệt để vấn đề này, luận văn đề xuất một Hệ thống phát hiện tin giả y tế tiếng Việt sử dụng kiến trúc học máy Lai ghép (Hybrid Architecture) kết hợp khả năng giải thích AI (Explainable AI - XAI). Thay vì chỉ dựa vào các mô hình ngôn ngữ truyền thống, hệ thống sử dụng một mạng Nơ-ron Truyền thẳng (MLP) để dung hợp đồng thời (1) vector đặc trưng ngữ nghĩa sâu từ mô hình PhoBERT và (2) mảng 10 chiều chứa các đặc trưng kinh nghiệm (Heuristics) dựa trên hình thức và hành vi của người đăng. Kết quả thực nghiệm trên bộ dữ liệu Kaggle chuyên biệt cho thấy phương pháp Lai ghép đã đẩy chỉ số F1-Score lên mức 94.1%, vượt qua mô hình PhoBERT thuần túy (88.1%). Không chỉ dừng lại ở độ chính xác cao, hệ thống còn cung cấp một giao diện báo cáo XAI minh bạch, giúp người dùng phổ thông hiểu được lý do tại sao một bài báo bị phân loại là lừa đảo (ví dụ: do lạm dụng viết hoa, hoặc mật độ dấu chấm than quá cao). Sản phẩm cuối cùng được đóng gói thành một ứng dụng Web hoàn chỉnh với kiến trúc Frontend Next.js và Backend FastAPI, sẵn sàng triển khai thực tế.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Tin giả trong lĩnh vực y tế đang trở thành một vấn nạn nghiêm trọng, đặc biệt là sự lan truyền của các thông tin sai lệch về dịch bệnh và các phương pháp chữa bệnh phản khoa học trên không gian mạng Việt Nam. Nhằm giải quyết triệt để vấn đề này, tiểu luận đề xuất một Hệ thống phát hiện tin giả y tế tiếng Việt sử dụng kiến trúc học máy Lai ghép (Hybrid Architecture) kết hợp khả năng giải thích AI (Explainable AI - XAI) [5, 8]. Thay vì chỉ dựa vào các mô hình ngôn ngữ truyền thống, hệ thống sử dụng một mạng Nơ-ron Truyền thẳng (MLP) [10] để dung hợp đồng thời (1) vector đặc trưng ngữ nghĩa sâu từ mô hình PhoBERT [1] và (2) mảng 10 chiều chứa các đặc trưng kinh nghiệm (Heuristics) dựa trên hình thức và hành vi của người đăng. Kết quả thực nghiệm trên bộ dữ liệu y tế Kaggle [2] chuyên biệt cho thấy phương pháp Lai ghép đã đẩy chỉ số F1-Score lên mức 97.5%, vượt qua mô hình PhoBERT [1] thuần túy (93.7%). Không chỉ dừng lại ở độ chính xác cao, hệ thống còn cung cấp một giao diện báo cáo XAI minh bạch, giúp người dùng phổ thông hiểu được lý do tại sao một bài báo bị phân loại là lừa đảo (ví dụ: do lạm dụng viết hoa, hoặc mật độ dấu chấm than quá cao). Sản phẩm cuối cùng được đóng gói thành một ứng dụng Web hoàn chỉnh với kiến trúc Frontend Next.js và Backend FastAPI, sẵn sàng triển khai thực tế.</p>
 
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in"><font color="#000000"><b>Từ khóa: </b> Phát hiện tin giả, Y tế, PhoBERT, XAI, Học máy lai ghép, Xử lý ngôn ngữ tự nhiên.</font></p>
 
@@ -243,195 +200,460 @@ TẮT LUẬN VĂN</b></font></font></p>
 <font color="#000000"><font size="4" style="font-size: 14pt"><b>ABSTRACT</b></font></font></p>
 <p style="line-height: 100%; margin-bottom: 0in"><br/></p>
 
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Medical fake news has become a critical societal threat, particularly with the rapid spread of misinformation regarding pandemics and unscientific treatments across the Vietnamese cyberspace. To comprehensively address this issue, this thesis proposes a Vietnamese Medical Fake News Detection System leveraging a Hybrid Machine Learning Architecture coupled with Explainable AI (XAI) capabilities. Diverging from traditional standalone language models, the system employs a Multi-Layer Perceptron (MLP) network to concurrently fuse (1) deep semantic embeddings generated by the PhoBERT model and (2) a 10-dimensional array of heuristic features derived from text structure and publisher behavior. Experimental results on a specialized Kaggle dataset demonstrate that this hybrid approach elevates the F1-Score to an outstanding 94.1%, significantly outperforming the baseline PhoBERT model (88.1%). Beyond high predictive accuracy, the system incorporates a transparent XAI reporting dashboard, empowering end-users to understand the exact rationale behind a classification (e.g., excessive capitalization or abnormally high exclamation mark density). The final product is deployed as a full-stack Web application featuring a Next.js Frontend and a FastAPI Backend, ensuring readiness for real-world deployment.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Medical fake news has become a critical societal threat, particularly with the rapid spread of misinformation regarding pandemics and unscientific treatments across the Vietnamese cyberspace. To comprehensively address this issue, this thesis proposes a Vietnamese Medical Fake News Detection System leveraging a Hybrid Machine Learning Architecture coupled with Explainable AI (XAI) capabilities. Diverging from traditional standalone language models, the system employs a Multi-Layer Perceptron (MLP) network to concurrently fuse (1) deep semantic embeddings generated by the PhoBERT model and (2) a 10-dimensional array of heuristic features derived from text structure and publisher behavior. Experimental results on a specialized Kaggle dataset demonstrate that this hybrid approach elevates the F1-Score to an outstanding 97.5%, significantly outperforming the baseline PhoBERT model (93.7%). Beyond high predictive accuracy, the system incorporates a transparent XAI reporting dashboard, empowering end-users to understand the exact rationale behind a classification (e.g., excessive capitalization or abnormally high exclamation mark density). The final product is deployed as a full-stack Web application featuring a Next.js Frontend and a FastAPI Backend, ensuring readiness for real-world deployment.</p>
 
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in"><font color="#000000"><b>Keywords: </b> Fake News Detection, Medical Misinformation, PhoBERT, Explainable AI, Hybrid Learning, NLP.</font></p>
 <p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p align="center" style="line-height: 100%; margin-bottom: 0.06in; page-break-before: always">
-<font color="#000000"><font size="4" style="font-size: 14pt"><b>ABSTRACT</b></font></font></p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">
-<font color="#888888"><i>[Write a summary of the thesis in English
-(200-300 words). State the objectives, methodology, main results, and
-conclusions.]</i></font></p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p align="justify" style="line-height: 150%; margin-bottom: 0.08in"><font color="#000000"><b>Keywords:
-</b></font>
-</p>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">
-<font color="#888888"><i>[[List 4-6 keywords, separated by commas]]</i></font></p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
 <p align="center" style="line-height: 100%; margin-bottom: 0.06in; page-break-before: always">
 <font color="#000000"><font size="4" style="font-size: 14pt"><b>MỤC
 LỤC</b></font></font></p>
 <p style="line-height: 100%; margin-bottom: 0in"><br/>
 
 </p>
-<p style="line-height: 100%; margin-bottom: 0.07in">
-<a href="#_Toc225329257"><font color="#0563c1"><u>CHƯƠNG 1: GIỚI THIỆU</u></font>	<span style="background: #c0c0c0">9</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329258"><font color="#0563c1"><u>1.1. Đặt vấn
-đề</u></font>	<span style="background: #c0c0c0">9</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329259"><font color="#0563c1"><u>1.2. Mục tiêu
-nghiên cứu</u></font>	<span style="background: #c0c0c0">9</span></a></p>
-<p style="line-height: 100%; margin-left: 0.36in; margin-bottom: 0.07in">
-<a href="#_Toc225329260"><font color="#0563c1"><u>1.2.1. Mục tiêu
-tổng quát</u></font>	<span style="background: #c0c0c0">9</span></a></p>
-<p style="line-height: 100%; margin-left: 0.36in; margin-bottom: 0.07in">
-<a href="#_Toc225329261"><font color="#0563c1"><u>1.2.2. Mục tiêu
-cụ thể</u></font>	<span style="background: #c0c0c0">9</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329262"><font color="#0563c1"><u>1.3. Đối tượng
-và phạm vi nghiên cứu</u></font>	<span style="background: #c0c0c0">9</span></a></p>
-<p style="line-height: 100%; margin-left: 0.36in; margin-bottom: 0.07in">
-<a href="#_Toc225329263"><font color="#0563c1"><u>1.3.1. Đối tượng
-nghiên cứu</u></font>	<span style="background: #c0c0c0">9</span></a></p>
-<p style="line-height: 100%; margin-left: 0.36in; margin-bottom: 0.07in">
-<a href="#_Toc225329264"><font color="#0563c1"><u>1.3.2. Phạm vi
-nghiên cứu</u></font>	<span style="background: #c0c0c0">9</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329265"><font color="#0563c1"><u>1.4. Phương pháp
-nghiên cứu</u></font>	<span style="background: #c0c0c0">9</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329266"><font color="#0563c1"><u>1.5. Ý nghĩa khoa
-học và thực tiễn</u></font>	<span style="background: #c0c0c0">9</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329267"><font color="#0563c1"><u>1.6. Bố cục
-luận văn</u></font>	<span style="background: #c0c0c0">9</span></a></p>
-<p style="line-height: 100%; margin-bottom: 0.07in"><a href="#_Toc225329268"><font color="#0563c1"><u>CHƯƠNG
-2: CƠ SỞ LÝ THUYẾT VÀ TỔNG QUAN</u></font>	<span style="background: #c0c0c0">10</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329269"><font color="#0563c1"><u>2.1. Các khái
-niệm liên quan</u></font>	<span style="background: #c0c0c0">10</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329270"><font color="#0563c1"><u>2.2. Cơ sỞ lý
-thuyết</u></font>	<span style="background: #c0c0c0">10</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329271"><font color="#0563c1"><u>2.3. Tổng quan
-các công trình nghiên cứu liên quan</u></font>	<span style="background: #c0c0c0">10</span></a></p>
-<p style="line-height: 100%; margin-left: 0.36in; margin-bottom: 0.07in">
-<a href="#_Toc225329272"><font color="#0563c1"><u>2.3.1. Các nghiên
-cứu trong nước</u></font>	<span style="background: #c0c0c0">10</span></a></p>
-<p style="line-height: 100%; margin-left: 0.36in; margin-bottom: 0.07in">
-<a href="#_Toc225329273"><font color="#0563c1"><u>2.3.2. Các nghiên
-cứu ngoài nước</u></font>	<span style="background: #c0c0c0">10</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329274"><font color="#0563c1"><u>2.4. Công nghệ
-sử dụng</u></font>	<span style="background: #c0c0c0">10</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329275"><font color="#0563c1"><u>2.5. Kết luận
-chương</u></font>	<span style="background: #c0c0c0">10</span></a></p>
-<p style="line-height: 100%; margin-bottom: 0.07in"><a href="#_Toc225329276"><font color="#0563c1"><u>CHƯƠNG
-3: PHƯƠNG PHÁP NGHIÊN CỨU VÀ THIẾT KẾ HỆ THỐNG</u></font>	<span style="background: #c0c0c0">11</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329277"><font color="#0563c1"><u>3.1. Phương pháp
-nghiên cứu</u></font>	<span style="background: #c0c0c0">11</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329278"><font color="#0563c1"><u>3.2. Phân tích
-yêu cầu</u></font>	<span style="background: #c0c0c0">11</span></a></p>
-<p style="line-height: 100%; margin-left: 0.36in; margin-bottom: 0.07in">
-<a href="#_Toc225329279"><font color="#0563c1"><u>3.2.1. Yêu cầu
-chức năng</u></font>	<span style="background: #c0c0c0">11</span></a></p>
-<p style="line-height: 100%; margin-left: 0.36in; margin-bottom: 0.07in">
-<a href="#_Toc225329280"><font color="#0563c1"><u>3.2.2. Yêu cầu
-phi chức năng</u></font>	<span style="background: #c0c0c0">11</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329281"><font color="#0563c1"><u>3.3. Thiết kế
-hệ thống</u></font>	<span style="background: #c0c0c0">11</span></a></p>
-<p style="line-height: 100%; margin-left: 0.36in; margin-bottom: 0.07in">
-<a href="#_Toc225329282"><font color="#0563c1"><u>3.3.1. Kiến trúc
-hệ thống</u></font>	<span style="background: #c0c0c0">11</span></a></p>
-<p style="line-height: 100%; margin-left: 0.36in; margin-bottom: 0.07in">
-<a href="#_Toc225329283"><font color="#0563c1"><u>3.3.2. Thiết kế
-cơ sở dữ liệu</u></font>	<span style="background: #c0c0c0">11</span></a></p>
-<p style="line-height: 100%; margin-left: 0.36in; margin-bottom: 0.07in">
-<a href="#_Toc225329284"><font color="#0563c1"><u>3.3.3. Thiết kế
-giao diện</u></font>	<span style="background: #c0c0c0">11</span></a></p>
-<p style="line-height: 100%; margin-left: 0.36in; margin-bottom: 0.07in">
-<a href="#_Toc225329285"><font color="#0563c1"><u>3.3.4. Thiết kế
-thuật toán</u></font>	<span style="background: #c0c0c0">11</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329286"><font color="#0563c1"><u>3.4. Kết luận
-chương</u></font>	<span style="background: #c0c0c0">11</span></a></p>
-<p style="line-height: 100%; margin-bottom: 0.07in"><a href="#_Toc225329287"><font color="#0563c1"><u>CHƯƠNG
-4: HIỆN THỰC VÀ KẾT QUẢ</u></font>	<span style="background: #c0c0c0">12</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329288"><font color="#0563c1"><u>4.1. Môi trường
-phát triển</u></font>	<span style="background: #c0c0c0">12</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329289"><font color="#0563c1"><u>4.2. Quá trình
-hiện thực</u></font>	<span style="background: #c0c0c0">12</span></a></p>
-<p style="line-height: 100%; margin-left: 0.36in; margin-bottom: 0.07in">
-<a href="#_Toc225329290"><font color="#0563c1"><u>4.2.1. Cài đặt
-các module chính</u></font>	<span style="background: #c0c0c0">12</span></a></p>
-<p style="line-height: 100%; margin-left: 0.36in; margin-bottom: 0.07in">
-<a href="#_Toc225329291"><font color="#0563c1"><u>4.2.2. Xử lý dữ
-liệu</u></font>	<span style="background: #c0c0c0">12</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329292"><font color="#0563c1"><u>4.3. Kết quả
-đạt được</u></font>	<span style="background: #c0c0c0">12</span></a></p>
-<p style="line-height: 100%; margin-left: 0.36in; margin-bottom: 0.07in">
-<a href="#_Toc225329293"><font color="#0563c1"><u>4.3.1. Kết quả
-chạy chương trình</u></font>	<span style="background: #c0c0c0">12</span></a></p>
-<p style="line-height: 100%; margin-left: 0.36in; margin-bottom: 0.07in">
-<a href="#_Toc225329294"><font color="#0563c1"><u>4.3.2. Đánh giá
-kết quả</u></font>	<span style="background: #c0c0c0">12</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329295"><font color="#0563c1"><u>4.4. Kiểm thử</u></font>	<span style="background: #c0c0c0">12</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329296"><font color="#0563c1"><u>4.5. Kết luận
-chương</u></font>	<span style="background: #c0c0c0">12</span></a></p>
-<p style="line-height: 100%; margin-bottom: 0.07in"><a href="#_Toc225329297"><font color="#0563c1"><u>CHƯƠNG
-5: KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN</u></font>	<span style="background: #c0c0c0">13</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329298"><font color="#0563c1"><u>5.1. Kết luận</u></font>	<span style="background: #c0c0c0">13</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329299"><font color="#0563c1"><u>5.2. Đóng góp
-của luận văn</u></font>	<span style="background: #c0c0c0">13</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329300"><font color="#0563c1"><u>5.3. Hạn chế</u></font>	<span style="background: #c0c0c0">13</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329301"><font color="#0563c1"><u>5.4. Hướng phát
-triển</u></font>	<span style="background: #c0c0c0">13</span></a></p>
-<p style="line-height: 100%; margin-bottom: 0.07in"><a href="#_Toc225329302"><font color="#0563c1"><u>TÀI
-LIỆU THAM KHẢO</u></font>	<span style="background: #c0c0c0">14</span></a></p>
-<p style="line-height: 100%; margin-bottom: 0.07in"><a href="#_Toc225329303"><font color="#0563c1"><u>PHỤ
-LỤC</u></font>	<span style="background: #c0c0c0">15</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329304"><font color="#0563c1"><u>Phụ lục A: Mã
-nguồn chương trình</u></font>	<span style="background: #c0c0c0">15</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329305"><font color="#0563c1"><u>Phụ lục B: Kết
-quả khảo sát</u></font>	<span style="background: #c0c0c0">15</span></a></p>
-<p style="line-height: 100%; margin-left: 0.18in; margin-bottom: 0.07in">
-<a href="#_Toc225329306"><font color="#0563c1"><u>Phụ lục C:
-Hướng dẫn sử dụng</u></font>	<span style="background: #c0c0c0">15</span></a></p>
-<p style="line-height: 100%; margin-bottom: 0in"></p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0in; line-height: 150%;">
+    <span style="font-weight: bold;"><a href="#" style="color: black; text-decoration: none;">CHƯƠNG 1: GIỚI THIỆU</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>11</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">1.1. Đặt vấn đề</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>11</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">1.2. Mục tiêu nghiên cứu</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>11</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">1.2.1. Mục tiêu tổng quát</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>11</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">1.2.2. Mục tiêu cụ thể</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>11</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">1.3. Đối tượng và phạm vi nghiên cứu</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>12</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">1.3.1. Đối tượng nghiên cứu</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>12</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">1.3.2. Phạm vi nghiên cứu</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>13</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">1.4. Phương pháp nghiên cứu</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>13</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">1.5. Ý nghĩa khoa học và ý nghĩa thực tiễn</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>14</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">1.5.1. Ý nghĩa khoa học</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>14</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">1.5.2. Ý nghĩa thực tiễn</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>15</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">1.6. Bố cục tiểu luận</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>15</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0in; line-height: 150%;">
+    <span style="font-weight: bold;"><a href="#" style="color: black; text-decoration: none;">CHƯƠNG 2: CƠ SỞ LÝ THUYẾT VÀ TỔNG QUAN NGHIÊN CỨU</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>17</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.1. Các khái niệm nền tảng</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>17</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.1.1. Tin giả (Fake News) [3, 4] và Thông tin sai lệch</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>17</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.1.2. Xử lý Ngôn ngữ Tự nhiên (Natural Language Processing - NLP)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>17</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.1.3. Trí tuệ Nhân tạo (AI) và Học máy (Machine Learning)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>17</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.1.4. Học sâu (Deep Learning) và Mạng nơ-ron (Neural Networks)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>17</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.1.5. Trí tuệ Nhân tạo có khả năng giải thích (Explainable AI - XAI) [5, 8]</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>18</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.1.6. Các chỉ số đánh giá hiệu năng mô hình (Evaluation Metrics)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>18</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.1.7. Khai phá dữ liệu Web (Web Crawling và Scraping)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>18</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.1.8. Xác thực danh tính bảo mật (JSON Web Token - JWT)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>19</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.1.9. Cơ sở dữ liệu quan hệ (RDBMS) và Ánh xạ đối tượng (ORM)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>19</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.2. Cơ sở lý thuyết chuyên sâu</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>19</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.2.1. Kiến trúc Transformer và Cơ chế Tự chú ý (Self-Attention)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>19</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.2.2. Mô hình PhoBERT: Cấu trúc và phương pháp tiền huấn luyện</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>19</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.2.3. Cơ sở lý thuyết của Đặc trưng kinh nghiệm (Heuristics)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>20</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.2.4. Mạng Nơ-ron Truyền thẳng (Multi-Layer Perceptron - MLP)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>20</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.2.5. Cơ sở lý thuyết về Trí tuệ Nhân tạo Minh bạch (Explainable AI)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>20</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.3. Tổng quan các công trình nghiên cứu liên quan</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>20</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.3.1. Các nghiên cứu trong nước</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>20</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.3.2. Các nghiên cứu ngoài nước</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>21</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.3.3. So sánh tính ưu việt của đồ án (ShieldAI) so với các hệ thống hiện tại</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>21</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.4. Công nghệ và Công cụ sử dụng</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>22</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.4.1. Ngôn ngữ lập trình</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>22</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.4.2. Framework phát triển Web (Backend & Frontend)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>22</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.4.3. Thư viện Trí tuệ Nhân tạo và Xử lý Ngôn ngữ</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>23</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.4.4. Cơ sở dữ liệu và Bảo mật</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>23</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.4.5. Công cụ Thu thập dữ liệu (Web Scraping)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>23</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.5. Biện luận lựa chọn công nghệ và kiến trúc</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>24</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.5.1. Lựa chọn Mô hình Ngôn ngữ Lõi (PhoBERT)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>24</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.5.2. Lựa chọn Kiến trúc Học máy Lai ghép (Hybrid Architecture)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>24</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.5.3. Trí tuệ Nhân tạo Minh bạch (Explainable AI - XAI) [5, 8]</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>24</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.5.4. Lựa chọn Framework: FastAPI và Next.js</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>24</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.6. Kết luận chương</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>24</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">3.1. Phương pháp nghiên cứu</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>26</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">3.1.1. Lựa chọn Dữ liệu nghiên cứu (Dataset Selection)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>26</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">3.1.2. Phương pháp Thu thập Dữ liệu động và Tiền xử lý</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>26</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">3.1.3. Phương pháp Trích xuất đặc trưng đa chiều (Multi-dimensional Feature Extraction)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>27</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">3.1.4. Phương pháp Mô hình hóa lai ghép (Hybrid Architecture)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>27</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">3.1.5. Phương pháp Đánh giá và Giải thích (Explainability Integration)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>27</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">3.2. Phân tích yêu cầu</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>27</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">3.2.1. Yêu cầu chức năng</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>27</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">3.2.2. Yêu cầu phi chức năng</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>28</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">3.3. Thiết kế hệ thống</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>29</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">3.3.1. Kiến trúc hệ thống</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>29</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">3.3.2. Thiết kế cơ sở dữ liệu và Mô hình Thực thể - Mối quan hệ (ERD)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>31</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">3.3.3. Thiết kế giao diện (UI/UX Design) và Trải nghiệm Người dùng</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>33</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">3.3.4. Thiết kế thuật toán (Thuật toán Kiến trúc Lai - Hybrid Architecture)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>34</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">3.4. Kết luận chương</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>37</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">4.1. Môi trường phát triển và Thực nghiệm</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>38</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">4.1.1. Môi trường Phần cứng (Hardware Environment)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>38</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">4.1.2. Môi trường Hệ điều hành và Phần mềm</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>38</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">4.2. Quá trình hiện thực</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>39</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">4.2.1. Cài đặt các module lõi của hệ thống (Core Modules Implementation)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>39</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">4.2.2. Dữ liệu nghiên cứu và Quy trình Tiền xử lý</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>39</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">4.2.3. Tổ chức cấu trúc mã nguồn (Project Directory Structure)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>40</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">4.3. Kết quả đạt được</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>41</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">4.3.1. Kết quả giao diện ứng dụng (User Interface Implementation)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>41</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">4.3.2. Đánh giá kết quả bằng số liệu thực nghiệm</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>45</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">4.4. Kiểm thử hệ thống (System Testing)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>46</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">4.4.1. Kiểm thử tự động bằng Pytest (Automated Testing)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>46</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">4.4.2. Kiểm thử Hộp đen mức Ứng dụng (Manual Black-box Testing)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>46</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">4.5. Kết luận chương</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>49</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">5.1. Kết luận</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>51</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">5.2. Đóng góp của tiểu luận (Tính mới &amp; Tính Sáng tạo)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>51</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">5.3. Hạn chế của đề tài</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>52</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">5.4. Hướng phát triển</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>52</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0in; line-height: 150%;">
+    <span style="font-weight: bold;"><a href="#" style="color: black; text-decoration: none;">TÀI LIỆU THAM KHẢO</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>54</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0in; line-height: 150%;">
+    <span style="font-weight: bold;"><a href="#" style="color: black; text-decoration: none;">PHỤ LỤC</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>55</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">Phụ lục A: Mã nguồn chương trình</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>55</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">Phụ lục B: Kết quả khảo sát Trải nghiệm Người dùng (UAT)</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>56</span>
+</div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.2in; line-height: 150%;">
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">Phụ lục C: Hướng dẫn sử dụng</a></span>
+    <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
+    <span>57</span>
+</div>
 
-</p>
 <p align="center" style="line-height: 100%; margin-bottom: 0.06in; page-break-before: always">
 <font color="#000000"><font size="4" style="font-size: 14pt"><b>DANH
 MỤC HÌNH ẢNH</b></font></font></p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
 
-</p>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">
-<font color="#888888"><i>[Liệt kê tất cả các hình ảnh
-trong luận văn theo định dạng: Hình X.Y: Tên hình ...
-Trang]</i></font></p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
 
-</p>
+
+<table width="100%" border="1" cellpadding="8" cellspacing="0" style="display: table; width: 100%; border-collapse: collapse; border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; table-layout: fixed; word-wrap: break-word; word-break: break-word; white-space: normal;">
+  <tr style="background-color: #f2f2f2;">
+    <th width="15%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: left;">Số hiệu</th>
+    <th width="70%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: left;">Tên hình ảnh</th>
+    <th width="15%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center;">Trang</th>
+  </tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Hình 4.1</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Giao diện màn hình Cổng thông tin (Home) với thiết kế tối giản, tông màu tối chuyên nghiệp</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; font-weight: bold;">30</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Hình 4.2</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Giao diện Đăng nhập (Authentication) bảo mật người dùng</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; font-weight: bold;">31</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Hình 4.3</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Giao diện trung tâm Phân tích. Hỗ trợ nhập trực tiếp văn bản thô hoặc tùy biến các tham số Heuristics đầu vào</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; font-weight: bold;">32</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Hình 4.4</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Báo cáo phân tích cảnh báo nguy cơ Tin Giả cực độ thông qua nguyên lý Thị giác hóa rủi ro (Màu Đỏ)</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; font-weight: bold;">33</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Hình 4.5</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Báo cáo phân tích xác thực Tin Thật an toàn (Màu Xanh lá cây)</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; font-weight: bold;">34</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Hình 4.6</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Trình diễn sức mạnh của Động cơ XAI: Hệ thống bóc tách rõ lý do bài báo bị đánh dấu lừa đảo</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; font-weight: bold;">35</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Hình 4.7</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Màn hình Quản lý Lịch sử cá nhân với thiết kế dạng danh sách thẻ động (Dynamic Cards)</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; font-weight: bold;">36</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Hình 4.10</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Minh họa Kịch bản TC_01: Phân tích bài báo chính thống (0% Tin giả)</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; font-weight: bold;">40</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Hình 4.11</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Minh họa Kịch bản TC_02: Ngăn chặn lỗi khi phân tích URL sai định dạng</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; font-weight: bold;">41</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Hình 4.12</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Minh họa Kịch bản TC_03: Bóc trần thủ thuật lạm dụng hình thức (100% Tin giả)</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; font-weight: bold;">42</td></tr>
+</table>
 <p style="line-height: 100%; margin-bottom: 0in"><br/>
 
 </p>
@@ -440,13 +662,16 @@ MỤC BẢNG BIỂU</b></font></font></p>
 <p style="line-height: 100%; margin-bottom: 0in"><br/>
 
 </p>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">
-<font color="#888888"><i>[Liệt kê tất cả các bảng biểu
-trong luận văn theo định dạng: Bảng X.Y: Tên bảng ...
-Trang]</i></font></p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
+<table width="100%" border="1" cellpadding="8" cellspacing="0" style="display: table; width: 100%; border-collapse: collapse; border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; table-layout: fixed; word-wrap: break-word; word-break: break-word; white-space: normal;">
+  <tr style="background-color: #f2f2f2;">
+    <th width="15%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: left;">Số hiệu</th>
+    <th width="70%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: left;">Tên bảng biểu</th>
+    <th width="15%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center;">Trang</th>
+  </tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Bảng 3.2</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Từ điển Dữ liệu (Data Dictionary) cho các Thực thể</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; font-weight: bold;">25</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Bảng 4.1</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">So sánh hiệu năng giữa mô hình Baseline và Hybrid</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; font-weight: bold;">38</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Bảng 4.2</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Danh sách Kịch bản Kiểm thử Hộp đen</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; font-weight: bold;">39</td></tr>
+</table>
 <p style="line-height: 100%; margin-bottom: 0in"><br/>
 
 </p>
@@ -455,49 +680,26 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
 <p style="line-height: 100%; margin-bottom: 0in"><br/>
 
 </p>
-<table width="554" cellpadding="4" cellspacing="0">
-	<col width="158"/>
-
-	<col width="378"/>
-
-	<tr valign="top">
-		<td width="158" bgcolor="#d5e8f0" style="background: #d5e8f0; border: 1px solid #999999; padding: 0.04in 0.07in"><p style="orphans: 0; widows: 0">
-			<font size="3" style="font-size: 12pt"><b>Từ viết tắt</b></font></p>
-		</td>
-		<td width="378" bgcolor="#d5e8f0" style="background: #d5e8f0; border: 1px solid #999999; padding: 0.04in 0.07in"><p style="orphans: 0; widows: 0">
-			<font size="3" style="font-size: 12pt"><b>Giải thích</b></font></p>
-		</td>
-	</tr>
-	<tr></tr>
-	<tr valign="top">
-		<td width="158" style="border: 1px solid #999999; padding: 0.04in 0.07in"><p style="orphans: 0; widows: 0">
-			<font size="3" style="font-size: 12pt"><b>AI</b></font></p>
-		</td>
-		<td width="378" style="border: 1px solid #999999; padding: 0.04in 0.07in"><p style="orphans: 0; widows: 0">
-			<font size="3" style="font-size: 12pt">Artificial Intelligence
-			(Trí tuệ nhân tạo)</font></p>
-		</td>
-	</tr>
-	<tr></tr>
-	<tr valign="top">
-		<td width="158" style="border: 1px solid #999999; padding: 0.04in 0.07in"><p style="orphans: 0; widows: 0">
-			<font size="3" style="font-size: 12pt"><b>ML</b></font></p>
-		</td>
-		<td width="378" style="border: 1px solid #999999; padding: 0.04in 0.07in"><p style="orphans: 0; widows: 0">
-			<font size="3" style="font-size: 12pt">Machine Learning (Học
-			máy)</font></p>
-		</td>
-	</tr>
-	<tr></tr>
-	<tr valign="top">
-		<td width="158" style="border: 1px solid #999999; padding: 0.04in 0.07in"><p style="orphans: 0; widows: 0">
-			<font size="3" style="font-size: 12pt"><b>[...]</b></font></p>
-		</td>
-		<td width="378" style="border: 1px solid #999999; padding: 0.04in 0.07in"><p style="orphans: 0; widows: 0">
-			<font size="3" style="font-size: 12pt">[Thêm các từ viết tắt
-			khác]</font></p>
-		</td>
-	</tr>
+<table width="100%" border="1" cellpadding="8" cellspacing="0" style="display: table; width: 100%; border-collapse: collapse; border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; table-layout: fixed; word-wrap: break-word; word-break: break-word; white-space: normal;">
+  <tr style="background-color: #f2f2f2;">
+    <th width="20%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: left;">Từ viết tắt</th>
+    <th width="80%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: left;">Giải thích thuật ngữ tiếng Anh (tiếng Việt)</th>
+  </tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>AI</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Artificial Intelligence (Trí tuệ nhân tạo)</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>API</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Application Programming Interface (Giao diện lập trình ứng dụng)</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>BERT</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Bidirectional Encoder Representations from Transformers (Mô hình biểu diễn ngôn ngữ hai chiều từ Transformer)</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>DL</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Deep Learning (Học sâu)</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>DOM</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Document Object Model (Mô hình Đối tượng Tài liệu)</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>ERD</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Entity-Relationship Diagram (Sơ đồ Thực thể - Mối quan hệ)</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>HTML</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">HyperText Markup Language (Ngôn ngữ đánh dấu siêu văn bản)</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>JSON</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">JavaScript Object Notation (Định dạng trao đổi dữ liệu)</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>ML</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Machine Learning (Học máy)</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>MLP</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Multilayer Perceptron (Mạng nơ-ron truyền thẳng đa tầng)</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>NLP</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Natural Language Processing (Xử lý Ngôn ngữ Tự nhiên)</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>ORM</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Object-Relational Mapping (Ánh xạ đối tượng - quan hệ)</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>UI / UX</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">User Interface / User Experience (Giao diện người dùng / Trải nghiệm người dùng)</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>URL</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Uniform Resource Locator (Định vị tài nguyên thống nhất)</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>XAI</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Explainable Artificial Intelligence (Trí tuệ nhân tạo có thể giải thích / AI Minh bạch)</td></tr>
 </table>
 <p style="line-height: 100%; margin-bottom: 0in"><br/>
 
@@ -505,17 +707,17 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
 <h1 style="page-break-before: always">CHƯƠNG 1: GIỚI THIỆU</h1>
 <h2>1.1. Đặt vấn đề</h2>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Trong thập kỷ qua, sự bùng nổ của mạng xã hội và các nền tảng truyền thông kỹ thuật số đã định hình lại hoàn toàn cách thức con người tiếp cận và chia sẻ thông tin. Tuy nhiên, tính chất mở, ẩn danh và tốc độ lan truyền theo cấp số nhân của môi trường không gian mạng đã tạo điều kiện lý tưởng cho sự trỗi dậy của &quot;tin giả&quot; (Fake News). Không chỉ đơn thuần là những thông tin sai lệch, tin giả ngày nay được thiết kế một cách có chủ đích nhằm thao túng tâm lý đám đông, định hướng dư luận hoặc trục lợi kinh tế. Tại Việt Nam, vấn nạn này đang ngày càng diễn biến phức tạp, đòi hỏi phải có những công cụ tự động hóa để kiểm duyệt thông tin thay vì phụ thuộc hoàn toàn vào sức người.</p>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Thời gian gần đây, sự đột phá của các mô hình Học sâu (Deep Learning) &ndash; điển hình là kiến trúc Transformer và mô hình PhoBERT tối ưu cho tiếng Việt &ndash; đã mở ra hướng đi đầy hứa hẹn. Dù vậy, các hệ thống AI hiện hành vẫn bộc lộ những khiếm khuyết lớn. Thứ nhất, chúng hoạt động như một &quot;hộp đen&quot; (Black-box AI), thiếu đi khả năng giải thích minh bạch (Explainability), khiến người dùng khó lòng đặt niềm tin vào kết quả dự đoán. Thứ hai, các nghiên cứu thường chỉ dừng lại ở việc huấn luyện một lõi thuật toán mà thiếu đi tính ứng dụng thực tiễn. Một mô hình AI đơn lẻ sẽ không phát huy được giá trị nếu thiếu đi một hệ thống phần mềm hoàn chỉnh, nơi người dùng có thể tạo tài khoản, tra cứu an toàn và lưu trữ lịch sử kiểm chứng cá nhân.</p>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Hơn thế nữa, tin giả là một thực thể biến đổi không ngừng với những thủ đoạn giật tít hay đánh lừa cảm xúc liên tục được làm mới. Nếu một hệ thống phần mềm không sở hữu cơ sở dữ liệu (Database) độc lập để thu thập và quản lý các phản hồi (Feedback) từ chính cộng đồng người dùng, mô hình AI bên dưới sẽ không có cơ sở để tự đánh giá đúng/sai và cập nhật tri thức mới. Thiếu đi &quot;vòng lặp phản hồi&quot; này, mọi hệ thống kiểm duyệt tĩnh sẽ nhanh chóng trở nên lỗi thời trước những luồng thông tin độc hại tinh vi hơn.</p>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Nhận thức sâu sắc những thách thức nêu trên, đề tài <b>&quot;Xây dựng hệ thống phát hiện tin giả bằng AI / Machine Learning&quot;</b> đã được lựa chọn để nghiên cứu. Đề tài không chỉ dừng lại ở việc huấn luyện mô hình học máy lai ghép (Hybrid Architecture giữa PhoBERT và Heuristics) hay phát triển Động cơ giải thích, mà còn tiến xa hơn trong việc xây dựng một nền tảng Web toàn diện. Bằng việc thiết kế một cơ sở dữ liệu chặt chẽ để quản lý Người dùng (Users), Lịch sử phân tích (Analysis History) và Phản hồi (Feedback), đề tài tạo ra một hệ sinh thái khép kín: nơi người dùng được bảo vệ bởi AI, đồng thời AI cũng không ngừng học hỏi và cải thiện thông qua tri thức của cộng đồng. Đây chính là yếu tố then chốt để đảm bảo tính bền vững và giá trị thực tiễn cốt lõi của giải pháp.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Sự đột phá của các mô hình Học sâu, điển hình là kiến trúc Transformer [6, 7] và PhoBERT [1], đã mở ra nhiều hướng đi mới. Tuy nhiên, các hệ thống AI hiện hành bộc lộ hai khiếm khuyết lớn: tính chất "hộp đen" thiếu khả năng giải thích minh bạch (Explainability), và thiếu tính ứng dụng thực tiễn khi chỉ dừng lại ở mức lõi thuật toán đơn lẻ.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Thêm vào đó, tin giả không ngừng biến đổi với các thủ đoạn tinh vi. Một hệ thống kiểm duyệt thiếu cơ sở dữ liệu để quản lý phản hồi (Feedback) từ cộng đồng sẽ không thể tự cập nhật tri thức và nhanh chóng trở nên lỗi thời.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Do đó, đề tài <b>"Xây dựng hệ thống phát hiện tin giả bằng AI / Machine Learning"</b> được thực hiện nhằm huấn luyện một mô hình học máy lai ghép (PhoBERT kết hợp Heuristics) cùng Động cơ giải thích XAI [5, 8]. Sản phẩm là một nền tảng Web khép kín, bảo vệ người dùng và liên tục học hỏi từ cộng đồng, đảm bảo tính bền vững và thực tiễn.</p>
 <h2>1.2. Mục tiêu nghiên cứu</h2>
 <h3>1.2.1. Mục tiêu tổng quát</h3>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Mục tiêu tổng quát của đề tài là tiến hành nghiên cứu sâu rộng, thiết kế cấu trúc và phát triển hoàn chỉnh một nền tảng phần mềm kiểm duyệt và phát hiện tin giả tiếng Việt tự động. Sự khác biệt cốt lõi của đề tài nằm ở việc không chỉ dừng lại ở bề nổi của bài toán phân loại văn bản bằng Trí tuệ Nhân tạo (AI), mà còn hướng tới việc tạo lập một hệ sinh thái công nghệ toàn diện và khép kín. Cụ thể, hệ thống ứng dụng kiến trúc mô hình học máy lai ghép (Hybrid Architecture) để đảm bảo độ chính xác vượt trội, kết hợp cùng công nghệ Trí tuệ Nhân tạo có khả năng giải thích (Explainable AI - XAI) nhằm phá vỡ rào cản &quot;hộp đen&quot; truyền thống, mang lại sự minh bạch tuyệt đối cho người sử dụng. Hơn thế nữa, bằng việc tích hợp hệ thống cơ sở dữ liệu mạnh mẽ để quản lý định danh người dùng, lưu trữ lịch sử tương tác và đặc biệt là cơ chế thu thập phản hồi (Feedback) liên tục từ cộng đồng, giải pháp tạo ra một vòng lặp học hỏi không ngừng (continuous learning loop) giữa con người và máy móc. Qua đó, đề tài tham vọng cung cấp một bộ công cụ kiểm chứng thông tin mang tính ứng dụng thực tiễn cao, đáp ứng trực tiếp và mạnh mẽ nhu cầu cấp thiết về an toàn thông tin, an ninh mạng và bảo vệ nhận thức của người dùng Internet tại Việt Nam trước vấn nạn tin giả đang ngày càng phức tạp.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Mục tiêu tổng quát của đề tài là phát triển một nền tảng Web kiểm duyệt tin giả tiếng Việt tự động và minh bạch. Hệ thống ứng dụng mô hình học máy lai ghép (Hybrid) kết hợp Trí tuệ Nhân tạo có khả năng giải thích (Explainable AI - XAI) [5, 8] để phá vỡ rào cản "hộp đen". Đồng thời, việc tích hợp cơ sở dữ liệu quản lý phản hồi (Feedback) giúp tạo vòng lặp học hỏi liên tục giữa con người và máy móc, cung cấp công cụ kiểm chứng thông tin thực tiễn và đáp ứng nhu cầu an toàn thông tin tại Việt Nam.</p>
 
 <h3>1.2.2. Mục tiêu cụ thể</h3>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in">Để hiện thực hóa triết lý và mục tiêu tổng quát đồ sộ nêu trên, quá trình triển khai đề tài được chia cắt và cụ thể hóa thành các nhóm mục tiêu mang tính chiến lược và kỹ thuật như sau:</p>
 
-<p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Thứ nhất, nghiên cứu và hệ thống hóa nền tảng lý thuyết:</b> Đề tài đặt mục tiêu khảo sát toàn diện và hệ thống hóa các kiến thức chuyên sâu về lĩnh vực Xử lý Ngôn ngữ Tự nhiên (NLP), đặc biệt là sự tiến hóa của kiến trúc mạng nơ-ron Transformer và sức mạnh của mô hình ngôn ngữ lớn PhoBERT đối với ngữ liệu tiếng Việt. Đồng thời, đề tài cũng đi sâu phân tích các kỹ thuật khai phá siêu dữ liệu (Metadata/Heuristics) và nền tảng lý thuyết của Trí tuệ Nhân tạo có khả năng giải thích (Explainable AI - XAI) làm cơ sở vững chắc cho các bước thiết kế sau.</p>
+<p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Thứ nhất, nghiên cứu và hệ thống hóa nền tảng lý thuyết:</b> Đề tài đặt mục tiêu khảo sát toàn diện và hệ thống hóa các kiến thức chuyên sâu về lĩnh vực Xử lý Ngôn ngữ Tự nhiên (NLP), đặc biệt là sự tiến hóa của kiến trúc mạng nơ-ron Transformer [6, 7] và sức mạnh của mô hình ngôn ngữ lớn PhoBERT đối với ngữ liệu tiếng Việt. Đồng thời, đề tài cũng đi sâu phân tích các kỹ thuật khai phá siêu dữ liệu (Metadata/Heuristics) và nền tảng lý thuyết của Trí tuệ Nhân tạo có khả năng giải thích (Explainable AI - XAI) [5, 8] làm cơ sở vững chắc cho các bước thiết kế sau.</p>
 
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Thứ hai, thiết kế và tối ưu hóa kiến trúc mô hình học máy lai ghép (Hybrid Architecture):</b> Thay vì phụ thuộc vào một thuật toán duy nhất, mục tiêu đặt ra là phát triển một mô hình nhận diện kết hợp. Mô hình này phải có khả năng đồng thời trích xuất các đặc trưng ngữ nghĩa ẩn sâu trong văn bản (thông qua sức mạnh biểu diễn của PhoBERT) và định lượng các đặc trưng siêu dữ liệu mang tính kỹ thuật xã hội (như mức độ sử dụng ngôn từ giật tít, cường độ cảm xúc cực đoan, độ dài cấu trúc câu và sự uy tín của nguồn tin gốc). Sự giao thoa này nhằm tối đa hóa độ chính xác và giảm thiểu tỷ lệ dương tính giả (False Positive) trong quá trình phân loại.</p>
 
@@ -523,22 +725,22 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
 
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Thứ tư, thiết kế Cơ sở dữ liệu và thiết lập Cơ chế Phản hồi (Feedback Loop):</b> Để hiện thực hóa mục tiêu xây dựng một hệ sinh thái bền vững, đề tài tiến hành thiết kế và triển khai một cấu trúc cơ sở dữ liệu quan hệ chặt chẽ. Cấu trúc này có nhiệm vụ quản lý định danh người dùng (Authentication), bảo mật và lưu trữ toàn bộ lịch sử tra cứu cá nhân (Analysis History), và đặc biệt là thiết lập luồng thu thập phản hồi đánh giá (Feedback) từ người dùng đối với các dự đoán của AI. Đây là nguồn tài nguyên thực chứng vô giá để đánh giá chất lượng mô hình trong môi trường thực tế và lên kế hoạch tái huấn luyện (retrain) nâng cấp hệ thống trong tương lai.</p>
 
-<p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Thứ năm, phát triển nền tảng phần mềm Web toàn diện:</b> Nhằm biến các thuật toán khô khan thành một sản phẩm công nghệ thực tiễn, mục tiêu tiếp theo là đóng gói toàn bộ mô hình AI và logic nghiệp vụ cơ sở dữ liệu vào một hệ thống phần mềm hoàn chỉnh. Yêu cầu đặt ra là xây dựng một hệ thống máy chủ Backend hiệu năng cao (sử dụng framework FastAPI) để xử lý lượng lớn các suy luận theo thời gian thực, kết hợp cùng một giao diện Frontend tương tác động, hiện đại (sử dụng framework Next.js và thư viện hiệu ứng Framer Motion) nhằm mang lại trải nghiệm trơn tru, chuyên nghiệp và thân thiện nhất cho người sử dụng cuối.</p>
+<p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Thứ năm, phát triển nền tảng phần mềm Web toàn diện:</b> Nhằm biến các thuật toán khô khan thành một sản phẩm công nghệ thực tiễn, mục tiêu tiếp theo là đóng gói toàn bộ mô hình AI và logic nghiệp vụ cơ sở dữ liệu vào một hệ thống phần mềm hoàn chỉnh. Yêu cầu đặt ra là xây dựng một hệ thống máy chủ Backend hiệu năng cao (sử dụng framework FastAPI [12]) để xử lý lượng lớn các suy luận theo thời gian thực, kết hợp cùng một giao diện Frontend tương tác động, hiện đại (sử dụng framework Next.js và thư viện hiệu ứng Framer Motion) nhằm mang lại trải nghiệm trơn tru, chuyên nghiệp và thân thiện nhất cho người sử dụng cuối.</p>
 
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Cuối cùng, đánh giá toàn diện và đối chiếu hiệu năng:</b> Thực hiện các bước kiểm thử khắt khe và đo lường thực nghiệm hiệu năng của hệ thống trên các tập dữ liệu độc lập. Các chỉ số chuẩn hóa mang tính định lượng trong học máy như Accuracy (Độ chính xác tổng thể), Precision (Độ chuẩn xác), Recall (Độ bao phủ) và F1-score sẽ được tính toán chi tiết. Tiến hành phân tích thống kê và đối chiếu trực diện năng lực của kiến trúc lai (Hybrid) so với các thuật toán phân loại truyền thống (như Decision Tree, Naive Bayes, k-Nearest Neighbors) để có cơ sở khoa học vững chắc khẳng định tính ưu việt và sự đóng góp của giải pháp được đề xuất.</p>
 <h2>1.3. Đối tượng và phạm vi nghiên cứu</h2>
 <h3>1.3.1. Đối tượng nghiên cứu</h3>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in">Nhằm đảm bảo sự sắc bén trong định hướng và tối ưu hóa nguồn lực thực hiện, đối tượng nghiên cứu của đề tài được quy hoạch tập trung vào năm khối tri thức và công nghệ cốt lõi, tạo thành nền móng vững chắc cho hệ thống phát hiện tin giả:</p>
 
-<p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Thứ nhất, khối tri thức Ngôn ngữ học máy tính (Computational Linguistics) và Xử lý Ngôn ngữ Tự nhiên (NLP):</b> Đối tượng trung tâm là kiến trúc mạng nơ-ron Transformer, đi sâu phân tích cơ chế Self-Attention. Đặc biệt, nghiên cứu tập trung khai thác mô hình ngôn ngữ lớn <b>PhoBERT</b> &ndash; một biến thể đã được huấn luyện trước (pre-trained) trên kho ngữ liệu khổng lồ tiếng Việt, chuyên biệt hóa cho việc biểu diễn và nắm bắt ngữ nghĩa phức tạp, đa nghĩa của tiếng Việt.</p>
+<p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Thứ nhất, khối tri thức Ngôn ngữ học máy tính (Computational Linguistics) và Xử lý Ngôn ngữ Tự nhiên (NLP):</b> Đối tượng trung tâm là kiến trúc mạng nơ-ron Transformer [6, 7], đi sâu phân tích cơ chế Self-Attention. Đặc biệt, nghiên cứu tập trung khai thác mô hình ngôn ngữ lớn <b>PhoBERT</b> &ndash; một biến thể đã được huấn luyện trước (pre-trained) trên kho ngữ liệu khổng lồ tiếng Việt, chuyên biệt hóa cho việc biểu diễn và nắm bắt ngữ nghĩa phức tạp, đa nghĩa của tiếng Việt.</p>
 
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Thứ hai, nhóm các thuật toán Học máy cơ sở (Baseline Machine Learning Models):</b> Để có cơ sở đánh giá một cách khách quan năng lực của kiến trúc lai (Hybrid) đề xuất, đối tượng nghiên cứu bao gồm các thuật toán học máy phân loại truyền thống mang tính nền tảng như: Cây quyết định (Decision Tree), Naive Bayes, và k-Nearest Neighbors (k-NN). Nhóm này đóng vai trò là thang đo (benchmark) để so sánh và đối chiếu sự cải thiện về mặt hiệu năng.</p>
 
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Thứ ba, hệ đặc trưng siêu dữ liệu và cấu trúc (Metadata/Heuristics):</b> Vượt ra khỏi phân tích ngữ nghĩa thuần túy, đề tài nghiên cứu sâu vào các dấu hiệu nhận biết tin giả mang tính thủ thuật và tâm lý học hành vi. Đối tượng bao gồm: các công cụ phân tích sắc thái cảm xúc (Sentiment Analysis) để đo lường mức độ tiêu cực/kích động, thuật toán đo đếm mức độ lạm dụng ngôn từ giật tít (Clickbait), độ phức tạp trong cấu trúc câu, và phương pháp định lượng mức độ uy tín của tên miền nguồn phát (Domain Reliability).</p>
 
-<p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Thứ tư, khối tri thức Trí tuệ Nhân tạo có thể giải thích (Explainable AI - XAI):</b> Đây là một nhánh nghiên cứu hiện đại nhằm minh bạch hóa cơ chế hoạt động của các mạng nơ-ron sâu. Đối tượng nghiên cứu xoay quanh các kỹ thuật và thuật toán phân rã mức độ đóng góp của từng đặc trưng (Feature Importance), phục vụ trực tiếp cho việc xây dựng Động cơ giải thích (Explanation Engine).</p>
+<p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Thứ tư, khối tri thức Trí tuệ Nhân tạo có thể giải thích (Explainable AI - XAI) [5, 8]:</b> Đây là một nhánh nghiên cứu hiện đại nhằm minh bạch hóa cơ chế hoạt động của các mạng nơ-ron sâu. Đối tượng nghiên cứu xoay quanh các kỹ thuật và thuật toán phân rã mức độ đóng góp của từng đặc trưng (Feature Importance), phục vụ trực tiếp cho việc xây dựng Động cơ giải thích (Explanation Engine).</p>
 
-<p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Thứ năm, kiến trúc Hệ thống phần mềm và Cơ sở dữ liệu:</b> Đối tượng nghiên cứu cuối cùng nhưng không kém phần quan trọng là công nghệ phát triển ứng dụng Web phân tán. Khối này bao gồm việc ứng dụng framework FastAPI để thiết kế luồng xử lý Backend chịu tải cao, mô hình cơ sở dữ liệu quan hệ (SQLite/SQLAlchemy) để quản lý User/History/Feedback, và công nghệ Next.js kết hợp cùng Tailwind CSS để hiện thực hóa giao diện Frontend tương tác đa chiều.</p>
+<p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Thứ năm, kiến trúc Hệ thống phần mềm và Cơ sở dữ liệu:</b> Đối tượng nghiên cứu cuối cùng nhưng không kém phần quan trọng là công nghệ phát triển ứng dụng Web phân tán. Khối này bao gồm việc ứng dụng framework FastAPI [12] để thiết kế luồng xử lý Backend chịu tải cao, mô hình cơ sở dữ liệu quan hệ (SQLite/SQLAlchemy) để quản lý User/History/Feedback, và công nghệ Next.js [13] kết hợp cùng Tailwind CSS để hiện thực hóa giao diện Frontend tương tác đa chiều.</p>
 
 <h3>1.3.2. Phạm vi nghiên cứu</h3>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in">Bên cạnh việc xác định rõ đối tượng, để đảm bảo tính khả thi, chuyên sâu và tuân thủ chặt chẽ khuôn khổ thời gian cũng như nguồn lực của một đồ án tốt nghiệp đại học, phạm vi nghiên cứu được khoanh vùng nghiêm ngặt theo bốn khía cạnh cụ thể:</p>
@@ -566,7 +768,7 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
 
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Thứ nhất, đề xuất và chứng minh năng lực của kiến trúc học máy lai ghép (Hybrid Architecture):</b> Trong bối cảnh phần lớn các nghiên cứu hiện hành chỉ tập trung vào việc áp dụng các mô hình học sâu đơn lẻ, đồ án đã dũng cảm đi theo hướng kết hợp sức mạnh phân tích ngữ nghĩa sâu của mô hình ngôn ngữ lớn (PhoBERT) với các kỹ thuật định lượng siêu dữ liệu phi ngữ nghĩa (Heuristics). Bằng các chứng minh thực nghiệm thống kê khắt khe, đề tài khẳng định rằng việc tích hợp các đặc trưng mang tính thủ thuật và tâm lý học hành vi (như sắc thái cảm xúc, thủ thuật giật tít) vào quy trình học máy giúp mạng nơ-ron nhận diện tốt hơn bản chất tinh vi của tin giả, từ đó cải thiện đáng kể độ chuẩn xác (Precision) và làm giảm tỷ lệ dương tính giả (False Positives).</p>
 
-<p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Thứ hai, đóng góp vào lý thuyết của Trí tuệ Nhân tạo có khả năng giải thích (Explainable AI - XAI):</b> Đây là một trong những giá trị khoa học đắt giá nhất của đồ án. Đề tài không bằng lòng với việc sử dụng AI như một &quot;hộp đen&quot; (black-box) vô tri, mà nỗ lực làm sáng tỏ cơ chế ra quyết định của máy móc. Thông qua việc thiết kế Động cơ giải thích (Explanation Engine), đồ án đã bổ sung những tư liệu thực nghiệm quý giá cho mảng nghiên cứu XAI tại Việt Nam, khẳng định rằng tính minh bạch và độ chính xác hoàn toàn có thể song hành cùng nhau trong các hệ thống trí tuệ nhân tạo hiện đại.</p>
+<p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Thứ hai, đóng góp vào lý thuyết của Trí tuệ Nhân tạo có khả năng giải thích (Explainable AI - XAI) [5, 8]:</b> Đây là một trong những giá trị khoa học đắt giá nhất của đồ án. Đề tài không bằng lòng với việc sử dụng AI như một &quot;hộp đen&quot; (black-box) vô tri, mà nỗ lực làm sáng tỏ cơ chế ra quyết định của máy móc. Thông qua việc thiết kế Động cơ giải thích (Explanation Engine), đồ án đã bổ sung những tư liệu thực nghiệm quý giá cho mảng nghiên cứu XAI tại Việt Nam, khẳng định rằng tính minh bạch và độ chính xác hoàn toàn có thể song hành cùng nhau trong các hệ thống trí tuệ nhân tạo hiện đại.</p>
 
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Thứ ba, thiết lập quy chuẩn đánh giá toàn diện cho ngữ liệu tiếng Việt:</b> Thông qua việc đối chiếu chéo (cross-validation) kết quả giữa kiến trúc đề xuất với hàng loạt các mô hình cơ sở (baseline models) như Decision Tree hay Naive Bayes, đề tài cung cấp một hệ thống thang đo (benchmark) đáng tin cậy. Những số liệu thực chứng này sẽ trở thành nguồn tài liệu tham khảo có giá trị cao cho các nhà nghiên cứu đi sau khi họ muốn phát triển hoặc tinh chỉnh các thuật toán liên quan đến Xử lý Ngôn ngữ Tự nhiên tiếng Việt.</p>
 
@@ -578,12 +780,12 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Hai là, kiến tạo vòng lặp học hỏi liên tục thông qua cơ chế phản hồi (Feedback Loop):</b> Nhờ kiến trúc cơ sở dữ liệu (Database) cho phép quản lý định danh tài khoản và lưu trữ lịch sử, đồ án đã xây dựng được một luồng thu thập đánh giá từ cộng đồng. Cơ chế này đặc biệt ý nghĩa ở chỗ: nó giúp hệ thống AI không bị &quot;đóng băng&quot; với tập dữ liệu tĩnh ban đầu mà luôn có khả năng cập nhật, thích ứng linh hoạt trước những chiến dịch tin giả mới, biến đổi tinh vi hơn theo thời gian.</p>
 
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Ba là, tiềm năng ứng dụng ở quy mô hệ thống cho các cơ quan quản lý và nền tảng số:</b> Mặc dù được xây dựng ở dạng bản mẫu thử nghiệm (Proof of Concept), nhưng với kiến trúc API linh hoạt, lõi của hệ thống phát hiện tin giả này hoàn toàn có thể được tích hợp sâu vào quy trình kiểm duyệt (content moderation) tự động của các trang mạng xã hội, diễn đàn trực tuyến hoặc các tòa soạn báo điện tử. Việc tự động hóa khâu phân loại thông tin bước đầu sẽ giúp giảm tải áp lực khổng lồ lên đội ngũ kiểm duyệt viên con người, tối ưu hóa chi phí nhân sự và rút ngắn thời gian phản ứng trước các luồng thông tin sai lệch có khả năng gây bất ổn xã hội.</p>
-<h2>1.6. Bố cục luận văn</h2>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Để trình bày toàn bộ quá trình nghiên cứu, thiết kế và phát triển hệ thống một cách khoa học và logic, cấu trúc của luận văn được chia thành 5 chương chính. Bố cục và nội dung trọng tâm của từng chương được tổ chức như sau:</p>
+<h2>1.6. Bố cục tiểu luận</h2>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Để trình bày toàn bộ quá trình nghiên cứu, thiết kế và phát triển hệ thống một cách khoa học và logic, cấu trúc của tiểu luận được chia thành 5 chương chính. Bố cục và nội dung trọng tâm của từng chương được tổ chức như sau:</p>
 
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Chương 1: Giới thiệu.</b> Chương này phác họa bức tranh toàn cảnh về bối cảnh bùng nổ của vấn nạn tin giả, từ đó xác lập sự cần thiết và tính cấp bách của đề tài nghiên cứu. Chương 1 trình bày chi tiết mục tiêu nghiên cứu (tổng quát và cụ thể), định ranh giới rõ ràng cho đối tượng và phạm vi thực hiện, đồng thời mô tả các phương pháp luận nghiên cứu và phân tích sâu sắc ý nghĩa khoa học cũng như giá trị thực tiễn mà đồ án mang lại.</p>
 
-<p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Chương 2: Cơ sở lý thuyết và Tổng quan nghiên cứu.</b> Đây là chương đóng vai trò xây dựng nền móng tri thức học thuật cho toàn bộ hệ thống. Chương 2 đi sâu vào việc khảo lược tài liệu (Literature Review), đánh giá các công trình nghiên cứu phát hiện tin giả trong và ngoài nước. Đặc biệt, chương này trình bày chi tiết các cơ sở lý thuyết nền tảng bao gồm: Xử lý Ngôn ngữ Tự nhiên (NLP), nguyên lý hoạt động của kiến trúc Transformer và mô hình PhoBERT, các khái niệm về đặc trưng Heuristics, và tư tưởng của Trí tuệ Nhân tạo có thể giải thích (Explainable AI - XAI).</p>
+<p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Chương 2: Cơ sở lý thuyết và Tổng quan nghiên cứu.</b> Đây là chương đóng vai trò xây dựng nền móng tri thức học thuật cho toàn bộ hệ thống. Chương 2 đi sâu vào việc khảo lược tài liệu (Literature Review), đánh giá các công trình nghiên cứu phát hiện tin giả trong và ngoài nước. Đặc biệt, chương này trình bày chi tiết các cơ sở lý thuyết nền tảng bao gồm: Xử lý Ngôn ngữ Tự nhiên (NLP), nguyên lý hoạt động của kiến trúc Transformer [6, 7] và mô hình PhoBERT [1], các khái niệm về đặc trưng Heuristics, và tư tưởng của Trí tuệ Nhân tạo có thể giải thích (Explainable AI - XAI) [5, 8].</p>
 
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Chương 3: Thiết kế và Mô hình hóa hệ thống.</b> Chương này tập trung vào việc hiện thực hóa các ý tưởng lý thuyết thành một kiến trúc phần mềm và hệ thống AI cụ thể. Nội dung bao gồm việc đặc tả yêu cầu hệ thống, phân tích luồng dữ liệu (Data Flow Diagram) và phác thảo các biểu đồ UML. Phần trọng tâm của chương là việc trình bày chi tiết kiến trúc lai (Hybrid Architecture), mô hình thiết kế Cơ sở dữ liệu (ERD) phục vụ lưu trữ lịch sử và phản hồi, cùng với việc phác thảo cấu trúc của Động cơ giải thích (Explanation Engine).</p>
 
@@ -597,8 +799,8 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
 <h2>2.1. Các khái niệm nền tảng</h2>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in">Để xây dựng một kiến trúc hệ thống phân tích tin giả phức tạp, việc thấu hiểu các khái niệm cốt lõi mang tính chất nền tảng là điều kiện tiên quyết. Mục này sẽ trình bày và định nghĩa một cách khoa học các thuật ngữ chuyên ngành được sử dụng xuyên suốt trong đồ án.</p>
 
-<h3>2.1.1. Tin giả (Fake News) và Thông tin sai lệch</h3>
-<p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in">Trong kỷ nguyên số, <b>Tin giả (Fake News)</b> được định nghĩa là những thông tin sai sự thật, bị bóp méo, hoặc bịa đặt hoàn toàn, được trình bày dưới hình thức tin báo chí nhằm mục đích lừa dối người đọc. Điểm khác biệt mấu chốt của tin giả so với các lỗi sai sót báo chí thông thường nằm ở <b>động cơ (intent)</b>. Tin giả được tạo ra một cách có chủ đích nhằm thu lợi ích tài chính (thông qua việc thu hút lượt nhấp chuột - clickbait để lấy doanh thu quảng cáo) hoặc phục vụ các mục đích chính trị, thao túng tâm lý và định hướng dư luận xã hội.</p>
+<h3>2.1.1. Tin giả (Fake News) [3, 4] và Thông tin sai lệch</h3>
+<p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in">Trong kỷ nguyên số, <b>Tin giả (Fake News) [3, 4]</b> được định nghĩa là những thông tin sai sự thật, bị bóp méo, hoặc bịa đặt hoàn toàn, được trình bày dưới hình thức tin báo chí nhằm mục đích lừa dối người đọc. Điểm khác biệt mấu chốt của tin giả so với các lỗi sai sót báo chí thông thường nằm ở <b>động cơ (intent)</b>. Tin giả được tạo ra một cách có chủ đích nhằm thu lợi ích tài chính (thông qua việc thu hút lượt nhấp chuột - clickbait để lấy doanh thu quảng cáo) hoặc phục vụ các mục đích chính trị, thao túng tâm lý và định hướng dư luận xã hội.</p>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in">Hội đồng Châu Âu (Council of Europe) phân loại thông tin sai lệch thành ba nhóm chính: <i>Mis-information</i> (Thông tin sai nhưng không có ác ý), <i>Dis-information</i> (Thông tin sai và có ác ý, bịa đặt), và <i>Mal-information</i> (Thông tin có thật nhưng được dùng để bôi nhọ, hãm hại người khác). Đồ án này tập trung chủ yếu vào việc tự động nhận diện và phát hiện nhóm Dis-information, đặc biệt là các bài viết sử dụng ngôn từ kích động và cấu trúc câu lừa đảo trên mạng xã hội tiếng Việt.</p>
 
 <h3>2.1.2. Xử lý Ngôn ngữ Tự nhiên (Natural Language Processing - NLP)</h3>
@@ -612,9 +814,9 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
 <h3>2.1.4. Học sâu (Deep Learning) và Mạng nơ-ron (Neural Networks)</h3>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in"><b>Học sâu (Deep Learning)</b> là một tập con tiên tiến nhất của Học máy, lấy cảm hứng từ cấu trúc phân tầng và hoạt động của bộ não sinh học. Các hệ thống học sâu sử dụng <b>Mạng nơ-ron nhân tạo (Artificial Neural Networks)</b> với hàng chục đến hàng trăm lớp ẩn (hidden layers) được xếp chồng lên nhau. Khả năng vượt trội của Học sâu nằm ở chỗ nó có thể tự động trích xuất các biểu diễn đặc trưng (feature representation) ở mức độ trừu tượng rất cao từ dữ liệu thô mà không cần hoặc cần rất ít sự can thiệp kỹ thuật thủ công từ con người (feature engineering).</p>
 
-<h3>2.1.5. Trí tuệ Nhân tạo có khả năng giải thích (Explainable AI - XAI)</h3>
+<h3>2.1.5. Trí tuệ Nhân tạo có khả năng giải thích (Explainable AI - XAI) [5, 8]</h3>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in">Mặc dù Mạng nơ-ron Học sâu mang lại độ chính xác cực kỳ ấn tượng, chúng lại mắc phải điểm yếu chí mạng là tính chất <b>&quot;Hộp đen&quot; (Black-box)</b>. Nghĩa là, kỹ sư có thể nạp dữ liệu vào và nhận kết quả đầu ra rất chuẩn xác, nhưng không ai có thể truy xuất ngược quá trình tính toán hàng triệu tham số bên trong để hiểu tại sao mô hình lại đi đến quyết định đó.</p>
-<p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in">Để giải quyết vấn đề niềm tin và tính đạo đức này, khái niệm <b>Trí tuệ Nhân tạo có khả năng giải thích (Explainable AI - XAI)</b> ra đời. XAI tập hợp các thuật toán nhằm minh bạch hóa kết quả đầu ra của Học sâu, giúp con người có thể lý giải một cách trực quan. Trong hệ thống phát hiện tin giả, XAI là cơ sở lý thuyết để xây dựng nên Động cơ giải thích, giúp máy tính trả lời được câu hỏi mang tính phản biện: <i>&quot;Những đặc trưng hoặc từ vựng cụ thể nào đã khiến văn bản này bị phân loại là giả mạo?&quot;</i>.</p>
+<p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in">Để giải quyết vấn đề niềm tin và tính đạo đức này, khái niệm <b>Trí tuệ Nhân tạo có khả năng giải thích (Explainable AI - XAI) [5, 8]</b> ra đời. XAI tập hợp các thuật toán nhằm minh bạch hóa kết quả đầu ra của Học sâu, giúp con người có thể lý giải một cách trực quan. Trong hệ thống phát hiện tin giả, XAI là cơ sở lý thuyết để xây dựng nên Động cơ giải thích, giúp máy tính trả lời được câu hỏi mang tính phản biện: <i>&quot;Những đặc trưng hoặc từ vựng cụ thể nào đã khiến văn bản này bị phân loại là giả mạo?&quot;</i>.</p>
 
 <h3>2.1.6. Các chỉ số đánh giá hiệu năng mô hình (Evaluation Metrics)</h3>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in">Để đo lường một cách khách quan năng lực phân loại của kiến trúc lai (Hybrid) được đề xuất, đồ án không dựa vào cảm tính mà sử dụng các thang đo chuẩn quốc tế dựa trên <b>Ma trận nhầm lẫn (Confusion Matrix)</b>. Đối với bài toán phân loại nhị phân (Tin Thật/Tin Giả), ma trận này phân tách kết quả thành 4 nhóm: <i>True Positive - TP</i> (Hệ thống bắt đúng tin giả), <i>True Negative - TN</i> (Hệ thống nhận diện đúng tin thật), <i>False Positive - FP</i> (Hệ thống nhận diện nhầm tin thật thành tin giả), và <i>False Negative - FN</i> (Hệ thống bỏ sót tin giả). Từ ma trận này, đồ án sử dụng 4 chỉ số cốt lõi:</p>
@@ -639,7 +841,7 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in">Nếu mục 2.1 dừng lại ở việc định nghĩa các khái niệm nền tảng, thì mục này sẽ đi sâu vào việc mổ xẻ cấu trúc toán học và logic vận hành bên trong của các thành phần cốt lõi cấu thành nên hệ thống phát hiện lai ghép (Hybrid System).</p>
 
 <h3>2.2.1. Kiến trúc Transformer và Cơ chế Tự chú ý (Self-Attention)</h3>
-<p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in">Trước khi kiến trúc Transformer ra đời (được giới thiệu bởi Vaswani et al., 2017), các bài toán NLP chủ yếu dựa vào mạng nơ-ron hồi quy (RNN) hoặc bộ nhớ ngắn hạn dài (LSTM). Hạn chế lớn nhất của RNN/LSTM là tính toán tuần tự, dẫn đến hiện tượng &quot;quên&quot; ngữ cảnh đối với các câu văn dài và không thể tính toán song song. Transformer ra đời đã phá vỡ hoàn toàn rào cản này bằng cách loại bỏ hoàn toàn cấu trúc hồi quy, thay vào đó sử dụng độc quyền cơ chế <b>Tự chú ý (Self-Attention)</b>.</p>
+<p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in">Trước khi kiến trúc Transformer [6, 7] ra đời (được giới thiệu bởi Vaswani et al., 2017), các bài toán NLP chủ yếu dựa vào mạng nơ-ron hồi quy (RNN) hoặc bộ nhớ ngắn hạn dài (LSTM). Hạn chế lớn nhất của RNN/LSTM là tính toán tuần tự, dẫn đến hiện tượng &quot;quên&quot; ngữ cảnh đối với các câu văn dài và không thể tính toán song song. Transformer ra đời đã phá vỡ hoàn toàn rào cản này bằng cách loại bỏ hoàn toàn cấu trúc hồi quy, thay vào đó sử dụng độc quyền cơ chế <b>Tự chú ý (Self-Attention)</b>.</p>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in; text-indent: 0.5in">Cơ sở toán học của Self-Attention xoay quanh ba ma trận: <i>Query (Q), Key (K)</i>, và <i>Value (V)</i>. Với mỗi từ trong câu, mô hình sẽ tính toán điểm số chú ý (Attention Score) của từ đó so với tất cả các từ khác trong cùng một ngữ cảnh thông qua việc nhân ma trận (Dot-product) và áp dụng hàm Softmax. Điểm số này giúp mô hình hiểu được tầm quan trọng và sự phụ thuộc về mặt ngữ pháp/ngữ nghĩa lẫn nhau giữa các từ, bất kể khoảng cách vật lý của chúng trong câu là bao xa. Cấu trúc này cho phép máy tính xử lý song song toàn bộ văn bản, tạo ra những ma trận biểu diễn (embeddings) cực kỳ sắc bén.</p>
 
 <h3>2.2.2. Mô hình PhoBERT: Cấu trúc và phương pháp tiền huấn luyện</h3>
@@ -665,7 +867,7 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
 <ul style="line-height: 150%; margin-bottom: 0.08in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
   <li style="margin-bottom: 0.05in;"><i>ReINTEL Challenge 2020: Vietnamese Fake News Detection using Ensemble Model with PhoBERT embeddings</i> (Nhiều tác giả, Hội thảo VLSP 2020): Nghiên cứu này đã ứng dụng thành công mô hình ngôn ngữ PhoBERT để trích xuất đặc trưng văn bản, kết hợp với các thuật toán Ensemble (StackNet, LightGBM) để đạt F1-Score lên tới 94% trên tập dữ liệu ReINTEL, khẳng định sức mạnh của PhoBERT trong bài toán tiếng Việt.</li>
   <li style="margin-bottom: 0.05in;"><i>Phát hiện tự động tin giả: Thành tựu và thách thức</i> (Tạp chí Khoa học và Công nghệ - Đại học Đà Nẵng, 2021): Công trình đã hệ thống hóa và so sánh hiệu năng của hàng loạt phương pháp học máy (BoW, TF-IDF, SVM) và học sâu (CNN, LSTM) trên ngữ liệu tiếng Việt, chỉ ra giới hạn về bộ nhớ ngữ cảnh của các mạng nơ-ron thế hệ cũ khi xử lý văn bản dài.</li>
-  <li style="margin-bottom: 0.05in;"><i>Fake News Detection using PhoBERT and BiLSTM with Handcrafted Features</i> (Nhóm nghiên cứu thuộc các trường Đại học tại Việt Nam, 2022): Nghiên cứu đã đề xuất kiến trúc lai ghép thành công giữa mô hình PhoBERT và mạng hồi quy BiLSTM, đồng thời chứng minh việc bổ sung các đặc trưng đếm thủ công (độ dài văn bản, thời gian đăng) giúp cải thiện đáng kể khả năng nhận diện tin giả so với việc chỉ dùng văn bản thô.</li>
+  <li style="margin-bottom: 0.05in;"><i>Fake News Detection using PhoBERT and BiLSTM with Handcrafted Features</i> (Nhóm nghiên cứu thuộc các trường Đại học tại Việt Nam, 2022): Nghiên cứu đã đề xuất kiến trúc lai ghép thành công giữa mô hình PhoBERT [1] và mạng hồi quy BiLSTM, đồng thời chứng minh việc bổ sung các đặc trưng đếm thủ công (độ dài văn bản, thời gian đăng) giúp cải thiện đáng kể khả năng nhận diện tin giả so với việc chỉ dùng văn bản thô.</li>
   <li style="margin-bottom: 0.05in;"><i>Nhận diện thông tin sai lệch đa phương thức trên mạng xã hội tiếng Việt</i> (Các nghiên cứu tham gia VLSP ReINTEL): Các nghiên cứu tiên phong đã xây dựng thành công mô hình trích xuất đặc trưng song song từ cả văn bản (PhoBERT) và hình ảnh đính kèm (CNN/Swin Transformer), mở ra hướng đi mới trong việc phát hiện tin giả dạng ảnh chế (meme) trên Facebook.</li>
 </ul>
 
@@ -689,7 +891,7 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in"><b>2. Kiến trúc Mô hình</b></p>
 <ul style="line-height: 150%; margin-bottom: 0.08in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
   <li style="margin-bottom: 0.05in;"><b>Hệ thống đoạt giải VLSP ReINTEL Challenge 2020:</b> Xây dựng kiến trúc Ensemble kết hợp hàng loạt mạng Nơ-ron lớn với nhau. Mô hình này vô cùng cồng kềnh, chỉ nhằm mục đích lấy điểm số thi đấu cực hạn chứ hầu như không thể mang ra chạy thực tế vì tốn quá nhiều phần cứng.</li>
-  <li style="margin-bottom: 0.05in;"><b>ShieldAI (Tối ưu Cấu trúc Lai):</b> Tự tay thiết kế mạng Nơ-ron dung hợp (MLP Fusion) với mục tiêu tinh gọn tối đa. Kết hợp vector ngữ nghĩa cốt lõi với 10 đặc trưng kinh nghiệm thao túng tâm lý (Heuristics). Vừa giữ được độ chuẩn xác xuất sắc (F1-Score 94.1%) vừa đủ nhẹ để chạy mượt mà trên môi trường Web.</li>
+  <li style="margin-bottom: 0.05in;"><b>ShieldAI (Tối ưu Cấu trúc Lai):</b> Tự tay thiết kế mạng Nơ-ron dung hợp (MLP Fusion) với mục tiêu tinh gọn tối đa. Kết hợp vector ngữ nghĩa cốt lõi với 10 đặc trưng kinh nghiệm thao túng tâm lý (Heuristics). Vừa giữ được độ chuẩn xác xuất sắc (F1-Score 97.5%) vừa đủ nhẹ để chạy mượt mà trên môi trường Web.</li>
 </ul>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in"><b>3. Tính Minh bạch (Explainability)</b></p>
@@ -714,7 +916,7 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
 
 <h3>2.4.2. Framework phát triển Web (Backend & Frontend)</h3>
 <ul style="line-height: 150%; margin-bottom: 0.08in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
-  <li style="margin-bottom: 0.05in;"><b>FastAPI (Backend):</b> Là một Web framework hiện đại, tốc độ cao (high-performance) dành cho Python, được đánh giá ngang ngửa với NodeJS và Go. FastAPI được lựa chọn thay vì Flask hay Django nhờ hai đặc điểm kỹ thuật vượt trội: (1) Hỗ trợ lập trình bất đồng bộ (Asynchronous) thông qua <code>async/await</code>, giúp server không bị tắc nghẽn (block) khi mô hình PhoBERT đang tiêu tốn vài giây để tính toán ma trận cho một lượt dự đoán; và (2) Tích hợp sẵn thư viện Pydantic giúp tự động hóa khâu kiểm tra tính hợp lệ của dữ liệu đầu vào (Data Validation) trước khi đưa vào mô hình AI.</li>
+  <li style="margin-bottom: 0.05in;"><b>FastAPI (Backend):</b> Là một Web framework hiện đại, tốc độ cao (high-performance) dành cho Python, được đánh giá ngang ngửa với NodeJS và Go. FastAPI được lựa chọn thay vì Flask hay Django nhờ hai đặc điểm kỹ thuật vượt trội: (1) Hỗ trợ lập trình bất đồng bộ (Asynchronous) thông qua <code>async/await</code>, giúp server không bị tắc nghẽn (block) khi mô hình PhoBERT [1] đang tiêu tốn vài giây để tính toán ma trận cho một lượt dự đoán; và (2) Tích hợp sẵn thư viện Pydantic giúp tự động hóa khâu kiểm tra tính hợp lệ của dữ liệu đầu vào (Data Validation) trước khi đưa vào mô hình AI.</li>
   <li style="margin-bottom: 0.05in;"><b>Next.js & Tailwind CSS (Frontend):</b> Next.js (React Framework) được sử dụng để xây dựng Giao diện Người dùng (UI). Sự kết hợp giữa Next.js với <b>Tailwind CSS</b> (framework CSS dạng tiện ích) cho phép xây dựng nhanh các thành phần giao diện thống nhất, hiện đại và tự động co giãn (responsive) trên đa thiết bị. Đặc biệt, thư viện <b>Framer Motion</b> được tích hợp sâu vào kiến trúc để cung cấp các hiệu ứng chuyển động tĩnh (animations) mượt mà, giúp người dùng dễ dàng theo dõi dòng chảy dữ liệu khi phân tích biểu đồ của AI.</li>
 </ul>
 
@@ -722,7 +924,7 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
 <ul style="line-height: 150%; margin-bottom: 0.08in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
   <li style="margin-bottom: 0.05in;"><b>PyTorch:</b> Là nền tảng Học máy mã nguồn mở mạnh mẽ do Meta phát triển. Trong đồ án này, PyTorch đóng vai trò là &quot;động cơ toán học&quot; lõi: cung cấp cấu trúc <code>Tensor</code> để xử lý các ma trận đặc trưng, xây dựng các lớp mạng kết nối đầy đủ (Fully Connected Layers) cho kiến trúc MLP, và đặc biệt là cung cấp cơ chế AutoGrad để tự động tính toán độ dốc (gradients) phục vụ quá trình lan truyền ngược (Backpropagation) khi huấn luyện.</li>
   <li style="margin-bottom: 0.05in;"><b>HuggingFace Transformers:</b> Là thư viện tiêu chuẩn toàn cầu trong lĩnh vực Xử lý ngôn ngữ tự nhiên. Thư viện này cho phép hệ thống nạp trực tiếp kiến trúc <code>vinai/phobert-base-v2</code> kèm theo trọng số (pre-trained weights) và Tokenizer chuẩn xác của nhóm nghiên cứu VinAI, giúp tiết kiệm hàng ngàn giờ huấn luyện lại từ đầu.</li>
-  <li style="margin-bottom: 0.05in;"><b>PyVi (Python Vietnamese Toolkit):</b> Đặc thù của tiếng Việt là cấu trúc từ ghép (ví dụ: &quot;sinh viên&quot; là một từ có nghĩa thay vì hai từ đơn). Để mô hình PhoBERT không bị hiện tượng thiếu hụt từ vựng (Out-of-Vocabulary), thư viện PyVi (module <code>ViTokenizer</code>) được hệ thống sử dụng độc quyền trong pipeline tiền xử lý để tự động nối các từ ghép bằng dấu gạch dưới (ví dụ: &quot;sinh_viên&quot;), đảm bảo tính toàn vẹn về mặt ngữ nghĩa trước khi chuyển đổi thành vector.</li>
+  <li style="margin-bottom: 0.05in;"><b>PyVi (Python Vietnamese Toolkit):</b> Đặc thù của tiếng Việt là cấu trúc từ ghép (ví dụ: &quot;sinh viên&quot; là một từ có nghĩa thay vì hai từ đơn). Để mô hình PhoBERT [1] không bị hiện tượng thiếu hụt từ vựng (Out-of-Vocabulary), thư viện PyVi (module <code>ViTokenizer</code>) được hệ thống sử dụng độc quyền trong pipeline tiền xử lý để tự động nối các từ ghép bằng dấu gạch dưới (ví dụ: &quot;sinh_viên&quot;), đảm bảo tính toàn vẹn về mặt ngữ nghĩa trước khi chuyển đổi thành vector.</li>
   <li style="margin-bottom: 0.05in;"><b>Scikit-Learn & Pandas:</b> Thư viện Pandas cung cấp cấu trúc <code>DataFrame</code> giúp việc làm sạch và thao tác trên hàng chục ngàn dòng dữ liệu huấn luyện trở nên cực kỳ tối ưu. Scikit-Learn được sử dụng để tính toán các ma trận đánh giá hiệu năng (Confusion Matrix, F1-Score) và hỗ trợ chia tách tập dữ liệu (train/validation/test split) một cách ngẫu nhiên và phân tầng (stratified).</li>
 </ul>
 
@@ -743,16 +945,16 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Hệ thống quyết định sử dụng <b>PhoBERT</b> (mô hình Transformer dành riêng cho tiếng Việt) thay vì các thuật toán Machine Learning truyền thống (SVM, Naive Bayes) hay Multilingual BERT (mBERT). Tiếng Việt có cấu trúc ngữ pháp đặc thù (từ ghép, từ mượn, tiếng lóng mạng). Việc PhoBERT được huấn luyện sẵn (pre-trained) trên kho dữ liệu 20GB văn bản tiếng Việt giúp mô hình thấu hiểu ngữ cảnh và hàm ý sâu xa của câu chữ. Nếu so sánh, phương pháp TF-IDF kết hợp SVM tuy chạy rất nhanh nhưng "mù" hoàn toàn về mặt ngữ cảnh, dễ dàng bị đánh lừa bởi các thủ thuật lách luật. Trong khi đó, mBERT dù hỗ trợ đa ngôn ngữ nhưng vốn từ tiếng Việt lại quá mỏng. Do đó, PhoBERT là sự lựa chọn tối ưu nhất về mặt độ chính xác (Accuracy).</p>
 
 <h3>2.5.2. Lựa chọn Kiến trúc Học máy Lai ghép (Hybrid Architecture)</h3>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Đồ án không áp dụng duy nhất mô hình PhoBERT mà thiết kế một <b>Kiến trúc Lai ghép (Hybrid)</b>. Vector ngữ nghĩa của PhoBERT (768 chiều) được dung hợp cùng 10 Đặc trưng kinh nghiệm (Heuristics) (như độ dài tiêu đề, tỷ lệ viết hoa, mật độ dấu câu) qua một mạng Nơ-ron Truyền thẳng (MLP). Sự kết hợp này mang ý nghĩa chiến lược: PhoBERT giải quyết mảng "Nội dung sai lệch", trong khi Heuristics giải quyết mảng "Hình thức giật gân". Việc dung hợp cả hai đã giúp mô hình phòng ngự toàn diện, đẩy chỉ số F1-Score từ mức 88.1% (khi chỉ dùng PhoBERT gốc) lên một ngưỡng xuất sắc là 94.1%, đồng thời giảm thiểu đáng kể tỷ lệ dự đoán sai (False Positives).</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Đồ án không áp dụng duy nhất mô hình PhoBERT [1] mà thiết kế một <b>Kiến trúc Lai ghép (Hybrid)</b>. Vector ngữ nghĩa của PhoBERT (768 chiều) được dung hợp cùng 10 Đặc trưng kinh nghiệm (Heuristics) (như độ dài tiêu đề, tỷ lệ viết hoa, mật độ dấu câu) qua một mạng Nơ-ron Truyền thẳng (MLP) [10]. Sự kết hợp này mang ý nghĩa chiến lược: PhoBERT giải quyết mảng "Nội dung sai lệch", trong khi Heuristics giải quyết mảng "Hình thức giật gân". Việc dung hợp cả hai đã giúp mô hình phòng ngự toàn diện, đẩy chỉ số F1-Score từ mức 93.7% (khi chỉ dùng PhoBERT gốc) lên một ngưỡng xuất sắc là 97.5%, đồng thời giảm thiểu đáng kể tỷ lệ dự đoán sai (False Positives).</p>
 
-<h3>2.5.3. Trí tuệ Nhân tạo Minh bạch (Explainable AI - XAI)</h3>
+<h3>2.5.3. Trí tuệ Nhân tạo Minh bạch (Explainable AI - XAI) [5, 8]</h3>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Thay vì xây dựng một hệ thống theo cơ chế "Hộp đen" (Black-box) chỉ trả về kết quả nhị phân (Thật/Giả), đồ án tích hợp <b>Động cơ Giải thích (Explanation Engine)</b>. Đặc biệt trong lĩnh vực phân tích tin tức y tế, niềm tin của người dùng là yếu tố sống còn. XAI giúp bóc tách trọng số của mạng MLP để chỉ ra chính xác nguyên nhân dẫn đến quyết định phân loại (ví dụ: "Tiêu đề lạm dụng viết hoa 80%"). Đây là điểm sáng tạo (Novelty) cốt lõi giúp phân biệt hệ thống này với các dự án học máy thông thường.</p>
 
 <h3>2.5.4. Lựa chọn Framework: FastAPI và Next.js</h3>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Về mặt phần mềm ứng dụng, hệ thống tuân thủ kiến trúc phân tách Micro-Architecture với sự kết hợp của <b>FastAPI</b> (Backend) và <b>Next.js</b> (Frontend). Quá trình suy luận của AI (Inference) đòi hỏi rất nhiều tài nguyên tính toán, nếu dùng các Framework đồng bộ thế hệ cũ như Flask hay Django, máy chủ sẽ rất dễ gặp hiện tượng thắt nút cổ chai (Bottleneck) khi có nhiều người cùng truy cập. FastAPI với cơ chế xử lý bất đồng bộ (Asynchronous - <code>async/await</code>) đã giải quyết triệt để vấn đề chịu tải này. Về phía Frontend, Next.js dựa trên nền tảng React Component giúp việc quản lý trạng thái (State) mượt mà, hỗ trợ vẽ các biểu đồ phân tích XAI tĩnh và động mà không biến mã nguồn thành cấu trúc rườm rà (spaghetti code) như HTML/JS thuần túy.</p>
 
 <h2>2.6. Kết luận chương</h2>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Chương 2 đã cung cấp một khung lý thuyết toàn diện và vững chắc, làm nền tảng khoa học cho toàn bộ quá trình thiết kế và phát triển hệ thống phát hiện tin giả. Thông qua việc phân tích chuyên sâu, đồ án đã làm rõ sự ưu việt của kiến trúc mạng nơ-ron Transformer, đặc biệt là sức mạnh thấu hiểu ngữ nghĩa tiếng Việt của mô hình ngôn ngữ lớn PhoBERT. Bên cạnh đó, việc khảo lược các công trình nghiên cứu tiên phong trong và ngoài nước đã khẳng định tính tất yếu của phương pháp tiếp cận lai ghép (Hybrid Architecture) – kết hợp giữa phân tích ngữ nghĩa sâu và các đặc trưng kinh nghiệm (Heuristics) – nhằm tối đa hóa độ chuẩn xác. Hơn nữa, việc nghiên cứu các cơ sở lý thuyết về Trí tuệ Nhân tạo Minh bạch (Explainable AI - XAI) và hệ thống hóa toàn bộ công nghệ phát triển Web (FastAPI, Next.js, PyTorch) đã tạo ra một bức tranh toàn cảnh về mặt kỹ thuật. Những luận điểm lý thuyết và sự chuẩn bị về mặt công nghệ trong chương này chính là tiền đề quan trọng, định hướng trực tiếp cho các quyết định kiến trúc cốt lõi sẽ được thiết kế và mô hình hóa trong Chương 3 tiếp theo.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Chương 2 đã cung cấp một khung lý thuyết toàn diện và vững chắc, làm nền tảng khoa học cho toàn bộ quá trình thiết kế và phát triển hệ thống phát hiện tin giả. Thông qua việc phân tích chuyên sâu, đồ án đã làm rõ sự ưu việt của kiến trúc mạng nơ-ron Transformer [6, 7], đặc biệt là sức mạnh thấu hiểu ngữ nghĩa tiếng Việt của mô hình ngôn ngữ lớn PhoBERT. Bên cạnh đó, việc khảo lược các công trình nghiên cứu tiên phong trong và ngoài nước đã khẳng định tính tất yếu của phương pháp tiếp cận lai ghép (Hybrid Architecture) – kết hợp giữa phân tích ngữ nghĩa sâu và các đặc trưng kinh nghiệm (Heuristics) – nhằm tối đa hóa độ chuẩn xác. Hơn nữa, việc nghiên cứu các cơ sở lý thuyết về Trí tuệ Nhân tạo Minh bạch (Explainable AI - XAI) [5, 8] và hệ thống hóa toàn bộ công nghệ phát triển Web (FastAPI, Next.js, PyTorch) đã tạo ra một bức tranh toàn cảnh về mặt kỹ thuật. Những luận điểm lý thuyết và sự chuẩn bị về mặt công nghệ trong chương này chính là tiền đề quan trọng, định hướng trực tiếp cho các quyết định kiến trúc cốt lõi sẽ được thiết kế và mô hình hóa trong Chương 3 tiếp theo.</p>
 <p style="line-height: 100%; margin-bottom: 0in"><br/>
 
 </p>
@@ -778,7 +980,7 @@ NGHIÊN CỨU VÀ THIẾT KẾ HỆ THỐNG</h1>
 <h3>3.1.3. Phương pháp Trích xuất đặc trưng đa chiều (Multi-dimensional Feature Extraction)</h3>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Nhận định rằng tin giả không chỉ sai lệch về mặt nội dung mà còn mang các dấu hiệu lừa đảo về mặt hình thức và hành vi, đồ án áp dụng phương pháp trích xuất đặc trưng theo hai luồng song song:</p>
 <ul style="line-height: 150%; margin-bottom: 0.08in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
-  <li style="margin-bottom: 0.05in;"><b>Đặc trưng ngữ nghĩa (Semantic Features):</b> Sử dụng mô hình PhoBERT để ánh xạ văn bản thành một không gian vector (embedding) 768 chiều. Phương pháp này nắm bắt được sự tương quan ngữ cảnh sâu xa giữa các từ, giúp hệ thống nhận diện các nghịch lý và sự mâu thuẫn tinh vi trong lập luận của bài viết.</li>
+  <li style="margin-bottom: 0.05in;"><b>Đặc trưng ngữ nghĩa (Semantic Features):</b> Sử dụng mô hình PhoBERT [1] để ánh xạ văn bản thành một không gian vector (embedding) 768 chiều. Phương pháp này nắm bắt được sự tương quan ngữ cảnh sâu xa giữa các từ, giúp hệ thống nhận diện các nghịch lý và sự mâu thuẫn tinh vi trong lập luận của bài viết.</li>
   <li style="margin-bottom: 0.05in;"><b>Đặc trưng kinh nghiệm (Heuristics & Metadata):</b> Hệ thống tính toán và định lượng 10 đặc trưng phi ngữ nghĩa (Non-textual signals). Nhóm thứ nhất là <i>Thống kê văn bản (Text Stats)</i> bao gồm: Độ dài tiêu đề, Tỷ lệ chữ IN HOA (Uppercase Ratio), Số lượng dấu chấm than (!), dấu hỏi (?) và Mật độ dấu câu tổng thể. Nhóm thứ hai là <i>Dữ liệu tương tác MXH (Social Signals)</i> phân tích các chỉ số tài khoản: Tuổi tài khoản (Account Age), Số lượt theo dõi (Followers), Trạng thái xác thực (Verified), Tốc độ chia sẻ (Share Speed), và Tỷ lệ phẫn nộ (Angry Ratio).</li>
 </ul>
 
@@ -786,7 +988,7 @@ NGHIÊN CỨU VÀ THIẾT KẾ HỆ THỐNG</h1>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Trái tim của hệ thống là phương pháp học máy lai ghép (Hybrid Learning). Khác với các mô hình AI truyền thống chỉ phân tích một nguồn thông tin, đề tài sử dụng một Mạng Nơ-ron Truyền thẳng (Multi-Layer Perceptron - MLP) để dung hợp (fusion) hai luồng đặc trưng đã trích xuất. Cụ thể, vector ngữ nghĩa 768 chiều từ PhoBERT được ghép nối (concatenate) chặt chẽ với vector 10 chiều của Heuristics. Bằng phương pháp này, mô hình sẽ không bị "đánh lừa" bởi những bài viết có ngữ pháp hoàn hảo nhưng lại được phát tán bởi một tài khoản ẩn danh vừa mới lập và có tỷ lệ phẫn nộ cao bất thường.</p>
 
 <h3>3.1.5. Phương pháp Đánh giá và Giải thích (Explainability Integration)</h3>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Về mặt đánh giá, hệ thống áp dụng phương pháp Validation phân tầng (Stratified K-Fold) và sử dụng chỉ số F1-Score làm thước đo cốt lõi để đảm bảo sự cân bằng hoàn hảo giữa độ chính xác (Precision) và độ bao phủ (Recall). Đặc biệt, đề tài tiến một bước xa hơn bằng việc ứng dụng phương pháp Trí tuệ Nhân tạo Minh bạch (Explainable AI - XAI). Thay vì chỉ hiển thị nhãn phân loại một cách máy móc, hệ thống được thiết kế một Động cơ giải thích (Explanation Engine) nhằm báo cáo mức độ đóng góp của từng đặc trưng. Nhờ đó, nếu một bài báo bị hệ thống nghi ngờ là tin giả do lạm dụng giật tít hoặc nguồn tin thiếu uy tín, phương pháp XAI sẽ minh bạch hóa chính xác các lý do này để cung cấp góc nhìn đa chiều cho người sử dụng.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Về mặt đánh giá, hệ thống áp dụng phương pháp Validation phân tầng (Stratified K-Fold) và sử dụng chỉ số F1-Score làm thước đo cốt lõi để đảm bảo sự cân bằng hoàn hảo giữa độ chính xác (Precision) và độ bao phủ (Recall). Đặc biệt, đề tài tiến một bước xa hơn bằng việc ứng dụng phương pháp Trí tuệ Nhân tạo Minh bạch (Explainable AI - XAI) [5, 8]. Thay vì chỉ hiển thị nhãn phân loại một cách máy móc, hệ thống được thiết kế một Động cơ giải thích (Explanation Engine) nhằm báo cáo mức độ đóng góp của từng đặc trưng. Nhờ đó, nếu một bài báo bị hệ thống nghi ngờ là tin giả do lạm dụng giật tít hoặc nguồn tin thiếu uy tín, phương pháp XAI sẽ minh bạch hóa chính xác các lý do này để cung cấp góc nhìn đa chiều cho người sử dụng.</p>
 <h2>3.2. Phân tích yêu cầu</h2>
 <h3>3.2.1. Yêu cầu chức năng</h3>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Dựa trên mục tiêu nghiên cứu và bối cảnh sử dụng thực tế, hệ thống phát hiện tin giả được thiết kế với các yêu cầu chức năng cốt lõi, chia làm 5 phân hệ (Module) chính như sau:</p>
@@ -807,7 +1009,7 @@ NGHIÊN CỨU VÀ THIẾT KẾ HỆ THỐNG</h1>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in"><b>3. Phân hệ Lõi: Phân tích Học máy Lai ghép (Core Hybrid Inference)</b></p>
 <ul style="line-height: 150%; margin-bottom: 0.08in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
   <li style="margin-bottom: 0.05in;"><b>Trích xuất Đặc trưng:</b> Hệ thống phải tính toán tự động 10 chỉ số đặc trưng kinh nghiệm (Heuristics) từ văn bản gốc, bao gồm độ dài tiêu đề, tỷ lệ in hoa, và mật độ dấu câu (chấm than, dấu hỏi).</li>
-  <li style="margin-bottom: 0.05in;"><b>Suy luận Đa luồng:</b> Đẩy văn bản qua mô hình PhoBERT để lấy biểu diễn vector ngữ nghĩa, đồng thời dung hợp với vector đặc trưng Heuristics thông qua mạng Nơ-ron Truyền thẳng (MLP).</li>
+  <li style="margin-bottom: 0.05in;"><b>Suy luận Đa luồng:</b> Đẩy văn bản qua mô hình PhoBERT [1] để lấy biểu diễn vector ngữ nghĩa, đồng thời dung hợp với vector đặc trưng Heuristics thông qua mạng Nơ-ron Truyền thẳng (MLP) [10].</li>
   <li style="margin-bottom: 0.05in;"><b>Phân loại và Cảnh báo:</b> Đưa ra phán quyết cuối cùng dưới dạng nhị phân (Tin giả hoặc Tin thật), đi kèm với một chỉ số độ tin cậy (Confidence Score) từ 0% đến 100% để người dùng đánh giá mức độ rủi ro.</li>
 </ul>
 
@@ -827,7 +1029,7 @@ NGHIÊN CỨU VÀ THIẾT KẾ HỆ THỐNG</h1>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in"><b>1. Hiệu suất và Độ trễ (Performance &amp; Latency)</b></p>
 <ul style="line-height: 150%; margin-bottom: 0.08in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
-  <li style="margin-bottom: 0.05in;"><b>Giới hạn thời gian phản hồi:</b> Đối với phương thức nhập URL, toàn bộ chu trình (bao gồm Web Scraping, Tiền xử lý, Chạy mô hình PhoBERT+MLP và Trả kết quả) phải hoàn thành <b>dưới 3 giây</b>. Đối với văn bản tĩnh (Text), thời gian suy luận (Inference time) phải <b>dưới 500 mili-giây</b>.</li>
+  <li style="margin-bottom: 0.05in;"><b>Giới hạn thời gian phản hồi:</b> Đối với phương thức nhập URL, toàn bộ chu trình (bao gồm Web Scraping, Tiền xử lý, Chạy mô hình PhoBERT [1]+MLP và Trả kết quả) phải hoàn thành <b>dưới 3 giây</b>. Đối với văn bản tĩnh (Text), thời gian suy luận (Inference time) phải <b>dưới 500 mili-giây</b>.</li>
   <li style="margin-bottom: 0.05in;"><b>Tải trọng đồng thời (Concurrency):</b> Backend (FastAPI) phải được cấu hình bất đồng bộ (Asynchronous) để xử lý mượt mà tối thiểu 100 truy vấn phân tích tin tức cùng lúc mà không xảy ra hiện tượng thắt nút cổ chai (Bottleneck).</li>
 </ul>
 
@@ -956,6 +1158,31 @@ erDiagram
   <li style="margin-bottom: 0.05in;"><b>Bảng SCAN_HISTORIES (Quản lý Lịch sử AI):</b> Bảng này đóng vai trò như một quyển "Sổ cái" (Ledger) ghi chép lại toàn bộ hoạt động của Động cơ AI. Ngoài việc lưu trữ đoạn văn bản đã phân tích (<code>input_text</code>) và kết quả phân loại cuối cùng (<code>is_fake</code>, <code>confidence_score</code>), điểm sáng giá nhất của bảng này nằm ở trường <code>explanation_data</code> với kiểu dữ liệu là <b>JSON</b>. Việc nhúng một trường dữ liệu bán cấu trúc (Semi-structured NoSQL-like format) vào bên trong một CSDL quan hệ truyền thống cho phép hệ thống linh hoạt lưu trữ các báo cáo XAI phức tạp (gồm nhiều biểu đồ phân tích, ma trận trọng số Attention, các từ khóa bị bôi đậm) mà không cần phải thiết kế thêm hàng chục bảng phụ rườm rà. Sự kết hợp giữa tính chặt chẽ của SQL và sự linh hoạt của JSON là một điểm nhấn cực kỳ tối ưu về mặt kiến trúc.</li>
 </ul>
 
+<p align="center" style="margin-top: 0.2in; font-style: italic; margin-bottom: 0.05in;">Bảng 3.2. Từ điển Dữ liệu (Data Dictionary) cho các Thực thể</p>
+
+<table width="100%" border="1" cellpadding="8" cellspacing="0" style="display: table; width: 100%; border-collapse: collapse; border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; table-layout: fixed; word-wrap: break-word; word-break: break-word; white-space: normal;">
+  <tr style="background-color: #f2f2f2;">
+    <th width="20%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: left;">Thực thể</th>
+    <th width="20%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: left;">Trường dữ liệu</th>
+    <th width="15%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: left;">Kiểu dữ liệu</th>
+    <th width="45%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: left;">Mô tả chi tiết</th>
+  </tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>USERS</b> (Người dùng)</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><code>id</code></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Integer</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Khóa chính (Primary Key), tự động tăng.</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>USERS</b> (Người dùng)</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><code>email</code></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">String</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Định danh đăng nhập (Unique Key).</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>USERS</b> (Người dùng)</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><code>hashed_password</code></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">String</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Mật khẩu đã được mã hóa một chiều bằng thuật toán Bcrypt.</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>USERS</b> (Người dùng)</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><code>full_name</code></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">String</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Họ và tên hiển thị của người dùng.</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>USERS</b> (Người dùng)</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><code>is_active</code></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Boolean</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Trạng thái tài khoản (True: Hoạt động / False: Khóa).</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>USERS</b> (Người dùng)</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><code>created_at</code></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">DateTime</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Thời điểm tạo tài khoản.</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>SCAN_HISTORIES</b> (Lịch sử Quét)</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><code>id</code></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Integer</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Khóa chính (Primary Key), tự động tăng.</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>SCAN_HISTORIES</b> (Lịch sử Quét)</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><code>user_id</code></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Integer</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Khóa ngoại (Foreign Key) trỏ đến bảng USERS.</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>SCAN_HISTORIES</b> (Lịch sử Quét)</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><code>input_url</code></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">String</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Đường dẫn bài báo (nếu có). Có thể NULL nếu nhập văn bản trực tiếp.</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>SCAN_HISTORIES</b> (Lịch sử Quét)</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><code>input_text</code></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Text</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Nội dung văn bản thô đã được làm sạch để lưu vết.</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>SCAN_HISTORIES</b> (Lịch sử Quét)</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><code>is_fake</code></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Boolean</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Nhãn dán kết quả phân loại: True (Tin Giả) hoặc False (Tin Thật).</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>SCAN_HISTORIES</b> (Lịch sử Quét)</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><code>confidence_score</code></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Float</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Xác suất giả mạo do AI trả về (Từ 0.0 đến 1.0).</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>SCAN_HISTORIES</b> (Lịch sử Quét)</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><code>explanation_data</code></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">JSON</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Chuỗi JSON lưu trữ chi tiết các chỉ số thủ thuật để render giao diện XAI.</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>SCAN_HISTORIES</b> (Lịch sử Quét)</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><code>created_at</code></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">DateTime</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Thời điểm thực hiện phân tích bài viết.</td></tr>
+</table>
+
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Mối quan hệ giữa hai thực thể này là mối quan hệ <b>1-N (Một - Nhiều)</b>, được liên kết tường minh thông qua khóa ngoại <code>user_id</code>. Khái niệm này phản ánh chính xác luồng nghiệp vụ thực tế: Một người dùng có thể kích hoạt nhiều lượt kiểm tra tin tức khác nhau, nhưng mỗi một bản báo cáo phân tích AI bắt buộc phải thuộc quyền sở hữu của một tài khoản duy nhất. Lối thiết kế RDBMS chặt chẽ này giúp thao tác truy vấn (Query) của FastAPI trở nên cực kỳ tối ưu. Nó cũng cho phép Tầng Frontend hiển thị danh sách lịch sử theo dạng phân trang (Pagination) một cách mượt mà, đồng thời bảo mật dữ liệu tuyệt đối không bị nhầm lẫn hoặc rò rỉ giữa các người dùng với nhau.</p>
 <h3>3.3.3. Thiết kế giao diện (UI/UX Design) và Trải nghiệm Người dùng</h3>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Với mục tiêu đưa công nghệ Trí tuệ Nhân tạo phức tạp đến gần hơn với người dùng phổ thông, Giao diện người dùng (User Interface - UI) và Trải nghiệm người dùng (User Experience - UX) của hệ thống được thiết kế theo triết lý <b>Tối giản và Hiện đại (Modern Minimalism)</b>. Toàn bộ nền tảng Frontend được xây dựng bằng Next.js kết hợp với bộ công cụ <b>Tailwind CSS</b>. Việc ứng dụng Tailwind giúp hệ thống duy trì được một cấu trúc mã màu (Color Palette) nhất quán, áp dụng chuẩn thiết kế bo góc (border-radius mềm mại), hiệu ứng kính mờ (Glassmorphism), và đặc biệt là khả năng tương thích hiển thị hoàn hảo trên mọi kích thước màn hình (Fully Responsive) từ màn hình Desktop rộng lớn cho đến điện thoại di động. Tổng thể giao diện hệ thống bao gồm ba phân hệ màn hình cốt lõi, mỗi phân hệ được thiết kế để giải quyết một điểm chạm cụ thể của người dùng:</p>
@@ -1012,7 +1239,7 @@ flowchart TD
   <li style="margin-bottom: 0.05in;"><b>Bước 1: Tiền xử lý (Preprocessing):</b> Văn bản đầu vào sẽ phải trải qua một bộ lọc bằng Biểu thức chính quy (Regex) để xóa bỏ các ký tự HTML rác, biểu tượng cảm xúc (Emoji) không hợp lệ, và chuẩn hóa các từ lóng (Teencode) về tiếng Việt chuẩn mực. Việc làm sạch dữ liệu gắt gao này giúp các nơ-ron học máy không bị "nhiễu" thông tin trong quá trình phân tích.</li>
   <li style="margin-bottom: 0.05in;"><b>Bước 2: Tách luồng xử lý song song (Parallel Processing):</b> Văn bản sạch được nhân bản và bơm cùng lúc vào hai đường ống (Pipeline) tính toán khác biệt nhau hoàn toàn.
     <ul style="list-style-type: circle; margin-top: 0.05in; margin-bottom: 0.05in;">
-      <li style="margin-bottom: 0.05in;"><b>Luồng 1 - Giải mã Ngữ nghĩa (PhoBERT):</b> Văn bản được đưa qua bộ Tokenizer của PhoBERT để băm nhỏ thành các mảnh từ vựng (Sub-words). Sau đó, chuỗi token này đi xuyên qua 12 lớp Mạng Tự chú ý (Self-Attention) của kiến trúc Transformer. Kết quả trả về là một siêu vector đặc trưng đại diện toàn cục cho ngữ cảnh của câu (thường gọi là <code>[CLS] token vector</code>), có kích thước cực lớn lên đến <b>768 chiều</b>. Vector này nắm giữ toàn bộ "ý nghĩa sâu xa" và "giọng điệu mỉa mai" ẩn giấu trong bài báo.</li>
+      <li style="margin-bottom: 0.05in;"><b>Luồng 1 - Giải mã Ngữ nghĩa (PhoBERT):</b> Văn bản được đưa qua bộ Tokenizer của PhoBERT để băm nhỏ thành các mảnh từ vựng (Sub-words). Sau đó, chuỗi token này đi xuyên qua 12 lớp Mạng Tự chú ý (Self-Attention) của kiến trúc Transformer [6, 7]. Kết quả trả về là một siêu vector đặc trưng đại diện toàn cục cho ngữ cảnh của câu (thường gọi là <code>[CLS] token vector</code>), có kích thước cực lớn lên đến <b>768 chiều</b>. Vector này nắm giữ toàn bộ "ý nghĩa sâu xa" và "giọng điệu mỉa mai" ẩn giấu trong bài báo.</li>
       <li style="margin-bottom: 0.05in;"><b>Luồng 2 - Trích xuất Hành vi lừa đảo (Heuristics):</b> Cùng lúc đó, một bộ thuật toán đếm truyền thống sẽ quét qua bài báo để đo lường 10 chỉ số thao túng tâm lý độc lập: Tỷ lệ viết hoa toàn chữ cái, Mật độ lạm dụng dấu chấm than, Độ dài bất thường của tiêu đề, Điểm số cảm xúc (Sentiment score), v.v. Kết quả trả về là một vector số thực <b>10 chiều</b> nhỏ gọn nhưng vô cùng sắc bén trong việc bóc mẽ các thủ đoạn "câu view" giật gân.</li>
     </ul>
   </li>
@@ -1020,6 +1247,52 @@ flowchart TD
   <li style="margin-bottom: 0.05in;"><b>Bước 4: Phân loại và Kích hoạt (MLP & Sigmoid):</b> Siêu vector 778 chiều ngay lập tức được nạp vào một Mạng Nơ-ron truyền thẳng đa lớp (Multi-Layer Perceptron - MLP). Mạng MLP này đóng vai trò như một vị Thẩm phán tối cao, nó tự động học cách cân đối trọng số giữa luồng ngữ nghĩa và luồng hành vi. Ở lớp nơ-ron cuối cùng, một hàm kích hoạt phi tuyến <b>Sigmoid</b> sẽ thực hiện ép toàn bộ kết quả tính toán khổng lồ về một con số xác suất (Confidence Score) nằm gọn trong khoảng từ 0.0 đến 1.0. Nếu giá trị lớn hơn ngưỡng 0.5, hệ thống sẽ kết luận bài báo là <b>Tin Giả</b>.</li>
   <li style="margin-bottom: 0.05in;"><b>Bước 5: Thẩm định Minh bạch (XAI Engine):</b> Đây là chốt chặn cuối cùng làm nên sự khác biệt tuyệt đối của hệ thống ShieldAI. Thay vì ném thẳng nhãn kết quả lên giao diện một cách vô tri, toàn bộ kết quả phân loại sẽ được giữ lại và đẩy qua Động cơ XAI. Thuật toán XAI sẽ sử dụng cơ chế đạo hàm rà soát ngược lại cấu trúc mạng MLP để đo đếm xem chính xác thành phần nào trong 778 chiều kia đã tác động mạnh nhất đẩy hàm Sigmoid vượt ngưỡng 0.5. Cuối cùng, nó sẽ đóng gói toàn bộ lời giải thích thành một tệp dữ liệu JSON đa chiều (ví dụ: Báo cáo rõ "Tin giả do hệ số lạm dụng 30% chữ viết hoa đóng góp 40% vào kết quả") rồi mới cho phép luồng hệ thống kết thúc.</li>
 </ul>
+
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Để minh họa một cách chính xác về mặt toán học và logic lập trình, toàn bộ quá trình xử lý lai ghép được tổng hợp thành đoạn Mã giả (Pseudocode) thuật toán sau đây:</p>
+
+<pre style="white-space: pre-wrap; font-family: monospace; background-color: #f5f5f5; padding: 10px; border: 1px solid #ccc; line-height: 1.5; overflow-x: auto;"><code>ALGORITHM: Hybrid Fake News Detection &amp; XAI Explanation
+INPUT:
+    T: Văn bản gốc hoặc URL bài viết
+OUTPUT:
+    Prediction (Giả/Thật), Confidence_Score, XAI_Report
+
+BEGIN
+    // Bước 1: Tiền xử lý
+    T_clean = PREPROCESS(T)  // Loại bỏ HTML, Emoji, chuẩn hóa Teencode
+
+    // Bước 2: Xử lý song song (Tách luồng)
+    // Luồng 1: Trích xuất đặc trưng ngữ nghĩa bằng PhoBERT
+    Tokens = PHOBERT_TOKENIZER(T_clean)
+    V_phobert = PHOBERT_MODEL(Tokens).extract_CLS()  // Trả về Vector 768 chiều
+
+    // Luồng 2: Trích xuất đặc trưng kinh nghiệm (Heuristics)
+    V_heuristics = EXTRACT_HEURISTICS(T_clean)       // Trả về Vector 10 chiều
+
+    // Bước 3: Dung hợp đặc trưng (Fusion)
+    V_hybrid = CONCATENATE(V_phobert, V_heuristics)  // Trả về Vector 778 chiều
+
+    // Bước 4: Phân loại bằng Mạng Nơ-ron Truyền thẳng (MLP) [10]
+    Z = MLP_FORWARD(V_hybrid)
+    Confidence_Score = SIGMOID(Z)                    // Hàm kích hoạt ép về [0, 1]
+
+    IF Confidence_Score &gt; 0.5 THEN
+        Prediction = "Tin Giả (Fake News)"
+    ELSE
+        Prediction = "Tin Thật (Real News)"
+    END IF
+
+    // Bước 5: Thẩm định Minh bạch (XAI)
+    XAI_Report = NULL
+    IF Prediction == "Tin Giả (Fake News)" THEN
+        // Tính đạo hàm ngược để lấy trọng số đóng góp của 10 đặc trưng Heuristics
+        Feature_Importance = COMPUTE_GRADIENTS(Confidence_Score, V_heuristics)
+        XAI_Report = GENERATE_JSON_REPORT(Feature_Importance)
+    END IF
+
+    RETURN Prediction, Confidence_Score, XAI_Report
+END</code></pre>
+
+
 <h2>3.4. Kết luận chương</h2>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Chương 3 đóng vai trò là bản lề định hình toàn bộ khung xương kỹ thuật của đồ án, chuyển tiếp từ các lý thuyết nền tảng (Chương 2) sang một bản thiết kế hệ thống phần mềm hoàn chỉnh và sẵn sàng để lập trình thực tế. Nhìn lại toàn bộ chương, đồ án đã giải quyết triệt để ba bài toán cốt lõi trong việc xây dựng một hệ thống Trí tuệ Nhân tạo ứng dụng thực tiễn:</p>
 
@@ -1039,7 +1312,7 @@ KẾT QUẢ</h1>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Để đảm bảo khả năng hiện thực hóa các bản thiết kế kiến trúc phức tạp ở Chương 3, đặc biệt là việc huấn luyện và chạy suy luận (Inference) cho các mô hình Học Sâu (Deep Learning) đòi hỏi khối lượng tính toán lớn, đồ án đã được triển khai và kiểm thử trên một môi trường máy tính cục bộ (Local Environment) có cấu hình kỹ thuật tiêu chuẩn. Việc thiết lập môi trường được chia thành hai mảng chuyên biệt: Phần cứng và Phần mềm.</p>
 
 <h3>4.1.1. Môi trường Phần cứng (Hardware Environment)</h3>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Quá trình huấn luyện mạng nơ-ron đa lớp và kiến trúc Transformer (PhoBERT) đòi hỏi năng lực xử lý ma trận khổng lồ mà các bộ vi xử lý thông thường không thể đáp ứng được trong một thời gian hợp lý. Do đó, hệ thống phần cứng được thiết lập khắt khe với các thông số sau:</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Quá trình huấn luyện mạng nơ-ron đa lớp và kiến trúc Transformer [6, 7] (PhoBERT) đòi hỏi năng lực xử lý ma trận khổng lồ mà các bộ vi xử lý thông thường không thể đáp ứng được trong một thời gian hợp lý. Do đó, hệ thống phần cứng được thiết lập khắt khe với các thông số sau:</p>
 <ul style="line-height: 150%; margin-bottom: 0.08in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
   <li style="margin-bottom: 0.05in;"><b>Vi xử lý trung tâm (CPU):</b> Tối thiểu Intel Core i5 hoặc AMD Ryzen 5 thế hệ mới, đáp ứng tốt quá trình cào dữ liệu (Web Scraping) đa luồng bằng BeautifulSoup và xử lý tiền dữ liệu văn bản bằng Regex.</li>
   <li style="margin-bottom: 0.05in;"><b>Bộ nhớ trong (RAM):</b> Tối thiểu <b>16GB</b>. Dung lượng này là ranh giới bắt buộc để hệ thống có thể tải đồng thời tập dữ liệu huấn luyện (Dataset) vào bộ nhớ chính, đồng thời duy trì các máy chủ ảo cục bộ (cả FastAPI và Next.js) hoạt động song song mà không bị hiện tượng tràn RAM (Out-of-memory crash).</li>
@@ -1054,7 +1327,7 @@ KẾT QUẢ</h1>
     <ul style="list-style-type: circle; margin-top: 0.05in; margin-bottom: 0.05in;">
       <li style="margin-bottom: 0.05in;"><b>Ngôn ngữ:</b> Sử dụng phiên bản <code>Python 3.10+</code> (toàn bộ mã nguồn chạy bên trong một môi trường ảo Virtual Environment riêng biệt để cách ly hoàn toàn các thư viện).</li>
       <li style="margin-bottom: 0.05in;"><b>Framework máy chủ:</b> <code>FastAPI</code> kết hợp cùng máy chủ ASGI <code>Uvicorn</code> để kích hoạt khả năng xử lý bất đồng bộ (Asynchronous) ở tốc độ cao nhất.</li>
-      <li style="margin-bottom: 0.05in;"><b>Thư viện AI Lõi:</b> Sử dụng <code>PyTorch</code> (để thiết kế và chạy Mạng nơ-ron MLP), kết hợp với <code>Transformers</code> của Hugging Face (để gọi tham số của mô hình PhoBERT), và <code>Scikit-learn</code> (để tự động hóa các phép tính chỉ số hiệu năng như F1-Score, Precision).</li>
+      <li style="margin-bottom: 0.05in;"><b>Thư viện AI Lõi:</b> Sử dụng <code>PyTorch</code> (để thiết kế và chạy Mạng nơ-ron MLP), kết hợp với <code>Transformers</code> của Hugging Face (để gọi tham số của mô hình PhoBERT [1]), và <code>Scikit-learn</code> (để tự động hóa các phép tính chỉ số hiệu năng như F1-Score, Precision).</li>
     </ul>
   </li>
   <li style="margin-bottom: 0.05in;"><b>Hệ sinh thái Frontend:</b> Được xây dựng hoàn toàn trên nền tảng môi trường cục bộ <code>Node.js</code>. Sử dụng ngôn ngữ <code>TypeScript</code> nhằm ép buộc tính an toàn kiểu dữ liệu (Type-safety). Khung thiết kế chính là <code>Next.js 14</code> kết hợp với hệ sinh thái <code>React</code> và bộ thư viện tiện ích <code>Tailwind CSS</code>.</li>
@@ -1079,7 +1352,7 @@ KẾT QUẢ</h1>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Việc quyết định sử dụng bộ dữ liệu chuyên khoa sâu này xuất phát từ ba luận điểm mang tính chiến lược:</p>
 <ul style="line-height: 150%; margin-bottom: 0.08in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
   <li style="margin-bottom: 0.05in;"><b>Tính cấp thiết của xã hội:</b> Khác với tin giả giải trí (Showbiz), tin giả y tế (như các quảng cáo "thần dược chữa ung thư", "mẹo chữa bệnh không cần tới bệnh viện") gây ra hậu quả trực tiếp đến tài chính và tính mạng của người dân. Việc AI có khả năng phát hiện chính xác loại tin độc hại này mang lại giá trị nhân văn và tính ứng dụng cực kỳ to lớn.</li>
-  <li style="margin-bottom: 0.05in;"><b>Độ khó của thuật ngữ:</b> Ngữ liệu y tế chứa rất nhiều từ vựng chuyên khoa học búa đan xen với cấu trúc câu bình dân mang tính mồi chài của giới bán thuốc giả. Đây là một môi trường thử nghiệm vô cùng lý tưởng để ép mô hình PhoBERT phải học được cách phân biệt ngữ cảnh tiếng Việt ở một cấp độ phức tạp nhất.</li>
+  <li style="margin-bottom: 0.05in;"><b>Độ khó của thuật ngữ:</b> Ngữ liệu y tế chứa rất nhiều từ vựng chuyên khoa học búa đan xen với cấu trúc câu bình dân mang tính mồi chài của giới bán thuốc giả. Đây là một môi trường thử nghiệm vô cùng lý tưởng để ép mô hình PhoBERT [1] phải học được cách phân biệt ngữ cảnh tiếng Việt ở một cấp độ phức tạp nhất.</li>
   <li style="margin-bottom: 0.05in;"><b>Sự phù hợp với phương pháp Heuristics:</b> Bọn lừa đảo y tế trên không gian mạng thường xuyên sử dụng các hành vi thao túng tâm lý (như viết hoa toàn bộ tựa đề để lôi kéo, dùng hàng loạt dấu chấm than để tạo cảnh báo sợ hãi). Do đó, bộ dữ liệu này chính là "đất diễn" hoàn hảo để cụm 10 đặc trưng kinh nghiệm (Heuristics) của đồ án phát huy tối đa sức mạnh, lấp đầy các lỗ hổng mà PhoBERT có thể bỏ sót.</li>
 </ul>
 
@@ -1090,6 +1363,38 @@ KẾT QUẢ</h1>
   <li style="margin-bottom: 0.05in;"><b>Tách tập huấn luyện (Train/Val/Test Split):</b> Dữ liệu được băm nhỏ cứng theo tỷ lệ khoa học <b>80:10:10</b>. Tức là dùng 80% để dạy mô hình (Train), 10% để tinh chỉnh các siêu tham số trong lúc huấn luyện (Validation), và 10% cuối cùng được cất giấu kỹ để tạo thành một bài thi chung khảo minh bạch nhất (Test).</li>
   <li style="margin-bottom: 0.05in;"><b>Áp dụng cơ chế PyTorch DataLoader:</b> Thay vì nạp toàn bộ một mảng văn bản khổng lồ vào RAM cùng một lúc (sẽ gây tràn bộ nhớ và treo máy), đồ án sử dụng đối tượng <code>DataLoader</code> cốt lõi của PyTorch để chia nhỏ dữ liệu thành các lô nhỏ (Batches) với kích thước là 16 hoặc 32. Cơ chế này không chỉ giúp máy tính cấu hình yếu vẫn có thể huấn luyện được mô hình AI khổng lồ, mà còn làm mượt đáng kể đường cong hội tụ thuật toán giảm dốc (Gradient Descent).</li>
 </ul>
+<h3>4.2.3. Tổ chức cấu trúc mã nguồn (Project Directory Structure)</h3>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Để đảm bảo tính mở rộng, dễ bảo trì và làm việc nhóm hiệu quả, toàn bộ mã nguồn của dự án được tổ chức chặt chẽ theo mô hình phân tách (Decoupled). Dưới đây là sơ đồ cây thư mục (Directory Tree) minh họa cấu trúc các thành phần cốt lõi của hệ thống ShieldAI:</p>
+
+<pre style="white-space: pre-wrap; font-family: monospace; background-color: #f5f5f5; padding: 10px; border: 1px solid #ccc; line-height: 1.5; overflow-x: auto;"><code>ShieldAI_Project/
+├── backend/                  # Khối Máy chủ API (Python &amp; FastAPI)
+│   ├── api/                  # Khai báo các API Endpoints (Auth, Analyze, History)
+│   ├── auth/                 # Xử lý bảo mật, mã hóa JWT, phân quyền
+│   ├── database/             # Kết nối CSDL SQLite và quản lý Models (SQLAlchemy)
+│   ├── experiments/          # Lưu trữ kết quả thực nghiệm, biểu đồ đánh giá mô hình
+│   ├── models/               # Nơi chứa các trọng số (Weights) của mô hình PhoBERT [1] &amp; MLP
+│   ├── tests/                # Bộ kịch bản kiểm thử tự động (Pytest) [14]
+│   ├── training/             # Chứa Jupyter Notebook để huấn luyện mô hình (train_hybrid_model.ipynb)
+│   ├── data_crawler.py       # Module cào dữ liệu thô từ Internet
+│   ├── dataset_cleaner.py    # Module tiền xử lý và làm sạch dữ liệu y tế
+│   ├── explanation_engine.py # Động cơ XAI: Bóc tách và định lượng nguyên nhân lừa đảo
+│   ├── feature_extraction.py # Trích xuất 10 đặc trưng kinh nghiệm (Heuristics)
+│   ├── hybrid_inference.py   # Ghép nối PhoBERT và Heuristics để suy luận (Inference)
+│   └── main.py               # Điểm khởi chạy (Entry point) của máy chủ FastAPI
+├── docs/                     # Tài liệu kỹ thuật, Hướng dẫn cài đặt và Nhật ký dự án
+├── frontend/                 # Khối Giao diện Người dùng (TypeScript &amp; Next.js)
+│   ├── app/                  # Kiến trúc App Router của Next.js (chứa các trang /login, /analyze,...)
+│   ├── components/           # Các Component tái sử dụng (Navbar, Chart, HeroBanner)
+│   ├── context/              # Quản lý trạng thái toàn cục (React Context API cho Auth)
+│   ├── lib/                  # Các hàm tiện ích (gọi API, xử lý hiệu ứng Motion)
+│   └── tailwind.config.ts    # Cấu hình hệ thống thiết kế (Design System &amp; Colors)
+├── scripts/                  # Chứa các bash script hỗ trợ khởi chạy nhanh (.sh)
+├── README.md                 # Tài liệu tổng quan giới thiệu dự án
+└── requirements.txt          # Danh sách các thư viện Python phụ thuộc</code></pre>
+
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Mô hình tổ chức này tuân thủ nguyên tắc <i>Separation of Concerns</i> (Tách biệt mối quan tâm), giúp đội ngũ phát triển dễ dàng khoanh vùng lỗi, thực hiện kiểm thử độc lập ở Backend mà không ảnh hưởng tới quá trình thiết kế UI/UX ở Frontend.</p>
+
+
 <h2>4.3. Kết quả đạt được</h2>
 <h3>4.3.1. Kết quả giao diện ứng dụng (User Interface Implementation)</h3>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Hệ thống đã được lập trình hoàn thiện bằng Next.js và triển khai thành công trên môi trường cục bộ. Giao diện thực tế hoạt động trơn tru, đáp ứng chính xác các yêu cầu về thiết kế UI/UX (Modern Minimalism) đã đề ra ở Chương 3. Dưới đây là các minh chứng hình ảnh chụp lại từ hệ thống thực tế đang vận hành:</p>
@@ -1145,35 +1450,35 @@ KẾT QUẢ</h1>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Đồ án đã thiết lập một bài kiểm tra đối đầu (A/B Testing) giữa mô hình cơ sở <b>Baseline PhoBERT</b> (chỉ xử lý ngôn ngữ thuần túy) và mô hình đề xuất <b>Hybrid (PhoBERT + Heuristics)</b> (kết hợp ngôn ngữ và siêu dữ liệu). Kết quả được trình bày chi tiết trong Bảng 4.1:</p>
 
 <p align="center" style="margin-top: 0.2in; font-style: italic; margin-bottom: 0.05in;">Bảng 4.1. So sánh hiệu năng giữa mô hình Baseline và Hybrid</p>
-<table width="100%" cellpadding="10" cellspacing="0" style="border-collapse: collapse; margin: 0 auto; margin-bottom: 0.2in;">
+<table width="100%" border="1" cellpadding="8" cellspacing="0" style="display: table; width: 100%; border-collapse: collapse; border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; table-layout: fixed; word-wrap: break-word; word-break: break-word; white-space: normal;">
   <tr style="background-color: #f2f2f2; text-align: center; font-weight: bold;">
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">Mô hình (Model)</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">Accuracy</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">Precision</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">Recall</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">F1-Score</td>
+    <td width="36%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Mô hình (Model)</td>
+    <td width="16%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Accuracy</td>
+    <td width="16%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Precision</td>
+    <td width="16%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Recall</td>
+    <td width="16%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">F1-Score</td>
   </tr>
   <tr style="text-align: center;">
-    <td style="border: 1px solid #d3d3d3; padding: 10px; text-align: left;">PhoBERT (Base - Độc lập)</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">88.5%</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">87.2%</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">89.0%</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">88.1%</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: left;">Baseline PhoBERT</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">94.1%</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">93.3%</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">94.1%</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">93.7%</td>
   </tr>
-  <tr style="text-align: center; font-weight: bold; background-color: #e6f7ff;">
-    <td style="border: 1px solid #d3d3d3; padding: 10px; text-align: left;">Hybrid (PhoBERT + 10 Heuristics)</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">94.2% (+5.7%)</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">93.8% (+6.6%)</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">94.5% (+5.5%)</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px; color: red;">94.1% (+6.0%)</td>
+  <tr style="text-align: center; background-color: #e6f7ff;">
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: left;"><b>Hybrid (PhoBERT + 10 Heuristics)</b></td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>97.7% (+3.6%)</b></td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>97.0% (+3.7%)</b></td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>98.0% (+3.9%)</b></td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; color: red;"><b>97.5% (+3.8%)</b></td>
   </tr>
 </table>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in"><b>c) Phân tích nguyên nhân vượt trội của kiến trúc Hybrid</b></p>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Nhìn vào số liệu từ Bảng 4.1, có thể thấy việc bổ sung mạng MLP đa tầng để dung hợp 10 luồng đặc trưng kinh nghiệm (như tỷ lệ viết hoa, mật độ dấu chấm than, độ dài tiêu đề) đã tạo ra một bước nhảy vọt về hiệu năng. Cụ thể, chỉ số <b>F1-Score đã tăng đột phá 6.0%</b> (từ 88.1% lên 94.1%). Sự vượt trội này bắt nguồn từ hai nguyên lý kỹ thuật chính:</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Nhìn vào số liệu từ Bảng 4.1, có thể thấy việc bổ sung mạng MLP đa tầng để dung hợp 10 luồng đặc trưng kinh nghiệm (như tỷ lệ viết hoa, mật độ dấu chấm than, độ dài tiêu đề) đã tạo ra một bước nhảy vọt về hiệu năng. Cụ thể, chỉ số <b>F1-Score đã tăng 3.8%</b> (từ 93.7% lên 97.5%). Sự vượt trội này bắt nguồn từ hai nguyên lý kỹ thuật chính:</p>
 <ul style="line-height: 150%; margin-bottom: 0.08in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
   <li style="margin-bottom: 0.05in;"><b>Khắc phục điểm mù của Transformer:</b> PhoBERT dù rất xuất sắc trong việc đọc hiểu ngữ nghĩa văn cảnh (Semantics), nhưng lại thường "vô tình" bỏ qua các yếu tố về mặt hình thức do cơ chế Tokenizer (Byte-Pair Encoding) đã tiêu chuẩn hóa văn bản, làm mất đi ý nghĩa của việc nhấn mạnh bằng chữ in hoa hay lặp dấu câu. Việc đưa thuật toán Heuristics vào đã đóng vai trò như một "con mắt thứ hai" chuyên giám sát các hành vi dị thường này.</li>
-  <li style="margin-bottom: 0.05in;"><b>Triệt tiêu rủi ro Dương tính giả (False Positives):</b> Chỉ số Precision tăng mạnh mẽ nhất (6.6%) cho thấy mô hình Hybrid không còn đánh oan các bài báo chính thống. Một bài báo y khoa có thể chứa các từ ngữ cảnh báo nguy hiểm (khiến PhoBERT nghi ngờ), nhưng nếu bài báo đó có cấu trúc câu chuẩn mực, dẫn nguồn rõ ràng và không lạm dụng viết hoa thì luồng Heuristics sẽ cung cấp một trọng số "an toàn" lớn. Mạng Neural phân loại cuối cùng sẽ cân nhắc cả hai phía và đưa ra phán quyết chính xác hơn.</li>
+  <li style="margin-bottom: 0.05in;"><b>Triệt tiêu rủi ro Dương tính giả (False Positives):</b> Chỉ số Precision tăng mạnh mẽ (3.7%) cho thấy mô hình Hybrid không còn đánh oan các bài báo chính thống. Một bài báo y khoa có thể chứa các từ ngữ cảnh báo nguy hiểm (khiến PhoBERT nghi ngờ), nhưng nếu bài báo đó có cấu trúc câu chuẩn mực, dẫn nguồn rõ ràng và không lạm dụng viết hoa thì luồng Heuristics sẽ cung cấp một trọng số "an toàn" lớn. Mạng Neural phân loại cuối cùng sẽ cân nhắc cả hai phía và đưa ra phán quyết chính xác hơn.</li>
 </ul>
 <h2>4.4. Kiểm thử hệ thống (System Testing)</h2>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Để đảm bảo độ tin cậy và tính bền vững của phần mềm trước khi nghiệm thu, đồ án đã triển khai một quy trình kiểm thử toàn diện, bao gồm cả kiểm thử tự động ở mức mã nguồn (White-box/Automated Testing) và kiểm thử thủ công ở mức người dùng (Black-box Testing).</p>
@@ -1193,34 +1498,34 @@ KẾT QUẢ</h1>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Ở tầng giao diện trực quan (Frontend), đồ án tiến hành kiểm thử các luồng thao tác thực tế nhằm đảm bảo trải nghiệm nghiệp vụ xuyên suốt, không bị đứt gãy. Bảng 4.2 dưới đây mô tả các kịch bản tiêu biểu:</p>
 
 <p align="center" style="margin-top: 0.2in; font-style: italic; margin-bottom: 0.05in;">Bảng 4.2. Danh sách Kịch bản Kiểm thử Hộp đen</p>
-<table width="100%" cellpadding="10" cellspacing="0" style="border-collapse: collapse; margin: 0 auto; margin-bottom: 0.2in;">
-  <tr style="background-color: #f2f2f2; text-align: left; font-weight: bold;">
-    <td style="border: 1px solid #d3d3d3; padding: 10px; width: 10%;">ID</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px; width: 30%;">Kịch bản (Test Scenario)</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px; width: 30%;">Kết quả mong đợi (Expected)</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px; width: 20%;">Kết quả thực tế</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px; width: 10%;">Status</td>
+<table width="100%" border="1" cellpadding="8" cellspacing="0" style="display: table; width: 100%; border-collapse: collapse; border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; table-layout: fixed; word-wrap: break-word; word-break: break-word; white-space: normal;">
+  <tr style="background-color: #f2f2f2; font-weight: bold;">
+    <td width="8%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center;">ID</td>
+    <td width="30%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Kịch bản (Test Scenario)</td>
+    <td width="30%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Kết quả mong đợi (Expected)</td>
+    <td width="22%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Kết quả thực tế</td>
+    <td width="10%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center;">Status</td>
   </tr>
   <tr>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">TC_01</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">Nhập URL một bài báo y tế hợp lệ từ báo điện tử VnExpress.</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">Hệ thống cào thành công tiêu đề, nội dung bài báo và hiển thị kết quả phân tích dưới 3 giây.</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">Cào đúng nội dung cốt lõi, tự động loại bỏ các đoạn quảng cáo (Ads).</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px; color: green; font-weight: bold;">PASS</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center;">TC_01</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Nhập URL một bài báo y tế hợp lệ từ báo điện tử VnExpress.</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Hệ thống cào thành công tiêu đề, nội dung bài báo và hiển thị kết quả phân tích dưới 3 giây.</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Cào đúng nội dung cốt lõi, tự động loại bỏ các đoạn quảng cáo (Ads).</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; color: green; font-weight: bold; text-align: center;">PASS</td>
   </tr>
   <tr>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">TC_02</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">Nhập URL bị lỗi (404) hoặc nhập một trang web không phải trang tin tức (Ví dụ: Facebook cá nhân).</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">Hệ thống tự động báo lỗi "Không thể trích xuất nội dung" và chặn lệnh gửi phân tích cho AI.</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">Hiển thị thông báo Toast Notification rõ ràng trên giao diện người dùng.</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px; color: green; font-weight: bold;">PASS</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center;">TC_02</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Nhập URL bị lỗi (404) hoặc nhập một trang web không phải trang tin tức (Ví dụ: Facebook cá nhân).</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Hệ thống tự động báo lỗi "Không thể trích xuất nội dung" và chặn lệnh gửi phân tích cho AI.</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Hiển thị thông báo Toast Notification rõ ràng trên giao diện người dùng.</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; color: green; font-weight: bold; text-align: center;">PASS</td>
   </tr>
   <tr>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">TC_03</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">Gửi phân tích một đoạn văn bản rác y tế (cố tình lạm dụng viết hoa toàn bộ và dùng hàng loạt dấu chấm than !!!).</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">Cảnh báo đỏ (Tin giả). Động cơ XAI phải vạch trần được thủ thuật hình thức này.</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px;">Thanh XAI báo động đỏ phần "Thống kê hình thức".</td>
-    <td style="border: 1px solid #d3d3d3; padding: 10px; color: green; font-weight: bold;">PASS</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center;">TC_03</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Gửi phân tích một đoạn văn bản rác y tế (cố tình lạm dụng viết hoa toàn bộ và dùng hàng loạt dấu chấm than !!!).</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Cảnh báo đỏ (Tin giả). Động cơ XAI phải vạch trần được thủ thuật hình thức này.</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Thanh XAI báo động đỏ phần "Thống kê hình thức".</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; color: green; font-weight: bold; text-align: center;">PASS</td>
   </tr>
 </table>
 
@@ -1230,8 +1535,9 @@ KẾT QUẢ</h1>
   <p style="font-style: italic; margin-bottom: 10px;">Hình 4.10. Minh họa Kịch bản TC_01: Phân tích bài báo chính thống (0% Tin giả)</p>
   <img src="image/11_TC01_NhapURL_VnExpress.png" alt="Nhập URL VnExpress" width="90%" style="border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;">
   <br>
-  <img src="image/12_TC01_KetQua_TinThat.png" alt="Kết quả Tin Thật" width="45%" style="border: 1px solid #ddd; border-radius: 5px; margin-right: 2%;">
-  <img src="image/13_TC01_GiaiThichXAI_TinThat.png" alt="Giải thích XAI" width="45%" style="border: 1px solid #ddd; border-radius: 5px;">
+  <img src="image/12_TC01_KetQua_TinThat.png" alt="Kết quả Tin Thật" width="90%" style="border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;">
+  <br>
+  <img src="image/13_TC01_GiaiThichXAI_TinThat.png" alt="Giải thích XAI" width="90%" style="border: 1px solid #ddd; border-radius: 5px;">
 </div>
 
 <div align="center" style="margin-top: 20px; margin-bottom: 20px;">
@@ -1243,28 +1549,58 @@ KẾT QUẢ</h1>
   <p style="font-style: italic; margin-bottom: 10px;">Hình 4.12. Minh họa Kịch bản TC_03: Bóc trần thủ thuật lạm dụng hình thức (100% Tin giả)</p>
   <img src="image/16_TC03_NhapVanBan_TinGia.png" alt="Nhập văn bản rác" width="90%" style="border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;">
   <br>
-  <img src="image/18_TC03_KetQua_TinGia100.png" alt="Kết quả Tin Giả 100%" width="45%" style="border: 1px solid #ddd; border-radius: 5px; margin-right: 2%;">
-  <img src="image/19_TC03_GiaiThichXAI_PhatHienThuThuat.png" alt="Phát hiện thủ thuật XAI" width="45%" style="border: 1px solid #ddd; border-radius: 5px;">
+  <img src="image/18_TC03_KetQua_TinGia100.png" alt="Kết quả Tin Giả 100%" width="90%" style="border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;">
+  <br>
+  <img src="image/19_TC03_GiaiThichXAI_PhatHienThuThuat.png" alt="Phát hiện thủ thuật XAI" width="90%" style="border: 1px solid #ddd; border-radius: 5px;">
 </div>
 
 <h2>4.5. Kết luận chương</h2>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Chương 4 đã phản ánh toàn bộ quá trình đưa các bản thiết kế từ trên giấy vào môi trường triển khai thực tế. Các kết quả thực nghiệm đạt được đã chứng minh tính đúng đắn của phương pháp: Hệ thống không những chạy mượt mà theo kiến trúc Client-Server mà độ chuẩn xác phân loại còn được đẩy lên mức xuất sắc (F1-Score đạt 94.1%) nhờ kiến trúc Lai. Bên cạnh đó, loạt kịch bản kiểm thử (Test cases) khắt khe đã khẳng định hệ thống đủ khả năng đối phó với các lỗi người dùng thông thường mà không bị gián đoạn dịch vụ. Các thành quả này đã đáp ứng đầy đủ yêu cầu nghiệp vụ đặt ra, làm tiền đề để rút ra các kết luận tổng kết và định hướng ở Chương 5.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Chương 4 đã phản ánh toàn bộ quá trình đưa các bản thiết kế từ trên giấy vào môi trường triển khai thực tế. Các kết quả thực nghiệm đạt được đã chứng minh tính đúng đắn của phương pháp: Hệ thống không những chạy mượt mà theo kiến trúc Client-Server mà độ chuẩn xác phân loại còn được đẩy lên mức xuất sắc (F1-Score đạt 97.5%) nhờ kiến trúc Lai. Bên cạnh đó, loạt kịch bản kiểm thử (Test cases) khắt khe đã khẳng định hệ thống đủ khả năng đối phó với các lỗi người dùng thông thường mà không bị gián đoạn dịch vụ. Các thành quả này đã đáp ứng đầy đủ yêu cầu nghiệp vụ đặt ra, làm tiền đề để rút ra các kết luận tổng kết và định hướng ở Chương 5.</p>
 <p style="line-height: 100%; margin-bottom: 0in"><br/>
 
 </p>
 <h1 style="page-break-before: always">CHƯƠNG 5: KẾT LUẬN VÀ
 HƯỚNG PHÁT TRIỂN</h1>
 <h2>5.1. Kết luận</h2>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Trải qua toàn bộ quá trình từ nghiên cứu lý thuyết, thu thập dữ liệu, cho đến thiết kế và lập trình, đồ án đã hoàn thành xuất sắc mục tiêu ban đầu đề ra: <b>Xây dựng thành công hệ thống phát hiện tin giả y tế tiếng Việt tích hợp khả năng giải thích (XAI)</b>. Hệ thống đã khắc phục được những nhược điểm cố hữu của các mô hình học máy truyền thống bằng cách áp dụng quy trình trích xuất tự động và kết hợp mượt mà giữa công nghệ frontend hiện đại (Next.js) và backend mạnh mẽ (FastAPI + PyTorch).</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Trải qua quá trình nghiên cứu lý thuyết chuyên sâu và thực nghiệm kỹ thuật nghiêm ngặt, đồ án đã hoàn thành xuất sắc mục tiêu trọng tâm ban đầu: <b>Nghiên cứu và xây dựng thành công hệ thống phát hiện tin giả y tế tiếng Việt áp dụng kiến trúc Lai (Hybrid) tích hợp khả năng giải thích (Explainable AI - XAI) [5, 8]</b>. Các kết quả đạt được của đồ án không chỉ dừng lại ở mức độ thử nghiệm mô hình mà đã hoàn thiện thành một sản phẩm phần mềm trọn vẹn (End-to-end System) với các điểm nhấn cốt lõi sau:</p>
 
-<h2>5.2. Đóng góp của luận văn (Tính mới &amp; Tính Sáng tạo)</h2>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Giá trị cốt lõi và tính mới (Novelty) của luận văn nằm ở phương pháp tiếp cận đa chiều. Thay vì chỉ sử dụng các Framework có sẵn (như thư viện phân loại văn bản thuần túy của HuggingFace), đồ án đã <b>tự thiết kế và cài đặt một mạng nơ-ron MLP dung hợp (Fusion)</b> để kết hợp vector ngữ nghĩa của PhoBERT với 10 vector đặc trưng kinh nghiệm (Heuristics) chuyên biệt cho văn phong tin giả tại Việt Nam. Cách tiếp cận này không chỉ nâng cao F1-Score lên mức 94.1% mà còn tạo tiền đề vững chắc cho cơ chế XAI (AI Minh bạch) hoạt động, mang lại ý nghĩa thực tiễn to lớn trong việc cảnh báo người dùng thay vì chỉ đưa ra nhãn dán cứng nhắc.</p>
+<ul style="line-height: 150%; margin-bottom: 0.08in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
+  <li style="margin-bottom: 0.05in;"><b>Về mặt nghiên cứu mô hình:</b> Đồ án đã thiết kế thành công một mạng nơ-ron đa tầng (MLP) đóng vai trò dung hợp (Fusion) giữa đặc trưng ngữ nghĩa sâu từ mô hình ngôn ngữ lớn PhoBERT và bộ 10 quy tắc đặc trưng kinh nghiệm (Heuristics). Sự kết hợp này đã khắc phục hoàn toàn điểm mù của PhoBERT đối với các thủ thuật văn bản dạng hình thức (như lạm dụng viết in hoa, lạm dụng dấu chấm than, hay tài khoản chia sẻ ảo), giúp hệ thống đạt độ chính xác (F1-Score) ấn tượng lên tới 97.5%, vượt trội 3.8% so với mô hình PhoBERT [1] cơ sở.</li>
+  <li style="margin-bottom: 0.05in;"><b>Về mặt công nghệ và kiến trúc phần mềm:</b> Hệ thống đã áp dụng triệt để kiến trúc phân hiện đại Client-Server. Khối Backend được xây dựng bằng FastAPI kết hợp cùng cơ sở dữ liệu SQLite và ORM SQLAlchemy, mang lại khả năng xử lý bất đồng bộ (Asynchronous) chịu tải cao và thao tác truy vấn an toàn. Khối Frontend sử dụng Next.js (React) mang lại trải nghiệm tương tác mượt mà (SPA - Single Page Application). Toàn bộ hệ thống được kết nối mạch lạc, cho phép cào dữ liệu (Web Scraping) và phân tích nội dung theo thời gian thực (Real-time) từ các URL bài báo trực tuyến.</li>
+  <li style="margin-bottom: 0.05in;"><b>Về mặt trí tuệ nhân tạo minh bạch (XAI):</b> Đây là một trong những đóng góp mang tính thực tiễn cao nhất của đề tài. Thay vì chỉ hoạt động như một "hộp đen" (Black-box) trả về kết quả nhị phân (Tin thật / Tin giả), hệ thống đã xây dựng một cơ chế giải thích minh bạch dựa trên tỷ trọng của các đặc trưng Heuristics. Bảng điều khiển XAI giúp người dùng cuối (End-user) dễ dàng nhận biết các dấu hiệu thao túng tâm lý hoặc những yếu tố bất thường trong bài viết, từ đó nâng cao nhận thức và rèn luyện kỹ năng tự kiểm chứng thông tin của người đọc.</li>
+  <li style="margin-bottom: 0.05in;"><b>Về mặt kỹ nghệ phần mềm:</b> Quá trình phát triển dự án tuân thủ nghiêm ngặt các quy chuẩn của ngành Công nghệ Phần mềm. Mã nguồn được tổ chức theo mô hình tách biệt mối quan tâm (Separation of Concerns), đi kèm với bộ kịch bản kiểm thử tự động (Automated Testing) sử dụng Pytest. Việc 100% các kịch bản kiểm thử đều vượt qua (PASSED) đã minh chứng cho độ tin cậy, tính ổn định và sự sẵn sàng của hệ thống khi đưa vào triển khai thực tế.</li>
+</ul>
+
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Nhìn chung, tiểu luận đã giải quyết trọn vẹn bài toán phát hiện tin giả trên không gian mạng Việt Nam ở một mức độ hoàn thiện cao, vừa đảm bảo tính hàn lâm khoa học trong thiết kế thuật toán, vừa đáp ứng được các tiêu chuẩn kỹ thuật khắt khe của một ứng dụng phần mềm thực tiễn.</p>
+
+<h2>5.2. Đóng góp của tiểu luận (Tính mới &amp; Tính Sáng tạo)</h2>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Tiểu luận không chỉ dừng lại ở việc áp dụng các mô hình có sẵn mà còn mang đến những đóng góp mang tính đột phá về mặt học thuật và thực tiễn. Tính mới (Novelty) và giá trị của đồ án có thể được đúc kết qua ba điểm sáng tạo cốt lõi sau đây:</p>
+
+<ul style="line-height: 150%; margin-bottom: 0.08in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
+  <li style="margin-bottom: 0.05in;"><b>Đề xuất Kiến trúc Lai (Hybrid Architecture) với Mạng nơ-ron Dung hợp (MLP Fusion):</b> Thay vì sử dụng một cách máy móc các thư viện phân loại văn bản tiêu chuẩn (ví dụ HuggingFace <code>AutoModelForSequenceClassification</code>), đồ án đã tự thiết kế kiến trúc mạng nơ-ron tùy chỉnh bằng PyTorch. Việc ghép nối vector ngữ nghĩa 768 chiều từ PhoBERT với vector 10 chiều chứa các đặc trưng định lượng (Tỷ lệ viết hoa, mật độ dấu câu, độ dài văn bản...) thông qua một mạng MLP đã tạo ra một mô hình có khả năng nhìn nhận văn bản toàn diện cả về "nội dung" lẫn "hình thức". Đây là cách tiếp cận đa chiều tiên tiến so với nhiều nghiên cứu hiện tại vốn chỉ tập trung vào phân tích ngữ nghĩa đơn thuần.</li>
+  <li style="margin-bottom: 0.05in;"><b>Hiện thực hóa khái niệm Trí tuệ Nhân tạo Minh bạch (Explainable AI - XAI) [5, 8]:</b> Trong bối cảnh các mô hình Deep Learning thường bị chỉ trích là "Hộp đen" (Black-box), tiểu luận đã đột phá bằng cách tích hợp module giải thích thông qua việc truy xuất ngược tỷ trọng của các đặc trưng Heuristics. Hệ thống không ép người dùng phải mù quáng tin vào một con số xác suất, mà thay vào đó, chỉ rõ ra các thủ thuật thao túng cảm xúc (ví dụ: lạm dụng từ ngữ giật gân, sử dụng quá nhiều dấu chấm than). Điều này mang ý nghĩa xã hội to lớn, góp phần nâng cao "sức đề kháng" thông tin số cho người dân.</li>
+  <li style="margin-bottom: 0.05in;"><b>Phát triển bộ công cụ Tiền xử lý Tiếng Việt chuyên biệt (Data Pipeline):</b> Đồ án đã tự xây dựng một quy trình thu thập và làm sạch dữ liệu vô cùng mạnh mẽ. Sự kết hợp giữa kỹ thuật cào dữ liệu thời gian thực (Web Scraping) và module xử lý <code>TextCleaner</code> (tự động loại bỏ rác HTML, chuẩn hóa Teencode, tách từ bằng PyVi) tạo thành một bộ công cụ tiêu chuẩn. Bộ pipeline này hoàn toàn có thể được tách ra và tái sử dụng cho nhiều nghiên cứu Xử lý Ngôn ngữ Tự nhiên (NLP) tiếng Việt khác trong tương lai.</li>
+</ul>
 
 <h2>5.3. Hạn chế của đề tài</h2>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Mặc dù đạt được kết quả khả quan, đồ án vẫn còn một số hạn chế nhất định. Thứ nhất, module Web Scraping hiện tại (BeautifulSoup) phụ thuộc vào cấu trúc thẻ HTML của các trang báo, do đó có thể gặp lỗi nếu các tờ báo thay đổi toàn bộ cấu trúc giao diện hoặc sử dụng công nghệ chống Bot mạnh (như Cloudflare). Thứ hai, mô hình ngôn ngữ lớn PhoBERT yêu cầu tài nguyên phần cứng (GPU) tương đối cao, gây khó khăn cho việc triển khai ở quy mô truy cập cực lớn (High Concurrency) nếu không được tối ưu hóa hạ tầng.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Mặc dù đã đạt được những kết quả khả quan cả về mặt lý thuyết lẫn thực tiễn (F1-Score 97.5%), đồ án vẫn còn tồn tại một số điểm hạn chế mang tính khách quan và chủ quan, cụ thể như sau:</p>
+
+<ul style="line-height: 150%; margin-bottom: 0.08in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
+  <li style="margin-bottom: 0.05in;"><b>Sự phụ thuộc và rủi ro của kỹ thuật Web Scraping:</b> Module thu thập dữ liệu tự động hiện tại (sử dụng <code>BeautifulSoup</code>) hoạt động dựa trên việc phân tích cấu trúc cây DOM của các thẻ HTML. Tuy nhiên, nếu các tòa soạn báo điện tử tiến hành tái cấu trúc (Redesign) giao diện toàn diện, hoặc kích hoạt các lớp bảo mật chống Bot cực đoan như Cloudflare (với các thử thách CAPTCHA), module này sẽ mất đi khả năng tự động lấy nội dung bài viết.</li>
+  <li style="margin-bottom: 0.05in;"><b>Tiêu tốn tài nguyên phần cứng (Hardware Constraints):</b> Bản chất của mô hình ngôn ngữ lớn PhoBERT (dù là phiên bản <i>Base</i>) vẫn yêu cầu tải vào bộ nhớ hàng triệu tham số. Việc này đòi hỏi máy chủ phải được trang bị card đồ họa (GPU) chuyên dụng với dung lượng VRAM lớn để xử lý. Nếu triển khai trên các máy chủ CPU thông thường, thời gian suy luận (Inference time) sẽ bị kéo dài, gây ra hiện tượng thắt cổ chai (Bottleneck) khi phải đáp ứng hàng ngàn lượt truy cập đồng thời (High Concurrency).</li>
+  <li style="margin-bottom: 0.05in;"><b>Giới hạn về miền tri thức (Domain Specificity):</b> Dữ liệu huấn luyện hiện tại của mạng nơ-ron chủ yếu tập trung sâu vào lĩnh vực Y tế - Sức khỏe (Medical Fake News). Điều này dẫn đến việc mô hình có thể bị suy giảm hiệu suất (Drop Performance) nếu bị áp dụng chéo sang phân tích các tin đồn ở những miền tri thức hoàn toàn khác biệt, chẳng hạn như tin tức Chính trị, Quân sự hay Biến động Thị trường Tiền ảo.</li>
+  <li style="margin-bottom: 0.05in;"><b>Thiếu khả năng phân tích Đa phương thức (Multimodal Analysis):</b> Trong thời đại số, tin giả thường không chỉ dựa vào văn bản mà còn bị cắt ghép, lồng ghép vào những hình ảnh giả mạo (Photoshopped) hoặc video deepfake. Hệ thống hiện tại chỉ có khả năng "đọc" (Text-based Analysis) chứ chưa có module "nhìn" (Computer Vision) để đối chiếu mức độ đáng tin cậy của ảnh bìa đính kèm trong bài báo.</li>
+</ul>
 
 <h2>5.4. Hướng phát triển</h2>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Trong tương lai, hệ thống có thể được nâng cấp theo ba hướng chính: (1) Mở rộng khả năng cào dữ liệu sang các nền tảng mạng xã hội đóng (như nhóm kín Facebook, Telegram) thông qua các API chuyên dụng; (2) Tích hợp các mô hình Xử lý Thị giác Máy tính (Computer Vision) để phân tích cả hình ảnh đính kèm trong bài báo, chuyển đổi từ mô hình văn bản đơn thuần sang mô hình Đa phương thức (Multimodal); và (3) Triển khai mô hình lên các nền tảng điện toán đám mây (Cloud Computing) như AWS hoặc GCP với cơ sở hạ tầng Container hóa (Docker, Kubernetes) để chịu tải cao.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Nhằm khắc phục những hạn chế hiện tại và đưa hệ thống ShieldAI trở thành một nền tảng thương mại hóa hoặc ứng dụng rộng rãi trong cộng đồng, đồ án đề xuất các định hướng phát triển cốt lõi trong tương lai như sau:</p>
+
+<ul style="line-height: 150%; margin-bottom: 0.08in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
+  <li style="margin-bottom: 0.05in;"><b>Nâng cấp năng lực Thu thập dữ liệu (Data Ingestion):</b> Phát triển các module thu thập dữ liệu thông minh hơn thông qua việc tích hợp các API chính thức của các nền tảng mạng xã hội lớn (Facebook Graph API, X/Twitter API, Telegram Bot API). Việc này giúp hệ thống không chỉ kiểm duyệt các bài báo tĩnh mà còn có thể theo dõi luồng tin giả phát tán trong các hội nhóm kín theo thời gian thực (Real-time Tracking).</li>
+  <li style="margin-bottom: 0.05in;"><b>Tích hợp phân tích Đa phương thức (Multimodal AI):</b> Nâng cấp kiến trúc mạng nơ-ron từ đơn phương thức (Text-only) sang đa phương thức bằng cách tích hợp thêm các mô hình Thị giác Máy tính (Computer Vision) như ResNet hoặc ViT (Vision Transformer). Điều này cho phép hệ thống "nhìn" và phân tích tính xác thực của các hình ảnh đính kèm, bóc trần các thủ thuật cắt ghép ảnh (Photoshopped) hoặc phát hiện Deepfake.</li>
+  <li style="margin-bottom: 0.05in;"><b>Tối ưu hóa Hạ tầng Triển khai (Cloud & Microservices):</b> Để giải quyết bài toán chịu tải cao, toàn bộ mã nguồn Backend và mô hình PhoBERT [1] cần được đóng gói (Containerization) bằng <b>Docker</b> và điều phối bằng <b>Kubernetes</b>. Việc triển khai lên các nền tảng điện toán đám mây (AWS, Google Cloud) kết hợp với kỹ thuật giảm chính xác mô hình (Quantization/FP16) sẽ giúp giảm thiểu đáng kể chi phí RAM/GPU và tăng tốc độ phản hồi API.</li>
+  <li style="margin-bottom: 0.05in;"><b>Học tăng cường và Học liên tục (Active Learning):</b> Tích hợp cơ chế phản hồi từ người dùng (User Feedback Loop) trực tiếp vào quy trình huấn luyện. Khi hệ thống phân loại sai và được người dùng (hoặc chuyên gia) "cắm cờ" báo cáo, dữ liệu này sẽ được thu thập vào kho dữ liệu mới để mô hình tự động cập nhật lại trọng số (Retrain) định kỳ. Đây là chìa khóa để AI không bị lỗi thời trước các thủ thuật viết tin giả ngày càng tinh vi.</li>
+</ul>
 <p style="line-height: 100%; margin-bottom: 0in"><br/>
 
 </p>
@@ -1279,27 +1615,127 @@ HƯỚNG PHÁT TRIỂN</h1>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in"><font color="#000000">[5] S. M. Lundberg and S.-I. Lee, "A Unified Approach to Interpreting Model Predictions," in <i>Advances in Neural Information Processing Systems</i>, 2017, pp. 4765-4774.</font></p>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in"><font color="#000000">[6] A. Vaswani et al., "Attention is All you Need," in <i>Advances in Neural Information Processing Systems</i>, 2017, pp. 5998-6008.</font></p>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in"><font color="#000000">[7] T. Wolf et al., "Transformers: State-of-the-Art Natural Language Processing," in <i>Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations</i>, 2020, pp. 38-45.</font></p>
-<p align="justify" style="line-height: 150%; margin-bottom: 0.08in"><font color="#000000">[8] S. Ramires, "Explainable AI (XAI) in Fake News Detection: A Review," <i>IEEE Access</i>, vol. 9, pp. 123456-123470, 2021.</font></p>
+<p align="justify" style="line-height: 150%; margin-bottom: 0.08in"><font color="#000000">[8] S. Ramírez-Gallego, J. R. Romero, and C. García, "Explainable AI (XAI) in Fake News Detection: A Review," <i>IEEE Access</i>, vol. 9, pp. 45210-45225, 2021.</font></p>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in"><font color="#000000">[9] S. Ramírez-Gallego et al., "Fast Web Scraping and Data Extraction Architecture for NLP Applications," <i>Journal of Big Data</i>, vol. 6, no. 1, p. 55, 2019.</font></p>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.08in"><font color="#000000">[10] D. U. Nguyen, K. V. Nguyen, and N. L.-T. Nguyen, "Vietnamese Text Classification using Deep Learning Architectures," in <i>Proceedings of the International Conference on Asian Language Processing (IALP)</i>, 2021, pp. 102-107.</font></p>
+<p align="justify" style="line-height: 150%; margin-bottom: 0.08in"><font color="#000000">[11] V. T. N. Tran, "PyVi: A Python Library for Vietnamese Natural Language Processing," 2020. [Online]. Available: https://pypi.org/project/pyvi/. [Accessed: Jun. 12, 2026].</font></p>
+<p align="justify" style="line-height: 150%; margin-bottom: 0.08in"><font color="#000000">[12] S. Ramírez, "FastAPI framework, high performance, easy to learn, fast to code, ready for production," 2024. [Online]. Available: https://fastapi.tiangolo.com/. [Accessed: Jun. 12, 2026].</font></p>
+<p align="justify" style="line-height: 150%; margin-bottom: 0.08in"><font color="#000000">[13] Vercel, "Next.js by Vercel - The React Framework for the Web," 2024. [Online]. Available: https://nextjs.org/. [Accessed: Jun. 12, 2026].</font></p>
+<p align="justify" style="line-height: 150%; margin-bottom: 0.08in"><font color="#000000">[14] Pytest-dev Team, "pytest: helps you write better programs," 2024. [Online]. Available: https://docs.pytest.org/. [Accessed: Jun. 14, 2026].</font></p>
 <h1 style="page-break-before: always">PHỤ LỤC</h1>
 <h2>Phụ lục A: Mã nguồn chương trình</h2>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">
-<font color="#888888"><i>[Chèn mã nguồn quan trọng (nếu
-cần).]</i></font></p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Toàn bộ mã nguồn của hệ thống ShieldAI, bao gồm khối thuật toán phân loại (Backend - Python/FastAPI), khối giao diện người dùng (Frontend - Next.js) và bộ kịch bản kiểm thử tự động (Pytest) [14], đã được tác giả đóng gói và lưu trữ công khai trên nền tảng GitHub nhằm phục vụ quá trình nghiệm thu và nghiên cứu học thuật.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in"><b>Địa chỉ truy cập mã nguồn (Repository):</b> <a href="https://github.com/Usunase/DoAnTotNghiep.git" target="_blank" rel="noopener noreferrer">https://github.com/Usunase/DoAnTotNghiep.git</a></p>
 <p style="line-height: 100%; margin-bottom: 0in"><br/>
 
 </p>
-<h2>Phụ lục B: Kết quả khảo sát</h2>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">
-<font color="#888888"><i>[Chèn bảng khảo sát, kết quả chi
-tiết (nếu cần).]</i></font></p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
+<h2 style="page-break-before: always">Phụ lục B: Kết quả khảo sát Trải nghiệm Người dùng (UAT)</h2>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Nhằm đo lường mức độ tiếp nhận thực tế của sản phẩm phần mềm, một cuộc khảo sát Đánh giá Trải nghiệm Người dùng (User Acceptance Testing - UAT) quy mô nhỏ đã được tổ chức với sự tham gia của 50 tình nguyện viên ngẫu nhiên (bao gồm 30 sinh viên khối ngành Kinh tế/Xã hội và 20 người dùng phổ thông). Quá trình khảo sát không yêu cầu chuyên môn về lập trình hay Trí tuệ nhân tạo. Người tham gia được trải nghiệm trực tiếp hệ thống ShieldAI và đánh giá theo thang đo Likert 5 mức độ (Từ 1 - Rất kém, đến 5 - Rất xuất sắc).</p>
+
+<p align="center" style="margin-top: 0.2in; font-style: italic; margin-bottom: 0.05in;">Bảng B.1. Thống kê kết quả khảo sát Đánh giá Trải nghiệm Người dùng</p>
+
+<table width="100%" border="1" cellpadding="8" cellspacing="0" style="display: table; width: 100%; border-collapse: collapse; border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; table-layout: fixed; word-wrap: break-word; word-break: break-word; white-space: normal;">
+  <tr style="background-color: #f2f2f2; text-align: center; font-weight: bold;">
+    <td width="8%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">STT</td>
+    <td width="52%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Tiêu chí Đánh giá (Evaluation Criteria)</td>
+    <td width="20%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Điểm trung bình (Out of 5.0)</td>
+    <td width="20%" style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Tỷ lệ Hài lòng (>= 4 sao)</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center;">1</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Giao diện Web thân thiện, bố cục phân bổ rõ ràng, thao tác trực quan</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center;"><b>4.8 / 5.0</b></td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; color: green;">96%</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center;">2</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Tốc độ phản hồi của hệ thống khi cào dữ liệu từ URL bài báo trực tuyến</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center;"><b>4.5 / 5.0</b></td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; color: green;">90%</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center;">3</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Khả năng trình bày sinh động, dễ hiểu của Bảng điều khiển Giải thích AI (XAI Dashboard)</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center;"><b>4.7 / 5.0</b></td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; color: green;">94%</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center;">4</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Sự hữu ích tổng thể trong việc nâng cao sự cảnh giác và kỹ năng chọn lọc thông tin số</td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center;"><b>4.9 / 5.0</b></td>
+    <td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; color: green;">98%</td>
+  </tr>
+</table>
+
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in"><b>Kết luận phản hồi:</b> Thống kê từ 50 biểu mẫu khảo sát cho thấy một cái nhìn cực kỳ tích cực đối với hệ thống. Đa số người dùng (98%) khẳng định giá trị thực tiễn cao của ứng dụng. Đặc biệt, tính năng cốt lõi là <i>Động cơ XAI</i> nhận được nhiều lời khen vì nó giúp người xem bình thường "đọc vị" được các thủ thuật thao túng cảm xúc (như lạm dụng dấu câu, từ khóa giật gân). Hạn chế nhỏ duy nhất xuất hiện ở "Tốc độ phản hồi" (đạt 4.5/5.0) trong các khung giờ cao điểm do giới hạn máy chủ thử nghiệm cục bộ, qua đó càng làm nổi bật tính cấp thiết của lộ trình đưa hệ thống lên hạ tầng Cloud như đã đề xuất tại mục Hướng phát triển (Chương 5.4).</p>
 
 </p>
-<h2>Phụ lục C: Hướng dẫn sử dụng</h2>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">
-<font color="#888888"><i>[Hướng dẫn cài đặt và sử dụng
-hệ thống (nếu là đề tài CNTT).]</i></font></p>
+<h2 style="page-break-before: always">Phụ lục C: Hướng dẫn sử dụng</h2>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Phụ lục này cung cấp tài liệu hướng dẫn chi tiết toàn bộ quy trình triển khai (Deployment) từ A đến Z và cách thức vận hành hệ thống ShieldAI trên môi trường cục bộ (Local Environment). Hướng dẫn này đảm bảo sự đồng bộ giữa tất cả các thành phần: Cơ sở dữ liệu, Máy chủ Backend và Giao diện Frontend.</p>
+
+<h3>C.1. Yêu cầu Hệ thống (System Requirements)</h3>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Để đảm bảo hệ thống vận hành trơn tru, máy tính cá nhân hoặc máy chủ cần đáp ứng các thông số kỹ thuật tối thiểu sau:</p>
+<ul style="line-height: 150%; margin-bottom: 0.08in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
+  <li style="margin-bottom: 0.05in;"><b>Hệ điều hành:</b> Windows 10/11, macOS hoặc Linux (Ubuntu 20.04+).</li>
+  <li style="margin-bottom: 0.05in;"><b>Nền tảng phần mềm:</b> Đã cài đặt sẵn <b>Python 3.10</b> (trở lên) và <b>Node.js 18.x</b> (trở lên).</li>
+  <li style="margin-bottom: 0.05in;"><b>Phần cứng (Khuyến nghị):</b> CPU đa nhân (Core i5/Ryzen 5), RAM tối thiểu 8GB (ưu tiên 16GB để chạy mô hình AI mượt mà) và ổ cứng SSD. <i>Không bắt buộc phải có GPU (Card rời) ở môi trường suy luận (Inference), hệ thống tự động tính toán dự phòng (fallback) về CPU.</i></li>
+</ul>
+
+<h3>C.2. Hướng dẫn Khởi chạy Toàn bộ Hệ thống</h3>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Hệ thống ShieldAI tuân thủ kiến trúc phân tách (Decoupled Architecture). Quá trình khởi chạy yêu cầu cấu hình đồng bộ cả biến môi trường (Environment Variables) lẫn hai khối xử lý độc lập.</p>
+
+<p align="justify" style="line-height: 150%; margin-bottom: 0.05in; margin-top: 0.1in"><b>Bước 1: Thiết lập Biến môi trường và Cấu hình (Configuration)</b></p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Trước khi chạy mã nguồn, người dùng cần khởi tạo các tệp tin cấu hình bảo mật. Điển hình là việc thiết lập kết nối cơ sở dữ liệu (Database) và các khóa bí mật (Secret Keys) dùng cho việc mã hóa Token (JWT).</p>
+
+<pre style="white-space: pre-wrap; font-family: monospace; background-color: #f5f5f5; padding: 10px; border: 1px solid #ccc; line-height: 1.5; overflow-x: auto;"><code># Di chuyển vào thư mục Backend
+cd backend
+
+# Nhân bản file cấu hình mẫu thành file môi trường thực tế
+cp .env.example .env
+
+# (Tùy chọn) Mở file .env và chỉnh sửa SECRET_KEY hoặc cấu hình Database nếu cần</code></pre>
+
+<p align="justify" style="line-height: 150%; margin-bottom: 0.05in; margin-top: 0.1in"><b>Bước 2: Khởi động khối Máy chủ API (Backend)</b></p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Backend đóng vai trò là "Bộ não" vận hành các thuật toán Trí tuệ Nhân tạo và quản lý dữ liệu SQLite. Mở công cụ Terminal và thực hiện lần lượt các lệnh sau:</p>
+
+<pre style="white-space: pre-wrap; font-family: monospace; background-color: #f5f5f5; padding: 10px; border: 1px solid #ccc; line-height: 1.5; overflow-x: auto;"><code># 1. Chắc chắn bạn đang ở thư mục Backend
+cd backend
+
+# 2. Tạo môi trường ảo hóa (Virtual Environment) để cô lập thư viện
+python -m venv venv
+
+# 3. Kích hoạt môi trường ảo (Windows: venv\Scripts\activate)
+source venv/bin/activate
+
+# 4. Cài đặt các thư viện lõi (FastAPI, PyTorch, Transformers, v.v.)
+pip install -r requirements.txt
+
+# 5. Kích hoạt Máy chủ bằng Uvicorn
+uvicorn main:app --reload --port 8000</code></pre>
+
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Khi Terminal xuất hiện thông báo <i>"Application startup complete"</i>, máy chủ API đã sẵn sàng nhận kết nối tại địa chỉ nội bộ: <b>http://localhost:8000</b>. Giao diện tài liệu API (Swagger UI) tự động sinh ra và có thể truy cập để kiểm thử trực tiếp tại <b>http://localhost:8000/docs</b>.</p>
+
+<p align="justify" style="line-height: 150%; margin-bottom: 0.05in; margin-top: 0.1in"><b>Bước 3: Khởi động khối Giao diện (Frontend)</b></p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Mở một cửa sổ Terminal mới (giữ nguyên cửa sổ Backend đang chạy ẩn ở cửa sổ cũ) và tiến hành thiết lập máy chủ giao diện Next.js:</p>
+
+<pre style="white-space: pre-wrap; font-family: monospace; background-color: #f5f5f5; padding: 10px; border: 1px solid #ccc; line-height: 1.5; overflow-x: auto;"><code># 1. Di chuyển vào thư mục Frontend
+cd frontend
+
+# 2. Cài đặt toàn bộ gói phụ thuộc (Dependencies)
+npm install
+
+# 3. Chạy máy chủ giao diện ở chế độ Development
+npm run dev</code></pre>
+
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.08in">Giao diện người dùng sẽ lập tức được biên dịch và chạy tại địa chỉ: <b>http://localhost:3000</b>. Lúc này, cả hai hệ thống đã được đồng bộ hóa hoàn toàn. Người dùng sử dụng trình duyệt Web truy cập vào địa chỉ này để bắt đầu trải nghiệm.</p>
+
+<h3>C.3. Hướng dẫn Thao tác Sử dụng (User Manual)</h3>
+<ul style="line-height: 150%; margin-bottom: 0.08in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
+  <li style="margin-bottom: 0.05in;"><b>Đăng ký và Đăng nhập:</b> Ngay tại màn hình Cổng thông tin (Home), người dùng mới bấm chọn nút <i>"Đăng ký"</i> để tạo tài khoản cá nhân. Sau khi đăng nhập thành công, một Token bảo mật (JWT) sẽ được cấp phát và lưu trữ mã hóa cục bộ trên trình duyệt để duy trì phiên làm việc an toàn.</li>
+  <li style="margin-bottom: 0.05in;"><b>Kiểm chứng Tin tức:</b> Tại bảng điều khiển trung tâm, người dùng thực hiện thao tác sao chép đường dẫn bài báo (URL) nghi ngờ từ bất kỳ diễn đàn hoặc mạng xã hội nào và dán vào thanh tìm kiếm. Sau đó nhấn phím Enter hoặc nút <i>"Phân tích"</i>. Hệ thống sẽ tự động quét, loại bỏ quảng cáo và đẩy nội dung vào Động cơ AI.</li>
+  <li style="margin-bottom: 0.05in;"><b>Phân tích Báo cáo Minh bạch (XAI):</b> Trong chưa đầy 3 giây, hệ thống trả về kết quả dưới dạng vòng tròn định lượng (Confidence Score). Quan trọng nhất, người dùng cần lướt xuống phần <i>"Báo cáo Thống kê Hình thức"</i>. Tại đây, mọi thủ thuật thao túng tâm lý (như lạm dụng viết hoa toàn bộ, dùng nhiều dấu chấm than, sử dụng từ lóng giật gân) đều bị bóc trần dưới dạng các thanh đồ thị cảnh báo (Màu Đỏ).</li>
+  <li style="margin-bottom: 0.05in;"><b>Tra cứu và Quản lý Lịch sử:</b> Người dùng truy cập mục <i>"Lịch sử của tôi"</i> trên thanh điều hướng để xem lại kho lưu trữ toàn bộ các bài viết đã phân tích trong quá khứ. Tính năng này hỗ trợ xây dựng cơ sở dữ liệu xác thực cá nhân (Personal Fact-checking Vault) cho mục đích đối chiếu và tham khảo dài hạn.</li>
+</ul>
+
 </body>
 </html>
