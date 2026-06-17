@@ -18,7 +18,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "ShieldAI | Phát hiện tin giả",
   description:
-    "Nền tảng phân loại tin thật / tin giả tiếng Việt — PhoBERT + Hybrid MLP",
+    "Nền tảng phân loại tin thật / tin giả tiếng Việt — PhoBERT + MLP",
 };
 
 export default function RootLayout({

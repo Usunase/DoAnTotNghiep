@@ -1,6 +1,6 @@
 # Hướng dẫn thực hiện dự án ShieldAI
 
-**Phát hiện tin giả tiếng Việt bằng học máy lai (PhoBERT + Metadata + MLP)**
+**Phát hiện tin giả tiếng Việt bằng PhoBERT + MLP (text-only)**
 
 Tài liệu này mô tả **toàn bộ quy trình** từ thu thập dữ liệu → huấn luyện → đánh giá → triển khai web, phù hợp cho đồ án tốt nghiệp.
 
@@ -32,8 +32,8 @@ Xây dựng công cụ **phân tích và phát hiện tin giả tiếng Việt**
 | Thành phần | Mô tả |
 |------------|-------|
 | **PhoBERT-base** | Trích xuất embedding ngữ cảnh 768 chiều từ nội dung bài viết |
-| **Metadata (10 chiều)** | 5 tín hiệu mạng xã hội + 5 thống kê văn bản |
 | **MLP `(128, 64)`** | Phân loại nhị phân: tin thật / tin giả |
+| **Verdict 3 mức** | Tin thật / Đáng ngờ / Tin giả (ngưỡng 35% / 75%) |
 | **Giải thích rule-based** | Trình bày lý do phân loại cho người dùng |
 
 ### 1.2. Kiến trúc hệ thống
@@ -45,13 +45,12 @@ Người dùng (Web)
 Next.js Frontend  ──POST /api/analyze──►  FastAPI Backend
       │                                        │
       │                                        ▼
-      │                              HybridInferenceSystem
+      │                              PhoBERTInferenceSystem
       │                              ┌─────────────────────┐
       │                              │ Module 1: Crawler   │
+      │                              │ + preprocess_text   │
       │                              │ Module 2: PhoBERT   │
-      │                              │           + Meta    │
-      │                              │ Module 3: Fusion    │
-      │                              │ Module 4: MLP       │
+      │                              │ Module 3: MLP + XAI │
       │                              └─────────────────────┘
       ▼
 Trang kết quả (xác suất + giải thích)
@@ -75,17 +74,17 @@ DoAnTotNghiep/
 ├── backend/
 │   ├── api/main.py                 # FastAPI — API phân tích
 │   ├── data_crawler.py             # Crawl URL / nhận văn bản thủ công
-│   ├── text_cleaner.py             # Tiền xử lý văn bản lúc inference
-│   ├── text_utils.py               # Hàm xử lý văn bản dùng chung
-│   ├── feature_extraction.py       # Trích xuất metadata & thống kê
+│   ├── text_utils.py               # preprocess_text — train + inference
+│   ├── text_cleaner.py             # Wrapper tương thích
 │   ├── dataset_cleaner.py          # Làm sạch CSV trước train
-│   ├── hybrid_inference.py         # Pipeline suy luận 4 module
+│   ├── phobert_inference.py        # Pipeline suy luận
+│   ├── verdict.py                  # Phân loại 3 mức
 │   ├── explanation_engine.py       # Sinh giải thích kết quả
 │   ├── data/
 │   │   └── full_dataset.csv        # Bộ dữ liệu gốc (~169k dòng)
 │   ├── models/                     # Mô hình đã train (.joblib, .npy)
 │   ├── training/
-│   │   └── train_hybrid_model.ipynb  # Notebook train duy nhất
+│   │   └── train_phobert_model.ipynb  # Notebook train duy nhất
 │   └── experiments/
 │       └── run_experimental_evaluation.py  # Đánh giá thực nghiệm
 ├── frontend/                       # Giao diện Next.js
@@ -198,17 +197,17 @@ source venv/bin/activate
 ./start_jupyter.sh
 ```
 
-Mở file: `backend/training/train_hybrid_model.ipynb`
+Mở file: `backend/training/train_phobert_model.ipynb`
 
-### Bước 5.2 — Chạy lần lượt 6 phần
+### Bước 5.2 — Chạy lần lượt các phần trong notebook
 
 | Phần | Nội dung | Đầu ra |
 |------|----------|--------|
-| **0** | Lý thuyết hybrid & cấu hình PhoBERT | Hiểu phương pháp |
+| **0** | Lý thuyết PhoBERT + MLP | Hiểu phương pháp |
 | **1** | Nạp & lọc dữ liệu | DataFrame sạch |
 | **2** | Nhúng PhoBERT-base | `phobert_base_features.npy`, `phobert_base_labels.npy` |
-| **3** | Metadata mô phỏng + thống kê văn bản | 10 cột đặc trưng |
-| **4** | Ghép vector & train MLP | 3 file `.joblib` |
+| **3** | (Bỏ qua metadata) | — |
+| **4** | Train MLP trên embedding 768-d | `phobert_mlp_model.joblib`, `phobert_scaler.joblib` |
 | **5** | Đánh giá thực nghiệm | Biểu đồ + bảng metrics |
 
 ### Bước 5.3 — Cấu hình quan trọng
@@ -236,28 +235,20 @@ PhoBERT-base (frozen, không fine-tune)
 Vector [CLS] 768 chiều  →  lưu .npy
 ```
 
-#### Phần 3 — Metadata (10 chiều)
-
-| Nhóm | Đặc trưng | Ghi chú |
-|------|-----------|---------|
-| MXH (5) | `account_age_days`, `followers`, `is_verified`, `share_speed`, `angry_ratio` | **Mô phỏng** theo nhãn tin giả/thật |
-| Văn bản (5) | `title_length`, `uppercase_ratio`, `exclamation_count`, `question_count`, `punctuation_density` | Tính từ title + content |
-
-#### Phần 4 — Hybrid MLP
+#### Phần 4 — MLP text-only
 
 ```
-[PhoBERT 768] + [Meta 10 (StandardScaler)]
-              │
-              ▼
-        StandardScaler (toàn bộ)
-              │
-              ▼
-     MLP (128, 64) + ReLU + Adam
-              │
-              ▼
-   hybrid_mlp_model.joblib
-   hybrid_scaler.joblib
-   hybrid_scaler_meta.joblib
+Vector [CLS] 768 chiều
+       │
+       ▼
+StandardScaler
+       │
+       ▼
+MLP (128, 64) + ReLU + Adam
+       │
+       ▼
+phobert_mlp_model.joblib
+phobert_scaler.joblib
 ```
 
 ### Bước 5.5 — Kiểm tra file mô hình
@@ -267,9 +258,8 @@ Sau khi train xong, thư mục `backend/models/` phải có:
 ```
 phobert_base_features.npy
 phobert_base_labels.npy
-hybrid_mlp_model.joblib
-hybrid_scaler.joblib
-hybrid_scaler_meta.joblib
+phobert_mlp_model.joblib
+phobert_scaler.joblib
 ```
 
 ---
@@ -280,7 +270,7 @@ hybrid_scaler_meta.joblib
 
 ```bash
 source venv/bin/activate
-python -m backend.experiments.run_experimental_evaluation
+python3 -m backend.experiments.run_experimental_evaluation
 ```
 
 Hoặc chạy **Phần 5** trong notebook.
@@ -290,8 +280,6 @@ Hoặc chạy **Phần 5** trong notebook.
 | Thí nghiệm | Mục đích |
 |------------|----------|
 | Confusion matrix | Nhìn lỗi phân loại |
-| Text-only vs Hybrid | Chứng minh metadata giúp cải thiện |
-| Ablation study | Bỏ từng nhóm metadata, đo ảnh hưởng |
 | ROC / AUC | Đánh giá khả năng phân tách lớp |
 | 5-fold Cross-validation | Độ ổn định mô hình |
 
@@ -299,10 +287,8 @@ Hoặc chạy **Phần 5** trong notebook.
 
 ```
 backend/experiments/figures/experimental/
-├── confusion_matrix_*.png
-├── comparison_*.png
-├── ablation_*.png
-├── roc_*.png
+├── confusion_matrix_text_only.png
+├── roc_curves.png
 ├── cv_summary.csv
 ├── cv_summary.json
 ├── metrics_summary.csv
@@ -319,35 +305,29 @@ Backend đã được triển khai sẵn. Hiểu luồng xử lý:
 
 ### Module 1 — Thu thập & tiền xử lý
 
-File: `backend/data_crawler.py`, `backend/text_cleaner.py`
+File: `backend/data_crawler.py`, `backend/text_utils.py`
 
-- **Chế độ URL:** crawl HTML → trích `<h1>` + `<p>`
+- **Chế độ URL:** crawl HTML → trích tiêu đề + nội dung
 - **Chế độ văn bản:** người dùng dán trực tiếp
-- **Tiền xử lý:** xóa HTML/URL → chuẩn hóa teencode → tách từ PyVi
+- **Tiền xử lý:** `preprocess_text` (lowercase, xóa URL, PyVi)
 
-### Module 2 — Trích xuất đặc trưng song song
+### Module 2 — PhoBERT embedding
 
-File: `backend/hybrid_inference.py`, `backend/feature_extraction.py`
+File: `backend/phobert_inference.py`
 
-- **Nhánh 1:** PhoBERT → vector 768 chiều
-- **Nhánh 2:** metadata người dùng nhập + thống kê văn bản → vector 10 chiều
+- PhoBERT → vector 768 chiều ([CLS])
 
-### Module 3 — Hợp nhất (Fusion)
+### Module 3 — Phân loại & giải thích
 
-- Chuẩn hóa metadata bằng `hybrid_scaler_meta.joblib`
-- Nối (concatenate) → vector 778 chiều
-- Chuẩn hóa toàn bộ bằng `hybrid_scaler.joblib`
-
-### Module 4 — Phân loại & giải thích
-
-- MLP dự đoán + xác suất tin giả
-- `explanation_engine.py` sinh giải thích rule-based
+- `phobert_scaler` + MLP → xác suất tin giả
+- `verdict.py` → nhãn 3 mức
+- `explanation_engine.py` → giải thích rule-based
 
 ### Test backend độc lập
 
 ```bash
 source venv/bin/activate
-python -m backend.hybrid_inference
+python3 -m backend.phobert_inference
 ```
 
 ### Chạy API
@@ -371,8 +351,9 @@ Frontend Next.js tại thư mục `frontend/`.
 | Route | Chức năng |
 |-------|-----------|
 | `/` | Trang chủ — giới thiệu ShieldAI |
-| `/analyze` | Nhập văn bản hoặc URL + metadata MXH |
-| `/results` | Hiển thị kết quả, xác suất, giải thích |
+| `/analyze` | Nhập văn bản hoặc URL (cần đăng nhập) |
+| `/results` | Xác suất, verdict 3 mức, giải thích |
+| `/history` | Lịch sử phân tích |
 
 ### Luồng frontend
 
@@ -385,7 +366,7 @@ File quan trọng:
 - `frontend/app/analyze/page.tsx` — form phân tích
 - `frontend/app/results/page.tsx` — hiển thị kết quả
 - `frontend/lib/api.ts` — gọi API backend
-- `frontend/components/` — UI components (gauge, explanation, metadata...)
+- `frontend/components/` — ResultGauge, ExplanationCard, ...
 
 ### Chạy frontend riêng
 
@@ -436,10 +417,9 @@ Terminal 2 — Frontend:
 
 1. Mở http://localhost:3000/analyze
 2. Chọn tab **Văn bản**
-3. Dán mẫu tin giả hoặc tin thật (có sẵn nút "Dùng mẫu")
-4. Điều chỉnh metadata MXH (tuổi tài khoản, follower, v.v.)
-5. Nhấn **Phân tích ngay**
-6. Xem kết quả tại `/results`
+3. Dán mẫu tin giả hoặc tin thật
+4. Nhấn **Phân tích ngay**
+5. Xem kết quả tại `/results`
 
 ### 10.2 — Test API bằng curl
 
@@ -472,11 +452,9 @@ curl -X POST http://127.0.0.1:8000/api/analyze \
 
 ## 11. Lưu ý quan trọng cho luận văn
 
-### 11.1 — Metadata MXH được mô phỏng
+### 11.1 — Pipeline thống nhất
 
-Bộ dữ liệu `full_dataset.csv` **không có** dữ liệu mạng xã hội thật. Trong quá trình train, 5 đặc trưng MXH được **sinh ngẫu nhiên có điều kiện** theo nhãn `is_fake` (xem `backend/feature_extraction.py`).
-
-**Cần ghi rõ trong luận văn:** đây là giả định/mô phỏng, không phải dữ liệu Facebook thực.
+Hàm `preprocess_text` trong `text_utils.py` phải được dùng cho **cả train và inference**. Ghi rõ trong luận văn để tránh lệch pipeline.
 
 ### 11.2 — PhoBERT frozen, không fine-tune
 
@@ -512,7 +490,7 @@ Crawler HTML đơn giản (BeautifulSoup), có thể **không trích xuất đư
 [ ] 2. Cài npm install trong frontend/
 [ ] 3. Kiểm tra backend/data/full_dataset.csv
 [ ] 4. Chạy python -m backend.dataset_cleaner
-[ ] 5. Mở train_hybrid_model.ipynb — chạy Phần 1→5
+[ ] 5. Mở train_phobert_model.ipynb — chạy Phần 1→5
 [ ] 6. Kiểm tra 5 file trong backend/models/
 [ ] 7. Chạy đánh giá thực nghiệm (Phần 5 / script)
 [ ] 8. Chạy ./run_web.sh

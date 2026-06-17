@@ -18,13 +18,6 @@ def test_analyze_unauthorized():
         "mode": "text",
         "text": "Bệnh ung thư có thể chữa khỏi bằng lá lốt!!!",
         "title": "Tin giật gân",
-        "meta": {
-            "account_age_days": 10,
-            "followers": 5,
-            "is_verified": 0,
-            "share_speed": 100,
-            "angry_ratio": 0.8
-        }
     }
     response = client.post("/api/analyze", json=payload)
     assert response.status_code == 200

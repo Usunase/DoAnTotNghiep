@@ -53,7 +53,7 @@ class DataCrawler:
                 "message": str(e)
             }
 
-    def get_article_from_text(self, raw_text, title="", author_metadata=None):
+    def get_article_from_text(self, raw_text, title=""):
         """Nhận nội dung bài báo do người dùng dán trực tiếp."""
         if not raw_text or not str(raw_text).strip():
             return {"status": "error", "message": "Nội dung bài báo trống."}
@@ -65,12 +65,11 @@ class DataCrawler:
             "content": raw_text.strip(),
             "source_domain": "user_input",
             "crawled_at": crawled_at,
-            "metadata": author_metadata or {},
         }
 
-    def get_facebook_post(self, raw_text, author_metadata=None):
+    def get_facebook_post(self, raw_text):
         """Giữ tương thích code cũ — alias cho nhập văn bản thủ công."""
-        return self.get_article_from_text(raw_text, title="Bài đăng mạng xã hội", author_metadata=author_metadata)
+        return self.get_article_from_text(raw_text, title="Bài đăng mạng xã hội")
 
 # Script Test nếu file được chạy độc lập
 if __name__ == "__main__":

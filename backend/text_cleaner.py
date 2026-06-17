@@ -2,7 +2,7 @@ import re
 
 from pyvi import ViTokenizer
 
-from backend.text_utils import remove_html, remove_urls, normalize_whitespace
+from backend.text_utils import preprocess_text, remove_html, remove_urls, normalize_whitespace
 
 class TextCleaner:
     """
@@ -64,17 +64,8 @@ class TextCleaner:
         return ViTokenizer.tokenize(text)
 
     def pipeline_clean(self, text):
-        """ Hàm tổng gọi liền mạch cả 4 bước (Pipeline) """
-        if not isinstance(text, str) or len(text) == 0:
-            return ""
-            
-        t1 = self.remove_html_and_urls(text)
-        t2 = self.normalize_teencode(t1)
-        # Chuyển về chữ thường để PyVi làm việc tốt nhất với module nhúng PhoBERT
-        t3 = t2.lower()
-        t4 = self.remove_special_characters_and_emojis(t3)
-        t5 = self.pyvi_segmentation(t4)
-        return t5
+        """Cùng pipeline với train/embed — gọi `preprocess_text` trong text_utils."""
+        return preprocess_text(text)
 
 # Script Test
 if __name__ == "__main__":

@@ -14,7 +14,6 @@ def save_analysis(
     db: Session,
     user_id: int,
     input_mode: str,
-    meta: dict[str, Any],
     result: dict[str, Any],
     *,
     input_title: str = "",
@@ -34,7 +33,7 @@ def save_analysis(
         fake_prob=float(result.get("fake_prob", 0)),
         verdict=explanation.get("verdict"),
         explanation_json=json.dumps(explanation, ensure_ascii=False),
-        meta_json=json.dumps(meta, ensure_ascii=False),
+        meta_json="{}",
     )
     db.add(record)
     db.commit()
@@ -131,6 +130,7 @@ def _to_detail(row: AnalysisHistory) -> dict[str, Any]:
         "status": "success",
         "history_id": row.id,
         "result": row.result_label,
+        "verdict": row.verdict or explanation.get("verdict"),
         "fake_prob": row.fake_prob,
         "raw_data": {
             "title": row.title,

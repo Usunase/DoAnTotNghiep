@@ -1,7 +1,7 @@
 """
 Làm sạch và chuẩn bị bộ dữ liệu trước khi train (PhoBERT + MLP).
 
-Gom logic từ notebook `train_hybrid_model.ipynb` (Phần 1 + tách từ Phần 2).
+Gom logic từ notebook `train_phobert_model.ipynb` (Phần 1 + tách từ Phần 2).
 
 Chạy độc lập:
     python -m backend.dataset_cleaner
@@ -14,7 +14,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from backend.text_utils import segment_for_training
+from backend.text_utils import preprocess_text
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_INPUT = PROJECT_ROOT / "backend/data/full_dataset.csv"
@@ -53,8 +53,8 @@ def fill_missing_text_columns(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def segment_text(text: str) -> str:
-    """Alias tương thích — gọi `segment_for_training` trong text_utils."""
-    return segment_for_training(text)
+    """Alias tương thích — gọi `preprocess_text` trong text_utils."""
+    return preprocess_text(text)
 
 
 def add_segmented_column(

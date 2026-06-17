@@ -23,12 +23,10 @@ def test_normalize_teencode(cleaner):
     assert "j" not in normalized
 
 def test_pipeline_clean(cleaner):
-    text = "Hôm nay tôi thấy bài báo đó viết sai sự thật wa j luôn á mọi ng ơi!!! Vào web xem nè http://fake.vn <br> Quá bức xúc!"
+    text = "Tin nóng tại https://example.com cần kiểm chứng gấp!!!"
     final_output = cleaner.pipeline_clean(text)
-    
-    # Should be lowercased, teencode fixed, urls removed, special characters removed, pyvi tokenized
+
     assert "http" not in final_output
-    assert "br" not in final_output
-    assert "!!!" not in final_output
-    assert "quá" in final_output
-    assert "_" in final_output # PyVi segmentation uses underscores
+    assert "example.com" not in final_output
+    assert final_output == final_output.lower()
+    assert "_" in final_output

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import type { AnalyzeResponse } from "@/lib/types";
-import { verdictFromProb } from "@/lib/types";
+import { resolveVerdict } from "@/lib/types";
 
 interface Props {
   data: AnalyzeResponse;
@@ -16,7 +16,7 @@ const toneStyles = {
 
 export default function ResultGauge({ data }: Props) {
   const prob = data.fake_prob ?? 0;
-  const v = verdictFromProb(prob);
+  const v = resolveVerdict(data);
   const circumference = 2 * Math.PI * 45;
   const offset = circumference - (prob / 100) * circumference;
 
@@ -79,7 +79,10 @@ export default function ResultGauge({ data }: Props) {
         transition={{ delay: 0.5 }}
         className={`mt-8 w-full rounded-2xl border bg-gradient-to-br px-6 py-5 text-white ${toneStyles[v.tone]}`}
       >
-        <p className="font-display text-xl font-bold">{v.label}</p>
+        <p className="text-xs font-semibold uppercase tracking-widest text-white/70">
+          PhoBERT + MLP
+        </p>
+        <p className="mt-2 font-display text-xl font-bold">{v.label}</p>
         <p className="mt-2 text-sm text-white/90">{v.advice}</p>
       </motion.div>
     </motion.div>

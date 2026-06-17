@@ -1,5 +1,5 @@
 """
-FastAPI — bridge giữa Next.js frontend và HybridInferenceSystem.
+FastAPI — bridge giữa Next.js frontend và PhoBERTInferenceSystem.
 Chạy: uvicorn backend.api.main:app --reload --host 0.0.0.0 --port 8000
 """
 from __future__ import annotations
@@ -22,7 +22,7 @@ from backend.api.feedback_routes import router as feedback_router
 from backend.api.history_routes import router as history_router
 from backend.auth.deps import get_current_user
 from backend.database import User, get_db, init_db, save_analysis
-from backend.hybrid_inference import HybridInferenceSystem
+from backend.phobert_inference import PhoBERTInferenceSystem
 
 app = FastAPI(title="ShieldAI API", version="1.2.0")
 
@@ -43,22 +43,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-_system: HybridInferenceSystem | None = None
+_system: PhoBERTInferenceSystem | None = None
 
 
-def get_system() -> HybridInferenceSystem:
+def get_system() -> PhoBERTInferenceSystem:
     global _system
     if _system is None:
-        _system = HybridInferenceSystem(verbose=False)
+        _system = PhoBERTInferenceSystem(verbose=False)
     return _system
-
-
-class MetaPayload(BaseModel):
-    account_age_days: float = 0
-    followers: float = 0
-    is_verified: float = 0
-    share_speed: float = 0
-    angry_ratio: float = 0
 
 
 class AnalyzePayload(BaseModel):
@@ -66,7 +58,6 @@ class AnalyzePayload(BaseModel):
     text: Optional[str] = None
     title: Optional[str] = ""
     url: Optional[str] = None
-    meta: MetaPayload = Field(default_factory=MetaPayload)
 
 
 @app.get("/api/health")
@@ -87,7 +78,6 @@ def analyze(
     if user is None:
         return {"status": "error", "message": "Vui lòng đăng nhập để phân tích."}
     system = get_system()
-    meta = payload.meta.model_dump()
 
     if payload.mode == "text":
         if not payload.text or not payload.text.strip():
@@ -95,12 +85,12 @@ def analyze(
         result = system.infer(
             article_text=payload.text.strip(),
             article_title=payload.title or "",
-            facebook_meta=meta,
+
         )
     else:
         if not payload.url or not payload.url.strip():
             return {"status": "error", "message": "URL trống."}
-        result = system.infer(url=payload.url.strip(), facebook_meta=meta)
+        result = system.infer(url=payload.url.strip())
 
     if not result:
         return {"status": "error", "message": "Lỗi không xác định."}
@@ -111,7 +101,6 @@ def analyze(
         db,
         user.id,
         payload.mode,
-        meta,
         result,
         input_title=payload.title or "",
         input_url=payload.url.strip() if payload.url else None,

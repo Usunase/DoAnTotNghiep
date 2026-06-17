@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import AuthGuard from "@/components/AuthGuard";
 import PageTransition from "@/components/PageTransition";
 import { deleteHistoryItem, fetchHistoryList } from "@/lib/history";
-import { verdictFromProb } from "@/lib/types";
+import { resolveVerdict, type Verdict } from "@/lib/types";
 import type { HistorySummary } from "@/lib/types";
 
 function formatDate(iso?: string | null) {
@@ -19,8 +19,8 @@ function formatDate(iso?: string | null) {
   }
 }
 
-function toneClass(fakeProb: number) {
-  const { tone } = verdictFromProb(fakeProb);
+function toneClass(verdict: Verdict | string | null | undefined, fakeProb: number) {
+  const { tone } = resolveVerdict({ verdict, fake_prob: fakeProb });
   if (tone === "danger") return "bg-red-100 text-red-800 ring-red-200";
   if (tone === "warn") return "bg-amber-100 text-amber-800 ring-amber-200";
   return "bg-emerald-100 text-emerald-800 ring-emerald-200";
@@ -111,7 +111,10 @@ export default function HistoryPage() {
             {!loading && items.length > 0 && (
               <div className="space-y-4">
                 {items.map((item, i) => {
-                  const verdict = verdictFromProb(item.fake_prob);
+                  const verdict = resolveVerdict({
+                    verdict: item.verdict,
+                    fake_prob: item.fake_prob,
+                  });
                   return (
                     <motion.article
                       key={item.id}
@@ -123,7 +126,7 @@ export default function HistoryPage() {
                       <div className="min-w-0 flex-1">
                         <div className="mb-2 flex flex-wrap items-center gap-2">
                           <span
-                            className={`inline-flex rounded-full px-2.5 py-0.5 text-xs font-semibold ring-1 ${toneClass(item.fake_prob)}`}
+                            className={`inline-flex rounded-full px-2.5 py-0.5 text-xs font-semibold ring-1 ${toneClass(item.verdict, item.fake_prob)}`}
                           >
                             {verdict.label} · {item.fake_prob.toFixed(1)}%
                           </span>

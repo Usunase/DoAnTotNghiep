@@ -5,10 +5,7 @@ import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import AuthGuard from "@/components/AuthGuard";
 import PageTransition from "@/components/PageTransition";
-import MetadataPanel from "@/components/MetadataPanel";
 import { analyzeNews, RESULT_STORAGE_KEY } from "@/lib/api";
-import { DEFAULT_META } from "@/lib/types";
-import type { MetaInput } from "@/lib/types";
 
 const SAMPLE_FAKE =
   "CẢNH BÁO KHẨN CẤP!!! Hàng ngàn người đang hoảng loạn tháo chạy vì vụ cháy quá lớn. Tin cực hot mọi người ơi chia sẻ gấp trước khi bị gỡ!!!!";
@@ -21,7 +18,6 @@ export default function AnalyzePage() {
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
   const [url, setUrl] = useState("");
-  const [meta, setMeta] = useState<MetaInput>(DEFAULT_META);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -43,7 +39,6 @@ export default function AnalyzePage() {
         text: tab === "text" ? text : undefined,
         title: tab === "text" ? title : undefined,
         url: tab === "url" ? url : undefined,
-        meta,
       });
 
       if (res.status === "error") {
@@ -78,12 +73,11 @@ export default function AnalyzePage() {
               Phân tích tin tức
             </h1>
             <p className="mt-2 text-slate-500">
-              Kết quả sẽ hiển thị trên trang riêng sau khi xử lý xong.
+              Nhập văn bản hoặc URL — mô hình PhoBERT + MLP sẽ phân loại và giải thích kết quả.
             </p>
           </motion.div>
 
-          <div className="grid gap-8 lg:grid-cols-3">
-            <div className="space-y-6 lg:col-span-2">
+          <div className="mx-auto max-w-3xl">
               <div className="card-premium">
                 <div className="flex gap-2 rounded-xl bg-surface-soft p-1">
                   {(["text", "url"] as const).map((t) => (
@@ -200,11 +194,6 @@ export default function AnalyzePage() {
                   )}
                 </button>
               </div>
-            </div>
-
-            <div>
-              <MetadataPanel meta={meta} onChange={setMeta} />
-            </div>
           </div>
         </div>
       </div>

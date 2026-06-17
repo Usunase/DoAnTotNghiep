@@ -5,7 +5,7 @@ export default function Footer() {
         <div>
           <p className="font-display text-sm font-bold text-ink">ShieldAI</p>
           <p className="mt-1 text-sm text-slate-500">
-            PhoBERT + Hybrid MLP · Phát hiện tin giả tiếng Việt
+            PhoBERT + MLP · Phát hiện tin giả tiếng Việt
           </p>
         </div>
         <p className="text-xs text-slate-400">

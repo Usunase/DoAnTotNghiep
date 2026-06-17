@@ -1,3 +1,5 @@
+export type Verdict = "real" | "fake" | "suspicious";
+
 export interface User {
   id: number;
   email: string;
@@ -22,20 +24,11 @@ export interface AuthResponse {
   user?: User;
 }
 
-export interface MetaInput {
-  account_age_days: number;
-  followers: number;
-  is_verified: number;
-  share_speed: number;
-  angry_ratio: number;
-}
-
 export interface AnalyzeRequest {
   mode: "text" | "url";
   text?: string;
   title?: string;
   url?: string;
-  meta: MetaInput;
 }
 
 export interface Explanation {
@@ -45,7 +38,6 @@ export interface Explanation {
   primary_reasons: string[];
   counter_points?: string[];
   counter_label?: string;
-  meta_breakdown?: { label: string; value: number | string }[];
 }
 
 export interface HistorySummary {
@@ -73,6 +65,7 @@ export interface AnalyzeResponse {
   message?: string;
   history_id?: number;
   result?: string;
+  verdict?: Verdict;
   fake_prob?: number;
   created_at?: string;
   raw_data?: {
@@ -82,34 +75,25 @@ export interface AnalyzeResponse {
     original_url?: string;
   };
   explanation?: Explanation;
-  meta_vector?: number[];
   feedback?: {
     is_correct: boolean;
     comment?: string | null;
   } | null;
 }
 
-export const DEFAULT_META: MetaInput = {
-  account_age_days: 0,
-  followers: 0,
-  is_verified: 0,
-  share_speed: 0,
-  angry_ratio: 0,
-};
-
-export function verdictFromProb(prob: number): {
+export function verdictToDisplay(verdict: Verdict): {
   label: string;
   tone: "safe" | "warn" | "danger";
   advice: string;
 } {
-  if (prob >= 75) {
+  if (verdict === "fake") {
     return {
       label: "TIN GIẢ",
       tone: "danger",
       advice: "Rủi ro rất cao — đối chiếu nguồn chính thống trước khi chia sẻ.",
     };
   }
-  if (prob >= 35) {
+  if (verdict === "suspicious") {
     return {
       label: "ĐÁNG NGỜ",
       tone: "warn",
@@ -121,4 +105,34 @@ export function verdictFromProb(prob: number): {
     tone: "safe",
     advice: "Nội dung được mô hình đánh giá tương đối đáng tin.",
   };
+}
+
+export function resolveVerdict(data: {
+  verdict?: Verdict | string | null;
+  explanation?: Explanation;
+  fake_prob?: number;
+}): {
+  label: string;
+  tone: "safe" | "warn" | "danger";
+  advice: string;
+} {
+  const fromApi = data.verdict ?? data.explanation?.verdict;
+  if (fromApi === "fake" || fromApi === "suspicious" || fromApi === "real") {
+    return verdictToDisplay(fromApi);
+  }
+  return verdictFromProb(data.fake_prob ?? 0);
+}
+
+export function verdictFromProb(prob: number): {
+  label: string;
+  tone: "safe" | "warn" | "danger";
+  advice: string;
+} {
+  if (prob >= 75) {
+    return verdictToDisplay("fake");
+  }
+  if (prob >= 35) {
+    return verdictToDisplay("suspicious");
+  }
+  return verdictToDisplay("real");
 }

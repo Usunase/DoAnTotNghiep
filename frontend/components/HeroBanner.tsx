@@ -48,8 +48,8 @@ export default function HeroBanner() {
           variants={fadeUp}
           className="mt-6 max-w-xl text-lg text-slate-400 sm:text-xl"
         >
-          Phân loại tin thật và tin giả tiếng Việt với mô hình hybrid PhoBERT +
-          metadata — giao diện premium, kết quả minh bạch.
+          Phân loại tin thật và tin giả tiếng Việt với PhoBERT + MLP —
+          giao diện premium, kết quả minh bạch.
         </motion.p>
 
         <motion.div
@@ -70,7 +70,7 @@ export default function HeroBanner() {
         >
           {[
             { n: "768D", l: "PhoBERT embedding" },
-            { n: "10+", l: "Tín hiệu metadata" },
+            { n: "MLP", l: "Bộ phân loại" },
             { n: "<3s", l: "Thời gian phản hồi" },
           ].map((stat) => (
             <div

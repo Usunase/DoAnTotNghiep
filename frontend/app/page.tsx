@@ -13,7 +13,7 @@ export default function HomePage() {
             Sẵn sàng kiểm tra tin tức?
           </h2>
           <p className="mx-auto mt-3 max-w-md text-slate-500">
-            Chuyển sang trang phân tích, nhập nội dung và nhận kết quả trên trang riêng.
+            Nhập văn bản hoặc link báo — nhận xác suất tin giả và giải thích từ PhoBERT + MLP.
           </p>
           <a href="/analyze" className="btn-primary mt-8 inline-flex">
             Đến trang phân tích

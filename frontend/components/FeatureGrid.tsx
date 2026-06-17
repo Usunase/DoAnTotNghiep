@@ -16,8 +16,8 @@ const features = [
   },
   {
     icon: "🧠",
-    title: "Hybrid AI",
-    desc: "Kết hợp ngữ nghĩa sâu và tín hiệu hành vi nguồn tin.",
+    title: "PhoBERT + MLP",
+    desc: "Phân tích ngữ nghĩa tiếng Việt bằng embedding sâu và bộ phân loại MLP.",
   },
   {
     icon: "💡",

@@ -22,7 +22,15 @@ def normalize_whitespace(text: str) -> str:
 
 
 def segment_for_training(text: str) -> str:
-    """Pipeline gọn cho train/embed: lower → xóa URL → tách từ PyVi."""
+    """
+    Pipeline tiền xử lý chuẩn cho train và inference:
+    lower → xóa URL → chuẩn hóa khoảng trắng → tách từ PyVi.
+    """
+    return preprocess_text(text)
+
+
+def preprocess_text(text: str) -> str:
+    """Alias rõ nghĩa — cùng logic với `segment_for_training`."""
     if not isinstance(text, str) or not text:
         return ""
     text = text.lower()
