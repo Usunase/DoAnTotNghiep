@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <b>Đồ án Tốt nghiệp: Nghiên cứu và Xây dựng hệ thống phát hiện tin giả dựa trên mô hình ngôn ngữ lớn và đặc trưng ngữ cảnh (Hybrid Architecture).</b>
+  <b>Đồ án Tốt nghiệp: Nghiên cứu và xây dựng hệ thống phát hiện tin giả tiếng Việt dựa trên PhoBERT và mạng nơ-ron MLP.</b>
 </p>
 
 ---
@@ -17,13 +17,13 @@
 ## 📖 Giới thiệu
 **ShieldAI** là một hệ thống Trí tuệ Nhân tạo chuyên biệt dùng để rà soát, phân tích và phát hiện các bài báo, bài viết giả mạo trên không gian mạng Việt Nam. 
 
-Thay vì chỉ sử dụng các mô hình học máy truyền thống, ShieldAI tiên phong áp dụng **Kiến trúc Lai (Hybrid Architecture)**, kết hợp sức mạnh đọc hiểu ngữ nghĩa sâu của **PhoBERT** cùng với **10 luồng Đặc trưng Kinh nghiệm (Heuristics/Metadata)**. Giải pháp này giúp hệ thống đạt độ chính xác (F1-Score) lên tới **94.1%**, đồng thời triệt tiêu điểm mù của AI và giảm thiểu tối đa hiện tượng đánh oan tin thật (False Positives).
+Thay vì các mô hình học máy truyền thống, ShieldAI sử dụng **PhoBERT** (embedding 768 chiều) kết hợp **MLP** để phân loại tin thật / tin giả. Hệ thống đạt F1-Score khoảng **94%** trên tập đánh giá hold-out, kèm lớp giải thích rule-based (XAI) dựa trên phân tích văn bản.
 
 ## ✨ Tính năng nổi bật
 - **Phân tích Đa phương thức:** Hỗ trợ nhập trực tiếp Văn bản (Text) hoặc dán Đường dẫn bài báo (URL) từ các trang tin tức chính thống.
-- **XAI (Explainable AI) - Trí tuệ nhân tạo có thể giải thích:** Không chỉ đưa ra kết luận (Tin thật/Tin giả), hệ thống còn vạch trần các thủ thuật lừa đảo (ví dụ: Lạm dụng viết hoa, lạm dụng dấu chấm than, giọng điệu kích động,...).
+- **XAI (Explainable AI):** Không chỉ đưa ra kết luận 3 mức (Tin thật / Đáng ngờ / Tin giả), hệ thống còn giải thích các dấu hiệu rủi ro trong văn bản.
 - **Giao diện hiện đại (Web App):** Xây dựng bằng Next.js mang lại trải nghiệm người dùng mượt mà, phản hồi tức thời.
-- **Bộ chuẩn hóa Tiếng Việt (Text Cleaner):** Tự động làm sạch rác HTML, tự động dịch các từ lóng mạng (Teencode) như *ko, dc, wa, j* về chuẩn Tiếng Việt.
+- **Tiền xử lý thống nhất:** Cùng pipeline `preprocess_text` cho train và inference (lowercase, xóa URL, PyVi tokenize).
 
 ## 📂 Cấu trúc Dự án
 Dự án được tổ chức theo mô hình Client-Server chuyên nghiệp:
@@ -33,8 +33,8 @@ DoAnTotNghiep/
 ├── backend/            # Chứa mã nguồn AI và API Server
 │   ├── api/            # Các Endpoint của FastAPI
 │   ├── tests/          # Bộ kiểm thử tự động (Unit Test & Integration Test)
-│   ├── text_cleaner.py # Module làm sạch văn bản & xử lý Teencode
-│   ├── feature_...py   # Module trích xuất Heuristics (Tỷ lệ viết hoa, dấu câu)
+│   ├── text_utils.py   # Tiền xử lý văn bản (train + inference)
+│   ├── phobert_inference.py  # Pipeline suy luận PhoBERT + MLP
 │   └── run_tests.sh    # Script chạy Test tự động
 ├── frontend/           # Giao diện người dùng (Next.js, React, TailwindCSS)
 ├── docs/               # Tài liệu tham khảo và Log quá trình
@@ -46,6 +46,32 @@ DoAnTotNghiep/
 - Hệ điều hành: Linux/Windows/macOS
 - Python: >= 3.10
 - Node.js: >= 18.0
+
+## 📦 Mô hình inference (`backend/models/`)
+
+Sau khi clone, thư mục này **phải có** các file sau để API chạy được (đã được commit trong repo):
+
+| File | Vai trò |
+|------|---------|
+| `phobert_mlp_model.joblib` | MLP đã huấn luyện (768-d → 2 lớp) |
+| `phobert_scaler.joblib` | StandardScaler fit trên embedding train |
+| `phobert_base_features.npy` | Embedding PhoBERT cache (train) — ~32MB |
+| `phobert_base_labels.npy` | Nhãn tương ứng embedding cache |
+
+**Không còn** file `hybrid_*.joblib` (pipeline cũ PhoBERT + metadata đã bỏ).
+
+Nếu thiếu file hoặc muốn train lại từ đầu:
+
+1. Chuẩn bị dữ liệu CSV (xem `docs/HUONG_DAN_THUC_HIEN_DU_AN.md`).
+2. Mở và chạy tuần tự `backend/training/train_phobert_model.ipynb` (Phần 1 → 5).
+3. Notebook ghi đè các file `.joblib` và `.npy` vào `backend/models/`.
+
+Kiểm tra nhanh sau khi có model:
+
+```bash
+source venv/bin/activate
+python -m backend.phobert_inference
+```
 
 ## 🚀 Hướng dẫn Cài đặt & Khởi chạy
 
@@ -66,9 +92,9 @@ Mở một tab Terminal thứ 2 và chạy script:
 Truy cập giao diện hệ thống tại: `http://localhost:3000`
 
 ## 🧪 Hệ thống Kiểm thử Tự động (Automated Testing)
-Dự án được trang bị bộ Test Suite chuẩn doanh nghiệp sử dụng `pytest`. Hệ thống kiểm thử chặt chẽ 3 hạng mục:
-1. Xử lý Teencode & Rác HTML.
-2. Trích xuất đặc trưng hình thức (Heuristics).
+Dự án được trang bị bộ Test Suite sử dụng `pytest`. Hệ thống kiểm thử:
+1. Tiền xử lý văn bản thống nhất (`preprocess_text`).
+2. Phân loại 3 mức (`verdict`).
 3. Đảm bảo bảo mật truy cập API.
 
 **Cách chạy Test:**
