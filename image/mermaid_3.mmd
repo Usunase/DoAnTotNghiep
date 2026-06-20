@@ -1,28 +1,24 @@
 flowchart TD
-    Start([Bắt đầu: Nhận Văn bản/URL]) --> Preprocess[Tiền xử lý & Làm sạch Văn bản]
-    Preprocess --> Split{Tách luồng xử lý song song}
-    
-    %% Luồng Ngữ Nghĩa PhoBERT
-    Split -->|Luồng 1: Ngữ nghĩa| Tokenize[PhoBERT Tokenization]
-    Tokenize --> BertForward[Qua các lớp Attention của PhoBERT]
-    BertForward --> BertVec[Trích xuất Vector CLS 768 chiều]
-    
-    %% Luồng Đặc trưng Heuristics
-    Split -->|Luồng 2: Heuristics| ExtractStats[Thống kê văn bản: Độ dài, Ký tự...]
-    ExtractStats --> ExtractMeta[Mô phỏng Dữ liệu MXH: Followers, Tuổi Account...]
-    ExtractMeta --> HeuristicVec[Tạo Vector Heuristics 10 chiều]
-    
-    %% Dung hợp & Phân loại
-    BertVec --> Fusion((Dung hợp Vector\nConcatenation))
-    HeuristicVec --> Fusion
-    Fusion --> MLP[Mạng nơ-ron truyền thẳng - MLP]
-    MLP --> Activation[Hàm kích hoạt Sigmoid]
-    
-    %% Đầu ra
-    Activation --> Output{Giá trị > 0.5?}
-    Output -->|Yes| Fake[Phân loại: Tin Giả]
-    Output -->|No| Real[Phân loại: Tin Thật]
-    
-    Fake --> XAI[Chạy thuật toán XAI tính độ quan trọng]
+    Start([Bắt đầu: nhận văn bản hoặc URL]) --> Crawl{Có URL?}
+    Crawl -->|Có| Fetch[Crawl title + content]
+    Crawl -->|Không| Preprocess
+    Fetch --> Preprocess[Tiền xử lý preprocess_text]
+
+    Preprocess --> Check{≥ 5 từ?}
+    Check -->|Không| Error([Trả lỗi])
+    Check -->|Có| Tokenize[PhoBERT tokenization]
+
+    Tokenize --> Embed[Vector CLS 768 chiều]
+    Embed --> Scale[StandardScaler]
+    Scale --> MLP[MLP 128 → 64 → Sigmoid]
+    MLP --> Prob[Xác suất tin giả %]
+
+    Prob --> Verdict{Verdict 3 mức}
+    Verdict -->|≥ 75%| Fake[TIN GIẢ]
+    Verdict -->|35–74%| Suspicious[ĐÁNG NGỜ]
+    Verdict -->|< 35%| Real[TIN THẬT]
+
+    Fake --> XAI[Giải thích rule-based]
+    Suspicious --> XAI
     Real --> XAI
-    XAI --> End([Kết thúc: Trả về Kết quả & Báo cáo XAI])
+    XAI --> End([JSON kết quả + explanation])

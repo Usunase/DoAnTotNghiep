@@ -1,46 +1,44 @@
 flowchart TB
-    %% Khai báo style CSS cho các node
     classDef client fill:#3b82f6,stroke:#1d4ed8,stroke-width:2px,color:#fff,rx:10px,ry:10px
     classDef api fill:#10b981,stroke:#047857,stroke-width:2px,color:#fff,rx:10px,ry:10px
     classDef ml fill:#8b5cf6,stroke:#6d28d9,stroke-width:2px,color:#fff,rx:10px,ry:10px
     classDef db fill:#f59e0b,stroke:#b45309,stroke-width:2px,color:#fff
 
-    subgraph TIER_CLIENT [Tầng Presentation / Client - Next.js]
+    subgraph TIER_CLIENT [Tầng Presentation — Next.js]
         direction LR
-        UI("💻 Giao diện Web (Dashboard)"):::client
-        XAI_UI("📊 Trực quan hóa XAI"):::client
+        UI("💻 Giao diện Web"):::client
+        XAI_UI("📊 Hiển thị verdict & XAI"):::client
         UI <--> XAI_UI
     end
 
-    subgraph TIER_SERVER [Tầng Application / Backend - FastAPI]
+    subgraph TIER_SERVER [Tầng Application — FastAPI]
         direction TB
-        Gateway("🌐 API Gateway & Router"):::api
-        Auth("🔒 JWT Auth Module"):::api
-        Scraper("🕸️ Trình thu thập dữ liệu (BeautifulSoup)"):::api
-        
+        Gateway("🌐 API Gateway"):::api
+        Auth("🔒 JWT Auth"):::api
+        Scraper("🕸️ Crawl URL / nhận text"):::api
         Gateway --> Auth
         Gateway --> Scraper
     end
 
-    subgraph TIER_ML [Tầng AI Inference - PyTorch]
+    subgraph TIER_ML [Tầng AI — PhoBERT text-only + MLP]
         direction TB
-        FeatureExt("⚙️ Trích xuất Đặc trưng (Heuristics)"):::ml
-        PhoBERT("🧠 Mô hình Phân tích Ngữ nghĩa (PhoBERT)"):::ml
-        MLP("🔀 Mạng Nơ-ron Dung hợp (Hybrid MLP)"):::ml
-        XAI("🔍 Động cơ Giải thích Minh bạch"):::ml
+        Preprocess("⚙️ preprocess_text"):::ml
+        PhoBERT("🧠 PhoBERT embedding 768-d"):::ml
+        ScalerMLP("📐 StandardScaler + MLP (128,64)"):::ml
+        Verdict("🏷️ Verdict 3 mức (75% / 35%)"):::ml
+        XAI("🔍 Giải thích rule-based"):::ml
 
-        FeatureExt --> PhoBERT
-        FeatureExt --> MLP
-        PhoBERT --> MLP
-        MLP --> XAI
+        Preprocess --> PhoBERT
+        PhoBERT --> ScalerMLP
+        ScalerMLP --> Verdict
+        Verdict --> XAI
     end
 
     subgraph TIER_DB [Tầng Data Storage]
-        SQLite[("🗄️ Cơ sở dữ liệu SQLite")]:::db
+        SQLite[("🗄️ SQLite — users, history")]:::db
     end
 
-    %% Tương tác luồng dữ liệu liên tầng
-    UI <==>|HTTP RESTful API| Gateway
-    Scraper ==>|Raw Text| FeatureExt
-    XAI ==>|JSON Report| Gateway
-    Gateway <==>|SQLAlchemy ORM| SQLite
+    UI <==>|REST API| Gateway
+    Scraper ==>|Raw text| Preprocess
+    XAI ==>|JSON| Gateway
+    Gateway <==>|ORM| SQLite

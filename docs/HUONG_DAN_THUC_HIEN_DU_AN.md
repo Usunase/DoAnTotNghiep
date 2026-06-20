@@ -81,7 +81,7 @@ DoAnTotNghiep/
 │   ├── verdict.py                  # Phân loại 3 mức
 │   ├── explanation_engine.py       # Sinh giải thích kết quả
 │   ├── data/
-│   │   └── full_dataset.csv        # Bộ dữ liệu gốc (~169k dòng)
+│   │   └── full_dataset.csv        # Bộ dữ liệu gốc (10.617 bản ghi → 10.609 sau lọc)
 │   ├── models/                     # Mô hình đã train (.joblib, .npy)
 │   ├── training/
 │   │   └── train_phobert_model.ipynb  # Notebook train duy nhất
@@ -90,7 +90,7 @@ DoAnTotNghiep/
 ├── frontend/                       # Giao diện Next.js
 ├── scripts/                        # Script chạy dự án
 ├── requirements.txt                # Thư viện Python
-├── run_web.sh                      # Chạy backend + frontend
+├── setup.sh / run.sh              # Cài đặt & chạy (all | api | web | test)
 └── docs/                           # Tài liệu
 ```
 
@@ -151,6 +151,13 @@ node -v && npm -v
 ### Bước 4.1 — Hiểu bộ dữ liệu
 
 File: `backend/data/full_dataset.csv`
+
+| Chỉ số | Giá trị |
+|--------|---------|
+| Số bản ghi gốc | **10.617** bài |
+| Sau lọc (`dataset_cleaner.py`) | **10.609** mẫu |
+| Tập kiểm thử hold-out (30%) | **~3.183** mẫu |
+| Lĩnh vực | Y tế, sức khỏe, COVID (tiếng Việt) |
 
 | Cột quan trọng | Ý nghĩa |
 |----------------|---------|
@@ -333,9 +340,8 @@ python3 -m backend.phobert_inference
 ### Chạy API
 
 ```bash
-source venv/bin/activate
-./run_api.sh
-# Hoặc: uvicorn backend.api.main:app --reload --host 0.0.0.0 --port 8000
+./run.sh api
+# Hoặc: source venv/bin/activate && uvicorn backend.api.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 Kiểm tra: http://127.0.0.1:8000/api/health
@@ -384,8 +390,8 @@ npm run dev
 
 ```bash
 cd /home/haminhchien/Documents/DoAnTotNghiep
-source venv/bin/activate
-./run_web.sh
+./run.sh
+# hoặc: ./run.sh all
 ```
 
 | Dịch vụ | URL |
@@ -399,14 +405,13 @@ source venv/bin/activate
 Terminal 1 — Backend:
 
 ```bash
-source venv/bin/activate
-./run_api.sh
+./run.sh api
 ```
 
 Terminal 2 — Frontend:
 
 ```bash
-./run_nextjs.sh
+./run.sh web
 ```
 
 ---
@@ -476,7 +481,7 @@ Crawler HTML đơn giản (BeautifulSoup), có thể **không trích xuất đư
 |--------|-------------|------------|
 | `Chưa tìm thấy mô hình .joblib` | Chưa train | Chạy notebook Phần 4 |
 | Lỗi `Số dòng không khớp` khi eval | CSV thay đổi sau khi embed | Đặt `REGENERATE_EMBEDDINGS = True` |
-| Frontend báo không kết nối API | Backend chưa chạy | Chạy `./run_api.sh` hoặc `./run_web.sh` |
+| Frontend báo không kết nối API | Backend chưa chạy | Chạy `./run.sh api` hoặc `./run.sh` (cả hai) |
 | Embedding chạy quá lâu | CPU, dataset lớn | Dùng GPU hoặc giữ `REGENERATE_EMBEDDINGS = False` |
 | Crawl URL trả về nội dung rỗng | Trang chặn bot / cấu trúc HTML khác | Dùng chế độ nhập văn bản |
 | Lần đầu chạy web chậm | Tải PhoBERT từ HuggingFace | Chờ 1–3 phút, model được cache |
@@ -493,7 +498,7 @@ Crawler HTML đơn giản (BeautifulSoup), có thể **không trích xuất đư
 [ ] 5. Mở train_phobert_model.ipynb — chạy Phần 1→5
 [ ] 6. Kiểm tra 5 file trong backend/models/
 [ ] 7. Chạy đánh giá thực nghiệm (Phần 5 / script)
-[ ] 8. Chạy ./run_web.sh
+[ ] 8. Chạy ./run.sh
 [ ] 9. Test /analyze với mẫu tin giả và tin thật
 [ ] 10. Chụp biểu đồ + ghi kết quả vào luận văn
 ```

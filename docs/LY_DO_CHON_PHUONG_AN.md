@@ -55,7 +55,7 @@ Nội dung văn bản ──► preprocess_text ──► PhoBERT ──► Vect
 
 - Học phi tuyến trên vector dense 768 chiều.
 - `predict_proba` cho xác suất tin giả.
-- Huấn luyện nhanh trên CPU với ~169k mẫu (embedding đã tính sẵn).
+- Huấn luyện nhanh trên CPU với **10.609 mẫu** (embedding đã tính sẵn).
 - Siêu tham số: `(128, 64)`, ReLU, Adam, `early_stopping=True`, `alpha=0.1`.
 
 ---

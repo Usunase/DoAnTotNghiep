@@ -21,10 +21,11 @@ frontend/
 
 ## Chạy nhanh (1 lệnh — khuyến nghị)
 
+Từ thư mục gốc dự án:
+
 ```bash
 cd /home/haminhchien/Documents/DoAnTotNghiep
-source venv/bin/activate
-./run_web.sh
+./run.sh
 ```
 
 Mở **http://localhost:3000** (API: http://127.0.0.1:8000)
@@ -32,13 +33,15 @@ Mở **http://localhost:3000** (API: http://127.0.0.1:8000)
 ## Chạy tách riêng (2 terminal)
 
 **Terminal 1 — API:**
+
 ```bash
-./run_api.sh
+./run.sh api
 ```
 
 **Terminal 2 — Next.js:**
+
 ```bash
-./run_nextjs.sh
+./run.sh web
 ```
 
 ## Trang
