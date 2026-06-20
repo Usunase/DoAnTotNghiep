@@ -1,0 +1,67 @@
+digraph G {
+    fontname="Helvetica,Arial,sans-serif"
+    fontsize=16
+    node [fontname="Helvetica,Arial,sans-serif", fontsize=14, margin="0.2,0.1"]
+    edge [fontname="Helvetica,Arial,sans-serif", fontsize=12]
+    
+    // Top to Bottom layout is better for A4 portrait
+    rankdir=TB;
+    splines=ortho;
+    nodesep=1.0;
+    ranksep=1.5;
+
+    subgraph cluster_frontend {
+        label = "Client - Giao diện Web (Frontend)";
+        fontsize=16;
+        fontweight=bold;
+        style=filled;
+        color=lightgrey;
+        fillcolor="#F0F8FF";
+        node [shape=box, style=filled, fillcolor=white, color="#005b96", penwidth=1.5];
+        
+        UI [label="Giao diện người dùng\n(React.js / TailwindCSS)", shape=component];
+        NextJS [label="Máy chủ Frontend\n(Next.js 14)", shape=box3d];
+        
+        UI -> NextJS [dir=both, penwidth=1.5];
+    }
+
+    subgraph cluster_backend {
+        label = "Máy chủ API (Backend)";
+        fontsize=16;
+        fontweight=bold;
+        style=filled;
+        color=lightgrey;
+        fillcolor="#F5FFFA";
+        node [shape=box, style=filled, fillcolor=white, color="#2e8b57", penwidth=1.5];
+        
+        FastAPI [label="API Server\n(FastAPI)", shape=component];
+        Scraper [label="Trình thu thập dữ liệu\n(BeautifulSoup4)"];
+        DB [label="Cơ sở dữ liệu\n(SQLite / SQLAlchemy)", shape=cylinder, fillcolor="#ffffe0"];
+        
+        FastAPI -> Scraper [label=" Lấy nội dung URL", penwidth=1.5];
+        FastAPI -> DB [dir=both, label=" Lưu/Tải lịch sử", penwidth=1.5];
+    }
+
+    subgraph cluster_ai {
+        label = "Khối Trí tuệ Nhân tạo (AI Core)";
+        fontsize=16;
+        fontweight=bold;
+        style=filled;
+        color=lightgrey;
+        fillcolor="#FFF0F5";
+        node [shape=box, style=filled, fillcolor=white, color="#c71585", penwidth=1.5];
+        
+        PyVi [label="Tiền xử lý văn bản\n(PyVi Word Segmentation)"];
+        PhoBERT [label="Mô hình ngôn ngữ\n(PhoBERT-base)", shape=cylinder];
+        MLP [label="Mạng nơ-ron đa tầng (MLP)\n(Dung hợp & Phân loại)"];
+        
+        PyVi -> PhoBERT [label=" Văn bản đã tách từ", penwidth=1.5];
+        PhoBERT -> MLP [label=" Vector ngữ nghĩa", penwidth=1.5];
+    }
+
+    // Connections between clusters
+    NextJS -> FastAPI [dir=both, label=" HTTP/REST API\n(Gửi văn bản/URL, nhận kết quả)", color="#000080", penwidth=2.0];
+    FastAPI -> PyVi [label=" Truyền văn bản cần kiểm tra", color="#8b0000", penwidth=2.0];
+    FastAPI -> MLP [label=" Truyền Siêu dữ liệu\n(Nguồn đăng...)", color="#8b0000", style=dashed, penwidth=2.0];
+    MLP -> FastAPI [label=" Kết quả phân loại\n(Real/Fake & Score)", color="#006400", penwidth=2.0];
+}

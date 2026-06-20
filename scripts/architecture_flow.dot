@@ -1,0 +1,27 @@
+digraph G {
+    fontname="Arial"
+    node [fontname="Arial", shape=box, style="rounded,filled", fillcolor="#f9f9f9", penwidth=2, fontsize=16, margin="0.3,0.2"]
+    edge [fontname="Arial", fontsize=14, penwidth=2, color="#555555"]
+    
+    rankdir=TB;
+    splines=spline;
+    nodesep=0.8;
+    ranksep=1.0;
+
+    User [label="👤 Người dùng\n(Nhập Text hoặc Link bài báo)", fillcolor="#d0e8f2", shape=ellipse];
+    Web [label="💻 Giao diện Web\n(Next.js / Gửi yêu cầu)", fillcolor="#e8f4f8"];
+    API [label="⚙️ Máy chủ Hệ thống\n(FastAPI / Tiếp nhận & Điều phối)", fillcolor="#fff3e6"];
+    Scraper [label="🕷️ Cào dữ liệu tự động\n(Lấy nội dung bài báo từ Link)", fillcolor="#fff3e6", shape=note];
+    PhoBERT [label="🧠 AI: Đọc & Hiểu văn bản\n(Mô hình PhoBERT)", fillcolor="#f2d9e6"];
+    MLP [label="⚖️ AI: Phân loại Thật/Giả\n(Mạng nơ-ron đa tầng)", fillcolor="#f2d9e6"];
+    Result [label="✅ Hiển thị Báo cáo\n(Độ tin cậy %)", fillcolor="#d9f2d9", shape=ellipse];
+
+    User -> Web [label=" Bước 1: Gửi yêu cầu"];
+    Web -> API [label=" Bước 2: Gọi API"];
+    API -> Scraper [label=" Bước 3: Lấy dữ liệu gốc"];
+    Scraper -> PhoBERT [label=" Bước 4: Chuyển dữ liệu cho AI"];
+    PhoBERT -> MLP [label=" Bước 5: Trích xuất ý nghĩa văn bản"];
+    MLP -> API [label=" Bước 6: Đưa ra Kết luận Thật/Giả"];
+    API -> Web [label=" Bước 7: Gửi trả kết quả"];
+    Web -> Result [label=" Bước 8: Hiển thị trực quan cho Người dùng"];
+}

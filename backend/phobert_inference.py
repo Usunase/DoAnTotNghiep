@@ -121,7 +121,7 @@ class PhoBERTInferenceSystem:
         except ValueError:
             class_index = 1
 
-        fake_prob = confidence[0][class_index] * 100.0
+        fake_prob = float(confidence[0][class_index] * 100.0)
         verdict = verdict_from_prob(fake_prob)
         result = result_label_from_verdict(verdict)
 

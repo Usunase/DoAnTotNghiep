@@ -1,0 +1,51 @@
+graph ER {
+    fontname="Helvetica,Arial,sans-serif"
+    node [fontname="Helvetica,Arial,sans-serif"]
+    edge [fontname="Helvetica,Arial,sans-serif"]
+    
+    rankdir=LR;
+    
+    node [shape=box, style=filled, fillcolor="#E8F4F8", fontcolor="#000000", penwidth=2];
+    
+    User [label="users"];
+    History [label="analysis_history"];
+    
+    node [shape=ellipse, style=filled, fillcolor="#FFFFFF", fontcolor="#333333", penwidth=1];
+    
+    // Attributes for User
+    u_id [label=<<u>id</u>>];
+    u_username [label="username"];
+    u_email [label="email"];
+    u_pwd [label="hashed_password"];
+    u_created [label="created_at"];
+    
+    User -- u_id;
+    User -- u_username;
+    User -- u_email;
+    User -- u_pwd;
+    User -- u_created;
+    
+    // Attributes for History
+    h_id [label=<<u>id</u>>];
+    h_user_id [label="user_id", fontcolor="#005b96"];
+    h_input_type [label="input_type"];
+    h_input_data [label="input_data"];
+    h_label [label="prediction_label"];
+    h_score [label="confidence_score"];
+    h_created [label="created_at"];
+    
+    History -- h_id;
+    History -- h_user_id;
+    History -- h_input_type;
+    History -- h_input_data;
+    History -- h_label;
+    History -- h_score;
+    History -- h_created;
+    
+    // Relationship
+    node [shape=diamond, style=filled, fillcolor="#FFF0F5", fontcolor="#c71585", penwidth=2];
+    Owns [label="Thực hiện"];
+    
+    User -- Owns [label="1"];
+    Owns -- History [label="N"];
+}

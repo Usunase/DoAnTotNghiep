@@ -1,0 +1,58 @@
+digraph G {
+    fontname="Helvetica,Arial,sans-serif"
+    node [fontname="Helvetica,Arial,sans-serif"]
+    edge [fontname="Helvetica,Arial,sans-serif"]
+    rankdir=LR;
+    splines=ortho;
+    nodesep=0.8;
+    ranksep=1.2;
+
+    subgraph cluster_frontend {
+        label = "Client - Giao diện Web (Frontend)";
+        style=filled;
+        color=lightgrey;
+        fillcolor="#F0F8FF";
+        node [shape=box, style=filled, fillcolor=white, color="#005b96"];
+        
+        UI [label="Giao diện người dùng\n(React.js / TailwindCSS)", shape=component];
+        NextJS [label="Máy chủ Frontend\n(Next.js 14)", shape=box3d];
+        
+        UI -> NextJS [dir=both];
+    }
+
+    subgraph cluster_backend {
+        label = "Máy chủ API (Backend)";
+        style=filled;
+        color=lightgrey;
+        fillcolor="#F5FFFA";
+        node [shape=box, style=filled, fillcolor=white, color="#2e8b57"];
+        
+        FastAPI [label="API Server\n(FastAPI)", shape=component];
+        Scraper [label="Trình thu thập dữ liệu\n(BeautifulSoup4)"];
+        DB [label="Cơ sở dữ liệu\n(SQLite / SQLAlchemy)", shape=cylinder, fillcolor="#ffffe0"];
+        
+        FastAPI -> Scraper [label=" Lấy nội dung URL"];
+        FastAPI -> DB [dir=both, label=" Lưu/Tải lịch sử"];
+    }
+
+    subgraph cluster_ai {
+        label = "Khối Trí tuệ Nhân tạo (AI Core)";
+        style=filled;
+        color=lightgrey;
+        fillcolor="#FFF0F5";
+        node [shape=box, style=filled, fillcolor=white, color="#c71585"];
+        
+        PyVi [label="Tiền xử lý văn bản\n(PyVi Word Segmentation)"];
+        PhoBERT [label="Mô hình ngôn ngữ\n(PhoBERT-base)", shape=cylinder];
+        MLP [label="Mạng nơ-ron đa tầng (MLP)\n(Dung hợp & Phân loại)"];
+        
+        PyVi -> PhoBERT [label=" Văn bản đã tách từ"];
+        PhoBERT -> MLP [label=" Vector ngữ nghĩa"];
+    }
+
+    // Connections between clusters
+    NextJS -> FastAPI [dir=both, label=" HTTP/REST API", color="#000080", penwidth=1.5];
+    FastAPI -> PyVi [label=" Văn bản / Tiêu đề", color="#8b0000", penwidth=1.5];
+    FastAPI -> MLP [label=" Siêu dữ liệu (Source...)", color="#8b0000", style=dashed];
+    MLP -> FastAPI [label=" Kết quả (Real/Fake)\n& Confidence Score", color="#006400", penwidth=1.5];
+}

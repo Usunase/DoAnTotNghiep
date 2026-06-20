@@ -7,7 +7,7 @@ from __future__ import annotations
 import re
 from typing import Any
 
-from backend.verdict import verdict_from_prob
+from backend.verdict import FAKE_THRESHOLD, SUSPICIOUS_THRESHOLD, verdict_from_prob
 
 SENSATIONAL_PATTERNS = [
     (r"cảnh báo|khẩn cấp|tin nóng|tin cực|sốc|kinh hoàng|chấn động", "Ngôn ngữ giật gân, kích động"),
@@ -104,7 +104,8 @@ def _scan_text_signals(content: str, title: str) -> list[dict[str, Any]]:
 
 
 def _phobert_summary(fake_prob: float) -> dict[str, str]:
-    if fake_prob >= 60:
+    """Dùng cùng ngưỡng với verdict.py (75% / 35%)."""
+    if fake_prob >= FAKE_THRESHOLD:
         return {
             "type": "model",
             "text": (
@@ -112,19 +113,19 @@ def _phobert_summary(fake_prob: float) -> dict[str, str]:
                 "(văn phong kích động, phi logic hoặc chứa thông tin sai lệch)."
             ),
         }
-    if fake_prob <= 40:
+    if fake_prob >= SUSPICIOUS_THRESHOLD:
         return {
             "type": "model",
             "text": (
-                "Mạng học sâu đánh giá ngữ cảnh phù hợp với tin tức chính thống "
-                "(khách quan, mạch lạc, ít dấu hiệu thao túng)."
+                "Mạng học sâu nhận thấy thông tin có cả đặc điểm thật và giả — "
+                "cần đối chiếu thêm với nguồn tin chính thống."
             ),
         }
     return {
         "type": "model",
         "text": (
-            "Mạng học sâu nhận thấy thông tin có cả đặc điểm thật và giả — "
-            "cần đối chiếu thêm với nguồn tin chính thống."
+            "Mạng học sâu đánh giá ngữ cảnh phù hợp với tin tức chính thống "
+            "(khách quan, mạch lạc, ít dấu hiệu thao túng)."
         ),
     }
 
