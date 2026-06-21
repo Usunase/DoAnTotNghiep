@@ -831,11 +831,26 @@ NGHIÊN CỨU VÀ THIẾT KẾ HỆ THỐNG</h1>
 <h3>3.1.6. Phương pháp Đánh giá và Giải thích (Explainability Integration)</h3>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Về mặt đánh giá, hệ thống áp dụng phương pháp đánh giá trên tập kiểm thử độc lập (Hold-out Test Set) và sử dụng chỉ số F1-Score làm thước đo cốt lõi. Đề tài tích hợp <b>ExplanationEngine</b> rule-based: sau khi mô hình trả xác suất, module quét văn bản gốc (viết hoa, dấu câu giật gân, độ dài tiêu đề…) và sinh câu giải thích tiếng Việt — không dùng SHAP/LIME hay gradient ngược trên trọng số mô hình lõi.</p>
 <h2>3.2. Công nghệ triển khai hệ thống phần mềm</h2>
-<p align="justify" style="line-height: 150%; margin-bottom: 0.06in; text-indent: 0.5in">Phần này trình bày các công nghệ kỹ thuật phần mềm được lựa chọn để hiện thực hóa mô hình AI thành một ứng dụng hoàn chỉnh.</p>
+<p align="justify" style="line-height: 150%; margin-bottom: 0.06in; text-indent: 0.5in">Phần này trình bày các công nghệ kỹ thuật phần mềm được lựa chọn để hiện thực hóa mô hình AI thành một ứng dụng hoàn chỉnh, bao gồm khối Xử lý trung tâm (Backend) và khối Giao diện tương tác (Frontend).</p>
 
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>1. Công nghệ khối Backend (Máy chủ và AI)</b></p>
+<ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
+  <li style="margin-bottom: 0.05in;"><b>Python:</b> Ngôn ngữ lập trình chủ đạo xuyên suốt từ khâu thu thập, tiền xử lý dữ liệu, huấn luyện mô hình cho đến việc xây dựng máy chủ API.</li>
+  <li style="margin-bottom: 0.05in;"><b>FastAPI:</b> Web Framework hiệu năng cao được sử dụng để xây dựng các RESTful API. Khung làm việc này hỗ trợ cơ chế bất đồng bộ (Asynchronous), tự động sinh tài liệu Swagger UI và đặc biệt phù hợp để bọc (wrap) các mô hình Học máy nặng.</li>
+  <li style="margin-bottom: 0.05in;"><b>Hugging Face Transformers &amp; PyTorch:</b> Bộ đôi thư viện nền tảng cung cấp lớp <code>AutoModelForSequenceClassification</code> để khởi tạo, tinh chỉnh (fine-tune) và thực thi mô hình PhoBERT trên không gian tensor.</li>
+  <li style="margin-bottom: 0.05in;"><b>SQLAlchemy ORM &amp; SQLite:</b> Cặp công nghệ quản trị cơ sở dữ liệu. SQLite đóng vai trò lưu trữ cục bộ gọn nhẹ (không cần cấu hình máy chủ rời), trong khi SQLAlchemy giúp ánh xạ các bảng CSDL thành các đối tượng Python, loại bỏ rủi ro bảo mật từ các truy vấn SQL thô.</li>
+  <li style="margin-bottom: 0.05in;"><b>Pytest:</b> Framework kiểm thử tự động, được ứng dụng để xây dựng 38 kịch bản kiểm thử (Test cases) nhằm đánh giá độ ổn định của toàn bộ pipeline từ xử lý văn bản đến API.</li>
+  <li style="margin-bottom: 0.05in;"><b>BeautifulSoup4 &amp; Requests:</b> Thư viện đóng vai trò thu thập (Crawl) và bóc tách nội dung HTML từ các URL bài báo trực tuyến do người dùng cung cấp.</li>
+</ul>
 
-
-<h2 style="page-break-before: always">3.3. Phân tích yêu cầu</h2>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>2. Công nghệ khối Frontend (Giao diện người dùng)</b></p>
+<ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
+  <li style="margin-bottom: 0.05in;"><b>TypeScript:</b> Ngôn ngữ lập trình chính, mở rộng từ JavaScript với hệ thống kiểu tĩnh (Static Typing), giúp kiểm soát chặt chẽ luồng dữ liệu trả về từ API và hạn chế lỗi ở phía trình duyệt.</li>
+  <li style="margin-bottom: 0.05in;"><b>Next.js (React Framework):</b> Khung làm việc hiện đại ứng dụng mô hình App Router, giúp xây dựng giao diện dạng Single Page Application (SPA) mượt mà, tối ưu hóa định tuyến và giảm thiểu độ trễ tải trang.</li>
+  <li style="margin-bottom: 0.05in;"><b>Tailwind CSS:</b> Thư viện CSS theo trường phái Utility-first. Được sử dụng để thiết kế giao diện mang hơi hướng Modern Minimalism, linh hoạt tạo ra các hiệu ứng đổ bóng mờ (Glassmorphism) và đảm bảo hiển thị hoàn hảo trên cả máy tính lẫn thiết bị di động (Responsive).</li>
+  <li style="margin-bottom: 0.05in;"><b>Framer Motion:</b> Thư viện đồ họa được tích hợp để tạo ra các chuyển động (Animations) mượt mà khi người dùng tương tác, tăng tính sinh động cho ứng dụng web.</li>
+  <li style="margin-bottom: 0.05in;"><b>Axios &amp; Recharts:</b> Axios được sử dụng để xử lý các cuộc gọi HTTP bất đồng bộ đến máy chủ Backend (đính kèm JWT Token), trong khi Recharts đảm nhận việc vẽ biểu đồ trực quan hóa kết quả phân tích tỷ lệ phần trăm Tin giả/Tin thật.</li>
+</ul><h2 style="page-break-before: always">3.3. Phân tích yêu cầu</h2>
 <div style="background-color: #f8f9fa; border-left: 4px solid #6c757d; padding: 10px; margin-bottom: 15px;">
   <i><b>*Lưu ý của tác giả:</b> Do tính chất và phạm vi của một đồ án Trí tuệ Nhân tạo, phần phân tích yêu cầu dưới đây chỉ được thiết kế ở mức độ cơ bản nhất để phục vụ cho việc kiểm thử mô hình Học máy, không đặt nặng tiêu chuẩn kỹ nghệ phần mềm.</i>
 </div>
