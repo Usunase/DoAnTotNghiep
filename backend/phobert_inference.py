@@ -1,8 +1,7 @@
 import torch
 import numpy as np
-import joblib
 from pathlib import Path
-from transformers import AutoModel, AutoTokenizer
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from backend.data_crawler import DataCrawler
 from backend.explanation_engine import build_explanation
 from backend.text_utils import preprocess_text
@@ -13,37 +12,32 @@ PROJECT_DIR = Path(__file__).resolve().parent.parent
 
 class PhoBERTInferenceSystem:
     """
-    Hệ thống phát hiện tin giả: PhoBERT embedding + MLP classifier.
+    Hệ thống phát hiện tin giả: PhoBERTForSequenceClassification.
     """
 
     def __init__(
         self,
         model_path=None,
-        scaler_path=None,
         verbose=True,
     ):
         self.crawler = DataCrawler()
         self.verbose = verbose
 
-        model_path = model_path or PROJECT_DIR / "backend/models/phobert_mlp_model.joblib"
-        scaler_path = scaler_path or PROJECT_DIR / "backend/models/phobert_scaler.joblib"
-
+        model_path = model_path or PROJECT_DIR / "backend/models/phobert-fakenews-final"
+        
         if self.verbose:
             print("[*] Khởi tạo Hệ thống AI...")
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        self.tokenizer = AutoTokenizer.from_pretrained("vinai/phobert-base")
-        self.phobert_model = AutoModel.from_pretrained("vinai/phobert-base").to(self.device)
-        self.phobert_model.eval()
-
-        paths = [Path(model_path), Path(scaler_path)]
-        if all(p.exists() for p in paths):
-            self.classifier = joblib.load(paths[0])
-            self.scaler = joblib.load(paths[1])
+        
+        model_path_obj = Path(model_path)
+        if model_path_obj.exists():
+            self.tokenizer = AutoTokenizer.from_pretrained(str(model_path_obj))
+            self.phobert_model = AutoModelForSequenceClassification.from_pretrained(str(model_path_obj)).to(self.device)
+            self.phobert_model.eval()
             self.model_loaded = True
         else:
-            missing = [p.name for p in paths if not p.exists()]
             if self.verbose:
-                print(f"CẢNH BÁO: Thiếu file mô hình: {', '.join(missing)}")
+                print(f"CẢNH BÁO: Không tìm thấy thư mục mô hình tại {model_path}")
             self.model_loaded = False
 
     def module_1_data_acquisition_and_preprocessing(
@@ -86,9 +80,9 @@ class PhoBERTInferenceSystem:
         return clean_content, raw_data
 
     def module_2_phobert_embedding(self, clean_content):
-        """Trích xuất embedding PhoBERT (768 chiều)."""
+        """Trích xuất logits từ PhoBERT model đã fine-tune."""
         if self.verbose:
-            print("--- MODULE 2: Trích xuất đặc trưng PhoBERT ---")
+            print("--- MODULE 2: Dự đoán với PhoBERT ---")
 
         with torch.no_grad():
             encoded = self.tokenizer(
@@ -102,26 +96,23 @@ class PhoBERTInferenceSystem:
             attention_mask = encoded["attention_mask"].to(self.device)
 
             outputs = self.phobert_model(input_ids, attention_mask=attention_mask)
-            phobert_vector = outputs.last_hidden_state[:, 0, :].cpu().numpy()[0]
+            logits = outputs.logits.cpu().numpy()[0]
 
         if self.verbose:
-            print(f" > PhoBERT embedding: {phobert_vector.shape}")
-        return phobert_vector
+            print(f" > PhoBERT logits: {logits}")
+        return logits
 
-    def module_3_classification(self, phobert_vector):
-        """Chuẩn hóa, phân loại và trả về xác suất + nhãn 3 mức."""
+    def module_3_classification(self, logits):
+        """Tính xác suất, phân loại và trả về xác suất + nhãn 3 mức."""
         if self.verbose:
-            print("--- MODULE 3: Phân loại (MLP) ---")
-        feature_vector = phobert_vector.reshape(1, -1)
-        scaled_vector = self.scaler.transform(feature_vector)
-        confidence = self.classifier.predict_proba(scaled_vector)
-
-        try:
-            class_index = list(self.classifier.classes_).index(True)
-        except ValueError:
-            class_index = 1
-
-        fake_prob = float(confidence[0][class_index] * 100.0)
+            print("--- MODULE 3: Phân loại ---")
+            
+        # Tính softmax thủ công để lấy xác suất
+        exp_logits = np.exp(logits - np.max(logits))
+        probs = exp_logits / exp_logits.sum(axis=-1)
+        
+        # Nhãn 1 là FAKE theo cấu hình lúc train
+        fake_prob = float(probs[1] * 100.0)
         verdict = verdict_from_prob(fake_prob)
         result = result_label_from_verdict(verdict)
 
@@ -140,7 +131,7 @@ class PhoBERTInferenceSystem:
         if not self.model_loaded:
             return {
                 "status": "error",
-                "message": "Chưa tìm thấy mô hình đã train (.joblib). Hãy chạy notebook train trước.",
+                "message": "Chưa tìm thấy mô hình đã train. Hãy chạy notebook train trước.",
             }
 
         clean_content, raw_data = self.module_1_data_acquisition_and_preprocessing(
@@ -155,8 +146,8 @@ class PhoBERTInferenceSystem:
                 "message": raw_data.get("message", "Không xử lý được dữ liệu đầu vào."),
             }
 
-        phobert_vector = self.module_2_phobert_embedding(clean_content)
-        result, fake_prob, verdict = self.module_3_classification(phobert_vector)
+        logits = self.module_2_phobert_embedding(clean_content)
+        result, fake_prob, verdict = self.module_3_classification(logits)
 
         explanation = build_explanation(
             fake_prob=fake_prob,
@@ -170,7 +161,7 @@ class PhoBERTInferenceSystem:
             "fake_prob": fake_prob,
             "raw_data": raw_data,
             "cleaned_text": clean_content,
-            "phobert_shape": phobert_vector.shape,
+            "phobert_shape": logits.shape, # Trả về shape của logits thay vì embedding 768
             "explanation": explanation,
         }
 

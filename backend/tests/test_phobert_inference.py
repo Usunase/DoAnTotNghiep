@@ -41,16 +41,14 @@ def test_module_1_rejects_short_content():
 def test_module_3_classification_fake_verdict():
     system = _make_system_without_init()
     system.verbose = False
-    system.scaler = MagicMock()
-    system.scaler.transform.return_value = np.zeros((1, 768))
-    system.classifier = MagicMock()
-    system.classifier.classes_ = [False, True]
-    system.classifier.predict_proba.return_value = np.array([[0.1, 0.82]])
+    
+    # Mock logits where class 1 (FAKE) is much higher than class 0 (REAL)
+    mock_logits = np.array([-2.0, 3.0])
 
-    result, fake_prob, verdict = system.module_3_classification(np.zeros(768))
+    result, fake_prob, verdict = system.module_3_classification(mock_logits)
 
     assert verdict == "fake"
-    assert fake_prob == pytest.approx(82.0)
+    assert fake_prob > 99.0
     assert "FAKE" in result
 
 
@@ -65,7 +63,7 @@ def test_infer_success_pipeline(
     mock_explain,
 ):
     mock_m1.return_value = ("clean_text", {"content": "raw", "title": "t"})
-    mock_m2.return_value = np.zeros(768)
+    mock_m2.return_value = np.zeros(2)
     mock_m3.return_value = ("ĐÁNG NGỜ", 50.0, "suspicious")
     mock_explain.return_value = {"verdict": "suspicious", "headline": "h"}
 

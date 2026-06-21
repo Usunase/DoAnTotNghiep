@@ -1,0 +1,23 @@
+{
+  "model_name": "vinai/phobert-base",
+  "label_map": {
+    "0": "REAL",
+    "1": "FAKE"
+  },
+  "max_len": 256,
+  "seed": 42,
+  "train_rows": 17201,
+  "val_rows": 2716,
+  "test_rows": 2716,
+  "test_metrics": {
+    "eval_loss": 0.15518204867839813,
+    "eval_accuracy": 0.9631811487481591,
+    "eval_precision": 0.9244791666666666,
+    "eval_recall": 0.9441489361702128,
+    "eval_f1": 0.9342105263157895,
+    "eval_runtime": 32.013,
+    "eval_samples_per_second": 84.841,
+    "eval_steps_per_second": 1.343,
+    "epoch": 3.0
+  }
+}

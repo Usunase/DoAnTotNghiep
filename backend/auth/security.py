@@ -2,11 +2,9 @@ from __future__ import annotations
 
 import os
 from datetime import datetime, timedelta, timezone
+import bcrypt
 
 from jose import JWTError, jwt
-from passlib.context import CryptContext
-
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 SECRET_KEY = os.getenv("SHIELD_JWT_SECRET", "shieldai-dev-secret-change-in-production")
 ALGORITHM = "HS256"
@@ -14,11 +12,12 @@ ACCESS_TOKEN_EXPIRE_DAYS = 7
 
 
 def hash_password(password: str) -> str:
-    return pwd_context.hash(password)
+    salt = bcrypt.gensalt()
+    return bcrypt.hashpw(password.encode("utf-8"), salt).decode("utf-8")
 
 
 def verify_password(plain: str, hashed: str) -> bool:
-    return pwd_context.verify(plain, hashed)
+    return bcrypt.checkpw(plain.encode("utf-8"), hashed.encode("utf-8"))
 
 
 def create_access_token(user_id: int) -> str:

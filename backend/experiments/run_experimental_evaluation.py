@@ -28,11 +28,14 @@ from sklearn.model_selection import StratifiedKFold, cross_validate, train_test_
 from sklearn.neural_network import MLPClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
+from sklearn.utils.class_weight import compute_sample_weight
 
 PROJECT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = PROJECT_DIR.parent.parent
 MODELS_DIR = PROJECT_ROOT / "backend/models"
 FIG_DIR = PROJECT_DIR / "figures" / "experimental"
+FEATURES_PATH = MODELS_DIR / "phobert_merged_features.npy"
+LABELS_PATH = MODELS_DIR / "phobert_merged_labels.npy"
 RANDOM_STATE = 42
 TEST_SIZE = 0.3
 CV_N_SPLITS = 5
@@ -49,8 +52,8 @@ MLP_KWARGS = dict(
 
 
 def load_dataset() -> tuple[np.ndarray, np.ndarray]:
-    X = np.load(MODELS_DIR / "phobert_base_features.npy")
-    y = np.load(MODELS_DIR / "phobert_base_labels.npy")
+    X = np.load(FEATURES_PATH)
+    y = np.load(LABELS_PATH)
     return X, y
 
 
@@ -68,7 +71,11 @@ def train_and_evaluate(X: np.ndarray, y: np.ndarray) -> dict:
         X, y, test_size=TEST_SIZE, random_state=RANDOM_STATE, stratify=y
     )
     pipe = make_pipeline()
-    pipe.fit(X_train, y_train)
+    sample_weights = compute_sample_weight(class_weight="balanced", y=y_train)
+    try:
+        pipe.fit(X_train, y_train, mlp__sample_weight=sample_weights)
+    except TypeError:
+        pipe.fit(X_train, y_train)
     y_pred = pipe.predict(X_test)
     y_proba = pipe.predict_proba(X_test)[:, 1]
     fpr, tpr, _ = roc_curve(y_test, y_proba, pos_label=True)
