@@ -146,7 +146,7 @@
 <div style="page-break-before: always; margin-top: 50px; margin-bottom: 30px; text-align: center; font-family: 'Times New Roman', serif;">
   <b style="font-size: 16pt;">TÓM TẮT TIỂU LUẬN</b>
 </div>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Bộ dữ liệu được sử dụng trong nghiên cứu gồm <b>10.617 bản ghi</b> (tệp <code>full_dataset.csv</code>), sau lọc còn <b>10.609 mẫu</b> phục vụ huấn luyện. Tỷ lệ phân bố giữa hai lớp tương đối cân bằng, góp phần giảm thiểu ảnh hưởng của hiện tượng mất cân bằng dữ liệu (Class Imbalance) trong quá trình huấn luyện mô hình. Điều này kết hợp với phương pháp kiểm định chéo 5-fold (Cross-validation) tạo điều kiện thuận lợi cho việc đánh giá hiệu năng mô hình một cách khách quan và đáng tin cậy.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Bộ dữ liệu được sử dụng trong nghiên cứu gồm <b>hơn 22.000 mẫu</b> được tổng hợp từ 4 nguồn phục vụ huấn luyện. Tỷ lệ phân bố giữa hai lớp tương đối cân bằng, góp phần giảm thiểu ảnh hưởng của hiện tượng mất cân bằng dữ liệu (Class Imbalance) trong quá trình huấn luyện mô hình. Điều này kết hợp với phương pháp kiểm định chéo 5-fold (Cross-validation) tạo điều kiện thuận lợi cho việc đánh giá hiệu năng mô hình một cách khách quan và đáng tin cậy.</p>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Đối với bài toán xử lý ngôn ngữ tự nhiên tiếng Việt, mô hình PhoBERT được lựa chọn làm thành phần trích xuất đặc trưng ngữ nghĩa nhờ được tiền huấn luyện trên lượng lớn dữ liệu tiếng Việt. Việc sử dụng PhoBERT giúp mô hình khai thác hiệu quả các mối quan hệ ngữ cảnh giữa các từ và cụm từ trong văn bản, từ đó hỗ trợ nâng cao chất lượng biểu diễn dữ liệu đầu vào cho tác vụ phát hiện tin giả.</p>
 
@@ -805,8 +805,8 @@ NGHIÊN CỨU VÀ THIẾT KẾ HỆ THỐNG</h1>
 <h3>3.1.1. Phân tích Dữ liệu nghiên cứu (Dataset Analysis)</h3>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Mọi hệ thống Trí tuệ Nhân tạo đều được định hình bởi chất lượng của nguồn dữ liệu huấn luyện. Đồ án sử dụng bộ dữ liệu <b>"Vietnamese Fake News Dataset"</b> tổng hợp từ nhiều nguồn tin tức trên không gian mạng. Quá trình Khai phá và Phân tích Dữ liệu (Exploratory Data Analysis - EDA) đã chỉ ra các đặc tính học thuật quan trọng sau:</p>
 <ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
-  <li style="margin-bottom: 0.05in;"><b>Số lượng mẫu và Phân bố nhãn (Label Distribution):</b> Bộ dữ liệu <code>full_dataset.csv</code> bao gồm tổng cộng <b>10.617 bản ghi (bài báo)</b>; sau lọc (<code>dataset_cleaner.py</code>) còn <b>10.609 mẫu</b> hợp lệ. Phân bố nhãn tương đối cân bằng (~53,6% tin thật / ~46,4% tin giả), giúp giảm rủi ro mô hình bị thiên lệch (class imbalance) trong quá trình huấn luyện.</li>
-  <li style="margin-bottom: 0.05in;"><b>Độ dài văn bản và Hiện tượng Mất cân bằng dữ liệu:</b> Các bài viết lừa đảo thường sử dụng từ ngữ thao túng kết hợp với cấu trúc câu giật gân, đe dọa. Qua thống kê độ dài trên 10.609 mẫu, dữ liệu không có sự chênh lệch quá lớn về số lượng từ giữa tin thật và tin giả, đảm bảo mô hình không học vẹt theo độ dài văn bản.</li>
+  <li style="margin-bottom: 0.05in;"><b>Số lượng mẫu và Phân bố nhãn (Label Distribution):</b> Tập ngữ liệu tổng hợp bao gồm <b>hơn 22.000 mẫu bài viết</b> hợp lệ (được gộp từ 4 bộ dữ liệu). Phân bố nhãn tương đối cân bằng (~53,6% tin thật / ~46,4% tin giả), giúp giảm rủi ro mô hình bị thiên lệch (class imbalance) trong quá trình huấn luyện.</li>
+  <li style="margin-bottom: 0.05in;"><b>Độ dài văn bản và Hiện tượng Mất cân bằng dữ liệu:</b> Các bài viết lừa đảo thường sử dụng từ ngữ thao túng kết hợp với cấu trúc câu giật gân, đe dọa. Qua thống kê độ dài trên toàn bộ tập dữ liệu, dữ liệu không có sự chênh lệch quá lớn về số lượng từ giữa tin thật và tin giả, đảm bảo mô hình không học vẹt theo độ dài văn bản.</li>
   <li style="margin-bottom: 0.05in;"><b>Cấu trúc trường thông tin:</b> Dữ liệu cung cấp các cột <code>title</code>, <code>content</code>, <code>url</code>, <code>source</code> phục vụ huấn luyện và crawl inference. Các tín hiệu hình thức (viết hoa, dấu câu) chỉ được dùng trong <code>ExplanationEngine</code> (XAI), không đưa vào vector đặc trưng mô hình.</li>
 </ul>
 
@@ -949,10 +949,50 @@ NGHIÊN CỨU VÀ THIẾT KẾ HỆ THỐNG</h1>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Để đảm bảo tính bền vững và nhất quán của luồng dữ liệu, hệ thống sử dụng hệ quản trị cơ sở dữ liệu quan hệ (RDBMS) <b>SQLite</b> kết hợp cùng công nghệ ánh xạ đối tượng <b>SQLAlchemy ORM (Object-Relational Mapping)</b>. Việc lựa chọn SQLite được xem là một quyết định kiến trúc chiến lược: nó cung cấp một giải pháp lưu trữ tối ưu (lightweight), không đòi hỏi cấu hình máy chủ cơ sở dữ liệu phức tạp, nhưng vẫn tuân thủ đầy đủ các tiêu chuẩn ACID (Atomicity, Consistency, Isolation, Durability) để đảm bảo an toàn dữ liệu. Thay vì viết các câu lệnh SQL thô (Raw SQL) dễ gây ra lỗ hổng bảo mật SQL Injection, SQLAlchemy ORM cho phép thao tác với dữ liệu dưới dạng các đối tượng (Objects) trong Python, giúp mã nguồn dễ đọc và bảo trì.</p>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Mô hình Thực thể - Mối quan hệ (Entity-Relationship Diagram - ERD) của hệ thống được thiết kế theo hướng tinh gọn, tập trung chủ yếu vào việc giải quyết bài toán cốt lõi: lưu trữ định danh người dùng, vết tích của quá trình phân tích AI, và thu thập phản hồi của người dùng để liên tục cải thiện mô hình. Hệ thống bao gồm ba thực thể chính là bảng <code>USERS</code> (Người dùng), bảng <code>ANALYSIS_HISTORY</code> (Lịch sử phân tích) và bảng <code>FEEDBACKS</code> (Phản hồi).</p>
 
-<p align="center" style="margin-top: 0.2in; margin-bottom: 0.2in;">
-![Sơ đồ Thực thể - Mối quan hệ ERD](image/erd.png)
-<br><i>Sơ đồ Thực thể - Mối quan hệ (ERD)</i>
-</p>
+<div align="center" style="margin-top: 0.2in; margin-bottom: 0.2in;">
+
+```mermaid
+erDiagram
+    USERS ||--o{ ANALYSIS_HISTORY : "Thực hiện (1-N)"
+    USERS ||--o{ FEEDBACKS : "Đánh giá (1-N)"
+    ANALYSIS_HISTORY ||--o| FEEDBACKS : "Nhận phản hồi (1-1)"
+
+    USERS {
+        Integer id PK
+        String email "Unique"
+        String username "Unique"
+        String hashed_password
+        DateTime created_at
+    }
+    
+    ANALYSIS_HISTORY {
+        Integer id PK
+        Integer user_id FK
+        String input_mode "text | url"
+        String title
+        Text content
+        String source_url
+        String source_domain
+        String result_label
+        Float fake_prob
+        String verdict
+        Text explanation_json
+        Text meta_json
+        DateTime created_at
+    }
+    
+    FEEDBACKS {
+        Integer id PK
+        Integer history_id FK "Unique"
+        Integer user_id FK
+        Boolean is_correct
+        Text comment
+        DateTime created_at
+    }
+```
+
+<br><i>Sơ đồ Thực thể - Mối quan hệ (ERD) bằng Mermaid</i>
+</div>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Chi tiết về các bảng và cấu trúc trường (Fields) được phân tích như sau:</p>
 <ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
@@ -993,6 +1033,7 @@ NGHIÊN CỨU VÀ THIẾT KẾ HỆ THỐNG</h1>
   <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>FEEDBACKS</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><code>user_id</code></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Integer</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Khóa ngoại (FK) trỏ về bảng USERS.</td></tr>
   <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>FEEDBACKS</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><code>is_correct</code></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Boolean</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Đánh giá dự đoán có chính xác không (Thumbs up/down).</td></tr>
   <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>FEEDBACKS</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><code>comment</code></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Text</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Nhận xét chi tiết từ người dùng (nếu có).</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>FEEDBACKS</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><code>created_at</code></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">DateTime</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Thời gian gửi phản hồi.</td></tr>
 </table>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Mối quan hệ giữa các thực thể này là mối quan hệ <b>1-N (Một - Nhiều)</b> giữa người dùng với lịch sử phân tích, và quan hệ <b>1-1 (Một - Một)</b> giữa bản phân tích và một phản hồi duy nhất. Việc ứng dụng ORM SQLAlchemy giúp liên kết tường minh thông qua các khóa ngoại (Foreign Keys). Khái niệm này phản ánh luồng nghiệp vụ thực tế: Một người dùng quét nhiều bài báo, họ đánh giá các báo cáo này, và toàn bộ dữ liệu trở thành quy mô tri thức mới khổng lồ để cải thiện AI trong tương lai.</p>
@@ -1108,22 +1149,31 @@ KẾT QUẢ</h1>
 
 <h3>4.2.2. Dữ liệu nghiên cứu và Quy trình Tiền xử lý</h3>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>Giới thiệu bộ dữ liệu (Dataset Overview)</b></p>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Để quá trình Tinh chỉnh (Fine-tuning) mang lại độ chính xác cao nhất trong thực tế, đồ án sử dụng bộ dữ liệu tin giả y tế/sức khỏe tiếng Việt trong tệp <code>full_dataset.csv</code> — <b>10.617 bản ghi</b> gốc, <b>10.609 mẫu</b> sau lọc. Dữ liệu được thu thập từ các nguồn báo chí và tập COVID-19 tiếng Việt (VnExpress, daikynguyen, covid19_dataset, …), tập trung chủ đề y tế và sức khỏe tại Việt Nam.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Để quá trình Tinh chỉnh (Fine-tuning) mang lại khả năng tổng quát hóa cao và độ chính xác lớn nhất trong thực tế, đồ án sử dụng dữ liệu được gộp thành từ 4 bộ ngữ liệu (dataset) uy tín trên nền tảng Kaggle. Tổng hợp lại, tập dữ liệu lớn mang đến sự đa dạng về văn phong và chủ đề, bao gồm:</p>
+<ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
+  <li style="margin-bottom: 0.05in;"><b>Bộ 1 (<a href="https://www.kaggle.com/datasets/phngnguynthu1803/vietnamese-fake-news-dataset" target="_blank">phngnguynthu1803</a>):</b> Cung cấp dữ liệu tin tức thật đa dạng nhằm cân bằng tập huấn luyện, giúp mô hình học được ngôn ngữ báo chí chính thống.</li>
+  <li style="margin-bottom: 0.05in;"><b>Bộ 2 (<a href="https://www.kaggle.com/datasets/chuynvinquc/fakenewvn" target="_blank">chuynvinquc</a>):</b> Bao gồm các bài đăng từ mạng xã hội và tin tức tổng hợp, giúp hệ thống kháng nhiễu với văn phong lóng mạng.</li>
+  <li style="margin-bottom: 0.05in;"><b>Bộ 3 (<a href="https://www.kaggle.com/datasets/goumanguyen/vietnamese-fake-news-dataset-pbl7" target="_blank">goumanguyen</a>):</b> Cung cấp các cặp văn bản được gán nhãn rõ ràng phục vụ cho việc kiểm chứng thông tin tổng hợp.</li>
+  <li style="margin-bottom: 0.05in;"><b>Bộ 4 (<a href="https://www.kaggle.com/datasets/leviettrieu369/vietnamese-medical-fake-news-dataset" target="_blank">leviettrieu369</a>):</b> Bộ dữ liệu chuyên biệt về tin giả y tế/sức khỏe bằng tiếng Việt thời kỳ COVID-19. Đây là bộ lõi giúp mô hình nhạy bén với các thuật ngữ sức khỏe và tin đồn y khoa độc hại.</li>
+</ul>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Tất cả dữ liệu từ 4 nguồn này được tự động thu thập, hợp nhất và đi qua cùng một pipeline tiền xử lý chung (loại bỏ bài viết dưới 20 ký tự, khử nhiễu HTML, v.v.), đem lại quy mô <b>hơn 22.000 mẫu tin</b>, cung cấp cho mô hình khả năng nhận diện các thủ thuật lừa đảo đa dạng và tinh vi trên không gian mạng.</p>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>Biện luận lý do lựa chọn bộ dữ liệu quy mô lớn</b></p>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Việc quyết định sử dụng bộ dữ liệu đa lĩnh vực này xuất phát từ ba luận điểm mang tính chiến lược:</p>
 <ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
-  <li style="margin-bottom: 0.05in;"><b>Tính khái quát hóa cao (Generalization):</b> Khác với các hệ thống chỉ học trên một miền dữ liệu hẹp, việc học trên <b>10.609 mẫu</b> tin y tế/sức khỏe tiếng Việt giúp mô hình nắm bắt ngữ cảnh chuyên ngành và có thể áp dụng kiểm chứng thông tin sức khỏe trên không gian mạng.</li>
+  <li style="margin-bottom: 0.05in;"><b>Tính khái quát hóa cao (Generalization):</b> Khác với các hệ thống chỉ học trên một miền dữ liệu hẹp, việc học trên <b>hơn 22.000 mẫu</b> tin tổng hợp giúp mô hình nắm bắt ngữ cảnh chuyên ngành và có thể áp dụng kiểm chứng thông tin sức khỏe trên không gian mạng.</li>
   <li style="margin-bottom: 0.05in;"><b>Độ phong phú của thuật ngữ:</b> Ngữ liệu lớn chứa rất nhiều từ vựng đan xen với cấu trúc câu mang tính mồi chài của giới bán hàng giả hoặc câu view giật gân. Đây là một môi trường thử nghiệm phù hợp để mô hình PhoBERT [1] học cách phân biệt ngữ cảnh tiếng Việt phức tạp.</li>
   <li style="margin-bottom: 0.05in;"><b>Sự phù hợp với phương pháp Heuristics:</b> Các tin giả trên không gian mạng thường xuyên lặp lại các hành vi thao túng tâm lý (như viết hoa toàn bộ tựa đề để lôi kéo, dùng hàng loạt dấu chấm than để kích động). Do đó, bộ dữ liệu khổng lồ này chính là "đất diễn" hiệu quả để Động cơ Giải thích Heuristics của đồ án phát huy tối đa sức mạnh.</li>
 </ul>
 
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>Quy trình Tiền xử lý Dữ liệu Huấn luyện (Data Preprocessing Workflow)</b></p>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Trước khi Fine-tune PhoBERT, toàn bộ tập dữ liệu thô trải qua quy trình làm sạch và chia tập:</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>Quy trình Hợp nhất và Tiền xử lý Dữ liệu Huấn luyện (Data Merging &amp; Preprocessing Workflow)</b></p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Do dữ liệu có nguồn gốc từ 4 tập khác biệt nhau về mặt cấu trúc (tên cột khác nhau như <code>content</code>, <code>post_message</code>, <code>Maintext</code>), đồ án đã xây dựng một tiến trình hợp nhất (Merging Pipeline) và tiền xử lý thống nhất như sau:</p>
 <ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
-  <li style="margin-bottom: 0.05in;"><b>Làm sạch (<code>dataset_cleaner.py</code>):</b> Tiến hành lọc và loại bỏ chính xác 8 bản ghi không đạt yêu cầu. Các lỗi dẫn đến việc loại bỏ bao gồm: văn bản bị rỗng, dữ liệu bị trùng lặp hoàn toàn (duplicates), thiếu nhãn phân loại, hoặc lỗi định dạng chuỗi (encoding) trong quá trình thu thập. Kết quả thu về <b>10.609 mẫu</b> hoàn toàn hợp lệ.</li>
-  <li style="margin-bottom: 0.05in;"><b>Tách tập huấn luyện (Train/Test Split):</b> Chia <b>70% huấn luyện — 30% kiểm thử</b> (stratified, <code>random_state=42</code>), tương đương ~<b>3.183 mẫu</b> hold-out.</li>
-  <li style="margin-bottom: 0.05in;"><b>Huấn luyện Fine-tuning:</b> Mỗi mẫu qua <code>preprocess_text</code> → Fine-tune <code>AutoModelForSequenceClassification</code> trên train. Artifact lưu <code>Hugging Face Model</code>. Không dùng PyTorch DataLoader hay resampling bắt buộc — tập đã cân bằng tương đối.</li>
+  <li style="margin-bottom: 0.05in;"><b>Đồng bộ hóa Trường dữ liệu (Schema Mapping):</b> Tự động ánh xạ nội dung từ các cột văn bản khác nhau về chung một cột <code>text</code>. Tương tự, nhãn phân loại từ các định dạng boolean/string khác nhau được ánh xạ chuẩn xác về định dạng số nguyên: <code>0 (REAL)</code> và <code>1 (FAKE)</code>.</li>
+  <li style="margin-bottom: 0.05in;"><b>Làm sạch Văn bản (Text Normalization):</b> Áp dụng hàm chuẩn hóa khoảng trắng thừa, loại bỏ các ký tự ẩn lỗi định dạng do quá trình trích xuất từ web.</li>
+  <li style="margin-bottom: 0.05in;"><b>Lọc Nhiễu và Gộp Dữ liệu (Filtering &amp; Concatenation):</b> Gom tất cả các DataFrame lại và tiến hành loại bỏ toàn bộ các bản ghi có chiều dài nội dung dưới 20 ký tự nhằm đảm bảo mô hình có đủ ngữ cảnh để học. Kết quả cuối cùng thu về <b>22.633 mẫu</b> hoàn toàn hợp lệ và chất lượng cao.</li>
+  <li style="margin-bottom: 0.05in;"><b>Tách tập huấn luyện (Train/Val/Test Split):</b> Chia tỷ lệ <b>76% Huấn luyện (17.201 mẫu) — 12% Xác thực (2.716 mẫu) — 12% Kiểm thử (2.716 mẫu)</b>, sử dụng kỹ thuật chia tách phân tầng (Stratified Split) với <code>random_state=42</code> để đảm bảo tỷ lệ Thật/Giả luôn đồng đều trên cả 3 tập.</li>
+  <li style="margin-bottom: 0.05in;"><b>Huấn luyện Fine-tuning:</b> Dữ liệu được mã hóa bằng <code>AutoTokenizer</code> của PhoBERT trước khi được nạp vào mô hình <code>AutoModelForSequenceClassification</code>. Quá trình huấn luyện không sử dụng tái lấy mẫu (resampling) do tập dữ liệu đã tương đối cân bằng.</li>
 </ul>
 <h3>4.2.3. Tổ chức cấu trúc mã nguồn (Project Directory Structure)</h3>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Để đảm bảo tính mở rộng, dễ bảo trì và làm việc nhóm hiệu quả, toàn bộ mã nguồn của dự án được tổ chức chặt chẽ theo mô hình phân tách (Decoupled). Dưới đây là sơ đồ cây thư mục (Directory Tree) minh họa cấu trúc các thành phần cốt lõi của hệ thống ShieldAI:</p>
@@ -1207,7 +1257,7 @@ KẾT QUẢ</h1>
 </p>
 
 <h3>4.3.2. Đánh giá kết quả bằng số liệu thực nghiệm</h3>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Để minh chứng tính đúng đắn của phương pháp tiếp cận, đồ án không chỉ dựa vào đánh giá cảm quan trên giao diện mà còn tiến hành định lượng (Quantitative Evaluation) hệ thống bằng các độ đo học máy chuẩn mực. Thử nghiệm được tiến hành trên tập kiểm thử hold-out <b>30%</b> (~3.183 mẫu) chưa từng được mô hình nhìn thấy trong quá trình huấn luyện.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Để minh chứng tính đúng đắn của phương pháp tiếp cận, đồ án không chỉ dựa vào đánh giá cảm quan trên giao diện mà còn tiến hành định lượng (Quantitative Evaluation) hệ thống bằng các độ đo học máy chuẩn mực. Thử nghiệm được tiến hành trên tập kiểm thử hold-out <b>30%</b> (2.716 mẫu) chưa từng được mô hình nhìn thấy trong quá trình huấn luyện.</p>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>a) Các độ đo đánh giá (Evaluation Metrics)</b></p>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Hệ thống sử dụng ma trận nhầm lẫn (Confusion Matrix) để tính toán 4 chỉ số cốt lõi:</p>
@@ -1220,7 +1270,7 @@ KẾT QUẢ</h1>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>b) Kết quả so sánh trên tập kiểm thử</b></p>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Để đảm bảo tính khách quan trong việc đánh giá hiệu năng, toàn bộ <b>10.609 mẫu</b> sau lọc đã được chia tách theo tỷ lệ <b>70% (Huấn luyện) — 30% (Kiểm thử)</b>, tương đương khoảng <b>~3.183 mẫu</b> tập kiểm thử hold-out. Quá trình chia tách sử dụng phương pháp phân tầng (Stratified Split) với <code>random_state=42</code> để đảm bảo phân phối nhãn (Thật/Giả) đồng đều, ngăn chặn hiện tượng rò rỉ dữ liệu (Data Leakage). Quá trình huấn luyện còn được củng cố bởi phương pháp kiểm định chéo 5-Fold Cross Validation.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Để đảm bảo tính khách quan trong việc đánh giá hiệu năng, toàn bộ <b>hơn 22.000 mẫu</b> đã được chia tách theo tỷ lệ <b>76% (Huấn luyện) — 12% (Xác thực) — 12% (Kiểm thử)</b>, tương đương khoảng <b>2.716 mẫu</b> tập kiểm thử hold-out. Quá trình chia tách sử dụng phương pháp phân tầng (Stratified Split) với <code>random_state=42</code> để đảm bảo phân phối nhãn (Thật/Giả) đồng đều, ngăn chặn hiện tượng rò rỉ dữ liệu (Data Leakage). Quá trình huấn luyện còn được củng cố bởi phương pháp kiểm định chéo 5-Fold Cross Validation.</p>
 
 Đồ án đã tiến hành đánh giá chi tiết hiệu năng của mô hình <b>PhoBERT Fine-tuned Sequence Classification (Hệ thống ShieldAI)</b> trên tập kiểm thử độc lập (chiếm 30% dữ liệu). Kết quả được trình bày chi tiết trong Bảng 4.1:</p>
 
@@ -1242,7 +1292,7 @@ KẾT QUẢ</h1>
   </tr>
 </table>
 
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Từ Bảng 4.1, có thể thấy kiến trúc của hệ thống đạt Accuracy xuất sắc 96,32% và F1-Score 93,42%. Việc tách biệt các vector Heuristics giúp mô hình học sâu tập trung vào khả năng phân tích ngữ nghĩa, đạt F1-Score 93,42% trên tập kiểm thử hold-out (~3.183 mẫu, 30% của 10.609 mẫu).</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Từ Bảng 4.1, có thể thấy kiến trúc của hệ thống đạt Accuracy xuất sắc 96,32% và F1-Score 93,42%. Việc tách biệt các vector Heuristics giúp mô hình học sâu tập trung vào khả năng phân tích ngữ nghĩa, đạt F1-Score 93,42% trên tập kiểm thử hold-out (2.716 mẫu, 12% của hơn 22.000 mẫu).</p>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>c) Phân tích sự ổn định qua Kiểm định chéo (Cross-validation)</b></p>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Đi sâu vào phân tích các chỉ số thành phần, mô hình đạt độ chuẩn xác (Precision) <b>92.45%</b> và độ bao phủ (Recall) <b>94.41%</b>. Việc Recall cao hơn Precision cho thấy hệ thống được tối ưu hóa để "bắt nhầm hơn bỏ sót", đảm bảo không bỏ lọt các tin giả nguy hiểm ảnh hưởng đến cộng đồng, đồng thời vẫn duy trì tỷ lệ cảnh báo sai ở mức rất thấp. Độ chính xác tổng thể (Accuracy) đạt mức <b>96.32%</b> chứng minh rằng việc áp dụng Fine-tuning toàn bộ kiến trúc Transformer đã giúp mô hình nắm bắt được các biểu diễn ngữ nghĩa phức tạp và tinh vi hơn rất nhiều.</p>
@@ -1474,7 +1524,7 @@ HƯỚNG PHÁT TRIỂN</h1>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Trải qua quá trình nghiên cứu lý thuyết chuyên sâu và thực nghiệm kỹ thuật nghiêm ngặt, đồ án đã hoàn thành khả quan mục tiêu trọng tâm ban đầu: <b>Nghiên cứu và xây dựng thành công công cụ phát hiện tin giả tiếng Việt bằng PhoBERT Fine-tuned Sequence Classification tích hợp Động cơ giải thích độc lập (Heuristic Explanation)</b>. Các kết quả đạt được của đồ án không chỉ dừng lại ở mức độ thử nghiệm mô hình mà đã hoàn thiện thành một sản phẩm phần mềm trọn vẹn (End-to-end System) với các điểm nhấn cốt lõi sau:</p>
 
 <ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
-  <li style="margin-bottom: 0.05in;"><b>Về mặt nghiên cứu mô hình:</b> Đồ án đã loại bỏ thành công sự phụ thuộc phức tạp vào các kiến trúc lai ghép (Hybrid) nặng nề. Việc áp dụng kiến trúc <b>PhoBERT Fine-tuned Sequence Classification</b> chuyên biệt đã chứng minh được tính hiệu quả. Khả năng phân tích ngữ nghĩa sâu của PhoBERT thông qua kỹ thuật Fine-tuning toàn diện đã mang lại các chỉ số thực nghiệm rất đáng kể (Accuracy đạt 96,32%, F1-Score đạt 93,42%) trên tập <b>10.609 mẫu</b> (hold-out 30% ≈ 3.183 mẫu), đạt mức hiệu suất rất cạnh tranh mà không cần đến các kiến trúc mạng quá phức tạp.</li>
+  <li style="margin-bottom: 0.05in;"><b>Về mặt nghiên cứu mô hình:</b> Đồ án đã loại bỏ thành công sự phụ thuộc phức tạp vào các kiến trúc lai ghép (Hybrid) nặng nề. Việc áp dụng kiến trúc <b>PhoBERT Fine-tuned Sequence Classification</b> chuyên biệt đã chứng minh được tính hiệu quả. Khả năng phân tích ngữ nghĩa sâu của PhoBERT thông qua kỹ thuật Fine-tuning toàn diện đã mang lại các chỉ số thực nghiệm rất đáng kể (Accuracy đạt 96,32%, F1-Score đạt 93,42%) trên tập tổng hợp <b>hơn 22.000 mẫu</b> (hold-out 12% ≈ 2.716 mẫu), đạt mức hiệu suất rất cạnh tranh mà không cần đến các kiến trúc mạng quá phức tạp.</li>
   <li style="margin-bottom: 0.05in;"><b>Về mặt công nghệ và kiến trúc phần mềm:</b> Hệ thống đã áp dụng kiến trúc phân hiện đại Client-Server. Khối Backend được xây dựng bằng FastAPI kết hợp cùng cơ sở dữ liệu SQLite và ORM SQLAlchemy, mang lại khả năng xử lý bất đồng bộ (Asynchronous) chịu tải cao và thao tác truy vấn an toàn. Khối Frontend sử dụng Next.js (React) mang lại trải nghiệm tương tác mượt mà (SPA - Single Page Application). Toàn bộ hệ thống được kết nối mạch lạc, hỗ trợ linh hoạt hai phương thức: tự động cào dữ liệu (Web Scraping) từ URL bài báo trực tuyến, hoặc phân tích trực tiếp từ đoạn văn bản thô do người dùng cung cấp.</li>
   <li style="margin-bottom: 0.05in;"><b>Về mặt trải nghiệm người dùng (UX) và tính minh bạch (XAI):</b> Thay vì chỉ trả về kết quả nhị phân, hệ thống phân chia kết quả thành 3 ngưỡng cảnh báo (Tin thật, Đáng ngờ, Tin giả), đồng thời tự động sinh ra các câu văn tiếng Việt giải thích lý do cảnh báo nhờ Động cơ Heuristics. Điều này giúp người dùng dễ dàng nhận biết các yếu tố lừa đảo, từ đó nâng cao "sức đề kháng" thông tin số của bản thân.</li>
   <li style="margin-bottom: 0.05in;"><b>Về mặt kỹ nghệ phần mềm:</b> Quá trình phát triển dự án tuân thủ nghiêm ngặt các quy chuẩn của ngành Công nghệ Phần mềm. Mã nguồn được tổ chức theo mô hình tách biệt mối quan tâm (Separation of Concerns), đi kèm với bộ <b>42 kịch bản kiểm thử tự động</b> sử dụng Pytest (Bảng 4.3, 4.4). Việc 100% các kịch bản kiểm thử đều vượt qua (42/42 PASSED) đã minh chứng cho độ tin cậy và tính ổn định của hệ thống.</li>
