@@ -1,4 +1,4 @@
-<!-- PHIÊN BẢN CẬP NHẬT 06/2026: Bản markdown này đã được nâng cấp và phản ánh chính xác kiến trúc mới nhất PhoBERT Text-only + MLP (Hệ thống ShieldAI). Các số liệu tham chiếu: F1 93,71%, ROC-AUC 98,50%. Mọi yếu tố thuộc về phiên bản Hybrid cũ đã được loại bỏ. -->
+<!-- PHIÊN BẢN CẬP NHẬT 06/2026: Bản markdown này đã được nâng cấp và phản ánh chính xác kiến trúc mới nhất PhoBERT Fine-tuned Sequence Classification (Hệ thống ShieldAI). Các số liệu tham chiếu: Accuracy 96,32%, F1 93,42%. Mọi yếu tố thuộc về phiên bản Hybrid cũ đã được loại bỏ. -->
 
 <!DOCTYPE html>
 <html>
@@ -152,7 +152,7 @@
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Bên cạnh mô hình dự đoán, nghiên cứu thiết kế một Động cơ giải thích rule-based độc lập (ExplanationEngine) dựa trên các đặc trưng kinh nghiệm (Heuristics). Thay vì tích hợp trực tiếp Heuristics vào quá trình dự đoán toán học, hệ thống chỉ chạy module này sau khi PhoBERT đã tính toán xong xác suất, nhằm sinh ra các câu văn tiếng Việt minh bạch hóa lý do bài báo bị cảnh báo (ví dụ: lạm dụng viết hoa, văn phong giật gân).</p>
 
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Kết quả thực nghiệm trên tập kiểm thử (30% dữ liệu) cho thấy kiến trúc PhoBERT Text-only + MLP đạt Accuracy 94,13%, F1-Score 93,71%, và ROC-AUC 98,50%. Bên cạnh đó, kết quả kiểm định chéo 5-Fold ghi nhận F1-Score ở mức 93,17% ± 1,33%. Đồng thời, việc tách biệt cơ chế Heuristics thành Động cơ giải thích độc lập cho phép hệ thống trích xuất các dấu hiệu hình thức để giải thích lý do phân loại, qua đó hạn chế tính chất "hộp đen" của mô hình học sâu.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Kết quả thực nghiệm trên tập kiểm thử (30% dữ liệu) cho thấy kiến trúc PhoBERT Fine-tuned Sequence Classification đạt Accuracy 96,32%, F1-Score 93,42%, với Precision 92,45% và Recall 94,41%. Đồng thời, việc tách biệt cơ chế Heuristics thành Động cơ giải thích độc lập cho phép hệ thống trích xuất các dấu hiệu hình thức để giải thích lý do phân loại, qua đó hạn chế tính chất "hộp đen" của mô hình học sâu.</p>
 
 <p align="justify" style="line-height: 150%; margin-top: 20px; margin-bottom: 0.06in"><b>Từ khóa: </b> Phát hiện tin giả tiếng Việt, PhoBERT, Giải thích Heuristic, Học máy, Xử lý ngôn ngữ tự nhiên.</p>
 
@@ -165,9 +165,9 @@
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Alongside the predictive model, the research designs an independent rule-based Explanation Engine utilizing heuristic features. Rather than embedding heuristics into the mathematical prediction process, the system executes this module after PhoBERT has calculated the probabilities. This decoupled approach generates clear, transparent textual reasons (e.g., excessive capitalization, sensationalist tone) to justify the warnings.</p>
 
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Experimental results demonstrate that the proposed PhoBERT Text-only + MLP architecture achieves excellent performance (93.71% F1-Score) on the research dataset. Furthermore, decoupling the heuristics into an independent Explanation Engine helps alleviate the "black-box" nature of deep learning, providing users with intuitive, text-based reasoning for the system's classification decisions.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Experimental results demonstrate that the proposed PhoBERT Fine-tuned Sequence Classification architecture achieves excellent performance (93.42% F1-Score) on the research dataset. Furthermore, decoupling the heuristics into an independent Explanation Engine helps alleviate the "black-box" nature of deep learning, providing users with intuitive, text-based reasoning for the system's classification decisions.</p>
 
-<p align="justify" style="line-height: 150%; margin-top: 20px; margin-bottom: 0.06in"><b>Keywords: </b> Fake News Detection, PhoBERT, Heuristic Explanation, Rule-based Engine, Text-only MLP, NLP.</p>
+<p align="justify" style="line-height: 150%; margin-top: 20px; margin-bottom: 0.06in"><b>Keywords: </b> Fake News Detection, PhoBERT, Heuristic Explanation, Rule-based Engine, Text-only Classification, NLP.</p>
 <p style="line-height: 100%; margin-bottom: 0in"><br/>
 <p align="center" style="line-height: 100%; margin-bottom: 0.06in; page-break-before: always">
 <font color="#000000"><font size="4" style="font-size: 14pt"><b>MỤC
@@ -288,7 +288,7 @@ LỤC</b></font></font></p>
     <span>16</span>
 </div>
 <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
-    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.2.4. Mạng Nơ-ron Truyền thẳng (Multi-Layer Perceptron - MLP)</a></span>
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.2.4. Phân loại Chuỗi (Sequence Classification)</a></span>
     <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
     <span>16</span>
 </div>
@@ -338,7 +338,7 @@ LỤC</b></font></font></p>
     <span>20</span>
 </div>
 <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
-    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.5.2. Lựa chọn Kiến trúc PhoBERT Text-only + MLP</a></span>
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">2.5.2. Lựa chọn Kiến trúc PhoBERT Fine-tuned Sequence Classification</a></span>
     <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
     <span>21</span>
 </div>
@@ -378,7 +378,7 @@ LỤC</b></font></font></p>
     <span>24</span>
 </div>
 <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
-    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">3.1.5. Phương pháp Mô hình hóa mạng đa tầng (PhoBERT + MLP)</a></span>
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">3.1.5. Phương pháp Mô hình hóa mạng đa tầng (PhoBERT Sequence Classification)</a></span>
     <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
     <span>24</span>
 </div>
@@ -428,7 +428,7 @@ LỤC</b></font></font></p>
     <span>35</span>
 </div>
 <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
-    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">3.4.4. Thiết kế thuật toán (Thuật toán PhoBERT + MLP - PhoBERT + MLP)</a></span>
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">3.4.4. Thiết kế thuật toán (Thuật toán PhoBERT Sequence Classification - PhoBERT Sequence Classification)</a></span>
     <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
     <span>36</span>
 </div>
@@ -584,7 +584,7 @@ MỤC BẢNG BIỂU</b></font></font></p>
   </tr>
   <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Bảng 3.1</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Yêu cầu chức năng hệ thống (FR-01 … FR-08)</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; font-weight: bold;">23</td></tr>
   <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Bảng 3.2</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Từ điển Dữ liệu (Data Dictionary) cho các Thực thể</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; font-weight: bold;">25</td></tr>
-  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Bảng 4.1</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Hiệu năng của mô hình PhoBERT Text-only + MLP</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; font-weight: bold;">38</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Bảng 4.1</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Hiệu năng của mô hình PhoBERT Fine-tuned Sequence Classification</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; font-weight: bold;">38</td></tr>
   <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Bảng 4.2</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Danh sách Kịch bản Kiểm thử Hộp đen</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; font-weight: bold;">39</td></tr>
   <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Bảng 4.3</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Bộ kiểm thử tự động Pytest — tổng quan theo file</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; font-weight: bold;">40</td></tr>
   <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Bảng 4.4</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Chi tiết từng kịch bản kiểm thử tự động (42 test cases)</td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; text-align: center; font-weight: bold;">41</td></tr>
@@ -605,7 +605,7 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
   <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>HTML</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">HyperText Markup Language (Ngôn ngữ đánh dấu siêu văn bản)</td></tr>
   <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>JSON</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">JavaScript Object Notation (Định dạng trao đổi dữ liệu)</td></tr>
   <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>ML</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Machine Learning (Học máy)</td></tr>
-  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>MLP</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Multilayer Perceptron (Mạng nơ-ron truyền thẳng đa tầng)</td></tr>
+  <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>SeqCls</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Sequence Classification (Phân loại chuỗi)</td></tr>
   <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>NLP</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Natural Language Processing (Xử lý Ngôn ngữ Tự nhiên)</td></tr>
   <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>ORM</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">Object-Relational Mapping (Ánh xạ đối tượng - quan hệ)</td></tr>
   <tr><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;"><b>UI / UX</b></td><td style="border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word;">User Interface / User Experience (Giao diện người dùng / Trải nghiệm người dùng)</td></tr>
@@ -616,18 +616,18 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
 <h2>1.1. Đặt vấn đề</h2>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Sự bùng nổ của mạng xã hội đã tạo điều kiện cho "tin giả" (Fake News) lan truyền, thao túng dư luận và gây rủi ro xã hội. Dù các mô hình Học sâu như Transformer và PhoBERT đã đạt nhiều tiến bộ trong việc phân tích văn bản, chúng vẫn bộc lộ hạn chế lớn là tính chất "hộp đen" và thiếu khả năng diễn giải kết quả cho người dùng cuối. Do đó, đề tài <b>"Nghiên cứu và xây dựng hệ thống phát hiện tin giả tiếng Việt sử dụng PhoBERT và mạng nơ-ron đa tầng (Hệ thống ShieldAI)"</b> được thực hiện nhằm giải quyết vấn đề này.</p>
 
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Đề tài tập trung nghiên cứu và xây dựng hệ thống phân loại tin giả dựa trên mô hình ngôn ngữ tiền huấn luyện PhoBERT kết hợp với mạng nơ-ron truyền thẳng (MLP). Hệ thống này tập trung khai thác các đặc trưng ngữ nghĩa từ văn bản để đưa ra phán quyết chuẩn xác. Đặc biệt, nhằm tăng khả năng giải thích quyết định của hệ thống và cải thiện khả năng giải thích của mô hình, nghiên cứu đề xuất tích hợp một Động cơ giải thích (Explanation Engine) độc lập dựa trên luật và các đặc trưng kinh nghiệm (Heuristics) — nhằm bóc tách các dấu hiệu thao túng cảm xúc, văn phong giật gân, sự lạm dụng dấu câu — từ đó góp phần nâng cao khả năng giải thích cho quyết định phân loại của mô hình.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Đề tài tập trung nghiên cứu và xây dựng hệ thống phân loại tin giả dựa trên mô hình ngôn ngữ tiền huấn luyện PhoBERT kết hợp với mô hình phân loại chuỗi (Sequence Classification). Hệ thống này tập trung khai thác các đặc trưng ngữ nghĩa từ văn bản để đưa ra phán quyết chuẩn xác. Đặc biệt, nhằm tăng khả năng giải thích quyết định của hệ thống và cải thiện khả năng giải thích của mô hình, nghiên cứu đề xuất tích hợp một Động cơ giải thích (Explanation Engine) độc lập dựa trên luật và các đặc trưng kinh nghiệm (Heuristics) — nhằm bóc tách các dấu hiệu thao túng cảm xúc, văn phong giật gân, sự lạm dụng dấu câu — từ đó góp phần nâng cao khả năng giải thích cho quyết định phân loại của mô hình.</p>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Để đánh giá tính khả thi của phương pháp đề xuất, mô hình được triển khai và kiểm thử trên bộ dữ liệu tin tức tiếng Việt đã được gán nhãn. Các chỉ số đánh giá cốt lõi như Accuracy, Precision, Recall và F1-Score được sử dụng để phân tích hiệu năng của mạng phân loại. Kết quả thực nghiệm, tính hiệu quả của cơ chế giải thích cùng các phân tích chi tiết sẽ được trình bày trong chương đánh giá của tiểu luận.</p>
 
 <h2>1.2. Mục tiêu nghiên cứu</h2>
 <h3>1.2.1. Mục tiêu tổng quát</h3>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Phát triển nền tảng Web kiểm duyệt tin giả tiếng Việt tự động, ứng dụng kiến trúc AI tinh gọn (PhoBERT Text-only + MLP) và cơ chế giải thích dựa trên đặc trưng để minh bạch hóa quyết định, đồng thời quản lý lịch sử tra cứu của người dùng an toàn.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Phát triển nền tảng Web kiểm duyệt tin giả tiếng Việt tự động, ứng dụng kiến trúc AI tinh gọn (PhoBERT Fine-tuned Sequence Classification) và cơ chế giải thích dựa trên đặc trưng để minh bạch hóa quyết định, đồng thời quản lý lịch sử tra cứu của người dùng an toàn.</p>
 
 <h3>1.2.2. Mục tiêu cụ thể</h3>
 <ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
-  <li style="margin-bottom: 0.05in;"><b>Hệ thống hóa lý thuyết:</b> Tổng hợp tri thức về NLP, mô hình PhoBERT, phân loại MLP (scikit-learn) và giải thích rule-based (XAI).</li>
-  <li style="margin-bottom: 0.05in;"><b>Tối ưu mô hình PhoBERT + MLP:</b> Sử dụng vector [CLS] 768 chiều duy nhất từ PhoBERT kết hợp mạng MLP (128, 64) để tăng độ chính xác phân loại.</li>
+  <li style="margin-bottom: 0.05in;"><b>Hệ thống hóa lý thuyết:</b> Tổng hợp tri thức về NLP, mô hình PhoBERT, phân loại Sequence Classification và giải thích rule-based (XAI).</li>
+  <li style="margin-bottom: 0.05in;"><b>Tối ưu mô hình PhoBERT Sequence Classification:</b> Ứng dụng kỹ thuật tinh chỉnh (Fine-tuning) toàn bộ trọng số của PhoBERT, nạp trực tiếp qua lớp <code>AutoModelForSequenceClassification</code> và sử dụng hàm Softmax để tính xác suất, loại bỏ hoàn toàn các mô-đun mạng nơ-ron rời rạc.</li>
   <li style="margin-bottom: 0.05in;"><b>Xây dựng Động cơ giải thích (Explanation Engine):</b> Thiết kế module rule-based độc lập chạy sau khi mô hình dự đoán xong, nhằm sinh ra câu văn tiếng Việt minh bạch hóa lý do bài báo bị cảnh báo.</li>
   <li style="margin-bottom: 0.05in;"><b>Phát triển nền tảng phần mềm hoàn chỉnh:</b> Thiết kế và triển khai kiến trúc Client-Server chuyên nghiệp để biến mô hình AI nghiên cứu thành sản phẩm thực tiễn (ShieldAI), mang lại trải nghiệm tương tác liền mạch cho người dùng đầu cuối.</li>
   <li style="margin-bottom: 0.05in;"><b>Đánh giá mô hình:</b> So sánh hiệu năng mô hình đề xuất với các thuật toán truyền thống (Decision Tree, Naive Bayes).</li>
@@ -635,12 +635,12 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
 
 <h2>1.3. Đối tượng và phạm vi nghiên cứu</h2>
 <h3>1.3.1. Đối tượng nghiên cứu</h3>
-<p align="justify" style="line-height: 150%; margin-bottom: 0.06in; text-indent: 0.5in">Bao gồm: (1) Mô hình ngôn ngữ lớn PhoBERT; (2) Bộ phân loại MLP (scikit-learn); (3) Pipeline tiền xử lý <code>preprocess_text</code>; (4) Giải thích rule-based (<code>ExplanationEngine</code>); và (5) Công nghệ Web (FastAPI, Next.js, SQLite).</p>
+<p align="justify" style="line-height: 150%; margin-bottom: 0.06in; text-indent: 0.5in">Bao gồm: (1) Mô hình ngôn ngữ lớn PhoBERT được tinh chỉnh; (2) Pipeline tiền xử lý <code>preprocess_text</code>; (3) Giải thích rule-based (<code>ExplanationEngine</code>); và (4) Công nghệ Web (FastAPI, Next.js, SQLite).</p>
 
 <h3>1.3.2. Phạm vi nghiên cứu</h3>
 <ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
   <li style="margin-bottom: 0.05in;"><b>Mục tiêu phân loại:</b> Thay vì tiếp cận theo hướng nhị phân cứng nhắc, hệ thống ShieldAI cung cấp trải nghiệm người dùng (UX) tinh tế hơn với 3 mức độ cảnh báo: Tin thật (Xác suất &lt; 35%), Đáng ngờ (35% - 74%), và Tin giả (Xác suất &ge; 75%).</li>
-  <li style="margin-bottom: 0.05in;"><b>Thuật toán:</b> Tập trung vào kiến trúc PhoBERT Text-only + MLP, lấy vector [CLS] 768 chiều từ PhoBERT đưa qua mạng nơ-ron truyền thẳng đa tầng.</li>
+  <li style="margin-bottom: 0.05in;"><b>Thuật toán:</b> Tập trung vào kiến trúc PhoBERT Fine-tuned Sequence Classification, lấy vector [CLS] 768 chiều từ PhoBERT đưa qua mạng nơ-ron truyền thẳng đa tầng.</li>
   <li style="margin-bottom: 0.05in;"><b>Cấu trúc Triển khai ứng dụng (Deployment):</b> Đồ án được hệ thống hóa hoàn chỉnh theo kiến trúc Client-Server chuyên nghiệp. Giao diện người dùng (Frontend) được phát triển bằng Next.js 14 mang lại trải nghiệm tương tác mượt mà; Máy chủ (Backend) sử dụng FastAPI bất đồng bộ cho hiệu năng cao; Dữ liệu lịch sử quét tin giả được lưu trữ an toàn bằng SQLite. Đặc biệt, hệ thống tích hợp Trình thu thập dữ liệu (Web Crawler) bằng BeautifulSoup giúp tự động cào nội dung bài báo trực tiếp từ URL, tối ưu hóa đáng kể trải nghiệm người dùng (UX) thay vì ép người dùng dán văn bản thuần túy.</li>
 </ul>
 
@@ -649,20 +649,20 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
 <ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
   <li style="margin-bottom: 0.05in;"><b>Phương pháp nghiên cứu tài liệu (Literature Review):</b> Khảo sát, tổng hợp và phân tích các bài báo khoa học, tài liệu chuyên ngành về Xử lý ngôn ngữ tự nhiên (NLP), kiến trúc Transformer (đặc biệt là họ mô hình PhoBERT), và các thuật toán phân loại Học máy. Phương pháp này giúp xây dựng cơ sở lý thuyết cho đồ án.</li>
   <li style="margin-bottom: 0.05in;"><b>Phương pháp thu thập và tiền xử lý dữ liệu (Data Preprocessing):</b> Xây dựng các kịch bản thu thập dữ liệu (Web Crawler) tự động hóa và áp dụng kỹ thuật làm sạch văn bản, chuẩn hóa ngôn ngữ tiếng Việt (sử dụng thư viện PyVi) để tạo ra tập ngữ liệu đầu vào chất lượng, khử nhiễu trước khi đưa vào huấn luyện mô hình.</li>
-  <li style="margin-bottom: 0.05in;"><b>Phương pháp thực nghiệm và mô hình hóa (Experimental & Modeling):</b> Thiết kế, xây dựng và tinh chỉnh mạng nơ-ron đa tầng (MLP) kết hợp với bộ trích xuất đặc trưng PhoBERT. Đồng thời, nghiên cứu và lập trình Cơ chế giải thích dựa trên đặc trưng hình thức (Heuristic Explanation Engine) để minh bạch hóa quá trình ra quyết định của trí tuệ nhân tạo.</li>
+  <li style="margin-bottom: 0.05in;"><b>Phương pháp thực nghiệm và mô hình hóa (Experimental & Modeling):</b> Thiết kế, tinh chỉnh (Fine-tuning) kiến trúc mô hình ngôn ngữ lớn PhoBERT cho bài toán Phân loại Chuỗi. Đồng thời, nghiên cứu và lập trình Cơ chế giải thích dựa trên đặc trưng hình thức (Heuristic Explanation Engine) để minh bạch hóa quá trình ra quyết định của trí tuệ nhân tạo.</li>
   <li style="margin-bottom: 0.05in;"><b>Phương pháp thống kê và đánh giá (Statistical Evaluation):</b> Sử dụng phương pháp kiểm chứng chéo phân tầng (Stratified K-Fold) và các độ đo tiêu chuẩn trong Học máy (Precision, Recall, F1-Score, Ma trận nhầm lẫn - Confusion Matrix) để đánh giá định lượng hiệu năng mô hình một cách khách quan.</li>
   <li style="margin-bottom: 0.05in;"><b>Phương pháp kỹ nghệ phần mềm (Software Engineering):</b> Áp dụng quy trình phát triển hiện đại để thiết kế kiến trúc phân tán 3 tầng (Client-Server), lập trình giao diện người dùng (Next.js) và tích hợp API máy chủ (FastAPI), qua đó hiện thực hóa mô hình AI thành một phần mềm thực tiễn.</li>
 </ul>
 
 <h2>1.5. Ý nghĩa khoa học và thực tiễn</h2>
-<p align="justify" style="line-height: 150%; margin-bottom: 0.06in; text-indent: 0.5in"><b>Về mặt khoa học:</b> Đồ án cung cấp một hướng tiếp cận hiệu quả trong việc kết hợp khả năng biểu diễn ngữ nghĩa của mô hình ngôn ngữ tiếng Việt (PhoBERT) với bộ phân loại học sâu truyền thống (MLP) trên tập ngữ liệu tiếng Việt đặc thù. Đặc biệt, việc tích hợp phương pháp Giải thích Heuristic góp phần cải thiện khả năng giải thích của mô hình, đóng góp thêm tài liệu tham khảo giá trị cho lĩnh vực Trí tuệ Nhân tạo Minh bạch (Explainable AI - XAI).</p>
+<p align="justify" style="line-height: 150%; margin-bottom: 0.06in; text-indent: 0.5in"><b>Về mặt khoa học:</b> Đồ án cung cấp một hướng tiếp cận hiệu quả trong việc ứng dụng kỹ thuật Tinh chỉnh (Fine-tuning) mô hình ngôn ngữ tiếng Việt (PhoBERT) nguyên bản cho tác vụ Phân loại Chuỗi trên tập ngữ liệu tiếng Việt đặc thù. Đặc biệt, việc tích hợp phương pháp Giải thích Heuristic góp phần cải thiện khả năng giải thích của mô hình, đóng góp thêm tài liệu tham khảo giá trị cho lĩnh vực Trí tuệ Nhân tạo Minh bạch (Explainable AI - XAI).</p>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.06in; text-indent: 0.5in"><b>Về mặt thực tiễn:</b> Đề tài đã xây dựng thành công nền tảng phần mềm ShieldAI hoàn thiện. Đây là một công cụ hỗ trợ kiểm chứng thông tin, cung cấp cho cộng đồng mạng Việt Nam khả năng nhận diện tin giả nhanh chóng kèm theo những lời giải thích dễ hiểu. Bên cạnh đó, với kiến trúc API linh hoạt, hệ thống có tiềm năng rất lớn để mở rộng và tích hợp vào các mạng xã hội hoặc các công cụ kiểm duyệt nội dung tự động của các cơ quan báo chí trong tương lai.</p>
 
 <h2>1.6. Bố cục đồ án</h2>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.06in; text-indent: 0.5in">Ngoài phần Lời mở đầu và Kết luận, nội dung chính của đồ án được tổ chức thành 5 chương cốt lõi như sau:</p>
 <ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
   <li style="margin-bottom: 0.05in;"><b>Chương 1 - Mở đầu:</b> Trình bày bối cảnh, lý do chọn đề tài, mục tiêu, phạm vi nghiên cứu, các phương pháp tiếp cận và ý nghĩa tổng thể của dự án.</li>
-  <li style="margin-bottom: 0.05in;"><b>Chương 2 - Cơ sở lý thuyết và tổng quan nghiên cứu:</b> Cung cấp các khái niệm nền tảng về bài toán tin giả, xử lý ngôn ngữ tự nhiên, kiến trúc mô hình PhoBERT, thuật toán MLP và các độ đo đánh giá mô hình.</li>
+  <li style="margin-bottom: 0.05in;"><b>Chương 2 - Cơ sở lý thuyết và tổng quan nghiên cứu:</b> Cung cấp các khái niệm nền tảng về bài toán tin giả, xử lý ngôn ngữ tự nhiên, kiến trúc mô hình PhoBERT, thuật toán Phân loại Chuỗi (Sequence Classification) và các độ đo đánh giá mô hình.</li>
   <li style="margin-bottom: 0.05in;"><b>Chương 3 - Phân tích thiết kế hệ thống:</b> Đi sâu vào kiến trúc phần mềm, mô hình dữ liệu (ERD), và chi tiết luồng dữ liệu (Data Pipeline) từ giai đoạn thu thập văn bản đến động cơ Giải thích Heuristic.</li>
   <li style="margin-bottom: 0.05in;"><b>Chương 4 - Kết quả thực nghiệm:</b> Công bố các số liệu huấn luyện mô hình, kết quả kiểm thử hệ thống tự động (Unit Test) và minh họa giao diện sử dụng thực tế của phần mềm ShieldAI.</li>
   <li style="margin-bottom: 0.05in;"><b>Chương 5 - Tổng kết và hướng phát triển:</b> Đúc kết lại những thành tựu đã đạt được, chỉ ra các hạn chế còn tồn đọng và đề xuất các hướng nâng cấp hệ thống trong tương lai.</li>
@@ -702,7 +702,7 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
 </ul>
 
 <h2>2.2. Cơ sở lý thuyết chuyên sâu</h2>
-<p align="justify" style="line-height: 150%; margin-bottom: 0.06in; text-indent: 0.5in">Nếu mục 2.1 dừng lại ở việc định nghĩa các khái niệm nền tảng, thì mục này sẽ đi sâu vào việc mổ xẻ cấu trúc toán học và logic vận hành bên trong của các thành phần cốt lõi cấu thành nên hệ thống AI (PhoBERT Text-only + MLP).</p>
+<p align="justify" style="line-height: 150%; margin-bottom: 0.06in; text-indent: 0.5in">Nếu mục 2.1 dừng lại ở việc định nghĩa các khái niệm nền tảng, thì mục này sẽ đi sâu vào việc mổ xẻ cấu trúc toán học và logic vận hành bên trong của các thành phần cốt lõi cấu thành nên hệ thống AI (PhoBERT Fine-tuned Sequence Classification).</p>
 
 <h3>2.2.1. Kiến trúc Transformer và Cơ chế Tự chú ý (Self-Attention)</h3>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.06in; text-indent: 0.5in">Trước khi kiến trúc Transformer [6, 7] ra đời (được giới thiệu bởi Vaswani et al., 2017), các bài toán NLP chủ yếu dựa vào mạng nơ-ron hồi quy (RNN) hoặc bộ nhớ ngắn hạn dài (LSTM). Hạn chế lớn nhất của RNN/LSTM là tính toán tuần tự, dẫn đến hiện tượng &quot;quên&quot; ngữ cảnh đối với các câu văn dài và không thể tính toán song song. Transformer ra đời đã khắc phục hạn chế này bằng cách thay thế cấu trúc hồi quy, thay vào đó sử dụng độc quyền cơ chế <b>Tự chú ý (Self-Attention)</b>.</p>
@@ -719,9 +719,9 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
   <li style="margin-bottom: 0.05in;"><b>Kỹ thuật Clickbait:</b> Tin giả thường sử dụng thủ thuật viết hoa toàn bộ tựa đề (CAPS LOCK) hoặc lạm dụng dấu câu (ví dụ: !!!, ???) nhằm thu hút sự chú ý của người đọc. Hệ thống sử dụng Biểu thức chính quy (Regular Expression) để trích xuất và đo lường mật độ của các dấu hiệu bất thường này.</li>
 </ul>
 
-<h3>2.2.4. Mạng Nơ-ron Truyền thẳng (Multi-Layer Perceptron - MLP)</h3>
-<p align="justify" style="line-height: 150%; margin-bottom: 0.06in; text-indent: 0.5in">Hệ thống sử dụng kiến trúc <b>Mạng nơ-ron truyền thẳng (Multi-Layer Perceptron - MLP)</b> để làm bộ phân loại lõi. Lớp MLP này nhận đầu vào là vector nhúng ngữ nghĩa duy nhất gồm 768 chiều được trích xuất từ token [CLS] của mô hình PhoBERT. Vector này được chuẩn hóa (StandardScaler) trước khi đưa vào các lớp ẩn.</p>
-<p align="justify" style="line-height: 150%; margin-bottom: 0.06in; text-indent: 0.5in">Cấu trúc MLP sử dụng <code>sklearn.neural_network.MLPClassifier</code> với lớp ẩn <b>(128, 64)</b>, hàm kích hoạt ReLU, solver Adam, <code>alpha=0.1</code> (chuẩn hóa L2) và <code>early_stopping=True</code> để chống overfitting. <code>predict_proba</code> trả xác suất tin giả; module <code>verdict.py</code> quy đổi thành 3 mức cảnh báo: Tin thật (&lt;35%), Đáng ngờ (35–74%), Tin giả (≥75%).</p>
+<h3>2.2.4. Phân loại Chuỗi (Sequence Classification)</h3>
+<p align="justify" style="line-height: 150%; margin-bottom: 0.06in; text-indent: 0.5in">Hệ thống sử dụng kỹ thuật <b>Tinh chỉnh (Fine-tuning)</b> trên mô hình ngôn ngữ lớn PhoBERT để thiết kế bộ phân loại lõi cho tác vụ Phân loại Chuỗi (Sequence Classification). Lớp phân loại này nhận đầu vào là vector nhúng ngữ nghĩa được trích xuất từ token [CLS] của mô hình PhoBERT sau đó ánh xạ thành các phân phối xác suất dự đoán.</p>
+<p align="justify" style="line-height: 150%; margin-bottom: 0.06in; text-indent: 0.5in">Kiến trúc sử dụng lớp <code>AutoModelForSequenceClassification</code> của thư viện Hugging Face Transformers. Đầu ra của mô hình (Logits) được đưa trực tiếp qua hàm Softmax để tính toán xác suất tin giả, loại bỏ hoàn toàn việc sử dụng mạng học máy rời rạc. Module <code>verdict.py</code> tiếp nhận xác suất này để quy đổi thành 3 mức cảnh báo: Tin thật (&lt;35%), Đáng ngờ (35–74%), Tin giả (≥75%).</p>
 
 <h3>2.2.5. Cơ sở lý thuyết về Cơ chế Giải thích dựa trên Đặc trưng (Feature-based Explanation)</h3>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.06in; text-indent: 0.5in">Bên cạnh việc đưa ra kết quả phân loại, hệ thống còn được thiết kế một Động cơ giải thích rule-based độc lập (ExplanationEngine) nhằm cung cấp các thông tin hỗ trợ người dùng hiểu rõ hơn lý do của dự đoán. Thay vì sử dụng các kỹ thuật Giải thích Trí tuệ nhân tạo (Explainable AI - XAI) phức tạp như SHAP hay LIME để mổ xẻ nội bộ mạng nơ-ron, nghiên cứu áp dụng phương pháp giải thích bằng luật dựa trên các đặc trưng kinh nghiệm (Heuristics) chạy độc lập sau bước phân loại.</p>
@@ -732,7 +732,7 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
 <ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
   <li style="margin-bottom: 0.05in;"><i>ReINTEL Challenge 2020: Vietnamese Fake News Detection using Ensemble Model with PhoBERT embeddings</i> (Nhiều tác giả, Hội thảo VLSP 2020): Nghiên cứu này đã ứng dụng thành công mô hình ngôn ngữ PhoBERT để trích xuất đặc trưng văn bản, kết hợp với các thuật toán Ensemble (StackNet, LightGBM) để đạt F1-Score lên tới 94% trên tập dữ liệu ReINTEL, khẳng định khả năng của PhoBERT trong bài toán tiếng Việt.</li>
   <li style="margin-bottom: 0.05in;"><i>Phát hiện tự động tin giả: Thành tựu và thách thức</i> (Tạp chí Khoa học và Công nghệ - Đại học Đà Nẵng, 2021): Công trình đã hệ thống hóa và so sánh hiệu năng của hàng loạt phương pháp học máy (BoW, TF-IDF, SVM) và học sâu (CNN, LSTM) trên ngữ liệu tiếng Việt, chỉ ra giới hạn về bộ nhớ ngữ cảnh của các mạng nơ-ron thế hệ cũ khi xử lý văn bản dài.</li>
-  <li style="margin-bottom: 0.05in;"><i>Fake News Detection using PhoBERT and BiLSTM with Handcrafted Features</i> (Nhóm nghiên cứu thuộc các trường Đại học tại Việt Nam, 2022): Nghiên cứu đã đề xuất PhoBERT + MLP ghép thành công giữa mô hình PhoBERT [1] và mạng hồi quy BiLSTM, đồng thời chứng minh việc bổ sung các đặc trưng đếm thủ công (độ dài văn bản, thời gian đăng) giúp cải thiện đáng kể khả năng nhận diện tin giả so với việc chỉ dùng văn bản thô.</li>
+  <li style="margin-bottom: 0.05in;"><i>Fake News Detection using PhoBERT and BiLSTM with Handcrafted Features</i> (Nhóm nghiên cứu thuộc các trường Đại học tại Việt Nam, 2022): Nghiên cứu đã đề xuất PhoBERT Sequence Classification ghép thành công giữa mô hình PhoBERT [1] và mạng hồi quy BiLSTM, đồng thời chứng minh việc bổ sung các đặc trưng đếm thủ công (độ dài văn bản, thời gian đăng) giúp cải thiện đáng kể khả năng nhận diện tin giả so với việc chỉ dùng văn bản thô.</li>
   <li style="margin-bottom: 0.05in;"><i>Nhận diện thông tin sai lệch đa phương thức trên mạng xã hội tiếng Việt</i> (Các nghiên cứu tham gia VLSP ReINTEL): Các nghiên cứu tiên phong đã xây dựng thành công mô hình trích xuất đặc trưng song song từ cả văn bản (PhoBERT) và hình ảnh đính kèm (CNN/Swin Transformer), mở ra hướng đi mới trong việc phát hiện tin giả dạng ảnh chế (meme) trên Facebook.</li>
 </ul>
 
@@ -756,7 +756,7 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>2. Kiến trúc Mô hình</b></p>
 <ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
   <li style="margin-bottom: 0.05in;"><b>Hệ thống đoạt giải VLSP ReINTEL Challenge 2020:</b> Xây dựng kiến trúc Ensemble kết hợp hàng loạt mạng Nơ-ron lớn với nhau. Mô hình này phức tạp và đòi hỏi nhiều tài nguyên, khó có khả năng ứng dụng thực tế do yêu cầu phần cứng cao.</li>
-  <li style="margin-bottom: 0.05in;"><b>ShieldAI (Tối ưu Cấu trúc Text-only):</b> Thiết kế cấu trúc PhoBERT + MLP tinh gọn tối đa. Thay vì nối vector phức tạp, hệ thống chỉ trích xuất vector ngữ nghĩa 768 chiều từ PhoBERT, chuẩn hóa bằng StandardScaler và phân loại qua MLP (128, 64). Cơ chế Heuristics được tách rời thành Động cơ giải thích độc lập. Điều này giúp hệ thống đạt F1-Score 93,71% trong khi vẫn tối ưu hóa thời gian suy luận trên môi trường Web.</li>
+  <li style="margin-bottom: 0.05in;"><b>ShieldAI (Tối ưu Cấu trúc Text-only):</b> Thiết kế cấu trúc PhoBERT Sequence Classification tinh gọn tối đa. Thay vì nối vector phức tạp hay sử dụng mạng học máy rời rạc, hệ thống áp dụng kỹ thuật Fine-tuning trực tiếp. Đầu ra mô hình được đưa qua hàm Softmax để phân loại. Cơ chế Heuristics được tách rời thành Động cơ giải thích độc lập. Điều này giúp hệ thống đạt F1-Score cao trong khi vẫn tối ưu hóa thời gian suy luận trên môi trường Web.</li>
 </ul>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>3. Tính Minh bạch (Explainability)</b></p>
@@ -775,7 +775,7 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
 
 <h3>2.4.1. Thư viện Trí tuệ Nhân tạo và Xử lý Ngôn ngữ</h3>
 <ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
-  <li style="margin-bottom: 0.05in;"><b>PyTorch &amp; Transformers:</b> PyTorch được dùng để chạy mô hình <b>PhoBERT-base</b> (embedding [CLS] 768 chiều) qua thư viện Hugging Face <code>Transformers</code>. Bộ phân loại <b>MLP</b> được huấn luyện và suy luận bằng <code>scikit-learn</code> (<code>MLPClassifier</code> + <code>StandardScaler</code>), lưu artifact dạng <code>.joblib</code>.</li>
+  <li style="margin-bottom: 0.05in;"><b>PyTorch &amp; Transformers:</b> PyTorch được dùng để chạy mô hình suy luận lõi thông qua thư viện Hugging Face <code>Transformers</code>. Bộ phân loại được khởi tạo qua lớp <code>AutoModelForSequenceClassification</code> và hàm <code>Softmax</code>, với toàn bộ thông số và kiến trúc mô hình được tải trực tiếp từ một thư mục chứa artifact theo chuẩn <code>Hugging Face Model</code> cục bộ.</li>
   <li style="margin-bottom: 0.05in;"><b>HuggingFace Transformers:</b> Là thư viện tiêu chuẩn toàn cầu trong lĩnh vực Xử lý ngôn ngữ tự nhiên. Thư viện này cho phép hệ thống nạp trực tiếp kiến trúc <code>vinai/phobert-base-v2</code> kèm theo trọng số (pre-trained weights) và Tokenizer chuẩn xác của nhóm nghiên cứu VinAI, giúp tiết kiệm hàng ngàn giờ huấn luyện lại từ đầu.</li>
   <li style="margin-bottom: 0.05in;"><b>PyVi (Python Vietnamese Toolkit):</b> Đặc thù của tiếng Việt là cấu trúc từ ghép (ví dụ: &quot;sinh viên&quot; là một từ có nghĩa thay vì hai từ đơn). Để mô hình PhoBERT [1] không bị hiện tượng thiếu hụt từ vựng (Out-of-Vocabulary), thư viện PyVi (module <code>ViTokenizer</code>) được hệ thống sử dụng độc quyền trong pipeline tiền xử lý để tự động nối các từ ghép bằng dấu gạch dưới (ví dụ: &quot;sinh_viên&quot;), đảm bảo tính toàn vẹn về mặt ngữ nghĩa trước khi chuyển đổi thành vector.</li>
   <li style="margin-bottom: 0.05in;"><b>Scikit-Learn & Pandas:</b> Thư viện Pandas cung cấp cấu trúc <code>DataFrame</code> giúp việc làm sạch và thao tác trên khối lượng lớn dữ liệu huấn luyện trở nên hiệu quả. Scikit-Learn được sử dụng để tính toán các ma trận đánh giá hiệu năng (Confusion Matrix, F1-Score) và hỗ trợ chia tách tập dữ liệu (train/validation/test split) một cách ngẫu nhiên và phân tầng (stratified).</li>
@@ -787,8 +787,8 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
 <h3>2.5.1. Lựa chọn Mô hình Ngôn ngữ Lõi (PhoBERT)</h3>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Hệ thống quyết định sử dụng <b>PhoBERT</b> (mô hình Transformer dành riêng cho tiếng Việt) thay vì các thuật toán Machine Learning truyền thống (SVM, Naive Bayes) hay Multilingual BERT (mBERT). Tiếng Việt có cấu trúc ngữ pháp đặc thù (từ ghép, từ mượn, tiếng lóng mạng). Việc PhoBERT được huấn luyện sẵn (pre-trained) trên kho dữ liệu 20GB văn bản tiếng Việt giúp mô hình nắm bắt ngữ cảnh và hàm ý sâu xa của câu chữ. Nếu so sánh, phương pháp TF-IDF kết hợp SVM tuy có tốc độ xử lý nhanh nhưng hạn chế trong việc nắm bắt ngữ cảnh, dễ dàng bị đánh lừa bởi các thủ thuật lách luật. Trong khi đó, mBERT dù hỗ trợ đa ngôn ngữ nhưng vốn từ tiếng Việt lại quá mỏng. Do đó, PhoBERT được lựa chọn nhằm cải thiện độ chính xác (Accuracy).</p>
 
-<h3>2.5.2. Lựa chọn Kiến trúc PhoBERT + MLP (Text-only)</h3>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Đồ án áp dụng kiến trúc tinh gọn <b>PhoBERT Text-only + MLP</b>. Thay vì dung hợp rườm rà, mô hình chỉ sử dụng vector ngữ nghĩa của PhoBERT (768 chiều) làm đầu vào cho mạng Nơ-ron Truyền thẳng (MLP) có cấu trúc lớp ẩn (128, 64). Việc sử dụng một luồng đặc trưng giúp dễ dàng quản lý pipeline, giảm thiểu chi phí tính toán và tận dụng được khả năng của PhoBERT trong việc nắm bắt ngữ cảnh. Các đặc trưng hình thức (Heuristics) được tách hẳn ra thành một phân hệ Động cơ Giải thích (Explanation Engine) độc lập chạy sau khi phân loại. Cách tiếp cận phân tách này giúp hệ thống đạt F1-Score 93,71% trên tập kiểm thử.</p>
+<h3>2.5.2. Lựa chọn Kiến trúc PhoBERT Sequence Classification (Text-only)</h3>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Đồ án áp dụng kiến trúc tinh gọn <b>PhoBERT Fine-tuned Sequence Classification</b>. Thay vì dung hợp rườm rà hay chia nhỏ thành các chặng (embedding rời rồi huấn luyện mạng nơ-ron rời), mô hình áp dụng kỹ thuật tinh chỉnh (Fine-tuning) trực tiếp từ nền tảng PhoBERT để xuất ra Logits và dùng hàm Softmax. Việc sử dụng cấu trúc đồng nhất này giúp dễ dàng quản lý pipeline, giảm thiểu chi phí tính toán và tận dụng được khả năng của PhoBERT trong việc nắm bắt ngữ cảnh. Các đặc trưng hình thức (Heuristics) được tách hẳn ra thành một phân hệ Động cơ Giải thích (Explanation Engine) độc lập chạy sau khi phân loại.</p>
 
 <h3>2.5.3. Lựa chọn cơ chế giải thích dựa trên đặc trưng</h3>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Trong nhiều hệ thống học sâu hiện nay, kết quả phân loại thường được cung cấp dưới dạng nhãn dự đoán mà không đi kèm thông tin giải thích, gây khó khăn cho người dùng trong việc đánh giá mức độ tin cậy của kết quả. Để khắc phục hạn chế này, đề tài xây dựng Động cơ giải thích rule-based độc lập (Explanation Engine) hoạt động độc lập với mạng nơ-ron lõi.</p>
@@ -796,7 +796,7 @@ MỤC TỪ VIẾT TẮT</b></font></font></p>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Sự tách biệt giữa mô hình dự đoán (PhoBERT) và mô hình giải thích (Heuristics) hỗ trợ tối ưu tốc độ suy luận và cải thiện khả năng diễn giải kết quả của hệ thống.</p>
 
 <h2>2.6. Kết luận chương</h2>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Chương 2 đã cung cấp khung lý thuyết, làm nền tảng khoa học cho toàn bộ quá trình thiết kế và phát triển hệ thống phát hiện tin giả. Thông qua việc phân tích chuyên sâu, đồ án đã phân tích kiến trúc mạng nơ-ron Transformer [6, 7], đặc biệt là sức mạnh nắm bắt ngữ nghĩa tiếng Việt của mô hình PhoBERT. Bên cạnh đó, việc khảo lược các công trình nghiên cứu tiên phong trong và ngoài nước đã khẳng định sự đúng đắn của phương pháp tiếp cận mạng đa tầng (PhoBERT Text-only + MLP) nhằm tối đa hóa độ chuẩn xác. Hơn nữa, việc nghiên cứu các cơ sở lý thuyết về Động cơ Giải thích độc lập (Rule-based Explanation) [5, 8] và hệ thống hóa toàn bộ công nghệ phát triển Web (FastAPI, Next.js, PyTorch) đã tạo ra một bức tranh toàn cảnh về mặt kỹ thuật. Những luận điểm lý thuyết và sự chuẩn bị về mặt công nghệ trong chương này chính là tiền đề quan trọng, định hướng trực tiếp cho các quyết định kiến trúc cốt lõi sẽ được thiết kế và mô hình hóa trong Chương 3 tiếp theo.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Chương 2 đã cung cấp khung lý thuyết, làm nền tảng khoa học cho toàn bộ quá trình thiết kế và phát triển hệ thống phát hiện tin giả. Thông qua việc phân tích chuyên sâu, đồ án đã phân tích kiến trúc mạng nơ-ron Transformer [6, 7], đặc biệt là sức mạnh nắm bắt ngữ nghĩa tiếng Việt của mô hình PhoBERT. Bên cạnh đó, việc khảo lược các công trình nghiên cứu tiên phong trong và ngoài nước đã khẳng định sự đúng đắn của phương pháp tiếp cận mạng đa tầng (PhoBERT Fine-tuned Sequence Classification) nhằm tối đa hóa độ chuẩn xác. Hơn nữa, việc nghiên cứu các cơ sở lý thuyết về Động cơ Giải thích độc lập (Rule-based Explanation) [5, 8] và hệ thống hóa toàn bộ công nghệ phát triển Web (FastAPI, Next.js, PyTorch) đã tạo ra một bức tranh toàn cảnh về mặt kỹ thuật. Những luận điểm lý thuyết và sự chuẩn bị về mặt công nghệ trong chương này chính là tiền đề quan trọng, định hướng trực tiếp cho các quyết định kiến trúc cốt lõi sẽ được thiết kế và mô hình hóa trong Chương 3 tiếp theo.</p>
 <h1 style="page-break-before: always">CHƯƠNG 3: PHƯƠNG PHÁP
 NGHIÊN CỨU VÀ THIẾT KẾ HỆ THỐNG</h1>
 <h2>3.1. Phương pháp nghiên cứu</h2>
@@ -825,11 +825,11 @@ NGHIÊN CỨU VÀ THIẾT KẾ HỆ THỐNG</h1>
 <h3>3.1.4. Phương pháp Trích xuất biểu diễn ngữ nghĩa bằng PhoBERT</h3>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Đồ án sử dụng mô hình ngôn ngữ tiền huấn luyện PhoBERT (dựa trên kiến trúc Transformer) làm thành phần cốt lõi để trích xuất đặc trưng văn bản. Văn bản tiếng Việt sau khi làm sạch sẽ được đưa qua bộ Tokenizer của PhoBERT để chuyển đổi thành chuỗi các sub-words. Hệ thống trích xuất vector nhúng (embedding) ở vị trí token đặc biệt <code>[CLS]</code> tại lớp ẩn cuối cùng (last hidden state). Vector 768 chiều này chứa đựng biểu diễn ngữ nghĩa sâu sắc của toàn bộ đoạn văn bản, bao gồm cả cấu trúc ngữ pháp và sự tương quan ngữ cảnh đa chiều giữa các từ. Đây là nguồn dữ liệu duy nhất và giàu thông tin nhất được sử dụng làm đầu vào cho bộ phân loại Học máy lõi, đảm bảo mô hình không bị nhiễu bởi các yếu tố thủ công.</p>
 
-<h3>3.1.5. Phương pháp Mô hình hóa mạng đa tầng (PhoBERT + MLP)</h3>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Trái tim của hệ thống là phương pháp <b>PhoBERT Text-only + MLP</b>. Bộ phân loại được triển khai dựa trên thuật toán <code>MLPClassifier</code> của thư viện scikit-learn (cấu hình mạng: lớp ẩn 128, 64; hàm kích hoạt ReLU; thuật toán tối ưu Adam; <code>alpha=0.1</code>; <code>early_stopping=True</code>). Vector ngữ nghĩa 768 chiều từ PhoBERT sau khi được trích xuất sẽ được chuẩn hóa thông qua <code>StandardScaler</code> trước khi đưa vào mạng nơ-ron. Lưu ý rằng bộ tín hiệu hình thức (Heuristics) không được nối trực tiếp vào pipeline phân loại, mà chỉ được sử dụng độc lập trong <code>ExplanationEngine</code> ở bước suy luận cuối cùng.</p>
+<h3>3.1.5. Phương pháp Mô hình hóa mạng đa tầng (PhoBERT Sequence Classification)</h3>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Trái tim của hệ thống là phương pháp <b>PhoBERT Fine-tuned Sequence Classification</b>. Hệ thống sử dụng trực tiếp lớp <code>AutoModelForSequenceClassification</code> của thư viện Hugging Face (dựa trên PyTorch). Logits đầu ra từ mô hình sẽ được chuyển hóa thành các giá trị xác suất phân phối qua hàm <code>Softmax</code>. Lưu ý rằng bộ tín hiệu hình thức (Heuristics) không được nối trực tiếp vào pipeline phân loại, mà chỉ được sử dụng độc lập trong <code>ExplanationEngine</code> ở bước suy luận cuối cùng.</p>
 
 <h3>3.1.6. Phương pháp Đánh giá và Giải thích (Explainability Integration)</h3>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Về mặt đánh giá, hệ thống áp dụng phương pháp Validation phân tầng (Stratified K-Fold) và sử dụng chỉ số F1-Score làm thước đo cốt lõi. Đề tài tích hợp <b>ExplanationEngine</b> rule-based: sau khi MLP trả xác suất, module quét văn bản gốc (viết hoa, dấu câu giật gân, độ dài tiêu đề…) và sinh câu giải thích tiếng Việt — không dùng SHAP/LIME hay gradient ngược trên trọng số MLP.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Về mặt đánh giá, hệ thống áp dụng phương pháp Validation phân tầng (Stratified K-Fold) và sử dụng chỉ số F1-Score làm thước đo cốt lõi. Đề tài tích hợp <b>ExplanationEngine</b> rule-based: sau khi mô hình trả xác suất, module quét văn bản gốc (viết hoa, dấu câu giật gân, độ dài tiêu đề…) và sinh câu giải thích tiếng Việt — không dùng SHAP/LIME hay gradient ngược trên trọng số mô hình lõi.</p>
 <h2>3.2. Công nghệ triển khai hệ thống phần mềm</h2>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.06in; text-indent: 0.5in">Phần này trình bày các công nghệ kỹ thuật phần mềm được lựa chọn để hiện thực hóa mô hình AI thành một ứng dụng hoàn chỉnh.</p>
 
@@ -874,14 +874,14 @@ NGHIÊN CỨU VÀ THIẾT KẾ HỆ THỐNG</h1>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>3. Phân hệ Lõi: Suy luận bằng PhoBERT và Mạng nơ-ron đa tầng (Core Inference)</b></p>
 <ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
-  <li style="margin-bottom: 0.05in;"><b>Trích xuất embedding:</b> Hệ thống trích vector [CLS] 768 chiều từ PhoBERT, chuẩn hóa bằng <code>StandardScaler</code> và phân loại qua MLP (scikit-learn).</li>
-  <li style="margin-bottom: 0.05in;"><b>Suy luận tuần tự:</b> Luồng: thu thập văn bản → <code>preprocess_text</code> → PhoBERT embedding → MLP → verdict 3 mức → <code>ExplanationEngine</code> (rule-based, chạy sau phân loại).</li>
+  <li style="margin-bottom: 0.05in;"><b>Trích xuất đặc trưng và Phân loại:</b> Hệ thống sử dụng mô hình PhoBERT đã tinh chỉnh (Fine-tuned), chuyển hóa Logits đầu ra bằng hàm <code>Softmax</code> để đánh giá trực tiếp xác suất tin giả.</li>
+  <li style="margin-bottom: 0.05in;"><b>Suy luận tuần tự:</b> Luồng: thu thập văn bản → <code>preprocess_text</code> → PhoBERT Sequence Classification (Logits + Softmax) → verdict 3 mức → <code>ExplanationEngine</code> (rule-based, chạy sau phân loại).</li>
   <li style="margin-bottom: 0.05in;"><b>Phân loại và Cảnh báo (Verdict):</b> Đưa ra phán quyết cuối cùng dưới dạng 3 mức độ (Tin thật, Đáng ngờ, Tin giả) thay vì nhị phân cứng nhắc. Đánh giá này dựa trên chỉ số xác suất rủi ro (Confidence Score) từ 0% đến 100% do AI cung cấp.</li>
 </ul>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>4. Phân hệ Trí tuệ Nhân tạo Minh bạch (Heuristic Explanation Engine - Giải thích Heuristic)</b></p>
 <ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
-  <li style="margin-bottom: 0.05in;"><b>Phân tích tín hiệu hình thức:</b> <code>ExplanationEngine</code> đo các chỉ số rule-based (viết hoa, dấu câu giật gân, độ dài tiêu đề…) trên văn bản gốc và sinh câu giải thích — không phân tích ngược trọng số nội bộ MLP.</li>
+  <li style="margin-bottom: 0.05in;"><b>Phân tích tín hiệu hình thức:</b> <code>ExplanationEngine</code> đo các chỉ số rule-based (viết hoa, dấu câu giật gân, độ dài tiêu đề…) trên văn bản gốc và sinh câu giải thích — không phân tích ngược trọng số nội bộ mô hình ngôn ngữ.</li>
   <li style="margin-bottom: 0.05in;"><b>Sinh Báo cáo Trực quan:</b> Trả về báo cáo dưới dạng JSON để Frontend hiển thị thành các thanh trạng thái (Progress Bars), giúp người dùng đọc hiểu dễ dàng tại sao bài báo lại bị dán nhãn lừa đảo.</li>
 </ul>
 
@@ -921,7 +921,7 @@ NGHIÊN CỨU VÀ THIẾT KẾ HỆ THỐNG</h1>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>5. Khả năng bảo trì và Nâng cấp mô hình (Maintainability &amp; MLOps)</b></p>
 <ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
   <li style="margin-bottom: 0.05in;"><b>Cấu trúc thư mục chuẩn:</b> Mã nguồn Python tuân cấu trúc tách module (<code>models/</code>, <code>api/</code>, <code>text_utils.py</code>, …); các hàm lõi có Docstring đầy đủ.</li>
-  <li style="margin-bottom: 0.05in;"><b>Tách biệt artifact:</b> PhoBERT tải qua Hugging Face; MLP + StandardScaler lưu <code>.joblib</code> trong <code>models/</code>, không nhúng vào mã nguồn — dễ retrain mà không đổi logic Backend.</li>
+  <li style="margin-bottom: 0.05in;"><b>Tách biệt artifact:</b> Mô hình PhoBERT đã Fine-tune lưu nguyên vẹn theo chuẩn cấu trúc <code>Hugging Face Model</code> trong thư mục <code>models/</code>, không nhúng vào mã nguồn — dễ dàng cập nhật trọng số mà không đổi logic Backend.</li>
 </ul>
 <h2>3.4. Thiết kế hệ thống</h2>
 <h3>3.4.1. Kiến trúc hệ thống</h3>
@@ -941,7 +941,7 @@ NGHIÊN CỨU VÀ THIẾT KẾ HỆ THỐNG</h1>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Đây là "trái tim điều phối" của toàn bộ nền tảng phần mềm, được triển khai bằng framework <b>FastAPI</b>. Các endpoint trả JSON với envelope <code>{"status": "success"|"error", "message": "...", ...}</code>; mã HTTP thường là <b>200</b> (kể cả lỗi nghiệp vụ như sai mật khẩu hoặc chưa đăng nhập). Ba phân hệ chính: (1) <b>JWT Auth</b>; (2) <b>Web Scraper</b> (BeautifulSoup khi nhập URL); (3) <b>Router</b> điều phối sang Tầng AI.</p>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>Tầng 3: Tầng Suy luận Trí tuệ Nhân tạo (AI Inference Tier)</b></p>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Tầng này chứa pipeline suy luận ShieldAI: <b>PhoBERT</b> (PyTorch/Transformers) trích embedding [CLS] 768 chiều; <b>StandardScaler + MLPClassifier</b> (scikit-learn, file <code>.joblib</code>) tính xác suất tin giả; <code>verdict.py</code> quy đổi 3 mức. Sau đó <b>ExplanationEngine</b> (rule-based) quét văn bản gốc (in hoa, dấu câu giật gân…) để sinh JSON giải thích tiếng Việt — <b>không</b> tham gia phân loại.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Tầng này chứa pipeline suy luận ShieldAI: Kiến trúc <b>PhoBERT Fine-tuned Sequence Classification</b> (PyTorch/Transformers) xuất Logits, kết hợp hàm <b>Softmax</b> tính xác suất tin giả; <code>verdict.py</code> quy đổi 3 mức. Sau đó <b>ExplanationEngine</b> (rule-based) quét văn bản gốc (in hoa, dấu câu giật gân…) để sinh JSON giải thích tiếng Việt — <b>không</b> tham gia phân loại.</p>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>Tầng 4: Tầng Lưu trữ Dữ liệu (Data Storage Tier)</b></p>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Mặc dù là tầng thấp nhất, Tầng Lưu trữ lại đóng vai trò tối quan trọng trong việc bảo toàn tính bền vững của nền tảng. Hệ thống sử dụng <b>SQLite</b> kết nối qua mô hình ORM của thư viện SQLAlchemy. Mọi kết quả phân tích JSON chi tiết từ Tầng AI, thông tin tài khoản người dùng, và lịch sử hoạt động đều được lưu vết vĩnh viễn tại đây. Cơ chế này mang lại ưu điểm đáng kể: cho phép người dùng có thể tra cứu ngay lập tức các bài báo họ đã quét trong quá khứ thông qua bảng điều khiển cá nhân (Dashboard), mà không cần phải bắt các cụm GPU/CPU của hệ thống AI phải vất vả chạy lại các phép toán nặng nề cho một dữ liệu cũ.</p>
@@ -1011,8 +1011,8 @@ NGHIÊN CỨU VÀ THIẾT KẾ HỆ THỐNG</h1>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>3. Màn hình Quản lý Lịch sử (Personal History View)</b></p>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Để tăng tính gắn kết cá nhân hóa, hệ thống cung cấp một bảng điều khiển lưu trữ toàn bộ các phiên phân tích trong quá khứ của người dùng. Màn hình này áp dụng thiết kế dạng danh sách thẻ động (Dynamic Cards), cho phép người dùng lướt nhanh qua các tiêu đề bài báo đã quét, thời gian thực hiện thao tác và đóng dấu nhãn Thật/Giả một cách rõ ràng. Điểm tối ưu về mặt UI/UX ở đây là việc triển khai tính năng phân trang (Pagination) ngay tại phía máy chủ kết hợp bộ lọc động, giúp giao diện Frontend có thể tải và cuộn qua hàng trăm bản ghi lịch sử một cách mượt mà, tối ưu hóa mức sử dụng bộ nhớ (RAM) và hạn chế tình trạng giật lag của trình duyệt.</p>
-<h3>3.4.4. Thiết kế thuật toán (Thuật toán PhoBERT + MLP - PhoBERT + MLP)</h3>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Đồ án triển khai thuật toán <b>PhoBERT Text-only + MLP</b>. Phân loại dựa trên embedding ngữ nghĩa 768 chiều; giải thích rule-based chạy <b>sau</b> bước phân loại, không ghép (concatenate) đặc trưng hình thức vào MLP. Lưu đồ dưới đây mô tả luồng từ văn bản đầu vào đến verdict và báo cáo giải thích.</p>
+<h3>3.4.4. Thiết kế thuật toán (Thuật toán PhoBERT Sequence Classification - PhoBERT Sequence Classification)</h3>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Đồ án triển khai kiến trúc <b>PhoBERT Fine-tuned Sequence Classification</b>. Quá trình phân loại diễn ra trực tiếp trên mô hình ngôn ngữ lớn đã được tinh chỉnh; cơ chế giải thích rule-based chạy <b>sau</b> bước phân loại, không can thiệp vào các tensor vector ngữ nghĩa đầu vào. Lưu đồ dưới đây mô tả luồng từ văn bản đầu vào đến verdict và báo cáo giải thích.</p>
 
 <p align="center" style="margin-top: 0.2in; margin-bottom: 0.2in;"><img src="image/luong_xu_ly.png" style="width: 80%; max-width: 600px; border: 1px solid #ccc;"></p>
 
@@ -1021,13 +1021,13 @@ NGHIÊN CỨU VÀ THIẾT KẾ HỆ THỐNG</h1>
 <ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
   <li style="margin-bottom: 0.05in;"><b>Bước 1: Tiền xử lý (Preprocessing):</b> Áp dụng <code>preprocess_text</code>: lowercase → xóa URL → chuẩn hóa khoảng trắng → PyVi tokenize. Cùng logic cho train và inference.</li>
   <li style="margin-bottom: 0.05in;"><b>Bước 2: Giải mã Ngữ nghĩa (PhoBERT):</b> Văn bản sạch được đưa qua bộ Tokenizer của PhoBERT để băm nhỏ thành các mảnh từ vựng (Sub-words). Sau đó, chuỗi token này đi xuyên qua 12 lớp Mạng Tự chú ý (Self-Attention) của kiến trúc Transformer [6, 7]. Kết quả trả về là một siêu vector đặc trưng đại diện toàn cục cho ngữ cảnh của câu (thường gọi là <code>[CLS] token vector</code>), có kích thước cực lớn lên đến <b>768 chiều</b>. Vector này nắm giữ toàn bộ "ý nghĩa sâu xa" và "giọng điệu mỉa mai" ẩn giấu trong bài báo.</li>
-  <li style="margin-bottom: 0.05in;"><b>Bước 3: Phân loại (StandardScaler + MLPClassifier):</b> Vector 768 chiều được <code>StandardScaler</code> chuẩn hóa, đưa vào <code>MLPClassifier</code> (128, 64). <code>predict_proba</code> trả xác suất tin giả; <code>verdict.py</code> quy đổi 3 mức: &lt;35% tin thật, 35–74% đáng ngờ, ≥75% tin giả.</li>
-  <li style="margin-bottom: 0.05in;"><b>Bước 4: Giải thích (ExplanationEngine):</b> Module rule-based quét văn bản gốc (viết hoa, dấu chấm than, văn phong giật gân), kết hợp xác suất từ MLP để sinh JSON giải thích tiếng Việt.</li>
+  <li style="margin-bottom: 0.05in;"><b>Bước 3: Phân loại (Logits + Softmax):</b> Mô hình <code>AutoModelForSequenceClassification</code> xuất giá trị Logits, sau đó truyền qua hàm <code>Softmax</code> để tính toán xác suất tin giả; module <code>verdict.py</code> quy đổi 3 mức: &lt;35% tin thật, 35–74% đáng ngờ, ≥75% tin giả.</li>
+  <li style="margin-bottom: 0.05in;"><b>Bước 4: Giải thích (ExplanationEngine):</b> Module rule-based quét văn bản gốc (viết hoa, dấu chấm than, văn phong giật gân), kết hợp xác suất suy luận để sinh JSON giải thích tiếng Việt.</li>
 </ul>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Để minh họa logic lập trình, luồng suy luận được tổng hợp thành đoạn Mã giả (Pseudocode) sau:</p>
 
-<pre style="white-space: pre-wrap; font-family: monospace; background-color: #f5f5f5; padding: 10px; border: 1px solid #ccc; line-height: 1.5; overflow-x: auto;"><code>ALGORITHM: PhoBERT Text-only MLP Inference &amp; Rule-based Explanation
+<pre style="white-space: pre-wrap; font-family: monospace; background-color: #f5f5f5; padding: 10px; border: 1px solid #ccc; line-height: 1.5; overflow-x: auto;"><code>ALGORITHM: PhoBERT Sequence Classification &amp; Rule-based Explanation
 INPUT:
     T: Văn bản gốc hoặc URL bài viết
 OUTPUT:
@@ -1045,8 +1045,9 @@ BEGIN
     V_phobert = PHOBERT_MODEL(Tokens).extract_CLS()  // Vector [CLS] 768 chiều
     V_scaled = STANDARD_SCALER.transform(V_phobert)
 
-    // Bước 3: Phân loại (sklearn MLPClassifier)
-    Confidence_Score = MLP_CLASSIFIER.predict_proba(V_scaled)[1]  // xác suất tin giả
+    // Bước 3: Phân loại (Hugging Face AutoModelForSequenceClassification)
+    Logits = PHOBERT_MODEL(Tokens).logits
+    Confidence_Score = SOFTMAX(Logits)[1]  // xác suất tin giả
 
     // Bước 4: Verdict 3 mức (verdict.py)
     Verdict = MAP_TO_VERDICT(Confidence_Score)  // &lt;0.35 / 0.35–0.74 / ≥0.75
@@ -1061,11 +1062,11 @@ END</code></pre>
 <h2>3.5. Kết luận chương</h2>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Chương 3 đóng vai trò là bản lề định hình toàn bộ khung xương kỹ thuật của đồ án, chuyển tiếp từ các lý thuyết nền tảng (Chương 2) sang một bản thiết kế hệ thống phần mềm hoàn chỉnh và sẵn sàng để lập trình thực tế. Nhìn lại toàn bộ chương, đồ án đã giải quyết ba bài toán cốt lõi trong việc xây dựng một hệ thống Trí tuệ Nhân tạo ứng dụng thực tiễn:</p>
 
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>Thứ nhất, về mặt Kiến trúc Phần mềm:</b> Đồ án thiết kế hệ thống theo kiến trúc <b>Micro-Architecture 3 tầng (3-Tier) độc lập</b>. Việc chia tách Tầng Giao diện (Next.js), Tầng Nghiệp vụ (FastAPI) và Tầng Suy luận AI (PhoBERT + MLP) đảm bảo tính bảo mật, khả năng mở rộng và chịu tải trong môi trường mạng thực tế.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>Thứ nhất, về mặt Kiến trúc Phần mềm:</b> Đồ án thiết kế hệ thống theo kiến trúc <b>Micro-Architecture 3 tầng (3-Tier) độc lập</b>. Việc chia tách Tầng Giao diện (Next.js), Tầng Nghiệp vụ (FastAPI) và Tầng Suy luận AI (PhoBERT Sequence Classification) đảm bảo tính bảo mật, khả năng mở rộng và chịu tải trong môi trường mạng thực tế.</p>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>Thứ hai, về mặt Thiết kế Dữ liệu và Trải nghiệm:</b> Việc ứng dụng linh hoạt giữa mô hình quan hệ chặt chẽ (SQLite/SQLAlchemy) và định dạng dữ liệu bán cấu trúc (JSON) trong lưu trữ báo cáo Heuristic cho thấy sự tối ưu hóa cao độ về mặt lưu trữ truy vấn. Song song đó, triết lý thiết kế UI/UX hiện đại (Modern Minimalism) với việc thị giác hóa rủi ro qua mã màu đã đập tan rào cản kỹ thuật, giúp bất kỳ người dùng phổ thông nào cũng có thể dễ dàng tương tác và nắm bắt các phán quyết của AI.</p>
 
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>Thứ ba, về mặt Thiết kế Thuật toán Lõi:</b> Lưu đồ thuật toán tuần tự mô tả pipeline <b>PhoBERT Text-only + MLP</b>: embedding 768 chiều → StandardScaler → MLPClassifier (scikit-learn) → verdict 3 mức → ExplanationEngine rule-based.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>Thứ ba, về mặt Thiết kế Thuật toán Lõi:</b> Lưu đồ thuật toán tuần tự mô tả pipeline <b>PhoBERT Fine-tuned Sequence Classification</b>: AutoModelForSequenceClassification (Logits) → Softmax → verdict 3 mức → ExplanationEngine rule-based.</p>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Tóm lại, những bản thiết kế logic mạch lạc, từ cấp độ Cơ sở dữ liệu (ERD) cho đến sơ đồ Thuật toán lõi được vạch ra trong Chương 3 chính là kim chỉ nam vững chắc. Khung kiến trúc kỹ thuật này đã sẵn sàng để được chuyển hóa thành những dòng mã nguồn thực tế. Toàn bộ quá trình lập trình cài đặt (Implementation) cũng như chạy các thực nghiệm đánh giá hiệu năng mô hình (Evaluation) sẽ được trình bày cặn kẽ trong <b>Chương 4: Hiện thực và Kết quả</b>.</p>
 <h1 style="page-break-before: always">CHƯƠNG 4: HIỆN THỰC VÀ
@@ -1078,7 +1079,7 @@ KẾT QUẢ</h1>
 <ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
   <li style="margin-bottom: 0.05in;"><b>Vi xử lý trung tâm (CPU):</b> Tối thiểu Intel Core i5 hoặc AMD Ryzen 5 thế hệ mới, đáp ứng tốt quá trình cào dữ liệu (Web Scraping) đa luồng bằng BeautifulSoup và xử lý tiền dữ liệu văn bản bằng Regex.</li>
   <li style="margin-bottom: 0.05in;"><b>Bộ nhớ trong (RAM):</b> Tối thiểu <b>16GB</b>. Dung lượng này là ranh giới bắt buộc để hệ thống có thể tải đồng thời tập dữ liệu huấn luyện (Dataset) vào bộ nhớ chính, đồng thời duy trì các máy chủ ảo cục bộ (cả FastAPI và Next.js) hoạt động song song mà không bị hiện tượng tràn RAM (Out-of-memory crash).</li>
-  <li style="margin-bottom: 0.05in;"><b>Bộ xử lý Đồ họa (GPU):</b> Khuyến nghị card <b>NVIDIA</b> hỗ trợ <b>CUDA</b> để tăng tốc suy luận PhoBERT (embedding). MLP huấn luyện bằng scikit-learn trên CPU; GPU chủ yếu phục vụ trích embedding hàng loạt khi train offline.</li>
+  <li style="margin-bottom: 0.05in;"><b>Bộ xử lý Đồ họa (GPU):</b> Khuyến nghị card <b>NVIDIA</b> hỗ trợ <b>CUDA</b> để tăng tốc suy luận PhoBERT (embedding). Quá trình huấn luyện Fine-tuning PhoBERT đòi hỏi sức mạnh GPU rất lớn để cập nhật trọng số hiệu quả.</li>
 </ul>
 
 <h3>4.1.2. Môi trường Hệ điều hành và Phần mềm</h3>
@@ -1089,7 +1090,7 @@ KẾT QUẢ</h1>
     <ul style="list-style-type: circle; margin-top: 0.05in; margin-bottom: 0.05in;">
       <li style="margin-bottom: 0.05in;"><b>Ngôn ngữ:</b> Sử dụng phiên bản <code>Python 3.10+</code> (toàn bộ mã nguồn chạy bên trong một môi trường ảo Virtual Environment riêng biệt để cách ly các thư viện).</li>
       <li style="margin-bottom: 0.05in;"><b>Framework máy chủ:</b> <code>FastAPI</code> kết hợp cùng máy chủ ASGI <code>Uvicorn</code> để kích hoạt khả năng xử lý bất đồng bộ (Asynchronous) ở tốc độ cao nhất.</li>
-      <li style="margin-bottom: 0.05in;"><b>Thư viện AI Lõi:</b> <code>PyTorch</code> + <code>Transformers</code> (PhoBERT embedding), <code>Scikit-learn</code> (<code>MLPClassifier</code>, <code>StandardScaler</code>, metrics F1/Precision), <code>joblib</code> (lưu artifact).</li>
+      <li style="margin-bottom: 0.05in;"><b>Thư viện AI Lõi:</b> <code>PyTorch</code> + <code>Transformers</code> (PhoBERT embedding), <code>Scikit-learn</code> (metrics F1/Precision, Confusion Matrix).</li>
     </ul>
   </li>
   <li style="margin-bottom: 0.05in;"><b>Hệ sinh thái Frontend:</b> Được xây dựng trên nền tảng môi trường cục bộ <code>Node.js</code>. Sử dụng ngôn ngữ <code>TypeScript</code> nhằm ép buộc tính an toàn kiểu dữ liệu (Type-safety). Khung thiết kế chính là <code>Next.js 14</code> kết hợp với hệ sinh thái <code>React</code> và bộ thư viện tiện ích <code>Tailwind CSS</code>.</li>
@@ -1101,13 +1102,13 @@ KẾT QUẢ</h1>
 
 <ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
   <li style="margin-bottom: 0.05in;"><b>Module Thu thập và Tiền xử lý (<code>data_crawler.py</code>, <code>text_utils.py</code>):</b> Khi người dùng nhập URL, <code>data_crawler.py</code> dùng <code>BeautifulSoup</code> + <code>requests</code> trích title/content từ HTML. Văn bản thu được (hoặc nhập trực tiếp) đi qua <code>preprocess_text</code> trong <code>text_utils.py</code>. Helper <code>TextCleaner</code> (HTML/teencode) chỉ dùng trong test, không nằm luồng chính.</li>
-  <li style="margin-bottom: 0.05in;"><b>Module Suy luận Phân loại (<code>phobert_inference.py</code>):</b> Tải PhoBERT-base qua <code>Transformers</code> (PyTorch), trích vector [CLS] 768 chiều, chuẩn hóa bằng <code>StandardScaler</code> và suy luận qua <code>MLPClassifier</code> đã lưu (<code>.joblib</code>). <code>predict_proba</code> trả xác suất tin giả; <code>verdict.py</code> quy đổi 3 mức cảnh báo.</li>
-  <li style="margin-bottom: 0.05in;"><b>Module Giải thích (<code>explanation_engine.py</code>):</b> Chạy sau phân loại. Quét văn bản gốc (tỷ lệ IN HOA, dấu câu, văn phong giật gân), áp luật rule-based và sinh JSON giải thích tiếng Việt — không tham gia vector đầu vào MLP.</li>
+  <li style="margin-bottom: 0.05in;"><b>Module Suy luận Phân loại (<code>phobert_inference.py</code>):</b> Tải PhoBERT-base qua <code>Transformers</code> (PyTorch), trích vector [CLS] 768 chiều, suy luận qua <code>AutoModelForSequenceClassification</code> đã lưu (<code>Hugging Face Model</code>). Logits qua <code>Softmax</code> trả xác suất tin giả; <code>verdict.py</code> quy đổi 3 mức cảnh báo.</li>
+  <li style="margin-bottom: 0.05in;"><b>Module Giải thích (<code>explanation_engine.py</code>):</b> Chạy sau phân loại. Quét văn bản gốc (tỷ lệ IN HOA, dấu câu, văn phong giật gân), áp luật rule-based và sinh JSON giải thích tiếng Việt — không tham gia vector đầu vào của mô hình.</li>
 </ul>
 
 <h3>4.2.2. Dữ liệu nghiên cứu và Quy trình Tiền xử lý</h3>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>Giới thiệu bộ dữ liệu (Dataset Overview)</b></p>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Để quá trình huấn luyện mạng MLP mang lại độ chính xác cao nhất trong thực tế, đồ án sử dụng bộ dữ liệu tin giả y tế/sức khỏe tiếng Việt trong tệp <code>full_dataset.csv</code> — <b>10.617 bản ghi</b> gốc, <b>10.609 mẫu</b> sau lọc. Dữ liệu được thu thập từ các nguồn báo chí và tập COVID-19 tiếng Việt (VnExpress, daikynguyen, covid19_dataset, …), tập trung chủ đề y tế và sức khỏe tại Việt Nam.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Để quá trình Tinh chỉnh (Fine-tuning) mang lại độ chính xác cao nhất trong thực tế, đồ án sử dụng bộ dữ liệu tin giả y tế/sức khỏe tiếng Việt trong tệp <code>full_dataset.csv</code> — <b>10.617 bản ghi</b> gốc, <b>10.609 mẫu</b> sau lọc. Dữ liệu được thu thập từ các nguồn báo chí và tập COVID-19 tiếng Việt (VnExpress, daikynguyen, covid19_dataset, …), tập trung chủ đề y tế và sức khỏe tại Việt Nam.</p>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>Biện luận lý do lựa chọn bộ dữ liệu quy mô lớn</b></p>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Việc quyết định sử dụng bộ dữ liệu đa lĩnh vực này xuất phát từ ba luận điểm mang tính chiến lược:</p>
@@ -1118,11 +1119,11 @@ KẾT QUẢ</h1>
 </ul>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>Quy trình Tiền xử lý Dữ liệu Huấn luyện (Data Preprocessing Workflow)</b></p>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Trước khi huấn luyện MLP, toàn bộ tập dữ liệu thô trải qua quy trình làm sạch và chia tập:</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Trước khi Fine-tune PhoBERT, toàn bộ tập dữ liệu thô trải qua quy trình làm sạch và chia tập:</p>
 <ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
   <li style="margin-bottom: 0.05in;"><b>Làm sạch (<code>dataset_cleaner.py</code>):</b> Tiến hành lọc và loại bỏ chính xác 8 bản ghi không đạt yêu cầu. Các lỗi dẫn đến việc loại bỏ bao gồm: văn bản bị rỗng, dữ liệu bị trùng lặp hoàn toàn (duplicates), thiếu nhãn phân loại, hoặc lỗi định dạng chuỗi (encoding) trong quá trình thu thập. Kết quả thu về <b>10.609 mẫu</b> hoàn toàn hợp lệ.</li>
   <li style="margin-bottom: 0.05in;"><b>Tách tập huấn luyện (Train/Test Split):</b> Chia <b>70% huấn luyện — 30% kiểm thử</b> (stratified, <code>random_state=42</code>), tương đương ~<b>3.183 mẫu</b> hold-out.</li>
-  <li style="margin-bottom: 0.05in;"><b>Trích embedding &amp; huấn luyện MLP:</b> Mỗi mẫu qua <code>preprocess_text</code> → PhoBERT [CLS] 768-d → <code>StandardScaler.fit</code> trên train → <code>MLPClassifier.fit</code> (128, 64). Artifact lưu <code>.joblib</code>. Không dùng PyTorch DataLoader hay resampling bắt buộc — tập đã cân bằng tương đối.</li>
+  <li style="margin-bottom: 0.05in;"><b>Huấn luyện Fine-tuning:</b> Mỗi mẫu qua <code>preprocess_text</code> → Fine-tune <code>AutoModelForSequenceClassification</code> trên train. Artifact lưu <code>Hugging Face Model</code>. Không dùng PyTorch DataLoader hay resampling bắt buộc — tập đã cân bằng tương đối.</li>
 </ul>
 <h3>4.2.3. Tổ chức cấu trúc mã nguồn (Project Directory Structure)</h3>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Để đảm bảo tính mở rộng, dễ bảo trì và làm việc nhóm hiệu quả, toàn bộ mã nguồn của dự án được tổ chức chặt chẽ theo mô hình phân tách (Decoupled). Dưới đây là sơ đồ cây thư mục (Directory Tree) minh họa cấu trúc các thành phần cốt lõi của hệ thống ShieldAI:</p>
@@ -1133,14 +1134,19 @@ KẾT QUẢ</h1>
 │   ├── auth/                 # Xử lý bảo mật, mã hóa JWT, phân quyền
 │   ├── database/             # Kết nối CSDL SQLite và quản lý Models (SQLAlchemy)
 │   ├── experiments/          # Lưu trữ kết quả thực nghiệm, biểu đồ đánh giá mô hình
-│   ├── models/               # Artifact MLP + StandardScaler (.joblib); cache PhoBERT
+│   ├── models/               # Thư mục chứa các mô hình AI
+│   │   └── phobert-fakenews-final/ # Folder chứa model Hugging Face hoàn chỉnh
+│   │       ├── config.json         # Cấu hình kiến trúc mô hình
+│   │       ├── pytorch_model.bin   # Trọng số (weights) đã được tinh chỉnh
+│   │       ├── vocab.txt           # Từ điển của PhoBERT
+│   │       └── bpe.codes           # Mã hóa Byte Pair Encoding
 │   ├── tests/                # Bộ kịch bản kiểm thử tự động (Pytest) [14]
 │   ├── training/             # Chứa Jupyter Notebook để huấn luyện mô hình (train_phobert_model.ipynb)
 │   ├── data_crawler.py       # Module cào dữ liệu thô từ Internet
 │   ├── dataset_cleaner.py    # Module tiền xử lý và làm sạch dữ liệu thô
 │   ├── explanation_engine.py # Động cơ Giải thích: Bóc tách và định lượng nguyên nhân lừa đảo
 │   ├── text_utils.py         # preprocess_text, PyVi; helper TextCleaner (test)
-│   ├── phobert_inference.py  # PhoBERT embedding + joblib MLP + verdict
+│   ├── phobert_inference.py  # PhoBERT Sequence Classification (Logits + Softmax) + verdict
 │   └── main.py               # Điểm khởi chạy (Entry point) của máy chủ FastAPI
 ├── docs/                     # Tài liệu kỹ thuật, Hướng dẫn cài đặt và Nhật ký dự án
 ├── frontend/                 # Khối Giao diện Người dùng (TypeScript &amp; Next.js)
@@ -1216,30 +1222,30 @@ KẾT QUẢ</h1>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Để đảm bảo tính khách quan trong việc đánh giá hiệu năng, toàn bộ <b>10.609 mẫu</b> sau lọc đã được chia tách theo tỷ lệ <b>70% (Huấn luyện) — 30% (Kiểm thử)</b>, tương đương khoảng <b>~3.183 mẫu</b> tập kiểm thử hold-out. Quá trình chia tách sử dụng phương pháp phân tầng (Stratified Split) với <code>random_state=42</code> để đảm bảo phân phối nhãn (Thật/Giả) đồng đều, ngăn chặn hiện tượng rò rỉ dữ liệu (Data Leakage). Quá trình huấn luyện còn được củng cố bởi phương pháp kiểm định chéo 5-Fold Cross Validation.</p>
 
-Đồ án đã tiến hành đánh giá chi tiết hiệu năng của mô hình <b>PhoBERT Text-only + MLP (Hệ thống ShieldAI)</b> trên tập kiểm thử độc lập (chiếm 30% dữ liệu). Kết quả được trình bày chi tiết trong Bảng 4.1:</p>
+Đồ án đã tiến hành đánh giá chi tiết hiệu năng của mô hình <b>PhoBERT Fine-tuned Sequence Classification (Hệ thống ShieldAI)</b> trên tập kiểm thử độc lập (chiếm 30% dữ liệu). Kết quả được trình bày chi tiết trong Bảng 4.1:</p>
 
-<p align="center" style="margin-top: 0.2in; font-style: italic; margin-bottom: 0.05in;">Bảng 4.1. Hiệu năng của mô hình PhoBERT Text-only + MLP</p>
+<p align="center" style="margin-top: 0.2in; font-style: italic; margin-bottom: 0.05in;">Bảng 4.1. Hiệu năng của mô hình PhoBERT Fine-tuned Sequence Classification</p>
 <table width="100%" border="1" cellpadding="8" cellspacing="0" style="display: table; width: 100%; border-collapse: collapse; border: 1px solid #000; white-space: normal; word-wrap: break-word; word-break: break-word; table-layout: fixed;">
   <tr style="background-color: #f2f2f2; text-align: center; font-weight: bold;">
     <td width="28%" style="border: 1px solid #000;">Mô hình (Model)</td>
     <td width="18%" style="border: 1px solid #000;">Accuracy</td>
+    <td width="18%" style="border: 1px solid #000;">Precision</td>
+    <td width="18%" style="border: 1px solid #000;">Recall</td>
     <td width="18%" style="border: 1px solid #000;">F1-Score</td>
-    <td width="18%" style="border: 1px solid #000;">ROC-AUC</td>
-    <td width="18%" style="border: 1px solid #000;">5-Fold CV (F1)</td>
   </tr>
   <tr style="text-align: center; background-color: #e6f7ff;">
-    <td style="border: 1px solid #000; text-align: left;"><b>PhoBERT Text-only + MLP</b></td>
-    <td style="border: 1px solid #000;"><b>94.13%</b></td>
-    <td style="border: 1px solid #000; color: red;"><b>93.71%</b></td>
-    <td style="border: 1px solid #000;"><b>98.50%</b></td>
-    <td style="border: 1px solid #000;"><b>93.17% ± 1.33%</b></td>
+    <td style="border: 1px solid #000; text-align: left;"><b>PhoBERT Fine-tuned Sequence Classification</b></td>
+    <td style="border: 1px solid #000;"><b>96.32%</b></td>
+    <td style="border: 1px solid #000;"><b>92.45%</b></td>
+    <td style="border: 1px solid #000;"><b>94.41%</b></td>
+    <td style="border: 1px solid #000; color: red;"><b>93.42%</b></td>
   </tr>
 </table>
 
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Từ Bảng 4.1, có thể thấy kiến trúc của hệ thống đạt F1-Score 93,71% và ROC-AUC 98,50%. Việc tách biệt các vector Heuristics giúp mô hình học sâu tập trung vào khả năng phân tích ngữ nghĩa, đạt F1-Score 93,71% trên tập kiểm thử hold-out (~3.183 mẫu, 30% của 10.609 mẫu).</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Từ Bảng 4.1, có thể thấy kiến trúc của hệ thống đạt Accuracy xuất sắc 96,32% và F1-Score 93,42%. Việc tách biệt các vector Heuristics giúp mô hình học sâu tập trung vào khả năng phân tích ngữ nghĩa, đạt F1-Score 93,42% trên tập kiểm thử hold-out (~3.183 mẫu, 30% của 10.609 mẫu).</p>
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>c) Phân tích sự ổn định qua Kiểm định chéo (Cross-validation)</b></p>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Để đánh giá tổng quan hơn, đồ án áp dụng phương pháp <b>Kiểm định chéo 5 phần (5-Fold Cross Validation)</b>. Kết quả ghi nhận <b>F1-Score đạt 93.17% ± 1.33%</b> (trong đó, giá trị ± 1.33% đại diện cho độ lệch chuẩn - Standard Deviation giữa các vòng lặp fold). Sự dao động biên độ hẹp này là một minh chứng quan trọng, cho thấy hiệu năng của hệ thống cực kỳ ổn định và ít phụ thuộc vào cách chia tách dữ liệu ngẫu nhiên. Về phía chỉ số <b>ROC-AUC đạt 98.50%</b>, đây là một con số rất ấn tượng, phản ánh khả năng phân tách hai lớp Thật/Giả của mạng Nơ-ron đa tầng MLP là vô cùng xuất sắc. Việc có sự chênh lệch khá rõ rệt giữa ROC-AUC (98,50%) và F1-Score (93,71%) là một hiện tượng hoàn toàn hợp lý về mặt khoa học dữ liệu: nguyên nhân cốt lõi là do ROC-AUC đánh giá khả năng phân tách tổng quát của mô hình trên toàn bộ các ngưỡng quyết định (thresholds) có thể có, trong khi đó F1-score lại là một độ đo phụ thuộc nghiêm ngặt vào một ngưỡng phân loại cố định (mặc định là 0.5). Do đó, hai chỉ số này mang ý nghĩa bổ trợ cho nhau chứ không nhất thiết phải bằng nhau.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Đi sâu vào phân tích các chỉ số thành phần, mô hình đạt độ chuẩn xác (Precision) <b>92.45%</b> và độ bao phủ (Recall) <b>94.41%</b>. Việc Recall cao hơn Precision cho thấy hệ thống được tối ưu hóa để "bắt nhầm hơn bỏ sót", đảm bảo không bỏ lọt các tin giả nguy hiểm ảnh hưởng đến cộng đồng, đồng thời vẫn duy trì tỷ lệ cảnh báo sai ở mức rất thấp. Độ chính xác tổng thể (Accuracy) đạt mức <b>96.32%</b> chứng minh rằng việc áp dụng Fine-tuning toàn bộ kiến trúc Transformer đã giúp mô hình nắm bắt được các biểu diễn ngữ nghĩa phức tạp và tinh vi hơn rất nhiều.</p>
 <h2>4.4. Kiểm thử hệ thống (System Testing)</h2>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Để đảm bảo độ tin cậy và tính bền vững của phần mềm trước khi nghiệm thu, đồ án đã triển khai một quy trình kiểm thử cơ bản, tập trung vào các kịch bản trọng yếu thông qua kiểm thử tự động (Automated Testing) và kiểm thử thủ công (Black-box Testing).</p>
 
@@ -1304,7 +1310,7 @@ KẾT QUẢ</h1>
     <td style="border: 1px solid #000;"><code>test_phobert_inference.py</code></td>
     <td style="border: 1px solid #000; text-align: center;">4</td>
     <td style="border: 1px solid #000;">Pipeline suy luận 3 mô-đun</td>
-    <td style="border: 1px solid #000;">Mock PhoBERT/MLP: thiếu model, từ chối &lt;5 từ, phân loại fake, luồng <code>infer()</code> đầy đủ</td>
+    <td style="border: 1px solid #000;">Mock mô hình: thiếu model, từ chối &lt;5 từ, suy luận xác suất, luồng <code>infer()</code> đầy đủ</td>
   </tr>
   <tr>
     <td style="border: 1px solid #000; text-align: center;">8</td>
@@ -1386,7 +1392,7 @@ KẾT QUẢ</h1>
   <tr><td style="border: 1px solid #000; text-align: center;">TC-25</td><td style="border: 1px solid #000;"><code>test_crawl_news_article_parses_html</code></td><td style="border: 1px solid #000; text-align: center;">Unit</td><td style="border: 1px solid #000; text-align: center;">FR-02</td><td style="border: 1px solid #000;">Mock HTTP HTML có <code>&lt;h1&gt;</code> và <code>&lt;p&gt;</code></td><td style="border: 1px solid #000;">Parse title, content; <code>source_domain=vnexpress.net</code></td></tr>
   <tr><td style="border: 1px solid #000; text-align: center;">TC-26</td><td style="border: 1px solid #000;"><code>test_infer_fails_when_model_not_loaded</code></td><td style="border: 1px solid #000; text-align: center;">Unit</td><td style="border: 1px solid #000; text-align: center;">—</td><td style="border: 1px solid #000;"><code>model_loaded=False</code></td><td style="border: 1px solid #000;"><code>status=error</code>, message gợi ý train model</td></tr>
   <tr><td style="border: 1px solid #000; text-align: center;">TC-27</td><td style="border: 1px solid #000;"><code>test_module_1_rejects_short_content</code></td><td style="border: 1px solid #000; text-align: center;">Unit</td><td style="border: 1px solid #000; text-align: center;">FR-03</td><td style="border: 1px solid #000;">Nội dung chỉ 3 từ</td><td style="border: 1px solid #000;"><code>clean=None</code>, <code>raw.status=error</code></td></tr>
-  <tr><td style="border: 1px solid #000; text-align: center;">TC-28</td><td style="border: 1px solid #000;"><code>test_module_3_classification_fake_verdict</code></td><td style="border: 1px solid #000; text-align: center;">Unit</td><td style="border: 1px solid #000; text-align: center;">FR-05</td><td style="border: 1px solid #000;">Mock MLP trả xác suất 82%</td><td style="border: 1px solid #000;"><code>verdict=fake</code>, <code>fake_prob≈82</code>, nhãn chứa <code>FAKE</code></td></tr>
+  <tr><td style="border: 1px solid #000; text-align: center;">TC-28</td><td style="border: 1px solid #000;"><code>test_module_3_classification_fake_verdict</code></td><td style="border: 1px solid #000; text-align: center;">Unit</td><td style="border: 1px solid #000; text-align: center;">FR-05</td><td style="border: 1px solid #000;">Mock model trả xác suất 82%</td><td style="border: 1px solid #000;"><code>verdict=fake</code>, <code>fake_prob≈82</code>, nhãn chứa <code>FAKE</code></td></tr>
   <tr><td style="border: 1px solid #000; text-align: center;">TC-29</td><td style="border: 1px solid #000;"><code>test_infer_success_pipeline</code></td><td style="border: 1px solid #000; text-align: center;">Unit</td><td style="border: 1px solid #000; text-align: center;">FR-04,05</td><td style="border: 1px solid #000;">Mock module 1→2→3 + explanation</td><td style="border: 1px solid #000;"><code>status=success</code>; gọi đủ 4 bước pipeline</td></tr>
   <tr><td style="border: 1px solid #000; text-align: center;">TC-30</td><td style="border: 1px solid #000;"><code>test_save_and_list_analysis</code></td><td style="border: 1px solid #000; text-align: center;">Unit</td><td style="border: 1px solid #000; text-align: center;">FR-07</td><td style="border: 1px solid #000;">Lưu kết quả phân tích vào SQLite test</td><td style="border: 1px solid #000;"><code>total=1</code>, <code>verdict=suspicious</code>, <code>fake_prob=42.5</code></td></tr>
   <tr><td style="border: 1px solid #000; text-align: center;">TC-31</td><td style="border: 1px solid #000;"><code>test_register_and_login_flow</code></td><td style="border: 1px solid #000; text-align: center;">API</td><td style="border: 1px solid #000; text-align: center;">—</td><td style="border: 1px solid #000;">POST register → login → GET <code>/api/auth/me</code></td><td style="border: 1px solid #000;">Có JWT token; email khớp ở cả 3 bước</td></tr>
@@ -1465,10 +1471,10 @@ KẾT QUẢ</h1>
 <h1 style="page-break-before: always">CHƯƠNG 5: KẾT LUẬN VÀ
 HƯỚNG PHÁT TRIỂN</h1>
 <h2>5.1. Kết luận</h2>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Trải qua quá trình nghiên cứu lý thuyết chuyên sâu và thực nghiệm kỹ thuật nghiêm ngặt, đồ án đã hoàn thành khả quan mục tiêu trọng tâm ban đầu: <b>Nghiên cứu và xây dựng thành công công cụ phát hiện tin giả tiếng Việt bằng PhoBERT Text-only + MLP tích hợp Động cơ giải thích độc lập (Heuristic Explanation)</b>. Các kết quả đạt được của đồ án không chỉ dừng lại ở mức độ thử nghiệm mô hình mà đã hoàn thiện thành một sản phẩm phần mềm trọn vẹn (End-to-end System) với các điểm nhấn cốt lõi sau:</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Trải qua quá trình nghiên cứu lý thuyết chuyên sâu và thực nghiệm kỹ thuật nghiêm ngặt, đồ án đã hoàn thành khả quan mục tiêu trọng tâm ban đầu: <b>Nghiên cứu và xây dựng thành công công cụ phát hiện tin giả tiếng Việt bằng PhoBERT Fine-tuned Sequence Classification tích hợp Động cơ giải thích độc lập (Heuristic Explanation)</b>. Các kết quả đạt được của đồ án không chỉ dừng lại ở mức độ thử nghiệm mô hình mà đã hoàn thiện thành một sản phẩm phần mềm trọn vẹn (End-to-end System) với các điểm nhấn cốt lõi sau:</p>
 
 <ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
-  <li style="margin-bottom: 0.05in;"><b>Về mặt nghiên cứu mô hình:</b> Đồ án đã loại bỏ thành công sự phụ thuộc phức tạp vào các kiến trúc lai ghép (Hybrid) nặng nề. Việc áp dụng kiến trúc <b>PhoBERT Text-only + MLP</b> chuyên biệt đã chứng minh được tính hiệu quả. Khả năng phân tích ngữ nghĩa sâu của PhoBERT kết hợp với mạng phân loại MLP đa tầng (128, 64) đã mang lại các chỉ số thực nghiệm rất đáng kể (F1-Score đạt 93,71%, ROC-AUC đạt 98,50%) trên tập <b>10.609 mẫu</b> (hold-out 30% ≈ 3.183 mẫu), đạt mức hiệu suất rất cạnh tranh mà không cần đến các kiến trúc mạng quá phức tạp.</li>
+  <li style="margin-bottom: 0.05in;"><b>Về mặt nghiên cứu mô hình:</b> Đồ án đã loại bỏ thành công sự phụ thuộc phức tạp vào các kiến trúc lai ghép (Hybrid) nặng nề. Việc áp dụng kiến trúc <b>PhoBERT Fine-tuned Sequence Classification</b> chuyên biệt đã chứng minh được tính hiệu quả. Khả năng phân tích ngữ nghĩa sâu của PhoBERT thông qua kỹ thuật Fine-tuning toàn diện đã mang lại các chỉ số thực nghiệm rất đáng kể (Accuracy đạt 96,32%, F1-Score đạt 93,42%) trên tập <b>10.609 mẫu</b> (hold-out 30% ≈ 3.183 mẫu), đạt mức hiệu suất rất cạnh tranh mà không cần đến các kiến trúc mạng quá phức tạp.</li>
   <li style="margin-bottom: 0.05in;"><b>Về mặt công nghệ và kiến trúc phần mềm:</b> Hệ thống đã áp dụng kiến trúc phân hiện đại Client-Server. Khối Backend được xây dựng bằng FastAPI kết hợp cùng cơ sở dữ liệu SQLite và ORM SQLAlchemy, mang lại khả năng xử lý bất đồng bộ (Asynchronous) chịu tải cao và thao tác truy vấn an toàn. Khối Frontend sử dụng Next.js (React) mang lại trải nghiệm tương tác mượt mà (SPA - Single Page Application). Toàn bộ hệ thống được kết nối mạch lạc, hỗ trợ linh hoạt hai phương thức: tự động cào dữ liệu (Web Scraping) từ URL bài báo trực tuyến, hoặc phân tích trực tiếp từ đoạn văn bản thô do người dùng cung cấp.</li>
   <li style="margin-bottom: 0.05in;"><b>Về mặt trải nghiệm người dùng (UX) và tính minh bạch (XAI):</b> Thay vì chỉ trả về kết quả nhị phân, hệ thống phân chia kết quả thành 3 ngưỡng cảnh báo (Tin thật, Đáng ngờ, Tin giả), đồng thời tự động sinh ra các câu văn tiếng Việt giải thích lý do cảnh báo nhờ Động cơ Heuristics. Điều này giúp người dùng dễ dàng nhận biết các yếu tố lừa đảo, từ đó nâng cao "sức đề kháng" thông tin số của bản thân.</li>
   <li style="margin-bottom: 0.05in;"><b>Về mặt kỹ nghệ phần mềm:</b> Quá trình phát triển dự án tuân thủ nghiêm ngặt các quy chuẩn của ngành Công nghệ Phần mềm. Mã nguồn được tổ chức theo mô hình tách biệt mối quan tâm (Separation of Concerns), đi kèm với bộ <b>42 kịch bản kiểm thử tự động</b> sử dụng Pytest (Bảng 4.3, 4.4). Việc 100% các kịch bản kiểm thử đều vượt qua (42/42 PASSED) đã minh chứng cho độ tin cậy và tính ổn định của hệ thống.</li>
@@ -1480,7 +1486,7 @@ HƯỚNG PHÁT TRIỂN</h1>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Đồ án không tập trung vào việc đề xuất một kiến trúc trí tuệ nhân tạo mới, mà hướng tới việc giải quyết một bài toán thực tiễn thông qua kỹ nghệ phần mềm và ứng dụng AI. Những đóng góp cốt lõi và giá trị thực tiễn của tiểu luận có thể được đúc kết qua bốn khía cạnh sau đây:</p>
 
 <ul style="line-height: 150%; margin-bottom: 0.06in; text-align: justify; padding-left: 0.8in; margin-top: 0in;">
-  <li style="margin-bottom: 0.05in;"><b>Ứng dụng hiệu quả AI cho tiếng Việt:</b> Đồ án đã vận dụng thành công mô hình ngôn ngữ PhoBERT kết hợp với mạng đa tầng MLP vào bài toán phát hiện tin giả tiếng Việt, đạt được kết quả phân loại khả quan trên tập dữ liệu ngữ liệu đặc thù.</li>
+  <li style="margin-bottom: 0.05in;"><b>Ứng dụng hiệu quả AI cho tiếng Việt:</b> Đồ án đã vận dụng thành công mô hình ngôn ngữ PhoBERT kết hợp lớp phân loại chuỗi (Sequence Classification) vào bài toán phát hiện tin giả tiếng Việt, đạt được kết quả phân loại khả quan trên tập dữ liệu ngữ liệu đặc thù.</li>
   <li style="margin-bottom: 0.05in;"><b>Xây dựng hệ thống hoàn chỉnh (End-to-end System):</b> Không chỉ dừng lại ở việc huấn luyện mô hình học máy trên môi trường thử nghiệm, đồ án đã phát triển thành công một hệ thống phần mềm hoàn chỉnh bao gồm quy trình thu thập dữ liệu tự động, cơ sở dữ liệu lưu trữ, kiến trúc Backend API xử lý bất đồng bộ và giao diện Frontend.</li>
   <li style="margin-bottom: 0.05in;"><b>Tích hợp Động cơ Giải thích (Explanation Engine):</b> Việc xây dựng Động cơ giải thích độc lập dựa trên luật (Rule-based Heuristics) chạy song song với mô hình học sâu giúp cung cấp những lý do cảnh báo trực quan bằng tiếng Việt, từ đó góp phần cải thiện khả năng giải thích và tính minh bạch của mô hình.</li>
   <li style="margin-bottom: 0.05in;"><b>Triển khai thành sản phẩm ShieldAI:</b> Đồ án đã đóng gói toàn bộ các thuật toán và module kỹ thuật phức tạp thành một nền tảng Web có tên gọi ShieldAI hỗ trợ người dùng cuối, sẵn sàng hỗ trợ cộng đồng trong việc kiểm chứng thông tin trên không gian mạng.</li>

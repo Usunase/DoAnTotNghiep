@@ -15,11 +15,11 @@ export function clearStoredToken(): void {
   localStorage.removeItem(TOKEN_KEY);
 }
 
-function authHeaders(): HeadersInit {
+function authHeaders(): Record<string, string> {
   const token = getStoredToken();
-  const headers: HeadersInit = { "Content-Type": "application/json" };
+  const headers: Record<string, string> = { "Content-Type": "application/json" };
   if (token) {
-    headers.Authorization = `Bearer ${token}`;
+    headers["Authorization"] = `Bearer ${token}`;
   }
   return headers;
 }

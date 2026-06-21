@@ -6,9 +6,9 @@ const BACKEND =
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const headers: HeadersInit = { "Content-Type": "application/json" };
+    const headers: Record<string, string> = { "Content-Type": "application/json" };
     const auth = req.headers.get("authorization");
-    if (auth) headers.Authorization = auth;
+    if (auth) headers["Authorization"] = auth;
 
     const res = await fetch(`${BACKEND}/api/analyze`, {
       method: "POST",

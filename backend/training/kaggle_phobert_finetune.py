@@ -111,7 +111,7 @@ def make_frame(
 
 frames: list[pd.DataFrame] = []
 
-# Dataset 1: phngnguynthu1803/vietnamese-fake-news-dataset
+# Dataset 1: General Vietnamese News
 # These files are real-news files. Their internal label column is not reused.
 for name in ["real_news.csv", "real_news_5500_balanced.csv"]:
     path = find_one(name)
@@ -121,7 +121,7 @@ for name in ["real_news.csv", "real_news_5500_balanced.csv"]:
             df_raw,
             text_col="content",
             label=0,
-            dataset_name="phngnguynthu1803/vietnamese-fake-news-dataset",
+            dataset_name="Dataset_1",
             original_file=path,
             title_col="title",
             url_col="url",
@@ -130,7 +130,7 @@ for name in ["real_news.csv", "real_news_5500_balanced.csv"]:
     )
     print("Loaded", path, df_raw.shape)
 
-# Dataset 2: chuynvinquc/fakenewvn
+# Dataset 2: Social Media Fake News
 path = find_one("public_train.csv")
 df_raw = pd.read_csv(path)
 frames.append(
@@ -138,7 +138,7 @@ frames.append(
         df_raw,
         text_col="post_message",
         label=lambda d: d["label"].astype(int),
-        dataset_name="chuynvinquc/fakenewvn",
+        dataset_name="Dataset_2",
         original_file=path,
     )
 )
@@ -151,17 +151,17 @@ frames.append(
         df_raw,
         text_col="post_message",
         label=lambda d: d["label"].astype(int),
-        dataset_name="chuynvinquc/fakenewvn",
+        dataset_name="Dataset_2",
         original_file=path,
     )
 )
 print("Loaded", path, df_raw.shape)
 
-# Dataset 3: goumanguyen/vietnamese-fake-news-dataset-pbl7
+# Dataset 3: PBL7 Fake News
 # Load all PBL7 CSVs, then exact-text dedup will remove duplicated origin/update rows.
 for filename in ["train_data.csv", "val_data.csv", "fix_test_data.csv", "update_train_data.csv", "update_val_data.csv"]:
     for path in find_all(filename):
-        if "pbl7" not in str(path).lower() and "fake-news-dataset-pbl7" not in str(path).lower():
+        if "pbl7" not in str(path).lower():
             continue
         df_raw = pd.read_csv(path)
         if {"Maintext", "Label"}.issubset(df_raw.columns):
@@ -170,13 +170,13 @@ for filename in ["train_data.csv", "val_data.csv", "fix_test_data.csv", "update_
                     df_raw,
                     text_col="Maintext",
                     label=lambda d: d["Label"].astype(int),
-                    dataset_name="goumanguyen/vietnamese-fake-news-dataset-pbl7",
+                    dataset_name="Dataset_3",
                     original_file=path,
                 )
             )
             print("Loaded", path, df_raw.shape)
 
-# Dataset 4: leviettrieu369/vietnamese-medical-fake-news-dataset
+# Dataset 4: Medical Fake News
 # Use raw content, not normalized_content, then apply one consistent PhoBERT preprocessing step.
 path = find_one("full_dataset.csv")
 df_raw = pd.read_csv(path)
@@ -185,7 +185,7 @@ frames.append(
         df_raw,
         text_col="content",
         label=lambda d: d["is_fake"].astype(bool).astype(int),
-        dataset_name="leviettrieu369/vietnamese-medical-fake-news-dataset",
+        dataset_name="Dataset_4",
         original_file=path,
         title_col="title",
         url_col="url",

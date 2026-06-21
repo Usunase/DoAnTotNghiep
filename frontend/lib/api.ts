@@ -9,10 +9,10 @@ const API_BASE =
 export async function analyzeNews(
   payload: AnalyzeRequest
 ): Promise<AnalyzeResponse> {
-  const headers: HeadersInit = { "Content-Type": "application/json" };
+  const headers: Record<string, string> = { "Content-Type": "application/json" };
   const token = getStoredToken();
   if (token) {
-    headers.Authorization = `Bearer ${token}`;
+    headers["Authorization"] = `Bearer ${token}`;
   }
 
   const res = await fetch(`${API_BASE}/api/analyze`, {
