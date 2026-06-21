@@ -428,7 +428,7 @@ LỤC</b></font></font></p>
     <span>35</span>
 </div>
 <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.07in; margin-left: 0.4in; line-height: 150%;">
-    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">3.4.4. Thiết kế thuật toán (Thuật toán PhoBERT Sequence Classification - PhoBERT Sequence Classification)</a></span>
+    <span style="font-weight: normal;"><a href="#" style="color: black; text-decoration: none;">3.4.4. Thiết kế thuật toán (PhoBERT Sequence Classification)</a></span>
     <span style="flex-grow: 1; border-bottom: 2px dotted #000; margin: 0 10px; position: relative; top: -4px;"></span>
     <span>36</span>
 </div>
@@ -820,16 +820,16 @@ NGHIÊN CỨU VÀ THIẾT KẾ HỆ THỐNG</h1>
 </ul>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><i>Lưu ý:</i> Module helper <code>TextCleaner</code> có thêm xóa HTML/teencode nhưng <b>không</b> nằm trên luồng <code>preprocess_text</code> chính. Crawler HTML chỉ dùng khi người dùng nhập URL (BeautifulSoup trích title/content).</p>
 <h3>3.1.3. Phân chia Dữ liệu Huấn luyện (Data Split)</h3>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Do quy mô dữ liệu khổng lồ, tập dữ liệu được phân chia theo tỷ lệ <b>70% (Train) - 30% (Test)</b> để phục vụ cho các vòng đời của mô hình AI. Đặc biệt, kỹ thuật phân tầng (Stratified Split) được áp dụng nghiêm ngặt trong hàm <code>train_test_split</code> của thư viện Scikit-learn để đảm bảo tỷ lệ phân bố nhãn luôn được giữ nguyên. Ngoài ra, để tăng tính thuyết phục học thuật, đồ án còn áp dụng thêm kỹ thuật <b>Kiểm định chéo 5-Fold (Cross-validation)</b> trên tập Train. Việc tạo ra tập Test hoàn toàn biệt lập (chiếm tới 30% dữ liệu) là cơ chế phòng vệ cốt lõi để loại trừ hiện tượng Rò rỉ dữ liệu (Data Leakage), đảm bảo độ tin cậy của các chỉ số hiệu năng.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Do quy mô dữ liệu khổng lồ, tập dữ liệu được phân chia theo tỷ lệ <b>76% (Train) - 12% (Validation) - 12% (Test)</b> để phục vụ cho các vòng đời huấn luyện và đánh giá của mô hình AI. Đặc biệt, kỹ thuật phân tầng (Stratified Split) được áp dụng nghiêm ngặt trong hàm <code>train_test_split</code> của thư viện Scikit-learn để đảm bảo tỷ lệ phân bố nhãn luôn được giữ nguyên. Quá trình phân chia này tạo ra một tập Validation (12%) để tinh chỉnh siêu tham số (Hyperparameter Tuning) và một tập Test hoàn toàn biệt lập (chiếm 12% dữ liệu, tương đương hơn 2.700 mẫu) là cơ chế phòng vệ cốt lõi để loại trừ hiện tượng Rò rỉ dữ liệu (Data Leakage), đảm bảo độ tin cậy của các chỉ số hiệu năng.</p>
 
 <h3>3.1.4. Phương pháp Trích xuất biểu diễn ngữ nghĩa bằng PhoBERT</h3>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Đồ án sử dụng mô hình ngôn ngữ tiền huấn luyện PhoBERT (dựa trên kiến trúc Transformer) làm thành phần cốt lõi để trích xuất đặc trưng văn bản. Văn bản tiếng Việt sau khi làm sạch sẽ được đưa qua bộ Tokenizer của PhoBERT để chuyển đổi thành chuỗi các sub-words. Hệ thống trích xuất vector nhúng (embedding) ở vị trí token đặc biệt <code>[CLS]</code> tại lớp ẩn cuối cùng (last hidden state). Vector 768 chiều này chứa đựng biểu diễn ngữ nghĩa sâu sắc của toàn bộ đoạn văn bản, bao gồm cả cấu trúc ngữ pháp và sự tương quan ngữ cảnh đa chiều giữa các từ. Đây là nguồn dữ liệu duy nhất và giàu thông tin nhất được sử dụng làm đầu vào cho bộ phân loại Học máy lõi, đảm bảo mô hình không bị nhiễu bởi các yếu tố thủ công.</p>
 
-<h3>3.1.5. Phương pháp Mô hình hóa mạng đa tầng (PhoBERT Sequence Classification)</h3>
+<h3>3.1.5. Phương pháp Mô hình hóa phân loại chuỗi (PhoBERT Sequence Classification)</h3>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Trái tim của hệ thống là phương pháp <b>PhoBERT Fine-tuned Sequence Classification</b>. Hệ thống sử dụng trực tiếp lớp <code>AutoModelForSequenceClassification</code> của thư viện Hugging Face (dựa trên PyTorch). Logits đầu ra từ mô hình sẽ được chuyển hóa thành các giá trị xác suất phân phối qua hàm <code>Softmax</code>. Lưu ý rằng bộ tín hiệu hình thức (Heuristics) không được nối trực tiếp vào pipeline phân loại, mà chỉ được sử dụng độc lập trong <code>ExplanationEngine</code> ở bước suy luận cuối cùng.</p>
 
 <h3>3.1.6. Phương pháp Đánh giá và Giải thích (Explainability Integration)</h3>
-<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Về mặt đánh giá, hệ thống áp dụng phương pháp Validation phân tầng (Stratified K-Fold) và sử dụng chỉ số F1-Score làm thước đo cốt lõi. Đề tài tích hợp <b>ExplanationEngine</b> rule-based: sau khi mô hình trả xác suất, module quét văn bản gốc (viết hoa, dấu câu giật gân, độ dài tiêu đề…) và sinh câu giải thích tiếng Việt — không dùng SHAP/LIME hay gradient ngược trên trọng số mô hình lõi.</p>
+<p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Về mặt đánh giá, hệ thống áp dụng phương pháp đánh giá trên tập kiểm thử độc lập (Hold-out Test Set) và sử dụng chỉ số F1-Score làm thước đo cốt lõi. Đề tài tích hợp <b>ExplanationEngine</b> rule-based: sau khi mô hình trả xác suất, module quét văn bản gốc (viết hoa, dấu câu giật gân, độ dài tiêu đề…) và sinh câu giải thích tiếng Việt — không dùng SHAP/LIME hay gradient ngược trên trọng số mô hình lõi.</p>
 <h2>3.2. Công nghệ triển khai hệ thống phần mềm</h2>
 <p align="justify" style="line-height: 150%; margin-bottom: 0.06in; text-indent: 0.5in">Phần này trình bày các công nghệ kỹ thuật phần mềm được lựa chọn để hiện thực hóa mô hình AI thành một ứng dụng hoàn chỉnh.</p>
 
@@ -1052,7 +1052,7 @@ erDiagram
 
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in"><b>3. Màn hình Quản lý Lịch sử (Personal History View)</b></p>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Để tăng tính gắn kết cá nhân hóa, hệ thống cung cấp một bảng điều khiển lưu trữ toàn bộ các phiên phân tích trong quá khứ của người dùng. Màn hình này áp dụng thiết kế dạng danh sách thẻ động (Dynamic Cards), cho phép người dùng lướt nhanh qua các tiêu đề bài báo đã quét, thời gian thực hiện thao tác và đóng dấu nhãn Thật/Giả một cách rõ ràng. Điểm tối ưu về mặt UI/UX ở đây là việc triển khai tính năng phân trang (Pagination) ngay tại phía máy chủ kết hợp bộ lọc động, giúp giao diện Frontend có thể tải và cuộn qua hàng trăm bản ghi lịch sử một cách mượt mà, tối ưu hóa mức sử dụng bộ nhớ (RAM) và hạn chế tình trạng giật lag của trình duyệt.</p>
-<h3>3.4.4. Thiết kế thuật toán (Thuật toán PhoBERT Sequence Classification - PhoBERT Sequence Classification)</h3>
+<h3>3.4.4. Thiết kế thuật toán (PhoBERT Sequence Classification)</h3>
 <p align="justify" style="line-height: 150%; text-indent: 0.5in; margin-bottom: 0.06in">Đồ án triển khai kiến trúc <b>PhoBERT Fine-tuned Sequence Classification</b>. Quá trình phân loại diễn ra trực tiếp trên mô hình ngôn ngữ lớn đã được tinh chỉnh; cơ chế giải thích rule-based chạy <b>sau</b> bước phân loại, không can thiệp vào các tensor vector ngữ nghĩa đầu vào. Lưu đồ dưới đây mô tả luồng từ văn bản đầu vào đến verdict và báo cáo giải thích.</p>
 
 <p align="center" style="margin-top: 0.2in; margin-bottom: 0.2in;"><img src="image/luong_xu_ly.png" style="width: 80%; max-width: 600px; border: 1px solid #ccc;"></p>
