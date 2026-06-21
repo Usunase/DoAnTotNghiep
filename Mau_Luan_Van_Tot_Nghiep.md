@@ -1181,32 +1181,31 @@ KẾT QUẢ</h1>
 <pre style="white-space: pre-wrap; font-family: monospace; background-color: #f5f5f5; padding: 10px; border: 1px solid #ccc; line-height: 1.5; overflow-x: auto;"><code>ShieldAI_Project/
 ├── backend/                  # Khối Máy chủ API (Python &amp; FastAPI)
 │   ├── api/                  # Khai báo các API Endpoints (Auth, Analyze, History)
-│   ├── auth/                 # Xử lý bảo mật, mã hóa JWT, phân quyền
+│   ├── auth/                 # Xử lý bảo mật, mã hóa JWT bằng thuật toán bcrypt
 │   ├── database/             # Kết nối CSDL SQLite và quản lý Models (SQLAlchemy)
-│   ├── experiments/          # Lưu trữ kết quả thực nghiệm, biểu đồ đánh giá mô hình
-│   ├── models/               # Thư mục chứa các mô hình AI
-│   │   └── phobert-fakenews-final/ # Folder chứa model Hugging Face hoàn chỉnh
-│   │       ├── config.json         # Cấu hình kiến trúc mô hình
-│   │       ├── pytorch_model.bin   # Trọng số (weights) đã được tinh chỉnh
+│   ├── experiments/          # Lưu trữ biểu đồ, ma trận nhầm lẫn từ quá trình đánh giá
+│   ├── models/               # Thư mục lưu trữ mô hình AI
+│   │   └── phobert-fakenews-final/ # Folder chứa model Hugging Face (Sequence Classification)
+│   │       ├── config.json         # Cấu hình kiến trúc mạng
+│   │       ├── model.safetensors   # Trọng số (weights) đã được tinh chỉnh an toàn
 │   │       ├── vocab.txt           # Từ điển của PhoBERT
 │   │       └── bpe.codes           # Mã hóa Byte Pair Encoding
-│   ├── tests/                # Bộ kịch bản kiểm thử tự động (Pytest) [14]
-│   ├── training/             # Chứa Jupyter Notebook để huấn luyện mô hình (train_phobert_model.ipynb)
-│   ├── data_crawler.py       # Module cào dữ liệu thô từ Internet
-│   ├── dataset_cleaner.py    # Module tiền xử lý và làm sạch dữ liệu thô
+│   ├── tests/                # Bộ 42 kịch bản kiểm thử tự động (Pytest) [14]
+│   ├── training/             # Tiền xử lý, hợp nhất dữ liệu và Fine-tune (kaggle_phobert_finetune.py)
+│   ├── data_crawler.py       # Module tự động cào văn bản từ URL báo chí trực tuyến
 │   ├── explanation_engine.py # Động cơ Giải thích: Bóc tách và định lượng nguyên nhân lừa đảo
-│   ├── text_utils.py         # preprocess_text, PyVi; helper TextCleaner (test)
-│   ├── phobert_inference.py  # PhoBERT Sequence Classification (Logits + Softmax) + verdict
+│   ├── text_utils.py         # Hàm hỗ trợ tiền xử lý văn bản bằng thư viện PyVi
+│   ├── phobert_inference.py  # Đóng gói kiến trúc AI thành hàm dự đoán độc lập (Inference)
 │   └── main.py               # Điểm khởi chạy (Entry point) của máy chủ FastAPI
 ├── docs/                     # Tài liệu kỹ thuật, Hướng dẫn cài đặt và Nhật ký dự án
 ├── frontend/                 # Khối Giao diện Người dùng (TypeScript &amp; Next.js)
 │   ├── app/                  # Kiến trúc App Router của Next.js (chứa các trang /login, /analyze,...)
-│   ├── components/           # Các Component tái sử dụng (Navbar, Chart, HeroBanner)
+│   ├── components/           # Các Component tĩnh và động tái sử dụng (Navbar, Chart, Hero)
 │   ├── context/              # Quản lý trạng thái toàn cục (React Context API cho Auth)
-│   ├── lib/                  # Các hàm tiện ích (gọi API, xử lý hiệu ứng Motion)
-│   └── tailwind.config.ts    # Cấu hình hệ thống thiết kế (Design System &amp; Colors)
-├── scripts/                  # setup.sh, run.sh (all | api | web | test)
-├── setup.sh / run.sh         # Wrapper gọc scripts/
+│   ├── lib/                  # Các hàm tiện ích (gọi API bằng Axios, cấu hình Request)
+│   └── tailwind.config.ts    # Cấu hình hệ thống thiết kế (Design System &amp; UI Colors)
+├── scripts/                  # Thư mục chứa bash script hỗ trợ (run_api.sh, run_nextjs.sh)
+├── run.sh                    # Script tiện ích để khởi chạy đồng thời cả Backend và Frontend
 ├── README.md                 # Tài liệu tổng quan giới thiệu dự án
 └── requirements.txt          # Danh sách các thư viện Python phụ thuộc</code></pre>
 
