@@ -15,7 +15,9 @@
 		body {
 			font-family: "Times New Roman", serif;
 			font-size: 13pt;
-			color: black;
+			color: black !important;
+			background-color: white !important;
+			padding: 20px;
 		}
 		* {
 			color: black !important;
