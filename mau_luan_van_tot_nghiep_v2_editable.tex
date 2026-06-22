@@ -901,12 +901,12 @@ Từ Bảng \ref{tab:hieu_nang}, có thể thấy sự chênh lệch hiệu năn
 
 Dựa trên kết quả chạy suy luận trên 2.716 mẫu kiểm thử, hệ thống ghi nhận Ma trận nhầm lẫn chi tiết như sau:
 \begin{itemize}[label={--},leftmargin=0.75cm,itemsep=3pt]
-    \item \textbf{True Positive (TP) = 1.250:} Nhận diện chính xác 1.250 bài tin giả.
-    \item \textbf{True Negative (TN) = 1.365:} Nhận diện chính xác 1.365 bài tin thật.
-    \item \textbf{False Positive (FP) = 75:} Phân loại nhầm 75 bài tin thật thành tin giả.
-    \item \textbf{False Negative (FN) = 26:} Bỏ lọt 26 bài tin giả (phân loại nhầm thành tin thật).
+    \item \textbf{True Positive (TP) = 710:} Nhận diện chính xác 710 bài tin giả.
+    \item \textbf{True Negative (TN) = 1.906:} Nhận diện chính xác 1.906 bài tin thật.
+    \item \textbf{False Positive (FP) = 58:} Phân loại nhầm 58 bài tin thật thành tin giả.
+    \item \textbf{False Negative (FN) = 42:} Bỏ lọt 42 bài tin giả (phân loại nhầm thành tin thật).
 \end{itemize}
-Tỷ lệ Âm tính giả (FN) ở mức rất thấp (chỉ 26 mẫu) cho thấy hệ thống được thiết kế với tư duy "phòng vệ chủ động" - tối ưu hóa để không bỏ lọt các tin giả nguy hiểm ảnh hưởng đến cộng đồng. Tỷ lệ Dương tính giả (FP = 75 mẫu) vẫn tồn tại do hệ thống còn nhầm lẫn với các bài báo giật gân chính thống.
+Tỷ lệ Âm tính giả (FN) ở mức thấp (42 mẫu) cho thấy hệ thống được thiết kế với tư duy "phòng vệ chủ động" - tối ưu hóa để không bỏ lọt các tin giả nguy hiểm ảnh hưởng đến cộng đồng. Tỷ lệ Dương tính giả (FP = 58 mẫu) vẫn tồn tại do hệ thống còn nhầm lẫn với các bài báo giật gân chính thống.
 
 \textbf{d) Đánh giá Độ trễ và Thông lượng (Latency \& Throughput)}
 
