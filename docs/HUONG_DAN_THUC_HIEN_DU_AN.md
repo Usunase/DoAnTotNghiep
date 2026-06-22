@@ -2,7 +2,7 @@
 
 **Phát hiện tin giả tiếng Việt bằng PhoBERT + MLP (text-only)**
 
-Tài liệu này mô tả **toàn bộ quy trình** từ thu thập dữ liệu → huấn luyện → đánh giá → triển khai web, phù hợp cho đồ án tốt nghiệp.
+Tài liệu này mô tả **toàn bộ quy trình** từ thu thập dữ liệu → huấn luyện → đánh giá → triển khai web, phù hợp cho tiểu luận tốt nghiệp.
 
 ---
 

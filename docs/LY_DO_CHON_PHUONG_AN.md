@@ -1,6 +1,6 @@
 # Lý do lựa chọn phương án — Dự án ShieldAI
 
-Tài liệu giải thích **các quyết định thiết kế** trong đồ án phát hiện tin giả tiếng Việt (phiên bản **PhoBERT text-only**), phù hợp Chương phương pháp / thiết kế trong luận văn.
+Tài liệu giải thích **các quyết định thiết kế** trong tiểu luận phát hiện tin giả tiếng Việt (phiên bản **PhoBERT text-only**), phù hợp Chương phương pháp / thiết kế trong luận văn.
 
 ---
 
@@ -45,7 +45,7 @@ Nội dung văn bản ──► preprocess_text ──► PhoBERT ──► Vect
 
 ## 4. Vì sao PhoBERT frozen (không fine-tune)?
 
-- Tiết kiệm GPU và thời gian đồ án.
+- Tiết kiệm GPU và thời gian tiểu luận.
 - Embedding lưu `.npy` — tái sử dụng khi thử MLP/hyperparameter.
 - F1 ~94% đủ chứng minh tính khả thi; fine-tune là hướng cải thiện sau.
 
@@ -133,4 +133,4 @@ File: `backend/phobert_inference.py` — class `PhoBERTInferenceSystem`.
 
 ## 12. Kết luận — phương án cuối cùng
 
-ShieldAI triển khai **PhoBERT embedding + MLP** trên văn bản tiếng Việt, với tiền xử lý thống nhất, verdict 3 mức, giải thích rule-based và ứng dụng web FastAPI + Next.js. Phương án cân bằng **độ chính xác**, **tính nhất quán** và **khả năng bảo vệ/demo** trong phạm vi đồ án tốt nghiệp.
+ShieldAI triển khai **PhoBERT embedding + MLP** trên văn bản tiếng Việt, với tiền xử lý thống nhất, verdict 3 mức, giải thích rule-based và ứng dụng web FastAPI + Next.js. Phương án cân bằng **độ chính xác**, **tính nhất quán** và **khả năng bảo vệ/demo** trong phạm vi tiểu luận tốt nghiệp.

@@ -265,7 +265,7 @@ ShieldAI giải quyết bài toán phân loại nhị phân tin thật/tin giả
 
 ### 2.1.2. Tiếp cận PhoBERT và phân loại MLP
 
-Đề tài sử dụng **embedding ngữ nghĩa** từ PhoBERT làm đầu vào cho **mạng nơ-ron đa tầng (MLP)** — kiến trúc phổ biến khi mô hình ngôn ngữ được cố định và bộ phân loại học trên vector đặc trưng. Cách tiếp cận này cân bằng giữa độ chính xác, khả năng triển khai và phạm vi đồ án tốt nghiệp.
+Đề tài sử dụng **embedding ngữ nghĩa** từ PhoBERT làm đầu vào cho **mạng nơ-ron đa tầng (MLP)** — kiến trúc phổ biến khi mô hình ngôn ngữ được cố định và bộ phân loại học trên vector đặc trưng. Cách tiếp cận này cân bằng giữa độ chính xác, khả năng triển khai và phạm vi tiểu luận tốt nghiệp.
 
 ### 2.1.3. Trí tuệ nhân tạo có thể giải thích
 
@@ -346,7 +346,7 @@ Hệ thống sử dụng một luồng đặc trưng ngữ nghĩa:
 
 ### 3.1.2. Chiến lược PhoBERT cố định
 
-Không fine-tune end-to-end vì: (i) tiết kiệm GPU/thời gian; (ii) embedding lưu `.npy` tái sử dụng; (iii) MLP nhỏ ổn định trên CPU. Trade-off: có thể mất 1–2% so với fine-tune tối ưu — chấp nhận được trong phạm vi đồ án.
+Không fine-tune end-to-end vì: (i) tiết kiệm GPU/thời gian; (ii) embedding lưu `.npy` tái sử dụng; (iii) MLP nhỏ ổn định trên CPU. Trade-off: có thể mất 1–2% so với fine-tune tối ưu — chấp nhận được trong phạm vi tiểu luận.
 
 ### 3.1.3. Tiền xử lý thống nhất
 
@@ -431,7 +431,7 @@ Ba mô-đun suy luận:
 
 ### 3.3.2. Thiết kế lưu trữ dữ liệu
 
-Hệ thống sử dụng **SQLite** (qua SQLAlchemy) để lưu người dùng, lịch sử phân tích và phản hồi. Mô hình ML lưu dạng file — phù hợp triển khai đồ án và tái lập thí nghiệm.
+Hệ thống sử dụng **SQLite** (qua SQLAlchemy) để lưu người dùng, lịch sử phân tích và phản hồi. Mô hình ML lưu dạng file — phù hợp triển khai tiểu luận và tái lập thí nghiệm.
 
 **Hình 3.3. Sơ đồ quan hệ lưu trữ dữ liệu và mô hình**
 
@@ -950,7 +950,7 @@ File JSON/CSV tại `backend/experiments/figures/experimental/`:
 
 | Câu hỏi | Gợi ý trả lời ngắn |
 |---------|---------------------|
-| Vì sao không fine-tune PhoBERT? | Tiết kiệm tài nguyên; F1 93,71% đủ mạnh cho đồ án; embedding tái sử dụng qua `.npy`. |
+| Vì sao không fine-tune PhoBERT? | Tiết kiệm tài nguyên; F1 93,71% đủ mạnh cho tiểu luận; embedding tái sử dụng qua `.npy`. |
 | Đóng góp của em khác gì PhoBERT có sẵn? | Xem Bảng 5.2.2: pipeline end-to-end, `preprocess_text` thống nhất, verdict 3 mức, giải thích, web, lịch sử. |
 | Vì sao chọn MLP thay vì XGBoost/SVM? | Phi tuyến trên vector dense 768 chiều; `predict_proba`; regularization L2; huấn luyện nhanh trên CPU. |
 | Vì sao không dùng metadata MXH? | Tập train không có MXH thực; triển khai text-only đảm bảo nhất quán; metadata là hướng mở rộng. |
