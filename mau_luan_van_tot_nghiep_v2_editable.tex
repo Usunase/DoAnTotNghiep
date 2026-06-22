@@ -1016,6 +1016,23 @@ Dưới đây là một số hình ảnh thực tế minh họa:
     \label{fig:tc03}
 \end{figure}
 
+
+\secA{4.4. Biện luận các vấn đề kỹ thuật và Phản biện (Critical Discussion)}
+Trong quá trình bảo vệ khoa học, bên cạnh việc chứng minh hiệu năng, một hệ thống AI cần được đánh giá nghiêm ngặt qua lăng kính phản biện để làm rõ các giới hạn thực tế. Mục này sẽ trực tiếp biện luận 4 rủi ro lớn nhất của hệ thống:
+
+\textbf{1. Phòng ngừa Rò rỉ Dữ liệu (Data Leakage) và Xử lý Trùng lặp}
+Rò rỉ dữ liệu xảy ra khi thông tin từ tập Kiểm thử (Test Set) vô tình xuất hiện trong tập Huấn luyện (Train Set), dẫn đến kết quả đánh giá bị ảo hóa. Hệ thống ShieldAI đã triệt tiêu rủi ro này bằng cách thực thi hàm \texttt{drop\_duplicates()} \textit{trước khi} tiến hành chia tách dữ liệu. Toàn bộ các bài báo có nội dung giống nhau (dù khác nguồn) đều bị loại bỏ, đảm bảo tập Test 2.716 mẫu là những văn bản hoàn toàn xa lạ đối với mạng nơ-ron trong quá trình tối ưu hóa trọng số.
+
+\textbf{2. Vấn đề Tách tập Dữ liệu (Stratified Split vs Source Split)}
+Hệ thống hiện tại sử dụng phân tầng ngẫu nhiên (Stratified Random Split) để chia tách dữ liệu từ 4 bộ ngữ liệu trộn lẫn. Mặc dù phương pháp này đảm bảo phân phối nhãn đồng đều, nhưng nó tiềm ẩn nguy cơ mô hình học thuộc lòng (memorize) đặc trưng của nguồn phát hành (ví dụ: văn phong đặc thù của một trang web nhất định) thay vì học bản chất tin giả. Dưới góc độ phản biện sâu, một phương pháp chia tách theo nguồn (Source Split / Leave-one-domain-out) — nghĩa là huấn luyện trên 3 bộ dữ liệu và kiểm thử hoàn toàn trên bộ thứ 4 — sẽ là một phép thử khắc nghiệt và phản ánh chính xác hơn năng lực khái quát hóa của mô hình. Trong phạm vi tiểu luận, Stratified Split được lựa chọn để tối đa hóa độ bao phủ từ vựng tiếng Việt, nhưng Source Split sẽ là định hướng bắt buộc khi thương mại hóa.
+
+\textbf{3. Kiểm thử Ngoại lai (External Test) và Tính Khái quát hóa}
+Độ chính xác 96,32\% đạt được là trên tập Kiểm thử nội bộ (Hold-out Test Set). Tuy nhiên, môi trường mạng xã hội luôn sinh ra các từ lóng và biến thể tin giả mới mỗi ngày. Nhận thức được giới hạn của dữ liệu tĩnh, tiểu luận đã xây dựng hệ thống Giao diện Web (FastAPI + Next.js) làm công cụ \textbf{Kiểm thử Ngoại lai (External Test)} liên tục. Việc cho phép người dùng tự do nhập các đường dẫn (URL) bài báo mới nhất năm 2026 chính là bài kiểm tra thực tế (in-the-wild) khắc nghiệt nhất nhằm đánh giá khả năng chống chịu sự thay đổi của miền dữ liệu (Domain Shift).
+
+\textbf{4. Bản chất thực sự của Động cơ XAI (The True Nature of Heuristic XAI)}
+Cần khẳng định rõ ràng: Hệ thống Giải thích của ShieldAI mang bản chất là \textbf{Giải thích suy diễn bề mặt sau mô hình (Post-hoc Surface Explanation)}, \textit{không} phải là Giải thích nội tại (Intrinsic Interpretation).
+Động cơ Heuristics không hề mổ xẻ các lớp Attention hay trọng số Gradient của PhoBERT để xem mạng nơ-ron "nghĩ gì". Thay vào đó, nó hoạt động độc lập bằng cách đo lường các dấu hiệu thao túng văn bản (viết hoa, dấu câu). Phương pháp này giúp cảnh báo người dùng về \textit{hình thức} của tin giả với chi phí tính toán O(1), nhưng chưa giải mã được \textit{ngữ nghĩa ẩn} mà PhoBERT đã học. Đây là sự đánh đổi (trade-off) có chủ đích giữa tính minh bạch bề mặt và thời gian phản hồi của hệ thống.
+
 \secA{4.5. Kết luận chương}
 Chương 4 đã trình bày toàn bộ quá trình hiện thực hóa các bản thiết kế kiến trúc thành một nền tảng hệ thống nguyên mẫu (prototype). Các kết quả thực nghiệm đạt được đã chứng minh tính đúng đắn và hiệu quả của thuật toán trí tuệ nhân tạo được đề xuất. Bên cạnh đó, việc thiết lập các kịch bản kiểm thử (Test cases) đã khẳng định tính ổn định của nền tảng phần mềm trong việc đáp ứng các yêu cầu nghiệp vụ thực tiễn. Những thành quả này là cơ sở vững chắc để rút ra các kết luận tổng hợp và đề xuất hướng phát triển trong Chương 5.
 \newpage
