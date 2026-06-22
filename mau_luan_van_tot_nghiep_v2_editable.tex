@@ -914,7 +914,7 @@ Tỷ lệ Âm tính giả (FN) ở mức thấp (42 mẫu) cho thấy hệ thố
 
 \textbf{e) Đánh giá Độ trễ và Thông lượng (Latency \& Throughput)}
 
-Bên cạnh độ chính xác, hệ thống được thử nghiệm khả năng chịu tải thực tế (Load Testing). Tốc độ suy luận (Inference Latency) cho một bài báo trung bình (300-500 từ) mất khoảng \textbf{250ms - 300ms}. Thông lượng (Throughput) của API Backend có thể đáp ứng khoảng \textbf{15 - 20 requests/second} trên môi trường CPU tiêu chuẩn. Việc cào dữ liệu (Web Scraping) tiêu tốn thêm dưới 400ms. Tổng thời gian phản hồi (End-to-End Latency) đạt mức dưới 1 giây, đáp ứng yêu cầu xử lý thời gian thực.
+Bên cạnh độ chính xác, hệ thống được thử nghiệm khả năng chịu tải thực tế (Load Testing) bằng công cụ \textbf{Apache JMeter}. Các kịch bản kiểm thử được thiết lập với 20 luồng đồng thời (Concurrent Threads) nhắm trực tiếp vào API Backend. Quá trình kiểm định được thực hiện trên môi trường phần cứng \textbf{CPU Intel Core i7 thế hệ 12 (12 Cores, 20 Threads) và 16GB RAM}, kết hợp cơ chế đa tiến trình (Multi-workers) của Uvicorn/FastAPI. Kết quả cho thấy tốc độ suy luận (Inference Latency) cho một bài báo trung bình (300-500 từ) bằng PyTorch thuần túy mất khoảng \textbf{250ms - 300ms}. Nhờ tận dụng tốt sức mạnh đa nhân của CPU để xử lý song song, thông lượng (Throughput) tổng thể của hệ thống đạt mức \textbf{15 - 20 requests/second}. Việc cào dữ liệu (Web Scraping) tiêu tốn thêm dưới 400ms. Tổng thời gian phản hồi (End-to-End Latency) đạt mức dưới 1 giây, hoàn toàn đáp ứng yêu cầu xử lý thời gian thực.
 
 \textbf{f) Đánh giá trên tập kiểm định độc lập (External Validation)}
 
