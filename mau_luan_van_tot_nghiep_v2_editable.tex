@@ -872,7 +872,7 @@ Hệ thống sử dụng ma trận nhầm lẫn (Confusion Matrix) để tính t
 
 \textbf{b) Kết quả so sánh trên tập kiểm thử}
 
-Để đảm bảo tính khách quan trong việc đánh giá hiệu năng, toàn bộ \textbf{hơn 22.000 mẫu} đã được chia tách theo tỷ lệ \textbf{76\% (Huấn luyện) — 12\% (Xác thực) — 12\% (Kiểm thử)}, tương đương khoảng \textbf{2.716 mẫu} tập kiểm thử hold-out. Quá trình chia tách sử dụng phương pháp phân tầng (Stratified Split) với \texttt{random\_state=42} để đảm bảo phân phối nhãn (Thật/Giả) đồng đều, ngăn chặn hiện tượng rò rỉ dữ liệu (Data Leakage). Quá trình huấn luyện còn được củng cố bởi phương pháp kiểm định chéo 5-Fold Cross Validation.
+Để đảm bảo tính khách quan trong việc đánh giá hiệu năng, toàn bộ \textbf{hơn 22.000 mẫu} đã được chia tách theo tỷ lệ \textbf{76\% (Huấn luyện) — 12\% (Xác thực) — 12\% (Kiểm thử)}, tương đương khoảng \textbf{2.716 mẫu} tập kiểm thử hold-out. Quá trình chia tách sử dụng phương pháp phân tầng (Stratified Split) với \texttt{random\_state=42} để đảm bảo phân phối nhãn (Thật/Giả) đồng đều, ngăn chặn hiện tượng rò rỉ dữ liệu (Data Leakage).
 
 Tiểu luận đã tiến hành đánh giá chi tiết hiệu năng của mô hình \textbf{PhoBERT Fine-tuned Sequence Classification (Hệ thống ShieldAI)} trên tập kiểm thử độc lập (chiếm 12\% dữ liệu). Kết quả được đối chiếu trực tiếp với các mô hình cơ sở (Baseline Models) trong Bảng \ref{tab:hieu_nang}:
 
