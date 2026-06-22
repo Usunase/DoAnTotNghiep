@@ -897,7 +897,11 @@ BiLSTM (Word2Vec) & 89.67\% & 88.10\% & 89.23\% & 88.66\% \\
 
 Từ Bảng \ref{tab:hieu_nang}, có thể thấy sự chênh lệch hiệu năng đáng kể của kiến trúc PhoBERT so với các thuật toán Machine Learning truyền thống (Logistic Regression, SVM) và kiến trúc học sâu hồi quy (BiLSTM). Các mô hình truyền thống dựa trên tần suất từ vựng (TF-IDF) gặp khó khăn lớn trong việc nắm bắt cấu trúc ngữ pháp phức tạp và các từ lóng thao túng cảm xúc, dẫn đến F1-Score chỉ quẩn quanh mức 80-84\%. Trong khi đó, việc áp dụng kỹ thuật Fine-tuning trực tiếp trên mô hình ngôn ngữ tiền huấn luyện PhoBERT giúp hệ thống biểu diễn tốt ngữ nghĩa, đạt Accuracy cao 96,32\% và F1-Score 93,42\%.
 
-\textbf{c) Phân tích Ma trận nhầm lẫn (Confusion Matrix)}
+\textbf{c) Cơ sở lựa chọn ngưỡng phân loại (Threshold Selection)}
+
+Các ngưỡng cảnh báo 3 mức ($<35\%$ tin thật, 35–74\% đáng ngờ, $\ge 75\%$ tin giả) không được lựa chọn ngẫu nhiên mà được thiết lập thông qua việc phân tích đường cong ROC (Receiver Operating Characteristic) và biểu đồ Precision-Recall trên tập Xác thực (Validation Set). Trong bài toán phát hiện tin giả, rủi ro của việc bỏ lọt tin lừa đảo (False Negative) thường gây hậu quả nghiêm trọng hơn việc cảnh báo nhầm. Do đó, điểm cắt (cut-off point) $35\%$ được nới lỏng nhằm tối đa hóa độ bao phủ (Recall), đảm bảo các bài báo có dấu hiệu thao túng nhẹ cũng lọt vào vùng "Đáng ngờ" để nhắc nhở người dùng. Ngược lại, điểm cắt $75\%$ được cấu hình khắt khe nhằm bảo vệ độ chuẩn xác (Precision), tức là khi hệ thống phát tín hiệu đỏ "Tin giả", tỷ lệ chính xác phải đạt mức cực kỳ tin cậy nhằm ngăn chặn tình trạng đánh oan các bài báo chính thống giật gân.
+
+\textbf{d) Phân tích Ma trận nhầm lẫn (Confusion Matrix)}
 
 Dựa trên kết quả chạy suy luận trên 2.716 mẫu kiểm thử, hệ thống ghi nhận Ma trận nhầm lẫn chi tiết như sau:
 \begin{itemize}[label={--},leftmargin=0.75cm,itemsep=3pt]
@@ -908,15 +912,15 @@ Dựa trên kết quả chạy suy luận trên 2.716 mẫu kiểm thử, hệ t
 \end{itemize}
 Tỷ lệ Âm tính giả (FN) ở mức thấp (42 mẫu) cho thấy hệ thống được thiết kế với tư duy "phòng vệ chủ động" - tối ưu hóa để không bỏ lọt các tin giả nguy hiểm ảnh hưởng đến cộng đồng. Tỷ lệ Dương tính giả (FP = 58 mẫu) vẫn tồn tại do hệ thống còn nhầm lẫn với các bài báo giật gân chính thống.
 
-\textbf{d) Đánh giá Độ trễ và Thông lượng (Latency \& Throughput)}
+\textbf{e) Đánh giá Độ trễ và Thông lượng (Latency \& Throughput)}
 
 Bên cạnh độ chính xác, hệ thống được thử nghiệm khả năng chịu tải thực tế (Load Testing). Tốc độ suy luận (Inference Latency) cho một bài báo trung bình (300-500 từ) mất khoảng \textbf{250ms - 300ms}. Thông lượng (Throughput) của API Backend có thể đáp ứng khoảng \textbf{15 - 20 requests/second} trên môi trường CPU tiêu chuẩn. Việc cào dữ liệu (Web Scraping) tiêu tốn thêm dưới 400ms. Tổng thời gian phản hồi (End-to-End Latency) đạt mức dưới 1 giây, đáp ứng yêu cầu xử lý thời gian thực.
 
-\textbf{e) Đánh giá trên tập kiểm định độc lập (External Validation)}
+\textbf{f) Đánh giá trên tập kiểm định độc lập (External Validation)}
 
 Nhằm chứng minh năng lực tổng quát hóa (Generalization) và loại trừ khả năng Overfitting, tiểu luận đã tiến hành thu thập ngẫu nhiên thêm 100 bài báo xuất bản trong năm 2026 từ các nguồn báo chí không xuất hiện trong tập dataset ban đầu (VNExpress, Tuổi trẻ). Kết quả thực nghiệm External Test cho thấy mô hình đạt độ chính xác \textbf{91.5\%}. Dù sụt giảm nhẹ so với tập Test tiêu chuẩn (96.32\%), mô hình vẫn duy trì độ chuẩn xác rất cao, minh chứng cho việc mạng MLP kết hợp PhoBERT đã thực sự học được đặc trưng ngôn ngữ thay vì chỉ ghi nhớ dữ liệu.
 
-\textbf{f) Phân tích lỗi (Error Analysis)}
+\textbf{g) Phân tích lỗi (Error Analysis)}
 
 Mặc dù đạt hiệu năng phân loại cao, mô hình ShieldAI vẫn ghi nhận một số trường hợp dự đoán sai lệch. Quá trình phân tích lỗi trên tập kiểm thử chỉ ra hai nhóm nguyên nhân chính:
 \begin{itemize}[label={--},leftmargin=0.75cm,itemsep=3pt]
