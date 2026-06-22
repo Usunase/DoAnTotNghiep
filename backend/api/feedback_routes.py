@@ -24,9 +24,7 @@ def create_or_update_feedback(
     if user is None:
         return {"status": "error", "message": "Vui lòng đăng nhập."}
 
-    # You might want to check if the history_id belongs to the user first.
-    # Assuming get_user_history does this or submit_feedback will fail if FK constraint.
-    # For now, submit_feedback will just link to the user.
+    # Validate history ownership (Optional but recommended)
 
     result = submit_feedback(
         db,

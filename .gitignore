@@ -22,3 +22,10 @@ __pycache__/
 .env
 *.log
 .DS_Store
+
+# LaTeX auxiliary files
+*.aux
+*.lof
+*.lot
+*.out
+*.toc

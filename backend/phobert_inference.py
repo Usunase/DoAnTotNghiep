@@ -107,11 +107,9 @@ class PhoBERTInferenceSystem:
         if self.verbose:
             print("--- MODULE 3: Phân loại ---")
             
-        # Tính softmax thủ công để lấy xác suất
         exp_logits = np.exp(logits - np.max(logits))
         probs = exp_logits / exp_logits.sum(axis=-1)
         
-        # Nhãn 1 là FAKE theo cấu hình lúc train
         fake_prob = float(probs[1] * 100.0)
         verdict = verdict_from_prob(fake_prob)
         result = result_label_from_verdict(verdict)
@@ -161,7 +159,7 @@ class PhoBERTInferenceSystem:
             "fake_prob": fake_prob,
             "raw_data": raw_data,
             "cleaned_text": clean_content,
-            "phobert_shape": logits.shape, # Trả về shape của logits thay vì embedding 768
+            "phobert_shape": logits.shape,
             "explanation": explanation,
         }
 

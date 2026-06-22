@@ -13,7 +13,7 @@ import pandas as pd
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_INPUT_DIR = PROJECT_ROOT / "last"
-DEFAULT_OUTPUT = PROJECT_ROOT / "backend/data/merged_fake_news_dataset.csv"
+DEFAULT_OUTPUT = PROJECT_ROOT / "backend/data/vietnamese_fake_news_dataset.csv"
 
 STANDARD_COLUMNS = [
     "id",

@@ -50,7 +50,7 @@ MAX_LEN = 256
 TEST_SIZE = 0.12
 VAL_SIZE = 0.12
 OUTPUT_DIR = Path("/kaggle/working/phobert-fakenews-final")
-MERGED_CSV = Path("/kaggle/working/merged_fake_news_dataset.csv")
+MERGED_CSV = Path("/kaggle/working/vietnamese_fake_news_dataset.csv")
 
 random.seed(SEED)
 np.random.seed(SEED)

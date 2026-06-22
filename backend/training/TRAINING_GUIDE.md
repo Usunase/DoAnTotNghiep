@@ -44,7 +44,7 @@ python3 -m backend.training.merge_last_datasets
 Lenh nay tao file:
 
 ```text
-backend/data/merged_fake_news_dataset.csv
+backend/data/vietnamese_fake_news_dataset.csv
 ```
 
 Quy uoc nhan trong file merged:

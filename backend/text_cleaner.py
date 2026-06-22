@@ -29,12 +29,9 @@ class TextCleaner:
 
     def remove_special_characters_and_emojis(self, text):
         """ Chỉ giữ lại chữ cái, số tiếng Việt và các dấu câu cơ bản. Xóa Emoji. """
-        # Xóa emojis/icon - giữ chữ cái, số, các dấu câu ,.!? và _
-        # Patern này match chữ Việt Nam (bao gồm các dấu thanh)
         vietnamese_chars = r"a-zA-Z0-9ÀÁÂÃÈÉÊẾÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêếìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỮỰỲỴÝỶỸửữựỳỵỷỹ\s\.,!\?"
         text = re.sub(f'[^{vietnamese_chars}]', ' ', text)
         
-        # Biến đống khoảng trắng dư thừa thành 1 khoảng trắng duy nhất
         return normalize_whitespace(text)
 
     def normalize_teencode(self, text):
@@ -42,15 +39,11 @@ class TextCleaner:
         words = text.split()
         normalized_words = []
         for word in words:
-            # Xử lý lowercase để tìm trong dictionary
             lower_word = word.lower()
-            # Bỏ mảng dấu câu ra ngoài để đối soát chữ cho chuẩn
             clean_word = re.sub(r'[^\w\s]', '', lower_word)
             
             if clean_word in self.teencode_dict:
-                # Nếu từ sau khi lột dấu câu nằm trong từ điển, thay thế!
                 new_word = self.teencode_dict[clean_word]
-                # Thêm lại dấu câu nếu có (rất thô sơ, nhưng hiệu quả)
                 if word[-1] in ['.', ',', '!', '?']:
                     new_word += word[-1]
                 normalized_words.append(new_word)
