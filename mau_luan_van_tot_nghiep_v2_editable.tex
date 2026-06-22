@@ -326,48 +326,46 @@ Phương pháp này hoạt động độc lập với mạng nơ-ron lõi, khôn
 
 \secA{2.3. Tổng quan các công trình nghiên cứu liên quan}
 \secB{2.3.1. Các nghiên cứu trong nước}
+Trong bối cảnh bùng nổ thông tin tại Việt Nam, bài toán phát hiện tin giả tiếng Việt đã thu hút sự chú ý mạnh mẽ từ cộng đồng xử lý ngôn ngữ tự nhiên (NLP). 
 \begin{itemize}[label={--},leftmargin=0.75cm,itemsep=3pt]
-\item \textit{ReINTEL Challenge 2020: Vietnamese Fake News Detection using Ensemble Model with PhoBERT embeddings} (Nhiều tác giả, VLSP 2020): \textbf{Ưu điểm:} Ứng dụng thành công PhoBERT để trích xuất đặc trưng, kết hợp thuật toán Ensemble (StackNet, LightGBM) để đạt F1-Score 94\%. \textbf{Nhược điểm:} Thiếu cơ chế giải thích, chỉ hoạt động dưới dạng mã nguồn thô không có giao diện tương tác.
-\item \textit{Phát hiện tự động tin giả: Thành tựu và thách thức} (Tạp chí Khoa học \& Công nghệ - ĐH Đà Nẵng, 2021): \textbf{Ưu điểm:} Hệ thống hóa toàn diện các phương pháp học máy (BoW, SVM) và học sâu (CNN, LSTM) cho ngữ liệu tiếng Việt. \textbf{Nhược điểm:} Chưa triển khai và đánh giá được hiệu năng thực tế của các mô hình Transformer tiên tiến.
-\item \textit{Fake News Detection using PhoBERT and BiLSTM with Handcrafted Features} (Nhóm nghiên cứu, 2022): \textbf{Ưu điểm:} Lai ghép thành công PhoBERT và BiLSTM, tận dụng thêm đặc trưng thời gian và độ dài văn bản để tăng độ chuẩn xác. \textbf{Nhược điểm:} Cấu trúc lai phức tạp làm tăng thời gian suy luận (inference time), không phù hợp xử lý tin tức theo thời gian thực.
-\item \textit{Nhận diện thông tin sai lệch đa phương thức trên mạng xã hội tiếng Việt} (VLSP ReINTEL): \textbf{Ưu điểm:} Mở ra hướng đi phát hiện tin giả dạng ảnh chế (meme) bằng cách phân tích song song văn bản và hình ảnh. \textbf{Nhược điểm:} Đòi hỏi tài nguyên phần cứng (GPU) cực kỳ lớn, khó tích hợp và vận hành liên tục cho người dùng phổ thông.
+\item \textit{Cuộc thi VLSP 2020 - ReINTEL Challenge}: Đây là cột mốc quan trọng đánh dấu sự chuyển dịch từ các mô hình học máy truyền thống sang học sâu. Các đội thi hàng đầu đã ứng dụng thành công mô hình ngôn ngữ tiền huấn luyện PhoBERT để trích xuất đặc trưng, kết hợp thuật toán Ensemble (như StackNet, LightGBM) để đạt F1-Score lên đến 94\%. Tuy nhiên, hạn chế chung của các phương pháp chiến thắng là tính chất "hộp đen" (black-box), mô hình đưa ra dự đoán dựa trên những hàm ẩn phức tạp mà thiếu đi cơ chế giải nghĩa cho người dùng cuối. 
+\item \textit{Phát hiện tự động tin giả: Thành tựu và thách thức} (Tạp chí Khoa học \& Công nghệ - ĐH Đà Nẵng, 2021): Công trình này hệ thống hóa toàn diện các tiếp cận học máy (SVM, Naive Bayes) và mạng nơ-ron hồi quy (LSTM). Nghiên cứu chỉ ra rằng các mô hình tĩnh thường gặp hiện tượng suy giảm hiệu năng khi đối mặt với sự thay đổi của miền dữ liệu (domain shift). Tuy nhiên, công trình dừng lại ở mức khảo sát, chưa đề xuất một kiến trúc giải quyết bài toán suy giảm miền dữ liệu đối với tin tức theo thời gian thực.
+\item \textit{Lai ghép PhoBERT và BiLSTM với Đặc trưng thủ công} (Nhóm nghiên cứu, 2022): Một bước tiến trong việc kết hợp vector ngữ nghĩa sâu của PhoBERT với cấu trúc chuỗi của BiLSTM, đồng thời bổ sung các đặc trưng bề mặt (số lượng từ, thời gian). Mặc dù phương pháp này nâng cao năng lực biểu diễn dữ liệu, nhưng cấu trúc mạng lai phức tạp kéo theo sự gia tăng đáng kể về chi phí tính toán và thời gian suy luận (inference time), gây khó khăn cho việc triển khai vào các hệ thống đòi hỏi độ trễ thấp.
 \end{itemize}
 
 \secB{2.3.2. Các nghiên cứu ngoài nước}
 \begin{itemize}[label={--},leftmargin=0.75cm,itemsep=3pt]
-\item \textit{Fake News Detection on Social Media: A Data Mining Perspective} (Kai Shu et al., 2017): Đã phân tách bộ đặc trưng thành Đặc trưng nội dung và Đặc trưng mạng xã hội. \textbf{Ưu điểm:} Đặt nền móng vững chắc cho việc khai thác Heuristics trong tin giả. \textbf{Nhược điểm:} Phương pháp chủ yếu dựa trên các bộ đếm thủ công, bỏ qua việc phân tích ngữ nghĩa sâu của ngữ cảnh.
-\item \textit{Emotion shapes the diffusion of moralized content} (Brady et al., Tạp chí PNAS, 2017): Chứng minh bằng thực nghiệm rằng từ vựng phẫn nộ làm tăng tốc độ lan truyền thông tin. \textbf{Ưu điểm:} Cung cấp cơ sở lý thuyết tâm lý vững chắc cho tính năng Phân tích Cảm xúc (Sentiment Analysis). \textbf{Nhược điểm:} Chỉ phân tích khía cạnh tâm lý xã hội học, chưa đề xuất một kiến trúc trí tuệ nhân tạo cụ thể để tự động phát hiện.
-\item \textit{dEFEND: Explainable Fake News Detection} (Kai Shu et al., Hội nghị KDD 2019): Xây dựng mô hình phân loại kết hợp cơ chế Attention để bôi đậm (highlight) các câu văn bất thường. \textbf{Ưu điểm:} Tiên phong trong việc hiện thực hóa tính minh bạch (Explainable AI) cho bài toán tin giả. \textbf{Nhược điểm:} Khả năng giải thích còn phụ thuộc vào trọng số mạng nơ-ron thay vì các luật ngôn ngữ tường minh, khó cấu hình cho ngôn ngữ tiếng Việt.
-\item \textit{FakeBERT: Fake news detection in social media with a BERT-based deep learning approach} (Kaliyar et al., Multimedia Tools and Applications, 2020): Sử dụng mạng 1D-CNN kết hợp với BERT. \textbf{Ưu điểm:} Đạt độ chính xác rất cao (>98\%) trên các bài báo tiếng Anh dài nhờ sự kết hợp giữa trích xuất đặc trưng cục bộ và toàn cục. \textbf{Nhược điểm:} Tốc độ suy luận rất chậm, hệ thống hoạt động theo cơ chế "hộp đen" (Black-box).
-\item \textit{Fake News Detection Using BERT Model with Handcrafted Features} (IEEE, 2021): Tích hợp trực tiếp vector ngữ nghĩa từ BERT với ma trận đặc trưng thủ công (số chữ in hoa, dấu câu). \textbf{Ưu điểm:} Tăng cường đáng kể độ chuẩn xác phân loại nhị phân. \textbf{Nhược điểm:} Việc dung hợp vector thủ công và vector Transformer trực tiếp làm tăng số lượng tham số tính toán và dễ dẫn đến hiện tượng học vẹt (overfitting).
+\item \textit{Fake News Detection on Social Media: A Data Mining Perspective} (Kai Shu et al., 2017): Nghiên cứu này đặt nền móng cho việc phân tách tin giả dựa trên hai trụ cột: Đặc trưng nội dung (Content-based) và Đặc trưng tương tác xã hội (Social context). Mặc dù việc khai phá mạng lưới xã hội mang lại lượng thông tin dồi dào, phương pháp này đòi hỏi hệ thống phải liên tục thu thập đồ thị tương tác (retweets, likes), làm chậm quá trình phát hiện sớm (early detection) khi tin đồn vừa mới xuất hiện.
+\item \textit{dEFEND: Explainable Fake News Detection} (Kai Shu et al., KDD 2019): Đi tiên phong trong việc hiện thực hóa tính minh bạch (Explainable AI - XAI). Mô hình dEFEND sử dụng cơ chế Attention đồng thời trên bình luận người dùng và nội dung bài báo để bôi đậm (highlight) các câu văn bất thường. Dù đem lại giá trị giải thích nội tại (intrinsic explanation), phương pháp này phụ thuộc quá nhiều vào bộ dữ liệu bình luận, vốn khó kiểm soát và không khả thi đối với các trang tin tức một chiều.
+\item \textit{FakeBERT: Fake news detection in social media with a BERT-based deep learning approach} (Kaliyar et al., Multimedia Tools and Applications, 2020): Sử dụng mạng 1D-CNN kết hợp trực tiếp với BERT để thu thập các khối thông tin cục bộ và toàn cục. Phương pháp này đạt độ chính xác >98\% trên tập dữ liệu tiếng Anh quy mô lớn. Tuy vậy, nghiên cứu chưa thảo luận sâu về nguy cơ học vẹt (overfitting) khi áp dụng CNN trên các cụm từ (n-grams) mang tính đặc thù của miền dữ liệu huấn luyện, làm giảm khả năng khái quát hóa.
 \end{itemize}
 
-\secB{2.3.3. So sánh và làm nổi bật tính ưu việt của tiểu luận (ShieldAI)}
-Dựa trên bức tranh tổng quan của các nghiên cứu đi trước, Bảng \ref{tab:so_sanh_nghien_cuu} dưới đây tổng hợp và so sánh trực tiếp các hệ thống nhằm xác định vị trí và ưu điểm của tiểu luận \textbf{ShieldAI}:
+\secB{2.3.3. Đánh giá phản biện và Khoảng trống nghiên cứu (Research Gaps)}
+Qua việc khảo lược các nghiên cứu tiên phong, bức tranh học thuật về bài toán phát hiện tin giả đã cho thấy sự dịch chuyển rõ rệt từ việc tối ưu hóa độ chính xác đơn thuần sang yêu cầu về tính minh bạch và khả năng triển khai thực tiễn. Bảng \ref{tab:so_sanh_nghien_cuu} dưới đây tổng hợp các đóng góp khoa học và phân tích những khoảng trống nghiên cứu còn tồn đọng:
 
 \begin{table}[H]
 \centering
 \small
-\caption{Bảng so sánh các công trình nghiên cứu tiêu biểu}
+\caption{Bảng phân tích phản biện các công trình nghiên cứu tiêu biểu}
 \label{tab:so_sanh_nghien_cuu}
-\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{0.5cm}|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}p{3cm}|X|X|}
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{0.5cm}|>{\raggedright\arraybackslash}p{2.5cm}|>{\raggedright\arraybackslash}p{3.5cm}|X|X|}
 \hline
-\textbf{STT} & \textbf{Công trình} & \textbf{Phương pháp} & \textbf{Ưu điểm cốt lõi} & \textbf{Nhược điểm / Hạn chế} \\
+\textbf{STT} & \textbf{Công trình} & \textbf{Phương pháp tiếp cận} & \textbf{Đóng góp khoa học (Contributions)} & \textbf{Khoảng trống nghiên cứu (Research Gaps)} \\
 \hline
-1 & Shu et al. (2017) & Khai phá dữ liệu \& Heuristics & Hệ thống hóa các bộ đặc trưng chuẩn. & Bỏ qua phân tích ngữ nghĩa sâu. \\
+1 & VLSP ReINTEL (2020) & PhoBERT + Ensemble Learning & Khẳng định sức mạnh của PhoBERT trong việc trích xuất vector ngữ nghĩa tiếng Việt. & Tập trung vào tối ưu hóa "hộp đen" (Black-box), hoàn toàn thiếu vắng cơ chế diễn giải cho dự đoán. \\
 \hline
-2 & VLSP ReINTEL (2020) & PhoBERT + Ensemble Learning & Tối ưu hóa rất tốt cho ngôn ngữ tiếng Việt. & Mô hình hộp đen (Black-box), chi phí tính toán cao. \\
+2 & dEFEND (2019) & Hierarchical Attention Networks & Tiên phong đưa XAI vào NLP thông qua việc trực quan hóa sự chú ý (Attention) trên bình luận. & Phương pháp giải thích phụ thuộc vào dữ liệu tương tác mạng xã hội, không phù hợp cho phát hiện sớm (Early Detection). \\
 \hline
-3 & FakeBERT (2020) & 1D-CNN + BERT & Độ chính xác rất cao trên ngữ liệu tiếng Anh. & Không có cơ chế giải thích minh bạch. \\
+3 & PhoBERT + BiLSTM (2022) & PhoBERT + BiLSTM + Handcrafted & Nỗ lực dung hợp biểu diễn ngữ nghĩa và chuỗi thời gian cùng các đặc trưng thủ công. & Kiến trúc lai ghép cồng kềnh, làm tăng độ trễ suy luận, khó triển khai thành API thời gian thực. \\
 \hline
-4 & IEEE Paper (2021) & BERT + Handcrafted Features & Nâng cao hiệu năng nhờ lai ghép vector ngữ nghĩa. & Tốc độ suy luận chậm, dễ bị học vẹt. \\
+4 & Kaliyar et al. (2020) & BERT + 1D-CNN & Khai phá hiệu quả các cụm từ (n-grams) mang sắc thái tin giả bằng tích chập 1D. & Dễ hội tụ cục bộ, thiếu đánh giá tính khái quát hóa khi áp dụng sang các miền tin tức mới (Cross-domain). \\
 \hline
-\textbf{5} & \textbf{ShieldAI (Đề xuất)} & \textbf{PhoBERT Fine-tuned + Rule-based XAI} & \textbf{Độ chính xác cao, tích hợp hệ thống giải thích độc lập, giao diện thực tiễn.} & \textbf{Chưa hỗ trợ phân tích đa phương thức (ảnh/video).} \\
+\textbf{5} & \textbf{ShieldAI (Tiểu luận)} & \textbf{PhoBERT Fine-tuned + Heuristic XAI} & \textbf{Phân tách kiến trúc: sử dụng PhoBERT để phân loại chính xác, kết hợp một lớp XAI Heuristic giải thích bề mặt với chi phí tính toán O(1).} & \textbf{Phương pháp XAI chỉ mang tính suy diễn bề mặt (Post-hoc), chưa mổ xẻ được cơ chế suy luận nội tại của mạng Transformer.} \\
 \hline
 \end{tabularx}
 \end{table}
 
-Qua phân tích từ Bảng \ref{tab:so_sanh_nghien_cuu}, có thể thấy giải pháp đề xuất \textbf{ShieldAI} tập trung khắc phục vấn đề "Hộp đen" của các mô hình học sâu hiện đại (như FakeBERT hay hệ thống VLSP 2020) bằng cách phát triển Động cơ Giải thích bằng luật (Rule-based XAI) chạy song song. Hơn nữa, việc loại bỏ các mạng nơ-ron phức tạp ở tầng cuối (giống như IEEE 2021) và chỉ sử dụng cấu trúc \textit{PhoBERT Sequence Classification} đã giúp hệ thống đạt độ cân bằng tương đối tốt giữa độ chính xác phân loại và tốc độ phản hồi trên môi trường thực tế.
+Phân tích trên cho thấy hai rào cản lớn nhất của hệ thống học sâu hiện tại là tính "hộp đen" và độ phức tạp tính toán khi triển khai thực tế. Khoảng trống nghiên cứu này đòi hỏi một phương pháp cân bằng giữa độ chính xác của Transformer và tính minh bạch, nhưng không được phép làm tăng chi phí tính toán. Hệ thống \textbf{ShieldAI} trong tiểu luận này được thiết kế để giải quyết bài toán trên thông qua tư duy \textit{Phân tách Ngữ nghĩa - Kinh nghiệm (Decoupled Semantic-Heuristic)}: nhường hoàn toàn tác vụ phân loại cho kiến trúc PhoBERT Sequence Classification nguyên bản (tối đa tốc độ), đồng thời vận hành một module giải thích Heuristic ngoại vi (Post-hoc Rule-based) để trực quan hóa các thủ thuật thao túng văn bản, bù đắp trực tiếp vào khiếm khuyết của các phương pháp "hộp đen" mà không can thiệp vào đồ thị tính toán cốt lõi.
 
 \secA{2.4. Công nghệ và Công cụ sử dụng}
 Tiểu luận này không chỉ dừng lại ở việc thiết kế một mô hình AI chạy trong môi trường nghiên cứu cô lập (Jupyter Notebook), mà được xây dựng thành một nền tảng phần mềm nguyên mẫu (prototype) theo kiến trúc Client-Server. Dưới đây là các công nghệ lõi được sử dụng để hiện thực hóa toàn bộ hệ thống:
