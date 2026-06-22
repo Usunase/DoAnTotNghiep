@@ -18,14 +18,13 @@
 
 **ShieldAI** là ứng dụng web phân tích và phát hiện tin giả tiếng Việt trong lĩnh vực y tế / sức khỏe. Hệ thống dùng **PhoBERT-base** (embedding 768 chiều, cố định) kết hợp **MLP (128, 64)** để ước lượng xác suất tin giả, sau đó phân loại **3 mức**: tin thật / đáng ngờ / tin giả.
 
-**Kết quả thực nghiệm** (tập 10.609 mẫu, hold-out 30%):
+**Kết quả thực nghiệm** (tập 22.000+ mẫu, phân tách 76-12-12):
 
 | Chỉ số | Giá trị |
 |--------|---------|
-| Accuracy | 94,13% |
-| F1-Score | **93,71%** |
-| ROC-AUC | 98,50% |
-| CV F1 (5-fold) | 93,17% ± 1,33% |
+| Accuracy (Test) | 96,32% |
+| F1-Score (Test) | **93,42%** |
+| External Test (OOD) | 91,50% |
 
 Stack triển khai: **FastAPI** (backend + AI) và **Next.js** (giao diện), SQLite lưu lịch sử phân tích.
 
@@ -96,10 +95,9 @@ DoAnTotNghiep/
 | Mục | Giá trị |
 |-----|---------|
 | File | `backend/data/full_dataset.csv` |
-| Số bản ghi | **10.617** bài |
-| Sau lọc (train) | **10.609** mẫu |
+| Số bản ghi | **~22.000+** bài |
 | Nhãn | `is_fake`: True = giả, False = thật |
-| Cân bằng lớp | ~53,6% thật / ~46,4% giả |
+| Cân bằng lớp | ~50% thật / ~50% giả |
 | Lĩnh vực | Y tế, sức khỏe, COVID (tiếng Việt) |
 | Nguồn chính | VnExpress, daikynguyen, covid19_dataset, … |
 
@@ -218,14 +216,14 @@ Bộ test (`pytest`) gồm: tiền xử lý văn bản, verdict 3 mức, explana
 
 | File | Nội dung |
 |------|----------|
-| [`Mau_Luan_Van_Tot_Nghiep.md`](Mau_Luan_Van_Tot_Nghiep.md) | Bản luận văn HTML (~1.580 dòng, export Word) — đồng bộ với kiến trúc PhoBERT Text-only + MLP |
-| [`docs/TIEU_LUAN_SHIELDAI.md`](docs/TIEU_LUAN_SHIELDAI.md) | Luận văn markdown — dùng để nộp / bảo vệ |
+| [`mau_luan_van_tot_nghiep_v2_editable.pdf`](mau_luan_van_tot_nghiep_v2_editable.pdf) | **Bản luận văn PDF chính thức** đã tinh chỉnh chuẩn học thuật, format LaTeX hoàn chỉnh |
+| [`mau_luan_van_tot_nghiep_v2_editable.tex`](mau_luan_van_tot_nghiep_v2_editable.tex) | Mã nguồn LaTeX của luận văn |
 | [`docs/HUONG_DAN_THUC_HIEN_DU_AN.md`](docs/HUONG_DAN_THUC_HIEN_DU_AN.md) | Hướng dẫn từng bước thực hiện |
 | [`docs/LY_DO_CHON_PHUONG_AN.md`](docs/LY_DO_CHON_PHUONG_AN.md) | Lý do chọn PhoBERT text-only |
 | [`docs/CHUAN_BI_BAO_VE_THEO_PHIEU_CHAM.md`](docs/CHUAN_BI_BAO_VE_THEO_PHIEU_CHAM.md) | Gợi ý trả lời hội đồng |
 | [`backend/training/README.md`](backend/training/README.md) | Notebook huấn luyện |
 
-Hai bản luận văn (`Mau_Luan_Van_Tot_Nghiep.md` và `docs/TIEU_LUAN_SHIELDAI.md`) mô tả cùng kiến trúc hiện tại; ưu tiên `TIEU_LUAN_SHIELDAI.md` khi chỉnh sửa nội dung học thuật.
+Bản PDF `mau_luan_van_tot_nghiep_v2_editable.pdf` là tài liệu tham chiếu cao nhất (Source of Truth), mọi thông số và kiến trúc thực nghiệm đều được cập nhật mới nhất tại đây.
 
 ---
 
