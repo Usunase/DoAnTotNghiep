@@ -399,6 +399,9 @@ Chương 2 đã cung cấp khung lý thuyết, làm nền tảng khoa học cho 
 \newpage
 
 \chap{CHƯƠNG 3: PHƯƠNG PHÁP NGHIÊN CỨU VÀ THIẾT KẾ HỆ THỐNG}
+
+Trong quá trình xây dựng hệ thống, đề tài tập trung vào việc đáp ứng các yêu cầu chức năng và phi chức năng của một hệ thống hỗ trợ phát hiện tin giả tiếng Việt. Hệ thống được triển khai theo kiến trúc Client–Server nhằm bảo đảm khả năng phân tách giữa giao diện người dùng và tầng xử lý dữ liệu, qua đó hỗ trợ việc bảo trì, nâng cấp và mở rộng trong tương lai. Giao diện web được thiết kế theo hướng đơn giản, giúp người dùng dễ dàng nhập nội dung cần kiểm tra và tiếp nhận kết quả phân tích. Bên cạnh đó, việc tích hợp mô hình PhoBERT cùng cơ chế giải thích dựa trên các đặc trưng heuristic không chỉ hỗ trợ quá trình phân loại văn bản mà còn cung cấp thêm thông tin giúp người dùng hiểu rõ hơn cơ sở của kết quả dự đoán. Cách tiếp cận này hướng đến việc nâng cao khả năng sử dụng và tính minh bạch của hệ thống trong bối cảnh ứng dụng thực tế.
+
 \secA{3.1. Phương pháp nghiên cứu}
 Để giải quyết bài toán phát hiện tin giả tiếng Việt, tiểu luận không áp dụng một thuật toán học máy đơn lẻ mà xây dựng một quy trình luận giải đa tầng (Multi-tier Analytical Pipeline). Phương pháp nghiên cứu được chia thành bốn mũi nhọn chiến lược, đi từ khâu thu thập dữ liệu thô, trích xuất đặc trưng, mô hình hóa suy luận, cho đến việc minh bạch hóa kết quả.
 
