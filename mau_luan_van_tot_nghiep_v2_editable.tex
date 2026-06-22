@@ -6,6 +6,8 @@
 \usepackage{float}
 \usepackage{xcolor}
 \usepackage{array,tabularx,longtable}
+\usepackage{booktabs}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \usepackage{chngcntr}
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
@@ -152,38 +154,47 @@ Experimental results demonstrate that the model achieves an Accuracy of \textbf{
 
 \begin{center}{\bfseries\Large DANH MỤC TỪ VIẾT TẮT}\end{center}
 \vspace{0.35cm}
-\begin{center}
-\begin{tabular}{|p{2.5cm}|p{11.5cm}|}\hline
-\renewcommand{\arraystretch}{1.35}\textbf{Từ viết tắt} & \textbf{Giải thích}\\ \hline
-AI & Artificial Intelligence (Trí tuệ nhân tạo)\\ \hline
-API & Application Programming Interface (Giao diện lập trình ứng dụng)\\ \hline
-BERT & Bidirectional Encoder Representations from Transformers (Mô hình biểu diễn ngôn ngữ hai chiều từ Transformer)\\ \hline
-CPU & Central Processing Unit (Bộ vi xử lý trung tâm)\\ \hline
-DDoS & Distributed Denial of Service (Tấn công từ chối dịch vụ phân tán)\\ \hline
-DL & Deep Learning (Học sâu)\\ \hline
-DOM & Document Object Model (Mô hình Đối tượng Tài liệu)\\ \hline
-EDA & Exploratory Data Analysis (Khai phá và Phân tích Dữ liệu)\\ \hline
-ERD & Entity-Relationship Diagram (Sơ đồ Thực thể - Mối quan hệ)\\ \hline
-GPU & Graphics Processing Unit (Bộ xử lý đồ họa)\\ \hline
-HTML & HyperText Markup Language (Ngôn ngữ đánh dấu siêu văn bản)\\ \hline
-JSON & JavaScript Object Notation (Định dạng trao đổi dữ liệu)\\ \hline
-JWT & JSON Web Token (Mã thông báo Web JSON)\\ \hline
-LSTM & Long Short-Term Memory (Bộ nhớ ngắn hạn dài)\\ \hline
-ML & Machine Learning (Học máy)\\ \hline
-MLOps & Machine Learning Operations (Vận hành Học máy)\\ \hline
-NLP & Natural Language Processing (Xử lý Ngôn ngữ Tự nhiên)\\ \hline
-ORM & Object-Relational Mapping (Ánh xạ đối tượng - quan hệ)\\ \hline
-RAM & Random Access Memory (Bộ nhớ truy cập ngẫu nhiên)\\ \hline
-RNN & Recurrent Neural Network (Mạng nơ-ron hồi quy)\\ \hline
-SeqCls & Sequence Classification (Phân loại chuỗi)\\ \hline
-SVM & Support Vector Machine (Máy học véc-tơ hỗ trợ)\\ \hline
-TF-IDF & Term Frequency-Inverse Document Frequency (Tần suất xuất hiện của từ - Nghịch đảo tần suất văn bản)\\ \hline
-UI/UX & User Interface / User Experience (Giao diện/Trải nghiệm người dùng)\\ \hline
-URL & Uniform Resource Locator (Định vị tài nguyên thống nhất)\\ \hline
-VRAM & Video Random Access Memory (Bộ nhớ truy cập ngẫu nhiên đồ họa)\\ \hline
-XAI & Explainable Artificial Intelligence (Trí tuệ nhân tạo minh bạch)\\ \hline
-\end{tabular}
-\end{center}
+\begingroup
+\renewcommand{\theHtable}{frontabbr}
+\begin{longtable}{L{0.20\textwidth}L{0.70\textwidth}}
+\toprule
+\textbf{Từ viết tắt} & \textbf{Giải thích}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Từ viết tắt} & \textbf{Giải thích}\\
+\midrule
+\endhead
+AI & Artificial Intelligence (Trí tuệ nhân tạo).\\
+API & Application Programming Interface (Giao diện lập trình ứng dụng).\\
+BERT & Bidirectional Encoder Representations from Transformers (Mô hình biểu diễn ngôn ngữ hai chiều từ Transformer).\\
+CPU & Central Processing Unit (Bộ vi xử lý trung tâm).\\
+DDoS & Distributed Denial of Service (Tấn công từ chối dịch vụ phân tán).\\
+DL & Deep Learning (Học sâu).\\
+DOM & Document Object Model (Mô hình Đối tượng Tài liệu).\\
+EDA & Exploratory Data Analysis (Khai phá và Phân tích Dữ liệu).\\
+ERD & Entity-Relationship Diagram (Sơ đồ Thực thể - Mối quan hệ).\\
+GPU & Graphics Processing Unit (Bộ xử lý đồ họa).\\
+HTML & HyperText Markup Language (Ngôn ngữ đánh dấu siêu văn bản).\\
+JSON & JavaScript Object Notation (Định dạng trao đổi dữ liệu).\\
+JWT & JSON Web Token (Mã thông báo Web JSON).\\
+LSTM & Long Short-Term Memory (Bộ nhớ ngắn hạn dài).\\
+ML & Machine Learning (Học máy).\\
+MLOps & Machine Learning Operations (Vận hành Học máy).\\
+NLP & Natural Language Processing (Xử lý Ngôn ngữ Tự nhiên).\\
+ORM & Object-Relational Mapping (Ánh xạ đối tượng - quan hệ).\\
+RAM & Random Access Memory (Bộ nhớ truy cập ngẫu nhiên).\\
+RNN & Recurrent Neural Network (Mạng nơ-ron hồi quy).\\
+SeqCls & Sequence Classification (Phân loại chuỗi).\\
+SVM & Support Vector Machine (Máy học véc-tơ hỗ trợ).\\
+TF-IDF & Term Frequency-Inverse Document Frequency (Tần suất xuất hiện của từ - Nghịch đảo tần suất văn bản).\\
+UI/UX & User Interface / User Experience (Giao diện/Trải nghiệm người dùng).\\
+URL & Uniform Resource Locator (Định vị tài nguyên thống nhất).\\
+VRAM & Video Random Access Memory (Bộ nhớ truy cập ngẫu nhiên đồ họa).\\
+XAI & Explainable Artificial Intelligence (Trí tuệ nhân tạo minh bạch).\\
+\bottomrule
+\end{longtable}
+\endgroup
 \newpage
 
 \chap{CHƯƠNG 1: GIỚI THIỆU}
