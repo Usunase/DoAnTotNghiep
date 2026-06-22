@@ -17,7 +17,13 @@
 			font-size: 13pt;
 			color: black !important;
 			background-color: white !important;
-			padding: 20px;
+			max-width: 210mm;
+			margin: 0 auto;
+			padding-top: 2.5cm;
+			padding-bottom: 2.5cm;
+			padding-left: 3.5cm;
+			padding-right: 2.0cm;
+			box-sizing: border-box;
 		}
 		* {
 			color: black !important;
