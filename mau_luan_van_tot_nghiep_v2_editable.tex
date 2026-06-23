@@ -238,6 +238,14 @@ Bao gồm: (1) Mô hình ngôn ngữ tiền huấn luyện PhoBERT được tinh
 \item \textbf{Cấu trúc Triển khai ứng dụng (Deployment):} Tiểu luận được hệ thống hóa theo kiến trúc Client-Server đầy đủ chức năng. Giao diện người dùng (Frontend) được phát triển bằng Next.js 14 hỗ trợ tương tác ổn định; Máy chủ (Backend) sử dụng FastAPI bất đồng bộ cho hiệu năng cao; Dữ liệu lịch sử quét tin giả được lưu trữ an toàn bằng SQLite. Đặc biệt, hệ thống tích hợp Trình thu thập dữ liệu (Web Crawler) bằng BeautifulSoup giúp tự động cào nội dung bài báo trực tiếp từ URL, hỗ trợ trải nghiệm người dùng (UX) thay vì ép người dùng dán văn bản thuần túy.
 \end{itemize}
 
+\secB{1.3.3. Đối tượng sử dụng hệ thống}
+Hệ thống ShieldAI được thiết kế hướng tới các nhóm người dùng mục tiêu sau:
+\begin{itemize}[label={--},leftmargin=0.75cm,itemsep=3pt]
+\item \textbf{Công chúng và người dùng mạng xã hội:} Những cá nhân tiếp xúc hàng ngày với lượng lớn thông tin trên Internet, cần một công cụ trực quan, dễ sử dụng để kiểm chứng nhanh tính xác thực của các bài báo hoặc bài đăng gây sốc.
+\item \textbf{Cơ quan báo chí và người làm truyền thông:} Các phóng viên, biên tập viên có thể sử dụng hệ thống như một bộ lọc thông tin sơ bộ, hỗ trợ việc đối chiếu chéo (cross-check) các nguồn tin lạ trước khi quyết định biên tập hoặc xuất bản.
+\item \textbf{Nhà nghiên cứu và quản trị viên cộng đồng:} Có thể sử dụng trực tiếp API của hệ thống (backend) nhằm tự động hóa quy trình rà soát, kiểm duyệt và phân tích xu hướng lan truyền tin giả trên quy mô lớn tại các diễn đàn hoặc nhóm mạng xã hội.
+\end{itemize}
+
 \secA{1.4. Phương pháp nghiên cứu}
 Để giải quyết đầy đủ bài toán phát hiện tin giả và xây dựng một ứng dụng tích hợp, tiểu luận áp dụng kết hợp các phương pháp nghiên cứu sau:
 \begin{itemize}[label={--},leftmargin=0.75cm,itemsep=3pt]
