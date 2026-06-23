@@ -22,7 +22,7 @@ POSITIVE_PATTERNS = [
 ]
 
 
-def _scan_text_signals(content: str, title: str) -> list[dict[str, Any]]:
+def _scan_text_signals(content: str, title: str, source: str = "") -> list[dict[str, Any]]:
     text = f"{title} {content}"
     text_lower = text.lower()
     signals = []
@@ -34,6 +34,25 @@ def _scan_text_signals(content: str, title: str) -> list[dict[str, Any]]:
     for pattern, desc in POSITIVE_PATTERNS:
         if re.search(pattern, text_lower, re.IGNORECASE):
             signals.append({"type": "text_trust", "text": desc, "weight": 2})
+
+    low_credibility_sources = [
+        "blogspot", "wordpress", "tinnhanh", "tinhoatoc", "tin24h", "giaitri", 
+        "showbiz", "tamlinh", "bí mật", "bimat", "tinrao", "hóng", "bocphot"
+    ]
+    if source and any(lc in source.lower() for lc in low_credibility_sources):
+        signals.append({
+            "type": "text_risk",
+            "text": "Nguồn phát có độ tin cậy thấp (Blog cá nhân, báo lá cải hoặc ẩn danh)",
+            "weight": 3,
+        })
+        
+    social_media_sources = ["facebook", "fb", "tiktok", "zalo", "youtube", "mạng xã hội", "instagram", "twitter", "x.com"]
+    if source and any(sm in source.lower() for sm in social_media_sources):
+        signals.append({
+            "type": "text_risk",
+            "text": "Nguồn phát từ mạng xã hội (thiếu kiểm duyệt, độ tin cậy thấp)",
+            "weight": 3,
+        })
 
     word_count = len(content.split())
     if word_count >= 80:
@@ -138,8 +157,9 @@ def build_explanation(
     verdict = verdict_from_prob(fake_prob)
     content = str(raw_data.get("content", ""))
     title = str(raw_data.get("title", ""))
+    source = str(raw_data.get("source", ""))
 
-    text_signals = _scan_text_signals(content, title)
+    text_signals = _scan_text_signals(content, title, source)
     model_note = _phobert_summary(fake_prob)
 
     risk_points = [s for s in text_signals if s["type"].endswith("_risk")]

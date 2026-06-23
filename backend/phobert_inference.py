@@ -152,7 +152,7 @@ class PhoBERTInferenceSystem:
                     print(f" > [Heuristic] Nguồn Chính Thống. Giảm Fake Prob: {fake_prob:.2f}%")
 
             # 2. Baseline Skepticism cho Mạng xã hội / Không rõ nguồn gốc
-            social_media_sources = ["facebook", "fb", "tiktok", "zalo", "youtube", "mạng xã hội"]
+            social_media_sources = ["facebook", "fb", "tiktok", "zalo", "youtube", "mạng xã hội", "instagram", "twitter", "x.com"]
             is_social_media = any(sm in source_domain for sm in social_media_sources)
             is_unknown_source = not source_domain or source_domain in ["ẩn danh", "internet", "không rõ", "chưa rõ", "vô danh"]
             
@@ -160,11 +160,25 @@ class PhoBERTInferenceSystem:
             fluctuation = (len(text_content) % 70) / 10.0
 
             if (is_social_media or is_unknown_source) and not is_trusted:
-                base_boost = 22.0 if is_social_media else 26.0
+                # Tăng RẤT MẠNH (70%) cho mạng xã hội để mặc định là Tin giả
+                base_boost = 70.0 if is_social_media else 26.0
                 boost_val = base_boost + fluctuation
                 fake_prob = fake_prob + boost_val
                 if self.verbose:
                     print(f" > [Heuristic] Nguồn MXH/Không rõ ràng. Base Fake Prob: {fake_prob:.2f}%")
+
+            # 2.5 Nguồn độ tin cậy thấp (Báo lá cải, trang giả mạo, blog cá nhân)
+            low_credibility_sources = [
+                "blogspot", "wordpress", "tinnhanh", "tinhoatoc", "tin24h", "giaitri", 
+                "showbiz", "tamlinh", "bí mật", "bimat", "tinrao", "hóng", "bocphot"
+            ]
+            is_low_credibility = any(lc in source_domain for lc in low_credibility_sources)
+            if is_low_credibility and not is_trusted:
+                # Tăng RẤT MẠNH (65%) để gần như chắc chắn đẩy bản tin vào mức Tin giả (Fake)
+                fake_prob = fake_prob + 65.0 + fluctuation
+                if self.verbose:
+                    print(f" > [Heuristic] Nguồn độ tin cậy thấp (Blog ẩn danh/Lá cải). Cập nhật Fake Prob: {fake_prob:.2f}%")
+
 
             # 3. Phản khoa học & Tin đồn thất thiệt (Pseudoscience & Rumors)
             lower_text = text_content.lower()

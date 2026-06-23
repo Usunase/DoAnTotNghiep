@@ -48,28 +48,34 @@ style: |
 ## 1. Bối cảnh và lý do chọn đề tài
 ![bg right:45% fit drop-shadow:0,5px,15px,rgba(0,0,0,0.15)](image/fake_news.png)
 
-- Mạng xã hội thúc đẩy tốc độ lan truyền tin giả (Fake News).
-- Tin giả gây ảnh hưởng tiêu cực đến an ninh và nhận thức cộng đồng.
-- Nhu cầu cấp thiết về công cụ hỗ trợ người dùng kiểm chứng thông tin.
+- **Tin giả (Fake News):** Thông tin sai lệch, được cố ý ngụy tạo nhằm lừa dối người đọc hoặc trục lợi.
+- Mạng xã hội thúc đẩy tin giả lan truyền với tốc độ chóng mặt, gây hoang mang dư luận.
+- Nhu cầu cấp thiết về công cụ hỗ trợ người dùng tự kiểm chứng thông tin.
 - Hệ thống ShieldAI được đề xuất nhằm tự động hóa quy trình phát hiện tin giả.
 
 ---
 
-## 2. Bài toán nghiên cứu
+## 2. Mục tiêu nghiên cứu và Đối tượng sử dụng
+
+**Mục tiêu cốt lõi:**
+- Xây dựng mô hình phân loại tin giả tiếng Việt có độ chính xác cao.
+- Phát triển cơ chế giải thích kết quả dự đoán (minh bạch hóa AI).
+- Thiết kế ứng dụng Web hoàn chỉnh phục vụ thực tiễn.
+
+**Đối tượng sử dụng:**
+- **Người dùng phổ thông:** Công cụ trực quan để tự kiểm chứng thông tin hàng ngày.
+- **Cơ quan báo chí:** Bộ lọc sơ bộ để đối chiếu chéo các nguồn tin lạ.
+- **Quản trị viên cộng đồng:** Sử dụng API để rà soát, kiểm duyệt tự động trên diện rộng.
+
+---
+
+## 3. Bài toán nghiên cứu
 ![bg right:45% fit drop-shadow:0,5px,15px,rgba(0,0,0,0.15)](image/xai.png)
 
 - Phân loại văn bản tin tức tiếng Việt thành các mức độ tin cậy.
 - Bài toán cốt lõi: Phân loại chuỗi (Sequence Classification).
 - Thách thức 1: Tính đa dạng và phức tạp của ngữ pháp tiếng Việt.
 - Thách thức 2: Thiếu tính minh bạch trong các mô hình học sâu (hộp đen).
-
----
-
-## 3. Mục tiêu nghiên cứu
-
-- Xây dựng mô hình phân loại tin giả tiếng Việt có độ chính xác cao.
-- Phát triển cơ chế giải thích kết quả dự đoán nhằm tăng tính minh bạch.
-- Thiết kế và triển khai ứng dụng Web hoàn chỉnh phục vụ thực tiễn.
 
 ---
 
@@ -90,12 +96,12 @@ style: |
 
 ---
 
-## 6. Đề xuất hệ thống ShieldAI
+## 6. Đề xuất hệ thống ShieldAI (Các điểm tối ưu)
 
-- Ứng dụng mô hình PhoBERT Fine-tuning cho tác vụ Sequence Classification.
-- Cảnh báo ba mức độ: Tin thật, Đáng ngờ, Tin giả.
-- Tích hợp cơ chế Heuristic Explanation định hướng tính minh bạch.
-- Tối ưu hóa kiến trúc xử lý nhằm đảm bảo tốc độ phản hồi nhanh.
+- **Tối ưu tính thực tiễn (End-to-End):** Hệ thống Web khép kín, tích hợp cào dữ liệu báo chí tự động.
+- **Tối ưu độ phân giải nhãn:** Cảnh báo linh hoạt với 3 mức độ (Tin thật, Đáng ngờ, Tin giả).
+- **Tối ưu tốc độ giải thích (XAI):** Cơ chế *Heuristic Explanation* độc lập, giải thích chi tiết với tốc độ phản hồi dưới 1 giây (khắc phục nhược điểm chậm của SHAP/LIME).
+- **Lõi xử lý mạnh mẽ:** Ứng dụng PhoBERT Fine-tuning cho tác vụ phân loại chuỗi.
 
 ---
 
