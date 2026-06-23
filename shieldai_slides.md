@@ -6,174 +6,215 @@ size: 16:9
 style: |
   section {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 30px;
+    font-size: 28px;
+    background-color: #f8fafc;
   }
   h1 {
-    color: #1e3a8a; /* Deep blue */
-    font-size: 55px;
+    color: #0f172a;
+    font-size: 52px;
+    font-weight: 800;
   }
   h2 {
     color: #1e3a8a;
-    border-bottom: 2px solid #3b82f6;
+    border-bottom: 3px solid #3b82f6;
     padding-bottom: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    font-size: 38px;
+    font-weight: 700;
   }
   strong {
-    color: #0369a1;
+    color: #2563eb;
+    font-weight: 600;
   }
   ul {
-    line-height: 1.5;
+    line-height: 1.6;
+    color: #334155;
+  }
+  li {
+    margin-bottom: 15px;
+  }
+  .lead {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
   }
 ---
 
 <!-- _class: lead -->
-# Xây dựng hệ thống phát hiện tin giả tiếng Việt
-## (Hệ thống ShieldAI)
-
-**Sinh viên:** Hà Minh Chiến - 2202095
-**Giảng viên hướng dẫn:** ThS. Trần Ngọc Anh
-**Ngành:** Khoa Học Máy Tính
+# Xây dựng hệ thống phát hiện tin giả tiếng Việt (ShieldAI)
+**Bảo vệ Luận văn Tốt nghiệp - Khoa Công nghệ Thông tin**
+**Sinh viên:** Hà Minh Chiến
 
 ---
 
-## 1. Đặt vấn đề & Lý do chọn đề tài
+## 1. Bối cảnh và lý do chọn đề tài
+![bg right:45% fit drop-shadow:0,5px,15px,rgba(0,0,0,0.15)](image/fake_news.png)
 
-- **Thực trạng:** Sự bùng nổ của mạng xã hội khiến tin giả lây lan nhanh, gây hậu quả nghiêm trọng.
-- **Hạn chế của AI hiện tại:** Các mô hình học sâu truyền thống thường mang tính chất **"hộp đen"** (black-box), khó diễn giải quyết định cho người dùng.
-- **Giải pháp:** Hệ thống **ShieldAI** ra đời nhằm cung cấp công cụ kiểm chứng thông tin:
-  - **Độ chính xác cao**
-  - **Tính minh bạch** (Có khả năng giải thích)
-
----
-
-## 2. Ý nghĩa tên gọi "ShieldAI"
-
-- **"Shield" (Lá chắn) + "AI" (Trí tuệ nhân tạo)**
-- **Sứ mệnh:** Xây dựng một lá chắn công nghệ thông minh và tự động.
-- **Mục tiêu:** Bảo vệ người dùng mạng xã hội tại Việt Nam trước các luồng thông tin độc hại, sai lệch và lừa đảo.
+- Mạng xã hội thúc đẩy tốc độ lan truyền tin giả (Fake News).
+- Tin giả gây ảnh hưởng tiêu cực đến an ninh và nhận thức cộng đồng.
+- Nhu cầu cấp thiết về công cụ hỗ trợ người dùng kiểm chứng thông tin.
+- Hệ thống ShieldAI được đề xuất nhằm tự động hóa quy trình phát hiện tin giả.
 
 ---
 
-## 3. Kiến trúc Tổng thể Hệ thống
+## 2. Bài toán nghiên cứu
+![bg right:45% fit drop-shadow:0,5px,15px,rgba(0,0,0,0.15)](image/xai.png)
 
-- **Frontend (Next.js 14):** Giao diện tương tác người dùng thân thiện, ổn định.
-- **Backend (FastAPI):** Xử lý bất đồng bộ, tốc độ cao.
-- **Core AI:** Mô hình ngôn ngữ lớn **PhoBERT** (Tối ưu hóa bằng Fine-tuning).
-- **Data Flow:** Tích hợp **Web Crawler** (BeautifulSoup) tự động trích xuất nội dung từ URL bài báo.
-
----
-
-## 4. Xử lý Ngôn ngữ Tự nhiên với PhoBERT
-
-- **Mô hình PhoBERT:** Kiến trúc Transformer tối ưu chuyên biệt cho tiếng Việt.
-- **Phương pháp tiếp cận:** Phân loại chuỗi (Sequence Classification).
-- **Quy trình:**
-  - Trích xuất đặc trưng ngữ nghĩa từ token `[CLS]`.
-  - Khắc phục hạn chế của các phương pháp đếm từ truyền thống (như TF-IDF).
-  - Khả năng nắm bắt cấu trúc ngữ pháp phức tạp.
+- Phân loại văn bản tin tức tiếng Việt thành các mức độ tin cậy.
+- Bài toán cốt lõi: Phân loại chuỗi (Sequence Classification).
+- Thách thức 1: Tính đa dạng và phức tạp của ngữ pháp tiếng Việt.
+- Thách thức 2: Thiếu tính minh bạch trong các mô hình học sâu (hộp đen).
 
 ---
 
-## 5. Động cơ Giải thích (Explanation Engine)
+## 3. Mục tiêu nghiên cứu
 
-Giải quyết vấn đề "Hộp đen" của AI thông qua Cơ chế Heuristics (Rule-based):
-
-- **Phân tích Cảm xúc (Sentiment):** Phát hiện ngôn từ kích động.
-- **Mật độ In hoa:** Phát hiện việc lạm dụng VIẾT HOA ĐỂ GÂY CHÚ Ý.
-- **Từ ngữ Giật gân:** Đếm các từ khóa clickbait ("sốc", "kinh hoàng").
-- **Tính chủ quan:** Tỷ lệ từ ngữ thể hiện quan điểm cá nhân thay vì sự thật khách quan.
-
-*Mỗi dự đoán của mô hình đều đi kèm với các bằng chứng cụ thể.*
+- Xây dựng mô hình phân loại tin giả tiếng Việt có độ chính xác cao.
+- Phát triển cơ chế giải thích kết quả dự đoán nhằm tăng tính minh bạch.
+- Thiết kế và triển khai ứng dụng Web hoàn chỉnh phục vụ thực tiễn.
 
 ---
 
-## 6. Dữ liệu Huấn luyện & Tiền xử lý
+## 4. Tổng quan các nghiên cứu liên quan
 
-- **Quy mô:** Hơn **22.000** bài báo.
-- **Làm sạch (TextCleaner):** Khử nhiễu HTML, loại bỏ trùng lặp (Deduplication) để tránh rò rỉ dữ liệu (Data Leakage).
-- **Tách từ (Tokenization):** Sử dụng thư viện **PyVi** chuẩn hóa tiếng Việt.
-- **Phân chia:** Stratified Split (76% Train - 12% Validation - 12% Test) giúp cân bằng nhãn phân loại.
-
----
-
-## 7. Cơ chế Phân loại đa mức độ (Thresholds)
-
-Không sử dụng phân loại nhị phân (Thật/Giả) cứng nhắc, ShieldAI áp dụng 3 mức độ tinh tế:
-
-1. **Tin thật:** Xác suất < 35% (Vùng an toàn)
-2. **Đáng ngờ:** 35% - 74% (Cần xác minh thêm)
-3. **Tin giả:** Xác suất ≥ 75% (Cảnh báo đỏ)
-
-*Điểm cắt 75% được chọn khắt khe để bảo vệ độ chuẩn xác (Precision), tránh đánh oan tin chính thống.*
+- Phương pháp học máy truyền thống: Logistic Regression, SVM (đặc trưng TF-IDF).
+- Mạng nơ-ron hồi quy: BiLSTM, GRU (đặc trưng Word2Vec).
+- Kiến trúc Transformer: PhoBERT, mBERT (nắm bắt ngữ cảnh hai chiều).
 
 ---
 
-## 8. Kết quả Thực nghiệm Nội bộ (Internal Test)
+## 5. Khoảng trống nghiên cứu
 
-Đánh giá trên tập kiểm thử độc lập (2.716 mẫu):
-
-| Mô hình (Model) | Accuracy | F1-Score |
-| :--- | :---: | :---: |
-| Logistic Regression (TF-IDF) | 82.15% | 80.82% |
-| Support Vector Machine (SVM) | 85.34% | 84.10% |
-| BiLSTM (Word2Vec) | 89.67% | 88.66% |
-| **ShieldAI (PhoBERT Fine-tuned)** | **96.32%** | **93.42%** |
-
-*Hiệu năng vượt trội nhờ khả năng thấu hiểu ngữ cảnh sâu của PhoBERT.*
+- Tập trung vào độ chính xác, bỏ qua khả năng diễn giải (Explainability).
+- Các thuật toán giải thích (SHAP, LIME) đòi hỏi chi phí tính toán lớn.
+- Khó tích hợp các thuật toán XAI phức tạp vào API yêu cầu thời gian thực.
+- Thiếu các nền tảng ứng dụng khép kín hỗ trợ người dùng cuối.
 
 ---
 
-## 9. Kiểm thử Độc lập & Chịu tải
+## 6. Đề xuất hệ thống ShieldAI
 
-- **External Validation:** Thử nghiệm trên 100 bài báo mới xuất bản năm 2026.
-  - Kết quả: Đạt độ chính xác **91.5%**.
-  - Chứng minh mô hình không bị "học vẹt" (Overfitting).
-- **Latency & Throughput (JMeter):**
-  - Tốc độ phản hồi (End-to-End): **< 1 giây**.
-  - Thông lượng: 15-20 requests/second.
-  - Đáp ứng tốt nhu cầu xử lý thời gian thực.
+- Ứng dụng mô hình PhoBERT Fine-tuning cho tác vụ Sequence Classification.
+- Cảnh báo ba mức độ: Tin thật, Đáng ngờ, Tin giả.
+- Tích hợp cơ chế Heuristic Explanation định hướng tính minh bạch.
+- Tối ưu hóa kiến trúc xử lý nhằm đảm bảo tốc độ phản hồi nhanh.
 
 ---
 
-## 10. Phân tích Sai số (Error Analysis)
+## 7. Kiến trúc tổng thể hệ thống
+![bg right:50% fit](image/kientruc.png)
 
-- **Dương tính giả (Báo nhầm tin thật thành tin giả):**
-  - Xảy ra ở các bài báo hình sự/thể thao dùng văn phong giật gân (Clickbait) quá giống tin lừa đảo.
-- **Âm tính giả (Bỏ lọt tin giả):**
-  - Xảy ra khi tin giả được ngụy trang cực kỳ tinh vi dưới dạng văn bản hành chính nhà nước (VD: thông báo phạt nguội).
+- Trình bày kiến trúc Client-Server đa tầng độc lập.
+- Frontend: Tương tác người dùng (Web Application).
+- Backend: Cào dữ liệu, xử lý nghiệp vụ và quản trị cơ sở dữ liệu.
+- AI Model: Khối suy luận xử lý ngôn ngữ tự nhiên.
 
 ---
 
-## 11. Trải nghiệm Người dùng (UX)
+## 8. Mô hình PhoBERT và lý do lựa chọn
+
+- PhoBERT là mô hình ngôn ngữ dựa trên kiến trúc Transformers.
+- Được tiền huấn luyện độc quyền trên 20GB ngữ liệu tiếng Việt.
+- Tối ưu hóa việc nắm bắt cú pháp và ngữ nghĩa đặc thù của tiếng Việt.
+- Thư viện Transformers và PyTorch hỗ trợ tích hợp linh hoạt.
+
+---
+
+## 9. Quy trình xử lý dữ liệu
+![bg right:40% fit](image/luong_gop_du_lieu.png)
+
+- Tổng hợp hơn 22.000 bài báo tiếng Việt đã gán nhãn.
+- Làm sạch (Data Cleaning): Loại bỏ HTML, liên kết, ký tự nhiễu.
+- Tách từ (Word Segmentation) bằng công cụ PyVi.
+- Phân tầng dữ liệu (Stratified Split) với tỷ lệ 76-12-12.
+
+---
+
+## 10. Luồng thuật toán & Cơ chế Heuristic
+![bg right:50% fit](image/luong_xu_ly.png)
+
+- Đây là cơ chế giải thích hậu xử lý (Post-hoc Explanation).
+- Hoạt động độc lập, không tác động vào trọng số mô hình PhoBERT.
+- Cung cấp bằng chứng: Từ ngữ giật gân, Cảm xúc, Mật độ in hoa.
+- Giải quyết vấn đề XAI mà không yêu cầu chi phí tính toán lớn.
+
+---
+
+## 11. Cơ sở dữ liệu & Triển khai hệ thống
+![bg right:45% fit](image/erd.png)
+
+- Database: Tích hợp cơ sở dữ liệu SQLite (Lưu trữ lịch sử quét).
+- Backend: Sử dụng khung làm việc FastAPI xử lý bất đồng bộ.
+- Frontend: Xây dựng giao diện tương tác bằng Next.js.
+- Web Crawler: Trích xuất nội dung bài báo tự động theo thời gian thực.
+
+---
+
+## 12. Giao diện trực quan của hệ thống
+![bg right:55% fit](image/08_Ket_Qua_Phan_Tich_Tin_Gia_100_Phan_Tram.png)
 
 - Người dùng chỉ cần sao chép và **dán URL bài báo**.
 - Hệ thống tự động bóc tách và phân tích.
 - Hiển thị trực quan:
   - Điểm số tin cậy (Confidence Score).
-  - Nhãn cảnh báo (Verdict).
+  - Nhãn cảnh báo (Tin thật / Đáng ngờ / Tin giả).
   - Chi tiết các nguyên nhân (Heuristic Explanations).
 
 ---
 
-## 12. Tổng kết & Đóng góp
+## 13. Kết quả thực nghiệm
 
-- **Thành tựu cốt lõi:**
-  - Áp dụng thành công kiến trúc PhoBERT vào bài toán thực tế.
-  - Xây dựng hệ thống Web phân tán (Client-Server) hoàn chỉnh.
-  - Giải quyết bài toán giải thích (XAI) thông qua Heuristics minh bạch.
-- **Ý nghĩa:** Chuyển giao AI từ phòng thí nghiệm thành một ứng dụng thiết thực, bảo vệ người dùng mạng.
+- Kết quả trên tập kiểm thử nội bộ (Khoảng 2.716 mẫu).
+- Accuracy đạt 96.32% (so với SVM 85.34%, BiLSTM 89.67%).
+- F1-Score đạt 93.42% đảm bảo cân bằng giữa Precision và Recall.
+- Kết quả External Test (kiểm thử ngoại lai) đạt Accuracy 91.5%.
 
 ---
 
-## 13. Hướng phát triển tương lai
+## 14. Phân tích và đánh giá kết quả
 
-- Cải tiến nhận diện bằng phương pháp **Fact-Checking** (Kiểm chứng sự kiện).
-- Tích hợp **Tri thức Đồ thị (Knowledge Graph)**.
-- Áp dụng kỹ thuật RAG (Retrieval-Augmented Generation) để đối chiếu thông tin với các nguồn báo chí chính thống theo thời gian thực.
+- Accuracy 96.32% chứng tỏ mô hình bao quát tốt cả hai nhãn.
+- F1-Score 93.42% phản ánh sự ổn định trên dữ liệu không cân bằng.
+- Tỷ lệ bỏ lọt tin giả (False Negative) được kiểm soát ở mức rất thấp.
+- Cơ chế giải thích hoạt động ổn định với thời gian trễ dưới 1 giây.
+
+---
+
+## 15. Hạn chế
+
+- Mô hình nhầm lẫn đối với các bài báo hình sự có văn phong giật gân.
+- Bỏ lọt các văn bản lừa đảo bắt chước hoàn hảo văn phong hành chính nhà nước.
+- Dễ bị biến thiên độ tin cậy khi độ dài văn bản quá ngắn (dưới 3 câu).
+- Chưa có khả năng kiểm chứng chéo sự kiện với thế giới thực.
+
+---
+
+## 16. Kết luận và hướng phát triển
+![bg right:45% fit drop-shadow:0,5px,15px,rgba(0,0,0,0.15)](image/future.png)
+
+- Tích hợp thành công PhoBERT vào ứng dụng thực tiễn.
+- Cơ chế Heuristics giải quyết hiệu quả bài toán giải thích hậu xử lý.
+- Hướng phát triển 1: Tích hợp Tri thức đồ thị (Knowledge Graph) để kiểm chứng.
+- Hướng phát triển 2: Áp dụng RAG truy xuất báo chí chính thống thời gian thực.
 
 ---
 
 <!-- _class: lead -->
 # Xin chân thành cảm ơn!
-## Q & A
-*Cảm ơn Quý Thầy Cô và Hội đồng đã lắng nghe.*
+## Phần Hỏi đáp (Q&A)
+
+---
+
+## Slide Dự phòng (Backup 1) - Tại sao không dùng SHAP/LIME?
+
+- SHAP/LIME đòi hỏi chi phí tính toán (Computational Cost) rất lớn.
+- Phải sinh nhiễu và chạy lại mô hình hàng nghìn lần cho mỗi văn bản.
+- Gây độ trễ (Latency) không thể chấp nhận được trên môi trường Web API.
+- Heuristic đáp ứng tốc độ phản hồi cực thấp (dưới 1s) với chi phí $O(N)$.
+
+---
+
+## Slide Dự phòng (Backup 2) - Phân biệt Accuracy và F1-Score
+
+- Accuracy đo tỷ lệ dự đoán đúng chung trên toàn bộ tập dữ liệu.
+- Trong dữ liệu mất cân bằng, Accuracy có thể gây ngộ nhận về hiệu năng.
+- F1-Score kết hợp Precision (độ chuẩn xác) và Recall (độ bao phủ).
+- F1-Score đánh giá khách quan hơn sự ổn định của hệ thống phòng vệ.
