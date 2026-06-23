@@ -90,6 +90,7 @@ style: |
 ---
 
 ## 7. Kiến trúc tổng thể hệ thống
+![bg right:50% fit](image/kientruc.png)
 
 - Trình bày kiến trúc Client-Server đa tầng độc lập.
 - Frontend: Tương tác người dùng (Web Application).
@@ -108,6 +109,7 @@ style: |
 ---
 
 ## 9. Quy trình xử lý dữ liệu
+![bg right:40% fit](image/luong_gop_du_lieu.png)
 
 - Tổng hợp hơn 22.000 bài báo tiếng Việt đã gán nhãn.
 - Làm sạch (Data Cleaning): Loại bỏ HTML, liên kết, ký tự nhiễu.
@@ -116,7 +118,8 @@ style: |
 
 ---
 
-## 10. Cơ chế Heuristic Explanation
+## 10. Luồng thuật toán & Cơ chế Heuristic
+![bg right:50% fit](image/luong_xu_ly.png)
 
 - Đây là cơ chế giải thích hậu xử lý (Post-hoc Explanation).
 - Hoạt động độc lập, không tác động vào trọng số mô hình PhoBERT.
@@ -125,16 +128,29 @@ style: |
 
 ---
 
-## 11. Triển khai hệ thống Web
+## 11. Cơ sở dữ liệu & Triển khai hệ thống
+![bg right:45% fit](image/erd.png)
 
+- Database: Tích hợp cơ sở dữ liệu SQLite (Lưu trữ lịch sử quét).
 - Backend: Sử dụng khung làm việc FastAPI xử lý bất đồng bộ.
-- Database: Tích hợp hệ quản trị cơ sở dữ liệu SQLite.
 - Frontend: Xây dựng giao diện tương tác bằng Next.js.
 - Web Crawler: Trích xuất nội dung bài báo tự động theo thời gian thực.
 
 ---
 
-## 12. Kết quả thực nghiệm
+## 12. Giao diện trực quan của hệ thống
+![bg right:55% fit](image/08_Ket_Qua_Phan_Tich_Tin_Gia_100_Phan_Tram.png)
+
+- Người dùng chỉ cần sao chép và **dán URL bài báo**.
+- Hệ thống tự động bóc tách và phân tích.
+- Hiển thị trực quan:
+  - Điểm số tin cậy (Confidence Score).
+  - Nhãn cảnh báo (Tin thật / Đáng ngờ / Tin giả).
+  - Chi tiết các nguyên nhân (Heuristic Explanations).
+
+---
+
+## 13. Kết quả thực nghiệm
 
 - Kết quả trên tập kiểm thử nội bộ (Khoảng 2.716 mẫu).
 - Accuracy đạt 96.32% (so với SVM 85.34%, BiLSTM 89.67%).
@@ -143,7 +159,7 @@ style: |
 
 ---
 
-## 13. Phân tích và đánh giá kết quả
+## 14. Phân tích và đánh giá kết quả
 
 - Accuracy 96.32% chứng tỏ mô hình bao quát tốt cả hai nhãn.
 - F1-Score 93.42% phản ánh sự ổn định trên dữ liệu không cân bằng.
@@ -152,7 +168,7 @@ style: |
 
 ---
 
-## 14. Hạn chế
+## 15. Hạn chế
 
 - Mô hình nhầm lẫn đối với các bài báo hình sự có văn phong giật gân.
 - Bỏ lọt các văn bản lừa đảo bắt chước hoàn hảo văn phong hành chính nhà nước.
@@ -161,7 +177,7 @@ style: |
 
 ---
 
-## 15. Kết luận và hướng phát triển
+## 16. Kết luận và hướng phát triển
 
 - Tích hợp thành công PhoBERT vào ứng dụng thực tiễn.
 - Cơ chế Heuristics giải quyết hiệu quả bài toán giải thích hậu xử lý.
