@@ -41,6 +41,12 @@
 \newcommand{\secA}[1]{\phantomsection\addcontentsline{toc}{subsection}{#1}\vspace{5pt}{\bfseries\color{headingblue}#1}\par\vspace{2pt}}
 \newcommand{\secB}[1]{\phantomsection\addcontentsline{toc}{subsubsection}{#1}\vspace{4pt}{\bfseries\color{headingblue}\small #1}\par\vspace{1pt}}
 
+\usepackage{tocloft}
+\cftsetindents{section}{0em}{0em}
+\cftsetindents{subsection}{2.0em}{0em}
+\cftsetindents{subsubsection}{4.0em}{0em}
+\renewcommand{\cftsecdotsep}{\cftdotsep} % Add dots for sections too
+
 \makeatletter
 \renewcommand\tableofcontents{%
     \begin{center}{\bfseries\Large MỤC LỤC}\end{center}%
