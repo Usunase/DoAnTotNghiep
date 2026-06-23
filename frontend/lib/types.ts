@@ -29,6 +29,7 @@ export interface AnalyzeRequest {
   text?: string;
   title?: string;
   url?: string;
+  source?: string;
 }
 
 export interface Explanation {

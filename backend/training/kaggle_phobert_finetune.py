@@ -81,12 +81,6 @@ def find_all(filename: str) -> list[Path]:
     return sorted(INPUT_ROOT.rglob(filename))
 
 
-def normalize_text(value: object) -> str:
-    if not isinstance(value, str):
-        return ""
-    return " ".join(value.split()).strip()
-
-
 def make_frame(
     df: pd.DataFrame,
     *,
@@ -112,7 +106,6 @@ def make_frame(
 frames: list[pd.DataFrame] = []
 
 # Dataset 1: General Vietnamese News
-# These files are real-news files. Their internal label column is not reused.
 for name in ["real_news.csv", "real_news_5500_balanced.csv"]:
     path = find_one(name)
     df_raw = pd.read_csv(path)
@@ -158,7 +151,6 @@ frames.append(
 print("Loaded", path, df_raw.shape)
 
 # Dataset 3: PBL7 Fake News
-# Load all PBL7 CSVs, then exact-text dedup will remove duplicated origin/update rows.
 for filename in ["train_data.csv", "val_data.csv", "fix_test_data.csv", "update_train_data.csv", "update_val_data.csv"]:
     for path in find_all(filename):
         if "pbl7" not in str(path).lower():
@@ -177,7 +169,6 @@ for filename in ["train_data.csv", "val_data.csv", "fix_test_data.csv", "update_
             print("Loaded", path, df_raw.shape)
 
 # Dataset 4: Medical Fake News
-# Use raw content, not normalized_content, then apply one consistent PhoBERT preprocessing step.
 path = find_one("full_dataset.csv")
 df_raw = pd.read_csv(path)
 frames.append(
@@ -195,6 +186,24 @@ frames.append(
 print("Loaded", path, df_raw.shape)
 
 df = pd.concat(frames, ignore_index=True)
+
+def make_text_with_metadata(row):
+    parts = []
+    title = str(row.get("title", "")).strip()
+    if title and title.lower() != "nan":
+        parts.append(f"Tiêu đề: {title}")
+        
+    source = str(row.get("source", "")).strip()
+    if source and source.lower() != "nan" and source != str(row.get("dataset_name", "")):
+        parts.append(f"Nguồn: {source}")
+        
+    text = str(row.get("text", "")).strip()
+    if text:
+        parts.append(f"Nội dung: {text}")
+        
+    return " | ".join(parts) if parts else text
+
+df["text"] = df.apply(make_text_with_metadata, axis=1)
 df["text"] = df["text"].map(normalize_text)
 df = df[df["text"].str.len() > 20].copy()
 
@@ -354,6 +363,7 @@ training_args_kwargs = dict(
     fp16=torch.cuda.is_available(),
     report_to="none",
     seed=SEED,
+    dataloader_num_workers=2,
 )
 
 training_args_signature = inspect.signature(TrainingArguments.__init__).parameters

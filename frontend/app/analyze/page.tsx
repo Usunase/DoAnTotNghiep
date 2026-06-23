@@ -16,6 +16,7 @@ export default function AnalyzePage() {
   const router = useRouter();
   const [tab, setTab] = useState<"text" | "url">("text");
   const [title, setTitle] = useState("");
+  const [source, setSource] = useState("");
   const [text, setText] = useState("");
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
@@ -38,6 +39,7 @@ export default function AnalyzePage() {
         mode: tab,
         text: tab === "text" ? text : undefined,
         title: tab === "text" ? title : undefined,
+        source: tab === "text" ? source : undefined,
         url: tab === "url" ? url : undefined,
       });
 
@@ -112,6 +114,7 @@ export default function AnalyzePage() {
                           onClick={() => {
                             setText(SAMPLE_FAKE);
                             setTitle("Tin giật gân (mẫu)");
+                            setSource("Facebook");
                           }}
                         >
                           Mẫu đáng ngờ
@@ -122,19 +125,31 @@ export default function AnalyzePage() {
                           onClick={() => {
                             setText(SAMPLE_REAL);
                             setTitle("Tin y tế (mẫu)");
+                            setSource("Sức khỏe đời sống");
                           }}
                         >
                           Mẫu khách quan
                         </button>
                       </div>
-                      <div>
-                        <label className="label-field">Tiêu đề</label>
-                        <input
-                          className="input-field"
-                          value={title}
-                          onChange={(e) => setTitle(e.target.value)}
-                          placeholder="Tiêu đề (tùy chọn)"
-                        />
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label className="label-field">Tiêu đề</label>
+                          <input
+                            className="input-field"
+                            value={title}
+                            onChange={(e) => setTitle(e.target.value)}
+                            placeholder="Tiêu đề (tùy chọn)"
+                          />
+                        </div>
+                        <div>
+                          <label className="label-field">Nguồn báo / Mạng xã hội</label>
+                          <input
+                            className="input-field"
+                            value={source}
+                            onChange={(e) => setSource(e.target.value)}
+                            placeholder="Vd: Facebook, Tuổi trẻ, VnExpress..."
+                          />
+                        </div>
                       </div>
                       <div>
                         <label className="label-field">Nội dung</label>

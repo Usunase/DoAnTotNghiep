@@ -58,6 +58,7 @@ class AnalyzePayload(BaseModel):
     text: Optional[str] = None
     title: Optional[str] = ""
     url: Optional[str] = None
+    source: Optional[str] = ""
 
 
 @app.get("/api/health")
@@ -85,7 +86,7 @@ def analyze(
         result = system.infer(
             article_text=payload.text.strip(),
             article_title=payload.title or "",
-
+            source_domain=payload.source or "",
         )
     else:
         if not payload.url or not payload.url.strip():

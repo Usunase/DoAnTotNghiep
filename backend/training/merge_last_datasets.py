@@ -181,6 +181,24 @@ def merge_datasets(input_dir: Path = DEFAULT_INPUT_DIR, min_chars: int = 20) -> 
         raise FileNotFoundError(f"No supported dataset files found under {input_dir}")
 
     df = pd.concat(frames, ignore_index=True)
+
+    def _combine_content(row):
+        parts = []
+        title = str(row.get("title", "")).strip()
+        if title and title.lower() != "nan":
+            parts.append(f"Tiêu đề: {title}")
+            
+        source = str(row.get("source", "")).strip()
+        if source and source.lower() != "nan" and source != row.get("dataset_name", ""):
+            parts.append(f"Nguồn: {source}")
+            
+        text = str(row.get("content", "")).strip()
+        if text:
+            parts.append(f"Nội dung: {text}")
+            
+        return " | ".join(parts) if parts else text
+
+    df["content"] = df.apply(_combine_content, axis=1)
     df["content"] = df["content"].map(_normalize_text)
     df = df[df["content"].str.len() > min_chars].copy()
 
