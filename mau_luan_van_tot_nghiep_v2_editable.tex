@@ -24,8 +24,9 @@
 
 \definecolor{headingblue}{RGB}{0,0,0}
 \definecolor{placeholdergray}{RGB}{0,0,0}
+\usepackage{indentfirst}
 \setstretch{1.5}
-\setlength{\parindent}{0pt}
+\setlength{\parindent}{1.25cm}
 \setlength{\parskip}{3pt}
 \setlist{nosep,leftmargin=*}
 
@@ -37,9 +38,9 @@
 \renewcommand{\footrulewidth}{0pt}
 
 \newcommand{\ph}[1]{{\itshape\color{placeholdergray}[#1]}}
-\newcommand{\chap}[1]{\stepcounter{section}\phantomsection\addcontentsline{toc}{section}{#1}\vspace*{0.1cm}{\bfseries\color{headingblue}\large #1}\par\vspace{6pt}}
-\newcommand{\secA}[1]{\phantomsection\addcontentsline{toc}{subsection}{#1}\vspace{5pt}{\bfseries\color{headingblue}#1}\par\vspace{2pt}}
-\newcommand{\secB}[1]{\phantomsection\addcontentsline{toc}{subsubsection}{#1}\vspace{4pt}{\bfseries\color{headingblue}\small #1}\par\vspace{1pt}}
+\newcommand{\chap}[1]{\stepcounter{section}\phantomsection\addcontentsline{toc}{section}{#1}\vspace*{0.1cm}\noindent{\bfseries\color{headingblue}\large #1}\par\vspace{6pt}}
+\newcommand{\secA}[1]{\phantomsection\addcontentsline{toc}{subsection}{#1}\vspace{5pt}\noindent{\bfseries\color{headingblue}#1}\par\vspace{2pt}}
+\newcommand{\secB}[1]{\phantomsection\addcontentsline{toc}{subsubsection}{#1}\vspace{4pt}\noindent{\bfseries\color{headingblue}\small #1}\par\vspace{1pt}}
 
 \usepackage{tocloft}
 \cftsetindents{section}{0em}{0em}
