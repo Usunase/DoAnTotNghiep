@@ -7,26 +7,34 @@ style: |
   section {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 28px;
+    background-color: #f8fafc;
   }
   h1 {
-    color: #1e3a8a; /* Deep blue */
-    font-size: 48px;
+    color: #0f172a;
+    font-size: 52px;
+    font-weight: 800;
   }
   h2 {
     color: #1e3a8a;
-    border-bottom: 2px solid #3b82f6;
+    border-bottom: 3px solid #3b82f6;
     padding-bottom: 10px;
     margin-bottom: 25px;
-    font-size: 36px;
+    font-size: 38px;
+    font-weight: 700;
   }
   strong {
-    color: #0369a1;
+    color: #2563eb;
+    font-weight: 600;
   }
   ul {
-    line-height: 1.5;
+    line-height: 1.6;
+    color: #334155;
   }
   li {
     margin-bottom: 15px;
+  }
+  .lead {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
   }
 ---
 
@@ -38,6 +46,7 @@ style: |
 ---
 
 ## 1. Bối cảnh và lý do chọn đề tài
+![bg right:45% fit drop-shadow:0,5px,15px,rgba(0,0,0,0.15)](image/fake_news.png)
 
 - Mạng xã hội thúc đẩy tốc độ lan truyền tin giả (Fake News).
 - Tin giả gây ảnh hưởng tiêu cực đến an ninh và nhận thức cộng đồng.
@@ -47,6 +56,7 @@ style: |
 ---
 
 ## 2. Bài toán nghiên cứu
+![bg right:45% fit drop-shadow:0,5px,15px,rgba(0,0,0,0.15)](image/xai.png)
 
 - Phân loại văn bản tin tức tiếng Việt thành các mức độ tin cậy.
 - Bài toán cốt lõi: Phân loại chuỗi (Sequence Classification).
@@ -178,6 +188,7 @@ style: |
 ---
 
 ## 16. Kết luận và hướng phát triển
+![bg right:45% fit drop-shadow:0,5px,15px,rgba(0,0,0,0.15)](image/future.png)
 
 - Tích hợp thành công PhoBERT vào ứng dụng thực tiễn.
 - Cơ chế Heuristics giải quyết hiệu quả bài toán giải thích hậu xử lý.
