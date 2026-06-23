@@ -205,10 +205,12 @@ XAI & Trí tuệ nhân tạo minh bạch (Explainable Artificial Intelligence).\
 \newpage
 
 \chap{CHƯƠNG 1: GIỚI THIỆU}
-\secA{1.1. Đặt vấn đề}
-Sự bùng nổ của mạng xã hội đã tạo điều kiện cho "tin giả" (Fake News) lan truyền, thao túng dư luận và gây rủi ro xã hội. Dù các mô hình Học sâu như Transformer và PhoBERT đã đạt nhiều tiến bộ trong việc phân tích văn bản, chúng vẫn bộc lộ hạn chế lớn là tính chất "hộp đen" và thiếu khả năng diễn giải kết quả cho người dùng cuối. Do đó, đề tài \textbf{"Xây dựng hệ thống phát hiện tin giả tiếng Việt (Hệ thống ShieldAI)"} được thực hiện nhằm giải quyết vấn đề này.
+\secA{1.1. Lý do chọn đề tài}
+Sự bùng nổ của mạng xã hội đã tạo điều kiện cho "tin giả" (Fake News) lan truyền, thao túng dư luận và gây rủi ro xã hội. Dù các mô hình Học sâu như Transformer và PhoBERT đã đạt nhiều tiến bộ trong việc phân tích văn bản, chúng vẫn bộc lộ hạn chế lớn là tính chất "hộp đen" và thiếu khả năng diễn giải kết quả cho người dùng cuối. Xuất phát từ nhu cầu cấp thiết về một công cụ kiểm chứng thông tin vừa có độ chính xác cao vừa minh bạch với người dùng, đề tài \textbf{"Xây dựng hệ thống phát hiện tin giả tiếng Việt (Hệ thống ShieldAI)"} đã được lựa chọn thực hiện.
 
 Đề tài tập trung nghiên cứu và xây dựng hệ thống phân loại tin giả dựa trên mô hình ngôn ngữ tiền huấn luyện PhoBERT kết hợp với mô hình phân loại chuỗi (Sequence Classification). Hệ thống này tập trung khai thác các đặc trưng ngữ nghĩa từ văn bản để đưa ra phán quyết chuẩn xác. Đặc biệt, nhằm tăng khả năng giải thích quyết định của hệ thống và cải thiện khả năng giải thích của mô hình, nghiên cứu đề xuất tích hợp một Động cơ giải thích (Explanation Engine) độc lập dựa trên luật và các đặc trưng kinh nghiệm (Heuristics) --- nhằm phân tích các dấu hiệu thao túng cảm xúc, văn phong giật gân, sự lạm dụng dấu câu --- từ đó góp phần nâng cao khả năng giải thích cho quyết định phân loại của mô hình.
+
+Về tên gọi của hệ thống, \textbf{"ShieldAI"} là sự kết hợp giữa "Shield" (Lá chắn) và "AI" (Trí tuệ nhân tạo). Tên gọi này phản ánh trực tiếp sứ mệnh của dự án: tạo ra một lá chắn công nghệ thông minh, vững chắc nhằm bảo vệ người dùng mạng xã hội tại Việt Nam trước các luồng thông tin độc hại, sai lệch và lừa đảo.
 
 Để đánh giá tính khả thi của phương pháp đề xuất, mô hình được triển khai và kiểm thử trên bộ dữ liệu tin tức tiếng Việt đã được gán nhãn. Các chỉ số đánh giá chính như Accuracy, Precision, Recall và F1-Score được sử dụng để phân tích hiệu năng của mạng phân loại. Kết quả thực nghiệm, tính hiệu quả của cơ chế giải thích cùng các phân tích chi tiết sẽ được trình bày trong chương đánh giá của tiểu luận.
 
