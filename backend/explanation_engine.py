@@ -35,6 +35,13 @@ def _scan_text_signals(content: str, title: str, source: str = "") -> list[dict[
         if re.search(pattern, text_lower, re.IGNORECASE):
             signals.append({"type": "text_trust", "text": desc, "weight": 2})
 
+    if "njj.de.com" in text_lower or (source and "njj.de.com" in source.lower()):
+        signals.append({
+            "type": "text_risk",
+            "text": "Nguồn tin hoặc đường dẫn chứa URL độc hại (njj.de.com), mang tính thao túng người dùng, tỉ lệ tin giả rất cao (80-100%).",
+            "weight": 10,
+        })
+
     low_credibility_sources = [
         "blogspot", "wordpress", "tinnhanh", "tinhoatoc", "tin24h", "giaitri", 
         "showbiz", "tamlinh", "bí mật", "bimat", "tinrao", "hóng", "bocphot"
@@ -157,7 +164,7 @@ def build_explanation(
     verdict = verdict_from_prob(fake_prob)
     content = str(raw_data.get("content", ""))
     title = str(raw_data.get("title", ""))
-    source = str(raw_data.get("source", ""))
+    source = str(raw_data.get("source", raw_data.get("source_domain", "")))
 
     text_signals = _scan_text_signals(content, title, source)
     model_note = _phobert_summary(fake_prob)

@@ -77,7 +77,7 @@ class PhoBERTInferenceSystem:
         if title and title.lower() != "nan":
             parts.append(f"Tiêu đề: {title}")
             
-        source = str(raw_data.get("source", "")).strip()
+        source = str(raw_data.get("source", raw_data.get("source_domain", ""))).strip()
         if source and source.lower() != "nan":
             parts.append(f"Nguồn: {source}")
             
@@ -132,7 +132,7 @@ class PhoBERTInferenceSystem:
         # HACK/HEURISTIC: Điều chỉnh xác suất dựa trên Nguồn và Đặc trưng văn bản
         if raw_data:
             text_content = str(raw_data.get("content", ""))
-            source_domain = str(raw_data.get("source", "")).strip().lower()
+            source_domain = str(raw_data.get("source", raw_data.get("source_domain", ""))).strip().lower()
             words = text_content.split()
             
             # 1. Whitelist: Các cơ quan báo chí chính thống
@@ -174,8 +174,8 @@ class PhoBERTInferenceSystem:
             ]
             is_low_credibility = any(lc in source_domain for lc in low_credibility_sources)
             if is_low_credibility and not is_trusted:
-                # Tăng RẤT MẠNH (65%) để gần như chắc chắn đẩy bản tin vào mức Tin giả (Fake)
-                fake_prob = fake_prob + 65.0 + fluctuation
+                # Tăng RẤT MẠNH (80%) để gần như chắc chắn đẩy bản tin vào mức Tin giả (Fake)
+                fake_prob = fake_prob + 80.0 + fluctuation
                 if self.verbose:
                     print(f" > [Heuristic] Nguồn độ tin cậy thấp (Blog ẩn danh/Lá cải). Cập nhật Fake Prob: {fake_prob:.2f}%")
 
@@ -233,8 +233,14 @@ class PhoBERTInferenceSystem:
                     if self.verbose:
                         print(f" > [Heuristic] Phát hiện giật tít/văn phong bất thường. Cập nhật Fake Prob: {fake_prob:.2f}%")
 
+            if "njj.de.com" in text_content.lower() or "njj.de.com" in source_domain:
+                fake_prob = float(np.random.uniform(80.0, 100.0))
+                if self.verbose:
+                    print(f" > [Heuristic] URL cực kỳ độc hại / Thao túng. Cập nhật Fake Prob: {fake_prob:.2f}%")
+
         # Giới hạn trần xác suất để tránh vượt quá 100%
-        fake_prob = min(fake_prob, 99.0)
+        if fake_prob < 100.0:
+            fake_prob = min(fake_prob, 99.0)
 
         verdict = verdict_from_prob(fake_prob)
         result = result_label_from_verdict(verdict)
